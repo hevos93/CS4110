@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../RW1-Files/dec2to4df.vhd" \
+"../../../../../RW1-Files/dec2to4df_tb.vhd" \
+
+# Do not sort compile order
+nosort

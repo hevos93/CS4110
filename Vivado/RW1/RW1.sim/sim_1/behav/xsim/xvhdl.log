@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "S:/Dokumenter/Skole/CS-Master/CS4110/Vivado/RW1-Files/dec2to4df.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dec2to4'
+INFO: [VRFC 10-163] Analyzing VHDL file "S:/Dokumenter/Skole/CS-Master/CS4110/Vivado/RW1-Files/dec2to4df_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dec2to4_tb'
