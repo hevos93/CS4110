@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-101] 'add_files': Too many positional arguments specified.&#xD;&#xA;SYNTAX &#xD;&#xA;  add_files &lt;src_files> [OPTIONS]&#xD;&#xA;    src_files :  &lt;string>  (required)&#xD;&#xA;    -blackbox[=true|*false*]&#xD;&#xA;    -cflags &lt;string> &#xD;&#xA;    -csimflags &lt;string> &#xD;&#xA;    -tb[=true|*false*]&#xD;&#xA;&#xD;&#xA;SEE ALSO&#xD;&#xA;  www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=vitis+doc;d=rpg1583259720879.html&#xD;&#xA;&#xD;&#xA;command 'add_files' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;add_files NapCipher - Files/nap.c&quot;&#xD;&#xA;    (file &quot;C:/Users/hevos/Documents/CS4110/VitisHLS/LW4/NapCipcher/solution1/csynth.tcl&quot; line 8)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;source C:/Users/hevos/Documents/CS4110/VitisHLS/LW4/NapCipcher/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/hevos/Documents/CS4110/VitisHLS/LW4/NapCipcher/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$newargs&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 16)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc [info nameofexecutable] $argv&quot;" projectName="NapCipcher" solutionName="solution1" date="2022-11-17T14:12:24.198+0100"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

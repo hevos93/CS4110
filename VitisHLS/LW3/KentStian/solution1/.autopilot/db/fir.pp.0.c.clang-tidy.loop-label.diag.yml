@@ -1,0 +1,13 @@
+---
+MainSourceFile:  'C:/Users/hevos/Documents/CS4110/VitisHLS/LW3/KentStian/solution1/.autopilot/db/fir.pp.0.c'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_18_1:  '
+    FileOffset:      18
+    FilePath:        'C:\Users\hevos\Documents\CS4110\VitisHLS\LW3\CS4110-HLS-Tutorial-master\CS4110-HLS-Tutorial-master\src\hls\fir.c'
+    Replacements:    
+      - FilePath:        'C:\Users\hevos\Documents\CS4110\VitisHLS\LW3\KentStian\solution1\.autopilot\db\fir.pp.0.c'
+        Offset:          14656
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_18_1: '
+...

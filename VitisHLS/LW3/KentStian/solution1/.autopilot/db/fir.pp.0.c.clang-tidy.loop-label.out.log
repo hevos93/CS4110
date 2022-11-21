@@ -1,0 +1,5 @@
+C:\Users\hevos\Documents\CS4110\VitisHLS\LW3\KentStian\solution1\.autopilot\db\fir.pp.0.c:389:2: warning: Added loop label VITIS_LOOP_18_1:   [xilinx-label-all-loops]
+ for (int8_t i = 3 - 1; i > 0; i--)
+ ^~~
+ VITIS_LOOP_18_1: 
+C:\Users\hevos\Documents\CS4110\VitisHLS\LW3\KentStian\solution1\.autopilot\db\fir.pp.0.c:389:2: note: FIX-IT applied suggested code changes

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir.h" path="C:\Users\hevos\Documents\CS4110\VitisHLS\LW3\CS4110-HLS-Tutorial-master\CS4110-HLS-Tutorial-master\src\hls\fir.h"/>
+    <originFiles name="fir.c" path="C:\Users\hevos\Documents\CS4110\VitisHLS\LW3\CS4110-HLS-Tutorial-master\CS4110-HLS-Tutorial-master\src\hls\fir.c"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.c" path="C:\Users\hevos\Documents\CS4110\VitisHLS\LW3\CS4110-HLS-Tutorial-master\CS4110-HLS-Tutorial-master\src\hls\tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

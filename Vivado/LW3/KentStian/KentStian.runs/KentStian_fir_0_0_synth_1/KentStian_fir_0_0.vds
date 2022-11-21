@@ -1,0 +1,454 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Nov 16 13:12:34 2022
+# Process ID: 5492
+# Current directory: C:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.runs/KentStian_fir_0_0_synth_1
+# Command line: vivado.exe -log KentStian_fir_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source KentStian_fir_0_0.tcl
+# Log file: C:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.runs/KentStian_fir_0_0_synth_1/KentStian_fir_0_0.vds
+# Journal file: C:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.runs/KentStian_fir_0_0_synth_1\vivado.jou
+# Running On: LAPTOP-USRGHIN7, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 16829 MB
+#-----------------------------------------------------------
+source KentStian_fir_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1040.035 ; gain = 155.914
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hevos/Documents/CS4110/VitisHLS/LW3/KentStianZip/export'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: KentStian_fir_0_0
+Command: synth_design -top KentStian_fir_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11836
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.461 ; gain = 408.762
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'KentStian_fir_0_0' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ip/KentStian_fir_0_0/synth/KentStian_fir_0_0.vhd:81]
+	Parameter C_S_AXI_CONTROL_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CONTROL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fir' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir.vhd:12' bound to instance 'U0' of component 'fir' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ip/KentStian_fir_0_0/synth/KentStian_fir_0_0.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'fir' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir.vhd:40]
+INFO: [Synth 8-3491] module 'fir_fir_Pipeline_VITIS_LOOP_18_1' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fir_Pipeline_VITIS_LOOP_18_1.vhd:12' bound to instance 'grp_fir_Pipeline_VITIS_LOOP_18_1_fu_89' of component 'fir_fir_Pipeline_VITIS_LOOP_18_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir.vhd:344]
+INFO: [Synth 8-638] synthesizing module 'fir_fir_Pipeline_VITIS_LOOP_18_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fir_Pipeline_VITIS_LOOP_18_1.vhd:35]
+INFO: [Synth 8-3491] module 'fir_flow_control_loop_pipe_sequential_init' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_flow_control_loop_pipe_sequential_init.vhd:11' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'fir_flow_control_loop_pipe_sequential_init' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fir_Pipeline_VITIS_LOOP_18_1.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'fir_flow_control_loop_pipe_sequential_init' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_flow_control_loop_pipe_sequential_init.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'fir_flow_control_loop_pipe_sequential_init' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_flow_control_loop_pipe_sequential_init.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'fir_fir_Pipeline_VITIS_LOOP_18_1' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fir_Pipeline_VITIS_LOOP_18_1.vhd:35]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fir_control_s_axi' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_control_s_axi.vhd:10' bound to instance 'control_s_axi_U' of component 'fir_control_s_axi' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'fir_control_s_axi' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_control_s_axi.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'fir_control_s_axi' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_control_s_axi.vhd:78]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fir_fadd_32ns_32ns_32_5_full_dsp_1' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fadd_32ns_32ns_32_5_full_dsp_1.vhd:9' bound to instance 'fadd_32ns_32ns_32_5_full_dsp_1_U5' of component 'fir_fadd_32ns_32ns_32_5_full_dsp_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir.vhd:399]
+INFO: [Synth 8-638] synthesizing module 'fir_fadd_32ns_32ns_32_5_full_dsp_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fadd_32ns_32ns_32_5_full_dsp_1.vhd:27]
+INFO: [Synth 8-3491] module 'fir_fadd_32ns_32ns_32_5_full_dsp_1_ip' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:53' bound to instance 'fir_fadd_32ns_32ns_32_5_full_dsp_1_ip_u' of component 'fir_fadd_32ns_32ns_32_5_full_dsp_1_ip' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fadd_32ns_32ns_32_5_full_dsp_1.vhd:57]
+INFO: [Synth 8-6157] synthesizing module 'fir_fadd_32ns_32ns_32_5_full_dsp_1_ip' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'fir_fadd_32ns_32ns_32_5_full_dsp_1_ip' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-256] done synthesizing module 'fir_fadd_32ns_32ns_32_5_full_dsp_1' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fadd_32ns_32ns_32_5_full_dsp_1.vhd:27]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fir_fmul_32ns_32ns_32_4_max_dsp_1' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fmul_32ns_32ns_32_4_max_dsp_1.vhd:9' bound to instance 'fmul_32ns_32ns_32_4_max_dsp_1_U6' of component 'fir_fmul_32ns_32ns_32_4_max_dsp_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir.vhd:414]
+INFO: [Synth 8-638] synthesizing module 'fir_fmul_32ns_32ns_32_4_max_dsp_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fmul_32ns_32ns_32_4_max_dsp_1.vhd:27]
+INFO: [Synth 8-3491] module 'fir_fmul_32ns_32ns_32_4_max_dsp_1_ip' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:53' bound to instance 'fir_fmul_32ns_32ns_32_4_max_dsp_1_ip_u' of component 'fir_fmul_32ns_32ns_32_4_max_dsp_1_ip' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fmul_32ns_32ns_32_4_max_dsp_1.vhd:57]
+INFO: [Synth 8-6157] synthesizing module 'fir_fmul_32ns_32ns_32_4_max_dsp_1_ip' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'fir_fmul_32ns_32ns_32_4_max_dsp_1_ip' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:53]
+INFO: [Synth 8-256] done synthesizing module 'fir_fmul_32ns_32ns_32_4_max_dsp_1' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_fmul_32ns_32ns_32_4_max_dsp_1.vhd:27]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 6 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fir_uitofp_32ns_32_6_no_dsp_1' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_uitofp_32ns_32_6_no_dsp_1.vhd:9' bound to instance 'uitofp_32ns_32_6_no_dsp_1_U7' of component 'fir_uitofp_32ns_32_6_no_dsp_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir.vhd:429]
+INFO: [Synth 8-638] synthesizing module 'fir_uitofp_32ns_32_6_no_dsp_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_uitofp_32ns_32_6_no_dsp_1.vhd:25]
+INFO: [Synth 8-3491] module 'fir_uitofp_32ns_32_6_no_dsp_1_ip' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_uitofp_32ns_32_6_no_dsp_1_ip.v:53' bound to instance 'fir_uitofp_32ns_32_6_no_dsp_1_ip_u' of component 'fir_uitofp_32ns_32_6_no_dsp_1_ip' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_uitofp_32ns_32_6_no_dsp_1.vhd:50]
+INFO: [Synth 8-6157] synthesizing module 'fir_uitofp_32ns_32_6_no_dsp_1_ip' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_uitofp_32ns_32_6_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'fir_uitofp_32ns_32_6_no_dsp_1_ip' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_uitofp_32ns_32_6_no_dsp_1_ip.v:53]
+INFO: [Synth 8-256] done synthesizing module 'fir_uitofp_32ns_32_6_no_dsp_1' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_uitofp_32ns_32_6_no_dsp_1.vhd:25]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 6 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fir_sitofp_32ns_32_6_no_dsp_1' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_sitofp_32ns_32_6_no_dsp_1.vhd:9' bound to instance 'sitofp_32ns_32_6_no_dsp_1_U8' of component 'fir_sitofp_32ns_32_6_no_dsp_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir.vhd:442]
+INFO: [Synth 8-638] synthesizing module 'fir_sitofp_32ns_32_6_no_dsp_1' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_sitofp_32ns_32_6_no_dsp_1.vhd:25]
+INFO: [Synth 8-3491] module 'fir_sitofp_32ns_32_6_no_dsp_1_ip' declared at 'c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_sitofp_32ns_32_6_no_dsp_1_ip.v:53' bound to instance 'fir_sitofp_32ns_32_6_no_dsp_1_ip_u' of component 'fir_sitofp_32ns_32_6_no_dsp_1_ip' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_sitofp_32ns_32_6_no_dsp_1.vhd:50]
+INFO: [Synth 8-6157] synthesizing module 'fir_sitofp_32ns_32_6_no_dsp_1_ip' [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_sitofp_32ns_32_6_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'fir_sitofp_32ns_32_6_no_dsp_1_ip' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/ip/fir_sitofp_32ns_32_6_no_dsp_1_ip.v:53]
+INFO: [Synth 8-256] done synthesizing module 'fir_sitofp_32ns_32_6_no_dsp_1' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_sitofp_32ns_32_6_no_dsp_1.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'fir' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'KentStian_fir_0_0' (0#1) [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ip/KentStian_fir_0_0/synth/KentStian_fir_0_0.vhd:81]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ipshared/e030/hdl/vhdl/fir_control_s_axi.vhd:306]
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized93 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized93 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized93 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[30] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[29] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[28] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[27] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[26] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[25] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[24] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[23] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[22] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[21] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[20] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[19] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[18] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[17] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[16] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[15] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[14] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[13] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[12] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[11] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[10] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[9] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[8] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[7] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[6] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[5] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[4] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[3] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[2] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[1] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[0] in module fix_to_flt_conv_exp__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[11] in module carry_chain__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized79 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized79 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized79 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized79 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized79 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port NORMALIZE[1] in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIXED_POINT in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIX_MANT_SIGN in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[7] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[6] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[5] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[4] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[3] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[2] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[1] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[0] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.216 . Memory (MB): peak = 2109.367 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 329 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ip/KentStian_fir_0_0/constraints/fir_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.gen/sources_1/bd/KentStian/ip/KentStian_fir_0_0/constraints/fir_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.runs/KentStian_fir_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.runs/KentStian_fir_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2109.367 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 19 instances were transformed.
+  FDE => FDRE: 19 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 2109.367 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:01:08 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:01:08 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.runs/KentStian_fir_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:08 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'fir_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'fir_control_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'fir_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              110
+*
+                  rdidle |                              010 |                              100
+                  rddata |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'fir_control_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:00 ; elapsed = 00:01:11 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/fadd_32ns_32ns_32_5_full_dsp_1_U5/fir_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'U0/fadd_32ns_32ns_32_5_full_dsp_1_U5/fir_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'U0/fadd_32ns_32ns_32_5_full_dsp_1_U5/fir_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/fadd_32ns_32ns_32_5_full_dsp_1_U5/fir_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/fadd_32ns_32ns_32_5_full_dsp_1_U5/fir_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/fadd_32ns_32ns_32_5_full_dsp_1_U5/fir_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/fmul_32ns_32ns_32_4_max_dsp_1_U6/fir_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/fmul_32ns_32ns_32_4_max_dsp_1_U6/fir_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/fmul_32ns_32ns_32_4_max_dsp_1_U6/fir_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/fmul_32ns_32ns_32_4_max_dsp_1_U6/fir_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/uitofp_32ns_32_6_no_dsp_1_U7/fir_uitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized27) to 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized27) to 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/sitofp_32ns_32_6_no_dsp_1_U8/fir_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:19 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:32 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:33 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:22 ; elapsed = 00:01:34 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:39 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:39 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:01:40 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:28 ; elapsed = 00:01:40 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:01:40 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:28 ; elapsed = 00:01:40 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                     | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper                 | Dynamic         | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0 | C+A'*B'         | 24     | 16     | 35     | -      | 35     | 1    | 1    | 1    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1 | (A*B)'          | 24     | 16     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2 | PCIN>>17+(A*B)' | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3 | PCIN+A:B+C      | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     3|
+|2     |DSP48E1 |     5|
+|7     |LUT1    |    14|
+|8     |LUT2    |    87|
+|9     |LUT3    |   277|
+|10    |LUT4    |   128|
+|11    |LUT5    |   158|
+|12    |LUT6    |   234|
+|13    |MUXCY   |   193|
+|14    |MUXF7   |     3|
+|15    |XORCY   |   105|
+|16    |FDE     |    19|
+|17    |FDRE    |   991|
+|18    |FDSE    |     2|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:28 ; elapsed = 00:01:40 . Memory (MB): peak = 2109.367 ; gain = 657.668
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 304 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:34 . Memory (MB): peak = 2109.367 ; gain = 657.668
+Synthesis Optimization Complete : Time (s): cpu = 00:01:28 ; elapsed = 00:01:40 . Memory (MB): peak = 2109.367 ; gain = 657.668
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 2109.367 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 328 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2109.367 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 70 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 51 instances
+  FDE => FDRE: 19 instances
+
+Synth Design complete, checksum: 7d2c09cc
+INFO: [Common 17-83] Releasing license: Synthesis
+94 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:37 ; elapsed = 00:01:51 . Memory (MB): peak = 2109.367 ; gain = 1027.059
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.runs/KentStian_fir_0_0_synth_1/KentStian_fir_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP KentStian_fir_0_0, cache-ID = fb3425cb6355c627
+INFO: [Coretcl 2-1174] Renamed 198 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hevos/Documents/CS4110/Vivado/LW3/KentStian/KentStian.runs/KentStian_fir_0_0_synth_1/KentStian_fir_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file KentStian_fir_0_0_utilization_synth.rpt -pb KentStian_fir_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 16 13:14:54 2022...

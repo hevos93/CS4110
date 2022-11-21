@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_matwicearray_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_matwicearray" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="228.753 ns"></ZoomEndTime>
+      <Cursor1Time time="45.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="345"></NameColumnWidth>
+      <ValueColumnWidth column_width="165"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/tb_matwicearray/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/a" type="array">
+      <obj_property name="ElementShortName">a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/b" type="array">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/c" type="array">
+      <obj_property name="ElementShortName">c[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/uut/ctr_path/st_reg" type="other">
+      <obj_property name="ElementShortName">st_reg</obj_property>
+      <obj_property name="ObjectShortName">st_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/uut/ctr_path/st_nxt" type="other">
+      <obj_property name="ElementShortName">st_nxt</obj_property>
+      <obj_property name="ObjectShortName">st_nxt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/uut/loop_cnt/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/uut/rom/HEX2LED_ROM" type="array">
+      <obj_property name="ElementShortName">HEX2LED_ROM[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">HEX2LED_ROM[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/uut/ctr_path/wr" type="logic">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/uut/temp_reg_q" type="array">
+      <obj_property name="ElementShortName">temp_reg_q[16:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_reg_q[16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/uut/ram/din" type="array">
+      <obj_property name="ElementShortName">din[16:0]</obj_property>
+      <obj_property name="ObjectShortName">din[16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/uut/ram/addr" type="array">
+      <obj_property name="ElementShortName">addr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwicearray/uut/ram/ram" type="array">
+      <obj_property name="ElementShortName">ram[3:0][16:0]</obj_property>
+      <obj_property name="ObjectShortName">ram[3:0][16:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,10 @@
+14:11:39 **** Build of configuration Debug for project KentStian_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 51982 C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian_Platform/export/KentStian_Platform/KentStian_Platform.xpfm standalone_domain C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian_Platform/export/KentStian_Platform/KentStian_Platform.xpfm --sys_config KentStian_Platform --bif C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian_system/Debug/system.bif --bitstream C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian/_ide/bitstream/KentStian_wrapper.bit --elf C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian/Debug/KentStian.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian/_ide/bitstream/KentStian_wrapper.bit
+Running C:/Xilinx/Vitis/2022.2/bin/bootgen  -image C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+14:11:45 Build Finished (took 6s.665ms)
+

@@ -1,0 +1,116 @@
+
+
+================================================================
+== Synthesis Summary Report of 'fir'
+================================================================
++ General Information: 
+    * Date:           Wed Nov 16 11:43:30 2022
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        KentStian
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------+------+------+---------+---------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |             Modules             | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |        |           |           |     |
+    |             & Loops             | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |    LUT    | URAM|
+    +---------------------------------+------+------+---------+---------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |+ fir                            |     -|  0.04|       39|  390.000|         -|       40|     -|        no|     -|  5 (6%)|   755 (2%)|  1526 (8%)|    -|
+    | + fir_Pipeline_VITIS_LOOP_18_1  |     -|  0.04|       17|  170.000|         -|       17|     -|        no|     -|       -|  142 (~0%)|  172 (~0%)|    -|
+    |  o VITIS_LOOP_18_1              |    II|  7.30|       15|  150.000|        11|        5|     2|       yes|     -|       -|          -|          -|    -|
+    +---------------------------------+------+------+---------+---------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+---------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register      | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+---------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL          | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER          | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER        | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR        | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | input_r       | 0x10   | 32    | W      | Data signal of input_r           |                                                                      |
+| s_axi_control | output_r      | 0x18   | 32    | R      | Data signal of output_r          |                                                                      |
+| s_axi_control | output_r_ctrl | 0x1c   | 32    | R      | Control signal of output_r       | 0=output_r_ap_vld                                                    |
++---------------+---------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------------+
+| Argument | Direction | Datatype             |
++----------+-----------+----------------------+
+| input    | in        | unsigned char const  |
+| output   | out       | unsigned char*       |
++----------+-----------+----------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+
+| Argument | HW Interface  | HW Type   |
++----------+---------------+-----------+
+| input    | s_axi_control | interface |
+| output   | s_axi_control | interface |
++----------+---------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------+-----+--------+------------+------+---------+---------+
+| Name                                | DSP | Pragma | Variable   | Op   | Impl    | Latency |
++-------------------------------------+-----+--------+------------+------+---------+---------+
+| + fir                               | 5   |        |            |      |         |         |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U6  | 3   |        | mul8       | fmul | maxdsp  | 3       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U5 | 2   |        | acc        | fadd | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U5 | 2   |        | dc         | fadd | fulldsp | 4       |
+|   add_ln346_fu_157_p2               | -   |        | add_ln346  | add  | fabric  | 0       |
+|   sub_ln1512_fu_171_p2              | -   |        | sub_ln1512 | sub  | fabric  | 0       |
+|  + fir_Pipeline_VITIS_LOOP_18_1     | 0   |        |            |      |         |         |
+|    add_ln18_fu_95_p2                | -   |        | add_ln18   | add  | fabric  | 0       |
++-------------------------------------+-----+--------+------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+----------------------------+---------------------------------------------------------------------------------------+
+| Type      | Options                    | Location                                                                              |
++-----------+----------------------------+---------------------------------------------------------------------------------------+
+| interface | mode=s_axilite port=fir    | CS4110-HLS-Tutorial-master/CS4110-HLS-Tutorial-master/src/hls/fir.c:10 in fir, fir    |
+| interface | mode=s_axilite port=input  | CS4110-HLS-Tutorial-master/CS4110-HLS-Tutorial-master/src/hls/fir.c:11 in fir, input  |
+| interface | mode=s_axilite port=output | CS4110-HLS-Tutorial-master/CS4110-HLS-Tutorial-master/src/hls/fir.c:12 in fir, output |
++-----------+----------------------------+---------------------------------------------------------------------------------------+
+
+

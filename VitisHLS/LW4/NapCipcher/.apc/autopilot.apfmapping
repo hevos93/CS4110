@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="nap.c" path="C:\Users\hevos\Documents\CS4110\VitisHLS\LW4\NapCipher - Files\nap.c"/>
+    <originFiles name="nap.h" path="C:\Users\hevos\Documents\CS4110\VitisHLS\LW4\NapCipher - Files\nap.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

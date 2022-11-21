@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="KentStian" location="C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian" platform="C:/Users/hevos/Documents/CS4110/VitisIDE/KentStian_Platform/export/KentStian_Platform/KentStian_Platform.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="KentStian_system" sysConfig="KentStian_Platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="a3367ef15fbff0f4bfdc007a8d33e680">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.27411870">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.2024735983" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

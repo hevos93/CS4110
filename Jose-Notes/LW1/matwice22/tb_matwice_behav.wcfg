@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_matwice_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_matwice" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="200.001 ns"></ZoomEndTime>
+      <Cursor1Time time="200.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="345"></NameColumnWidth>
+      <ValueColumnWidth column_width="157"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/tb_matwice/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/x" type="array">
+      <obj_property name="ElementShortName">x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/a" type="array">
+      <obj_property name="ElementShortName">a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/b" type="array">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/c" type="array">
+      <obj_property name="ElementShortName">c[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/uut/ctr_path/st_reg" type="other">
+      <obj_property name="ElementShortName">st_reg</obj_property>
+      <obj_property name="ObjectShortName">st_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/uut/ctr_path/st_nxt" type="other">
+      <obj_property name="ElementShortName">st_nxt</obj_property>
+      <obj_property name="ObjectShortName">st_nxt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/uut/adder_out" type="array">
+      <obj_property name="ElementShortName">adder_out[16:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_out[16:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/uut/ctr_path/load_temp_reg" type="logic">
+      <obj_property name="ElementShortName">load_temp_reg</obj_property>
+      <obj_property name="ObjectShortName">load_temp_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/uut/temp_reg/q" type="array">
+      <obj_property name="ElementShortName">q[16:0]</obj_property>
+      <obj_property name="ObjectShortName">q[16:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/uut/ctr_path/load_out_reg" type="logic">
+      <obj_property name="ElementShortName">load_out_reg</obj_property>
+      <obj_property name="ObjectShortName">load_out_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_matwice/y" type="array">
+      <obj_property name="ElementShortName">y[16:0]</obj_property>
+      <obj_property name="ObjectShortName">y[16:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

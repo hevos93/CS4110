@@ -1,0 +1,36 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'hevos' on host 'laptop-usrghin7' (Windows NT_amd64 version 6.2) on Thu Nov 17 14:12:23 +0100 2022
+INFO: [HLS 200-10] In directory 'C:/Users/hevos/Documents/CS4110/VitisHLS/LW4'
+Sourcing Tcl script 'C:/Users/hevos/Documents/CS4110/VitisHLS/LW4/NapCipcher/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/hevos/Documents/CS4110/VitisHLS/LW4/NapCipcher/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project NapCipcher 
+INFO: [HLS 200-10] Opening project 'C:/Users/hevos/Documents/CS4110/VitisHLS/LW4/NapCipcher'.
+INFO: [HLS 200-1510] Running: set_top main 
+INFO: [HLS 200-1510] Running: add_files NapCipher - Files/nap.c 
+ERROR: [HLS 200-101] 'add_files': Too many positional arguments specified.
+SYNTAX 
+  add_files <src_files> [OPTIONS]
+    src_files :  <string>  (required)
+    -blackbox[=true|*false*]
+    -cflags <string> 
+    -csimflags <string> 
+    -tb[=true|*false*]
+
+SEE ALSO
+  www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=vitis+doc;d=rpg1583259720879.html
+
+command 'add_files' returned error code
+    while executing
+"add_files NapCipher - Files/nap.c"
+    (file "C:/Users/hevos/Documents/CS4110/VitisHLS/LW4/NapCipcher/solution1/csynth.tcl" line 8)
+    invoked from within
+"source C:/Users/hevos/Documents/CS4110/VitisHLS/LW4/NapCipcher/solution1/csynth.tcl"
+    invoked from within
+"hls::main C:/Users/hevos/Documents/CS4110/VitisHLS/LW4/NapCipcher/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.697 seconds; peak allocated memory: 7.168 MB.

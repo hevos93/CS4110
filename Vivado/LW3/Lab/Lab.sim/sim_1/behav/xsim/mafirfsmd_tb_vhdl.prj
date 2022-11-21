@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../LW3-Files/Lab/gen_reg.vhd" \
+"../../../../../../LW3-Files/Lab/FIRfilter.vhd" \
+"../../../../../../LW3-Files/Lab/list_ch04_11_mod_m.vhd" \
+"../../../../../../LW3-Files/Lab/list_ch07_01_uart_rx.vhd" \
+"../../../../../../LW3-Files/Lab/list_ch07_03_uart_tx.vhd" \
+"../../../../../../LW3-Files/Lab/ctr_path.vhd" \
+"../../../../../../LW3-Files/Lab/MAFIRfilter.vhd" \
+"../../../../../../LW3-Files/Lab/mafilter_tb.vhd" \
+
+# Do not sort compile order
+nosort

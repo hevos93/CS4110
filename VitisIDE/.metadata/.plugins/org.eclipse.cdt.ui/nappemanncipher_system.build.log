@@ -1,0 +1,10 @@
+17:28:08 **** Build of configuration Release for project nappemanncipher_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 51668 C:/Users/hevos/Documents/CS4110/VitisIDE/napcipher_wrapper/export/napcipher_wrapper/napcipher_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/hevos/Documents/CS4110/VitisIDE/nappemanncipher_system/Release/system.bif
+sdcard_gen --xpfm C:/Users/hevos/Documents/CS4110/VitisIDE/napcipher_wrapper/export/napcipher_wrapper/napcipher_wrapper.xpfm --sys_config napcipher_wrapper --bif C:/Users/hevos/Documents/CS4110/VitisIDE/nappemanncipher_system/Release/system.bif --bitstream C:/Users/hevos/Documents/CS4110/VitisIDE/nappemanncipher/_ide/bitstream/napcipher_wrapper.bit --elf C:/Users/hevos/Documents/CS4110/VitisIDE/nappemanncipher/Release/nappemanncipher.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/hevos/Documents/CS4110/VitisIDE/nappemanncipher/_ide/bitstream/napcipher_wrapper.bit
+Running C:/Xilinx/Vitis/2022.2/bin/bootgen  -image C:/Users/hevos/Documents/CS4110/VitisIDE/nappemanncipher_system/Release/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+17:28:16 Build Finished (took 7s.923ms)
+

@@ -1,0 +1,30 @@
+14:11:37 **** Build of configuration Debug for project KentStian ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hevos/Documents/CS4110/VitisIDE/KentStian_Platform/export/KentStian_Platform/sw/KentStian_Platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hevos/Documents/CS4110/VitisIDE/KentStian_Platform/export/KentStian_Platform/sw/KentStian_Platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: KentStian.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/hevos/Documents/CS4110/VitisIDE/KentStian_Platform/export/KentStian_Platform/sw/KentStian_Platform/standalone_domain/bsplib/lib -o "KentStian.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: KentStian.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size KentStian.elf  |tee "KentStian.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21973	   1160	  22584	  45717	   b295	KentStian.elf
+'Finished building: KentStian.elf.size'
+' '
+
+14:11:38 Build Finished (took 1s.97ms)
+

@@ -1,0 +1,12 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/FIRfilter.vhd,1668608074,vhdl,C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/MAFIRfilter.vhd,,,firfilter,,,,,,,,
+C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/MAFIRfilter.vhd,1668608074,vhdl,,,,mafirfsmd,,,,,,,,
+C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/ctr_path.vhd,1668608074,vhdl,C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/MAFIRfilter.vhd,,,ctr_path,,,,,,,,
+C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/gen_reg.vhd,1668608074,vhdl,C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/FIRfilter.vhd,,,fir_reg,,,,,,,,
+C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/list_ch04_11_mod_m.vhd,1668608074,vhdl,C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/MAFIRfilter.vhd,,,mod_m_counter,,,,,,,,
+C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/list_ch07_01_uart_rx.vhd,1668608074,vhdl,C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/MAFIRfilter.vhd,,,uart_rx,,,,,,,,
+C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/list_ch07_03_uart_tx.vhd,1668608074,vhdl,C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/MAFIRfilter.vhd,,,uart_tx,,,,,,,,
+C:/Users/hevos/Documents/CS4110/Vivado/LW3-Files/Lab/mafilter_tb.vhd,1668610277,vhdl,,,,mafirfsmd_tb,,,,,,,,

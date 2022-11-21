@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../CS4110-HLS-Tutorial-master/CS4110-HLS-Tutorial-master/src/hls/tb.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'hevos' on host 'laptop-usrghin7' (Windows NT_amd64 version 6.2) on Wed Nov 16 11:39:53 +0100 2022
+INFO: [HLS 200-10] In directory 'C:/Users/hevos/Documents/CS4110/VitisHLS/LW3/KentStian/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 1 seconds. Total elapsed time: 3.613 seconds; peak allocated memory: 7.703 MB.
+   Compiling(apcc) ../../../../CS4110-HLS-Tutorial-master/CS4110-HLS-Tutorial-master/src/hls/fir.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'hevos' on host 'laptop-usrghin7' (Windows NT_amd64 version 6.2) on Wed Nov 16 11:39:58 +0100 2022
+INFO: [HLS 200-10] In directory 'C:/Users/hevos/Documents/CS4110/VitisHLS/LW3/KentStian/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.117 seconds; peak allocated memory: 7.199 MB.
+   Generating csim.exe
+INFO: [SIM 1] CSim file generation done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
