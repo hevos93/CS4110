@@ -1,0 +1,3 @@
+substitute_substitute_key_ROM_AUTO_1R
+substitute_control_s_axi
+substitute

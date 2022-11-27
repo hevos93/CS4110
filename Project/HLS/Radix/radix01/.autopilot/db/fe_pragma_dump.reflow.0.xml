@@ -1,0 +1,4 @@
+<pragmas>
+<pragma file="../../Code/radix/radix.c" line="58" pragmaType="interface" parentfunction="radix" mode="s_axilite" port="input" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../../Code/radix/radix.c" line="59" pragmaType="interface" parentfunction="radix" mode="s_axilite" port="output" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

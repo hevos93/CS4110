@@ -1,0 +1,39 @@
+INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Fri Nov 25 10:08:52 +0100 2022
+INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim/build'
+../../../../../../Code/radix/radix.c:26:14: error: redefinition of 'i'
+    for (int i = 0; i < max; ++i)
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+../../../../../../Code/radix/radix.c:30:14: error: redefinition of 'i'
+    for (int i = 0; i < size; i++)
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+../../../../../../Code/radix/radix.c:34:14: error: redefinition of 'i'
+    for (int i = 1; i < 10; i++)
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+../../../../../../Code/radix/radix.c:38:14: error: redefinition of 'i'
+    for (int i = size - 1; i >= 0; i--) {
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+../../../../../../Code/radix/radix.c:43:14: error: redefinition of 'i'
+    for (int i = 0; i < size; i++)
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+5 errors generated.
+ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
+ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-3] Tmp directory is apcc_db
+ERROR: [APCC 202-1] APCC failed.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.38 seconds; peak allocated memory: 7.449 MB.

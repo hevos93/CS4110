@@ -1,0 +1,15 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Demo/demo/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="substitute" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=substitute" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../../Code/demo/substitute.c:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="substitute" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=substitute" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../../Code/demo/substitute.c:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="substitute" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../../Code/demo/substitute.c:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="substitute" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

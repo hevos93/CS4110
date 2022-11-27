@@ -1,0 +1,98 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 48, Column: 0 }
+Function:        radixsort
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          getMax
+    DebugLoc:        { File: ../../Code/radix/radix.c, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          radixsort
+    DebugLoc:        { File: ../../Code/radix/radix.c, Line: 48, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 48, Column: 0 }
+Function:        radixsort
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          countingSort
+    DebugLoc:        { File: ../../Code/radix/radix.c, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          radixsort
+    DebugLoc:        { File: ../../Code/radix/radix.c, Line: 48, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 57, Column: 0 }
+Function:        radix
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          radixsort
+    DebugLoc:        { File: ../../Code/radix/radix.c, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          radix
+    DebugLoc:        { File: ../../Code/radix/radix.c, Line: 57, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 35, Column: 21 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 35, Column: 18 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 35, Column: 18 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 53, Column: 22 }
+Function:        radix
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_53_1
+  - String:          ' '
+  - LoopLoc:         '../../Code/radix/radix.c:53:22'
+  - String:          ' '
+  - Function:        radix
+    DebugLoc:        { File: ../../Code/radix/radix.c, Line: 57, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 35, Column: 18 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 35, Column: 18 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...

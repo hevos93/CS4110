@@ -1,0 +1,9 @@
+remark: ../../Code/radix/radix.c:48:0: Inlining function 'getMax' into 'radixsort'
+remark: ../../Code/radix/radix.c:48:0: Inlining function 'countingSort' into 'radixsort'
+remark: ../../Code/radix/radix.c:57:0: Inlining function 'radixsort' into 'radix'
+warning: ../../Code/radix/radix.c:35:21: The program may have out of bound array access
+warning: ../../Code/radix/radix.c:35:18: The program may have out of bound array access
+warning: ../../Code/radix/radix.c:35:18: The program may have out of bound array access
+remark: ../../Code/radix/radix.c:53:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_53_1 ../../Code/radix/radix.c:53:22 radix 
+warning: ../../Code/radix/radix.c:35:18: The program may have out of bound array access
+warning: ../../Code/radix/radix.c:35:18: The program may have out of bound array access

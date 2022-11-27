@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="Radix" solutionName="radix01" date="2022-11-25T10:08:52.423+0100"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="Radix" solutionName="radix01" date="2022-11-25T10:08:52.417+0100"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="Radix" solutionName="radix01" date="2022-11-25T10:08:52.410+0100"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="Radix" solutionName="radix01" date="2022-11-25T10:08:52.404+0100"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="Radix" solutionName="radix01" date="2022-11-25T10:08:52.397+0100"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="Radix" solutionName="radix01" date="2022-11-25T10:08:52.391+0100"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="Radix" solutionName="radix01" date="2022-11-25T10:08:52.384+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="Radix" solutionName="radix01" date="2022-11-25T10:07:23.707+0100"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="Radix" solutionName="radix01" date="2022-11-25T10:07:23.696+0100"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="Radix" solutionName="radix01" date="2022-11-25T10:07:23.690+0100"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="Radix" solutionName="radix01" date="2022-11-25T10:07:23.683+0100"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="Radix" solutionName="radix01" date="2022-11-25T10:07:23.675+0100"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="Radix" solutionName="radix01" date="2022-11-25T10:07:23.669+0100"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="Radix" solutionName="radix01" date="2022-11-25T10:07:23.663+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="Radix" solutionName="radix01" date="2022-11-25T10:06:08.252+0100"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="Radix" solutionName="radix01" date="2022-11-25T10:06:08.226+0100"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="Radix" solutionName="radix01" date="2022-11-25T10:06:08.220+0100"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="Radix" solutionName="radix01" date="2022-11-25T10:06:08.213+0100"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="Radix" solutionName="radix01" date="2022-11-25T10:06:08.207+0100"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="Radix" solutionName="radix01" date="2022-11-25T10:06:08.202+0100"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="Radix" solutionName="radix01" date="2022-11-25T10:06:08.195+0100"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Radix" solutionName="radix01" date="2022-11-25T09:13:47.432+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_53_1' (../../Code/radix/radix.c:16:23) in function 'radix' more than one sub loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html" projectName="Radix" solutionName="radix01" date="2022-11-25T09:13:44.052+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:18)" projectName="Radix" solutionName="radix01" date="2022-11-25T09:13:43.833+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:21)" projectName="Radix" solutionName="radix01" date="2022-11-25T09:13:43.828+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

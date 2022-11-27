@@ -1,0 +1,26 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=radix" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=radix" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:59:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../Code/radix/radix.c:48:0" msg_body="Inlining function 'getMax' into 'radixsort'">
+        <args Callee="getMax" Caller="radixsort"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../Code/radix/radix.c:48:0" msg_body="Inlining function 'countingSort' into 'radixsort'">
+        <args Callee="countingSort" Caller="radixsort"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../Code/radix/radix.c:57:0" msg_body="Inlining function 'radixsort' into 'radix'">
+        <args Callee="radixsort" Caller="radix"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:35:21" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:35:18" msg_body="The program may have out of bound array access"/>
+</xilinx:hls_fe_msgs>
+

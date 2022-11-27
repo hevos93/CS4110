@@ -1,0 +1,107 @@
+INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Fri Nov 25 10:08:36 +0100 2022
+INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS'
+Sourcing Tcl script 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl'
+INFO: [HLS 200-1510] Running: source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl
+INFO: [HLS 200-1510] Running: open_project Radix 
+INFO: [HLS 200-10] Opening project 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix'.
+INFO: [HLS 200-1510] Running: set_top radix 
+INFO: [HLS 200-1510] Running: add_files ../../Code/radix/radix.c 
+INFO: [HLS 200-10] Adding design file '../../Code/radix/radix.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../../Code/radix/radix.h 
+INFO: [HLS 200-10] Adding design file '../../Code/radix/radix.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../../Code/radix/tb.c 
+INFO: [HLS 200-10] Adding test bench file '../../Code/radix/tb.c' to the project
+INFO: [HLS 200-1510] Running: open_solution radix01 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+Running Dispatch Server on port: 61002
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../../../Code/radix/tb.c in debug mode
+INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Fri Nov 25 10:08:50 +0100 2022
+INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim/build'
+../../../../../../Code/radix/tb.c:10:10: warning: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char [10]' [-Wint-conversion]
+    char in = "2,3,4,5,6";
+         ^    ~~~~~~~~~~~
+../../../../../../Code/radix/tb.c:13:11: error: indirection requires pointer operand ('int' invalid)
+    radix(*in, &out);
+          ^~~
+../../../../../../Code/radix/tb.c:14:23: error: use of undeclared identifier 'i'
+    printf("%c", &out[i]);
+                      ^
+1 warning and 2 errors generated.
+ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
+ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-3] Tmp directory is apcc_db
+ERROR: [APCC 202-1] APCC failed.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.379 seconds; peak allocated memory: 7.562 MB.
+   Compiling(apcc) ../../../../../../Code/radix/radix.c in debug mode
+INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Fri Nov 25 10:08:52 +0100 2022
+INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim/build'
+../../../../../../Code/radix/radix.c:26:14: error: redefinition of 'i'
+    for (int i = 0; i < max; ++i)
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+../../../../../../Code/radix/radix.c:30:14: error: redefinition of 'i'
+    for (int i = 0; i < size; i++)
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+../../../../../../Code/radix/radix.c:34:14: error: redefinition of 'i'
+    for (int i = 1; i < 10; i++)
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+../../../../../../Code/radix/radix.c:38:14: error: redefinition of 'i'
+    for (int i = size - 1; i >= 0; i--) {
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+../../../../../../Code/radix/radix.c:43:14: error: redefinition of 'i'
+    for (int i = 0; i < size; i++)
+             ^
+../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
+    for (int i = 1; i < size; i++) {
+             ^
+5 errors generated.
+ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
+ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-3] Tmp directory is apcc_db
+ERROR: [APCC 202-1] APCC failed.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.38 seconds; peak allocated memory: 7.449 MB.
+   Generating csim.exe
+Makefile.rules:322: recipe for target 'csim.exe' failed
+g++.exe: error: obj/tb.o: No such file or directory
+g++.exe: error: obj/radix.o: No such file or directory
+make: *** [csim.exe] Error 1
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.714 seconds; current allocated memory: 0.234 MB.
+5
+    while executing
+"source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl"
+    invoked from within
+"hls::main S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 16.336 seconds; peak allocated memory: 676.652 MB.
