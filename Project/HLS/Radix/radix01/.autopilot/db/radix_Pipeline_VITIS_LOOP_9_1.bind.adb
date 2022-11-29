@@ -70,7 +70,7 @@
 						<coreName>RAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -146,7 +146,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869881447</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -170,7 +170,7 @@
 					<Obj>
 						<type>0</type>
 						<id>5</id>
-						<name>i</name>
+						<name>getMax_counter</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -180,7 +180,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>i</originalName>
+						<originalName>getMax_counter</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -188,7 +188,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819243365</coreId>
+						<coreId>544435055</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -230,7 +230,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1850286592</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -255,7 +255,7 @@
 					<Obj>
 						<type>0</type>
 						<id>7</id>
-						<name>i_write_ln0</name>
+						<name>getMax_counter_write_ln0</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -273,7 +273,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>536894775</coreId>
+						<coreId>694428968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -316,7 +316,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1651406112</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -359,7 +359,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1680154669</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -383,7 +383,7 @@
 					<Obj>
 						<type>0</type>
 						<id>11</id>
-						<name>i_1</name>
+						<name>getMax_counter_1</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>9</lineNumber>
@@ -407,7 +407,7 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>i</originalName>
+						<originalName>getMax_counter</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -529,7 +529,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>6759712</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -612,7 +612,7 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>i_cast</name>
+						<name>getMax_counter_cast</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>9</lineNumber>
@@ -644,7 +644,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>506512708</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -700,7 +700,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3861879792</coreId>
+						<coreId>1008755749</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -954,7 +954,7 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>i_write_ln9</name>
+						<name>getMax_counter_write_ln9</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>9</lineNumber>
@@ -986,7 +986,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1700929644</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1045,7 +1045,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2846963298</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1146,7 +1146,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>694428968</coreId>
+						<coreId>1680154669</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1278,7 +1278,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1309,7 +1309,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -1340,7 +1340,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -1405,7 +1405,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3014706</coreId>
+					<coreId>303254318</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1441,7 +1441,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3539054</coreId>
+					<coreId>5439520</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1474,7 +1474,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>544435055</coreId>
+					<coreId>1869881447</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1514,7 +1514,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1931488359</coreId>
+					<coreId>1936025972</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2498,7 +2498,7 @@
 			</second>
 		</item>
 		<item>
-			<first>i_cast_fu_87</first>
+			<first>getMax_counter_cast_fu_87</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2506,7 +2506,7 @@
 			</second>
 		</item>
 		<item>
-			<first>i_fu_38</first>
+			<first>getMax_counter_fu_38</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2562,7 +2562,7 @@
 		<count>9</count>
 		<item_version>0</item_version>
 		<item>
-			<first>i_1_load_fu_78</first>
+			<first>getMax_counter_1_load_fu_78</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2686,7 +2686,7 @@
 		<count>3</count>
 		<item_version>0</item_version>
 		<item>
-			<first>i_reg_137</first>
+			<first>getMax_counter_reg_137</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

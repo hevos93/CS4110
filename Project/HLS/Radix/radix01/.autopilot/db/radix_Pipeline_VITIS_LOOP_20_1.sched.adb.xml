@@ -460,10 +460,10 @@ newFuncRoot:0 %max = alloca i32 1
 
 <Node id="6" bw="4" op_0_bw="32">
 <![CDATA[
-newFuncRoot:1 %i_1 = alloca i32 1
+newFuncRoot:1 %countingSort_counter1 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="i_1"/></StgValue>
+<StgValue><ssdm name="countingSort_counter1"/></StgValue>
 </operation>
 
 <operation id="77" st_id="1" stage="1" lat="1">
@@ -520,7 +520,7 @@ newFuncRoot:4 %max_4_cast = sext i5 %max_4_read
 
 <Node id="10" bw="0" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:5 %store_ln0 = store i4 1, i4 %i_1
+newFuncRoot:5 %store_ln0 = store i4 1, i4 %countingSort_counter1
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -565,10 +565,10 @@ newFuncRoot:7 %br_ln0 = br void %for.body.i6.i
 
 <Node id="14" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-for.body.i6.i:0 %i = load i4 %i_1
+for.body.i6.i:0 %countingSort_counter1_1 = load i4 %countingSort_counter1
 
 ]]></Node>
-<StgValue><ssdm name="i"/></StgValue>
+<StgValue><ssdm name="countingSort_counter1_1"/></StgValue>
 </operation>
 
 <operation id="84" st_id="1" stage="1" lat="1">
@@ -595,7 +595,7 @@ for.body.i6.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i3
 
 <Node id="16" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.body.i6.i:2 %icmp_ln20 = icmp_eq  i4 %i, i4 8
+for.body.i6.i:2 %icmp_ln20 = icmp_eq  i4 %countingSort_counter1_1, i4 8
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln20"/></StgValue>
@@ -625,7 +625,7 @@ for.body.i6.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 
 
 <Node id="18" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.body.i6.i:4 %br_ln20 = br i1 %icmp_ln20, void %for.body.i6.i.split, void %for.inc14.i.i.preheader.exitStub
+for.body.i6.i:4 %br_ln20 = br i1 %icmp_ln20, void %for.body.i6.i.split, void %for.inc13.i.i.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln20"/></StgValue>
@@ -641,10 +641,10 @@ for.body.i6.i:4 %br_ln20 = br i1 %icmp_ln20, void %for.body.i6.i.split, void %fo
 
 <Node id="21" bw="64" op_0_bw="4">
 <![CDATA[
-for.body.i6.i.split:1 %i_1_cast = zext i4 %i
+for.body.i6.i.split:1 %countingSort_counter1_cast = zext i4 %countingSort_counter1_1
 
 ]]></Node>
-<StgValue><ssdm name="i_1_cast"/></StgValue>
+<StgValue><ssdm name="countingSort_counter1_cast"/></StgValue>
 </operation>
 
 <operation id="89" st_id="1" stage="1" lat="1">
@@ -657,7 +657,7 @@ for.body.i6.i.split:1 %i_1_cast = zext i4 %i
 
 <Node id="23" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i6.i.split:3 %vla13_addr = getelementptr i32 %vla13, i64 0, i64 %i_1_cast
+for.body.i6.i.split:3 %vla13_addr = getelementptr i32 %vla13, i64 0, i64 %countingSort_counter1_cast
 
 ]]></Node>
 <StgValue><ssdm name="vla13_addr"/></StgValue>
@@ -689,7 +689,7 @@ for.body.i6.i.split:4 %vla13_load = load i3 %vla13_addr
 
 <Node id="29" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.body.i6.i.split:9 %add_ln20 = add i4 %i, i4 1
+for.body.i6.i.split:9 %add_ln20 = add i4 %countingSort_counter1_1, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln20"/></StgValue>
@@ -705,7 +705,7 @@ for.body.i6.i.split:9 %add_ln20 = add i4 %i, i4 1
 
 <Node id="30" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.body.i6.i.split:10 %store_ln20 = store i4 %add_ln20, i4 %i_1
+for.body.i6.i.split:10 %store_ln20 = store i4 %add_ln20, i4 %countingSort_counter1
 
 ]]></Node>
 <StgValue><ssdm name="store_ln20"/></StgValue>
@@ -2011,7 +2011,7 @@ for.body.i6.i.split:6 %srem_ln21 = srem i32 %sdiv_ln21, i32 10
 
 <Node id="34" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-for.inc14.i.i.preheader.exitStub:0 %max_load = load i32 %max
+for.inc13.i.i.preheader.exitStub:0 %max_load = load i32 %max
 
 ]]></Node>
 <StgValue><ssdm name="max_load"/></StgValue>
@@ -2027,7 +2027,7 @@ for.inc14.i.i.preheader.exitStub:0 %max_load = load i32 %max
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.inc14.i.i.preheader.exitStub:1 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %max_5_out, i32 %max_load
+for.inc13.i.i.preheader.exitStub:1 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %max_5_out, i32 %max_load
 
 ]]></Node>
 <StgValue><ssdm name="write_ln0"/></StgValue>
@@ -2043,7 +2043,7 @@ for.inc14.i.i.preheader.exitStub:1 %write_ln0 = write void @_ssdm_op_Write.ap_au
 
 <Node id="36" bw="0">
 <![CDATA[
-for.inc14.i.i.preheader.exitStub:2 %ret_ln0 = ret
+for.inc13.i.i.preheader.exitStub:2 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>

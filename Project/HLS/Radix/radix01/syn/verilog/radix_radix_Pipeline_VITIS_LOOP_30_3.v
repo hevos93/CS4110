@@ -212,16 +212,16 @@ wire   [31:0] grp_fu_126_p2;
 reg   [2:0] count_addr_reg_227;
 wire   [0:0] addr_cmp_fu_149_p2;
 reg   [0:0] addr_cmp_reg_233;
-wire   [63:0] i_3_cast_fu_116_p1;
+wire   [63:0] countingSort_counter3_cast_fu_116_p1;
 wire    ap_block_pp0_stage0;
 wire   [63:0] zext_ln31_fu_141_p1;
 reg   [63:0] reuse_addr_reg_fu_38;
 wire    ap_loop_init;
 reg   [31:0] reuse_reg_fu_42;
 wire   [31:0] add_ln31_fu_170_p2;
-reg   [3:0] i_3_fu_46;
+reg   [3:0] countingSort_counter3_fu_46;
 wire   [3:0] add_ln30_fu_110_p2;
-reg   [3:0] ap_sig_allocacmp_i;
+reg   [3:0] ap_sig_allocacmp_countingSort_counter3_1;
 wire   [4:0] grp_fu_131_p1;
 wire   [2:0] grp_fu_131_p2;
 wire   [2:0] trunc_ln31_fu_137_p1;
@@ -1173,9 +1173,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln30_fu_104_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_3_fu_46 <= add_ln30_fu_110_p2;
+            countingSort_counter3_fu_46 <= add_ln30_fu_110_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_3_fu_46 <= 4'd0;
+            countingSort_counter3_fu_46 <= 4'd0;
         end
     end
 end
@@ -1325,9 +1325,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i = 4'd0;
+        ap_sig_allocacmp_countingSort_counter3_1 = 4'd0;
     end else begin
-        ap_sig_allocacmp_i = i_3_fu_46;
+        ap_sig_allocacmp_countingSort_counter3_1 = countingSort_counter3_fu_46;
     end
 end
 
@@ -1374,7 +1374,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln30_fu_110_p2 = (ap_sig_allocacmp_i + 4'd1);
+assign add_ln30_fu_110_p2 = (ap_sig_allocacmp_countingSort_counter3_1 + 4'd1);
 
 assign add_ln31_fu_170_p2 = (reuse_select_fu_163_p3 + 32'd1);
 
@@ -1546,17 +1546,17 @@ assign count_address1 = zext_ln31_fu_141_p1;
 
 assign count_d0 = (reuse_select_fu_163_p3 + 32'd1);
 
+assign countingSort_counter3_cast_fu_116_p1 = ap_sig_allocacmp_countingSort_counter3_1;
+
 assign grp_fu_131_p1 = 32'd10;
 
-assign i_3_cast_fu_116_p1 = ap_sig_allocacmp_i;
-
-assign icmp_ln30_fu_104_p2 = ((ap_sig_allocacmp_i == 4'd8) ? 1'b1 : 1'b0);
+assign icmp_ln30_fu_104_p2 = ((ap_sig_allocacmp_countingSort_counter3_1 == 4'd8) ? 1'b1 : 1'b0);
 
 assign reuse_select_fu_163_p3 = ((addr_cmp_reg_233[0:0] == 1'b1) ? reuse_reg_fu_42 : count_q1);
 
 assign trunc_ln31_fu_137_p1 = grp_fu_131_p2[2:0];
 
-assign vla13_address0 = i_3_cast_fu_116_p1;
+assign vla13_address0 = countingSort_counter3_cast_fu_116_p1;
 
 assign zext_ln31_fu_141_p1 = trunc_ln31_fu_137_p1;
 

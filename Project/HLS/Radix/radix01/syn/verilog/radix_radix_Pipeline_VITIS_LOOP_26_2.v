@@ -46,12 +46,12 @@ wire   [0:0] icmp_ln26_fu_62_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] i_2_cast1_fu_74_p1;
-reg   [2:0] i_2_fu_26;
+wire   [63:0] countingSort_counter2_cast1_fu_74_p1;
+reg   [2:0] countingSort_counter2_fu_26;
 wire   [2:0] add_ln26_fu_68_p2;
 wire    ap_loop_init;
-reg   [2:0] ap_sig_allocacmp_i;
-wire   [31:0] i_2_cast_fu_58_p1;
+reg   [2:0] ap_sig_allocacmp_countingSort_counter2_1;
+wire   [31:0] countingSort_counter2_cast_fu_58_p1;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -104,9 +104,9 @@ end
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         if ((icmp_ln26_fu_62_p2 == 1'd1)) begin
-            i_2_fu_26 <= add_ln26_fu_68_p2;
+            countingSort_counter2_fu_26 <= add_ln26_fu_68_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_2_fu_26 <= 3'd0;
+            countingSort_counter2_fu_26 <= 3'd0;
         end
     end
 end
@@ -153,9 +153,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_sig_allocacmp_i = 3'd0;
+        ap_sig_allocacmp_countingSort_counter2_1 = 3'd0;
     end else begin
-        ap_sig_allocacmp_i = i_2_fu_26;
+        ap_sig_allocacmp_countingSort_counter2_1 = countingSort_counter2_fu_26;
     end
 end
 
@@ -186,7 +186,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln26_fu_68_p2 = (ap_sig_allocacmp_i + 3'd1);
+assign add_ln26_fu_68_p2 = (ap_sig_allocacmp_countingSort_counter2_1 + 3'd1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -196,14 +196,14 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign count_address0 = i_2_cast1_fu_74_p1;
+assign count_address0 = countingSort_counter2_cast1_fu_74_p1;
 
 assign count_d0 = 32'd0;
 
-assign i_2_cast1_fu_74_p1 = ap_sig_allocacmp_i;
+assign countingSort_counter2_cast1_fu_74_p1 = ap_sig_allocacmp_countingSort_counter2_1;
 
-assign i_2_cast_fu_58_p1 = ap_sig_allocacmp_i;
+assign countingSort_counter2_cast_fu_58_p1 = ap_sig_allocacmp_countingSort_counter2_1;
 
-assign icmp_ln26_fu_62_p2 = (($signed(i_2_cast_fu_58_p1) < $signed(max_5_reload)) ? 1'b1 : 1'b0);
+assign icmp_ln26_fu_62_p2 = (($signed(countingSort_counter2_cast_fu_58_p1) < $signed(max_5_reload)) ? 1'b1 : 1'b0);
 
 endmodule //radix_radix_Pipeline_VITIS_LOOP_26_2

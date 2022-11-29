@@ -47,12 +47,12 @@ attribute shreg_extract : string;
     signal ap_condition_exit_pp0_iter0_stage0 : STD_LOGIC;
     signal ap_loop_exit_ready : STD_LOGIC;
     signal ap_ready_int : STD_LOGIC;
-    signal i_2_cast1_fu_74_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal i_2_fu_26 : STD_LOGIC_VECTOR (2 downto 0);
+    signal countingSort_counter2_cast1_fu_74_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal countingSort_counter2_fu_26 : STD_LOGIC_VECTOR (2 downto 0);
     signal add_ln26_fu_68_p2 : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_loop_init : STD_LOGIC;
-    signal ap_sig_allocacmp_i : STD_LOGIC_VECTOR (2 downto 0);
-    signal i_2_cast_fu_58_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_sig_allocacmp_countingSort_counter2_1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal countingSort_counter2_cast_fu_58_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -127,14 +127,14 @@ begin
     end process;
 
 
-    i_2_fu_26_assign_proc : process (ap_clk)
+    countingSort_counter2_fu_26_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_start_int = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                 if ((icmp_ln26_fu_62_p2 = ap_const_lv1_1)) then 
-                    i_2_fu_26 <= add_ln26_fu_68_p2;
+                    countingSort_counter2_fu_26 <= add_ln26_fu_68_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
-                    i_2_fu_26 <= ap_const_lv3_0;
+                    countingSort_counter2_fu_26 <= ap_const_lv3_0;
                 end if;
             end if; 
         end if;
@@ -149,7 +149,7 @@ begin
                 ap_NS_fsm <= "X";
         end case;
     end process;
-    add_ln26_fu_68_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i) + unsigned(ap_const_lv3_1));
+    add_ln26_fu_68_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_countingSort_counter2_1) + unsigned(ap_const_lv3_1));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
 
     ap_ST_fsm_state1_blk_assign_proc : process(ap_start_int)
@@ -209,16 +209,16 @@ begin
     end process;
 
 
-    ap_sig_allocacmp_i_assign_proc : process(ap_CS_fsm_state1, i_2_fu_26, ap_loop_init)
+    ap_sig_allocacmp_countingSort_counter2_1_assign_proc : process(ap_CS_fsm_state1, countingSort_counter2_fu_26, ap_loop_init)
     begin
         if (((ap_loop_init = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            ap_sig_allocacmp_i <= ap_const_lv3_0;
+            ap_sig_allocacmp_countingSort_counter2_1 <= ap_const_lv3_0;
         else 
-            ap_sig_allocacmp_i <= i_2_fu_26;
+            ap_sig_allocacmp_countingSort_counter2_1 <= countingSort_counter2_fu_26;
         end if; 
     end process;
 
-    count_address0 <= i_2_cast1_fu_74_p1(3 - 1 downto 0);
+    count_address0 <= countingSort_counter2_cast1_fu_74_p1(3 - 1 downto 0);
 
     count_ce0_assign_proc : process(ap_CS_fsm_state1, ap_start_int)
     begin
@@ -240,7 +240,7 @@ begin
         end if; 
     end process;
 
-    i_2_cast1_fu_74_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_i),64));
-    i_2_cast_fu_58_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_i),32));
-    icmp_ln26_fu_62_p2 <= "1" when (signed(i_2_cast_fu_58_p1) < signed(max_5_reload)) else "0";
+    countingSort_counter2_cast1_fu_74_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_countingSort_counter2_1),64));
+    countingSort_counter2_cast_fu_58_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_countingSort_counter2_1),32));
+    icmp_ln26_fu_62_p2 <= "1" when (signed(countingSort_counter2_cast_fu_58_p1) < signed(max_5_reload)) else "0";
 end behav;

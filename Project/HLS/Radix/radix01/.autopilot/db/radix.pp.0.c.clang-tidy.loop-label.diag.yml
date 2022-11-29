@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
       - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60139
+        Offset:          60204
         Length:          0
         ReplacementText: 'VITIS_LOOP_20_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
       - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60274
+        Offset:          60439
         Length:          0
         ReplacementText: 'VITIS_LOOP_26_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,7 +34,7 @@ Diagnostics:
     FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
       - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60332
+        Offset:          60577
         Length:          0
         ReplacementText: 'VITIS_LOOP_30_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -43,7 +43,7 @@ Diagnostics:
     FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
       - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60411
+        Offset:          60736
         Length:          0
         ReplacementText: 'VITIS_LOOP_34_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
       - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60480
+        Offset:          60905
         Length:          0
         ReplacementText: 'VITIS_LOOP_38_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
       - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60634
+        Offset:          61179
         Length:          0
         ReplacementText: 'VITIS_LOOP_43_6: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -70,7 +70,7 @@ Diagnostics:
     FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
       - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60781
+        Offset:          61426
         Length:          0
         ReplacementText: 'VITIS_LOOP_53_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -79,7 +79,7 @@ Diagnostics:
     FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
       - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          61498
+        Offset:          62143
         Length:          0
         ReplacementText: 'VITIS_LOOP_67_1: '
 ...

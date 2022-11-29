@@ -210,16 +210,16 @@ attribute shreg_extract : string;
     signal count_addr_reg_227 : STD_LOGIC_VECTOR (2 downto 0);
     signal addr_cmp_fu_149_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal addr_cmp_reg_233 : STD_LOGIC_VECTOR (0 downto 0);
-    signal i_3_cast_fu_116_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal countingSort_counter3_cast_fu_116_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal zext_ln31_fu_141_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal reuse_addr_reg_fu_38 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal reuse_reg_fu_42 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln31_fu_170_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal i_3_fu_46 : STD_LOGIC_VECTOR (3 downto 0);
+    signal countingSort_counter3_fu_46 : STD_LOGIC_VECTOR (3 downto 0);
     signal add_ln30_fu_110_p2 : STD_LOGIC_VECTOR (3 downto 0);
-    signal ap_sig_allocacmp_i : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_sig_allocacmp_countingSort_counter3_1 : STD_LOGIC_VECTOR (3 downto 0);
     signal grp_fu_131_p1 : STD_LOGIC_VECTOR (4 downto 0);
     signal grp_fu_131_p2 : STD_LOGIC_VECTOR (2 downto 0);
     signal trunc_ln31_fu_137_p1 : STD_LOGIC_VECTOR (2 downto 0);
@@ -1443,14 +1443,14 @@ begin
     end process;
 
 
-    i_3_fu_46_assign_proc : process (ap_clk)
+    countingSort_counter3_fu_46_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
                 if (((icmp_ln30_fu_104_p2 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then 
-                    i_3_fu_46 <= add_ln30_fu_110_p2;
+                    countingSort_counter3_fu_46 <= add_ln30_fu_110_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
-                    i_3_fu_46 <= ap_const_lv4_0;
+                    countingSort_counter3_fu_46 <= ap_const_lv4_0;
                 end if;
             end if; 
         end if;
@@ -1578,7 +1578,7 @@ begin
                 ap_NS_fsm <= "X";
         end case;
     end process;
-    add_ln30_fu_110_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i) + unsigned(ap_const_lv4_1));
+    add_ln30_fu_110_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_countingSort_counter3_1) + unsigned(ap_const_lv4_1));
     add_ln31_fu_170_p2 <= std_logic_vector(unsigned(reuse_select_fu_163_p3) + unsigned(ap_const_lv32_1));
     addr_cmp_fu_149_p2 <= "1" when (reuse_addr_reg_fu_38 = zext_ln31_fu_141_p1) else "0";
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(0);
@@ -1712,12 +1712,12 @@ begin
     end process;
 
 
-    ap_sig_allocacmp_i_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0, ap_loop_init, i_3_fu_46)
+    ap_sig_allocacmp_countingSort_counter3_1_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0, ap_loop_init, countingSort_counter3_fu_46)
     begin
         if (((ap_loop_init = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            ap_sig_allocacmp_i <= ap_const_lv4_0;
+            ap_sig_allocacmp_countingSort_counter3_1 <= ap_const_lv4_0;
         else 
-            ap_sig_allocacmp_i <= i_3_fu_46;
+            ap_sig_allocacmp_countingSort_counter3_1 <= countingSort_counter3_fu_46;
         end if; 
     end process;
 
@@ -1754,14 +1754,14 @@ begin
         end if; 
     end process;
 
+    countingSort_counter3_cast_fu_116_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_countingSort_counter3_1),64));
     grp_fu_131_p1 <= ap_const_lv32_A(5 - 1 downto 0);
-    i_3_cast_fu_116_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_i),64));
-    icmp_ln30_fu_104_p2 <= "1" when (ap_sig_allocacmp_i = ap_const_lv4_8) else "0";
+    icmp_ln30_fu_104_p2 <= "1" when (ap_sig_allocacmp_countingSort_counter3_1 = ap_const_lv4_8) else "0";
     reuse_select_fu_163_p3 <= 
         reuse_reg_fu_42 when (addr_cmp_reg_233(0) = '1') else 
         count_q1;
     trunc_ln31_fu_137_p1 <= grp_fu_131_p2(3 - 1 downto 0);
-    vla13_address0 <= i_3_cast_fu_116_p1(3 - 1 downto 0);
+    vla13_address0 <= countingSort_counter3_cast_fu_116_p1(3 - 1 downto 0);
 
     vla13_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)
     begin

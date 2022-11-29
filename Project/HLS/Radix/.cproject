@@ -59,6 +59,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/win64/tools/systemc/include"/>
                                     									
+                                    <listOptionValue builtIn="false" value="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS"/>
+                                    									
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/ap_sysc"/>
                                     								
                                 </option>
@@ -92,6 +94,8 @@
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS"/>
                                     									
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/ap_sysc"/>
                                     								
@@ -156,6 +160,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1830997841.1804632234" name="tb.c" rcbsApplicability="disable" resourcePath="testbench/tb.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.789573524.655710520">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.789573524.655710520" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.789573524">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.1309138241" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.1818209102" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.1802750580" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.431424870" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						
@@ -227,6 +261,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/win64/tools/systemc/include"/>
                                     									
+                                    <listOptionValue builtIn="false" value="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS"/>
+                                    									
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/ap_sysc"/>
                                     								
                                 </option>
@@ -250,6 +286,8 @@
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS"/>
                                     									
                                     <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/ap_sysc"/>
                                     								
@@ -304,6 +342,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.47004155.1478796050" name="tb.c" rcbsApplicability="disable" resourcePath="testbench/tb.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.release.186791658.999937978">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.186791658.999937978" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release.186791658">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.599339210" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.965309535" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS"/>
+                                								
+                                <listOptionValue builtIn="false" value="S:/Xilinx/Vitis_HLS/2022.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.2059844982" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1538821003" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						

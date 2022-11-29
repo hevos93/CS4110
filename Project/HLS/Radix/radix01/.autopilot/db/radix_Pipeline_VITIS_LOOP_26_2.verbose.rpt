@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_Pipeline_VITIS_LOOP_26_2'
 ================================================================
-* Date:           Fri Nov 25 09:13:46 2022
+* Date:           Mon Nov 28 20:43:52 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        Radix
@@ -96,26 +96,26 @@
     +--------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +--------------------+----+-----------+-----+-----------+
-    |        Name        | LUT| Input Size| Bits| Total Bits|
-    +--------------------+----+-----------+-----+-----------+
-    |ap_done_int         |   9|          2|    1|          2|
-    |ap_sig_allocacmp_i  |   9|          2|    3|          6|
-    |i_2_fu_26           |   9|          2|    3|          6|
-    +--------------------+----+-----------+-----+-----------+
-    |Total               |  27|          6|    7|         14|
-    +--------------------+----+-----------+-----+-----------+
+    +------------------------------------------+----+-----------+-----+-----------+
+    |                   Name                   | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                               |   9|          2|    1|          2|
+    |ap_sig_allocacmp_countingSort_counter2_1  |   9|          2|    3|          6|
+    |countingSort_counter2_fu_26               |   9|          2|    3|          6|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |Total                                     |  27|          6|    7|         14|
+    +------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +-------------+---+----+-----+-----------+
-    |     Name    | FF| LUT| Bits| Const Bits|
-    +-------------+---+----+-----+-----------+
-    |ap_CS_fsm    |  1|   0|    1|          0|
-    |ap_done_reg  |  1|   0|    1|          0|
-    |i_2_fu_26    |  3|   0|    3|          0|
-    +-------------+---+----+-----+-----------+
-    |Total        |  5|   0|    5|          0|
-    +-------------+---+----+-----+-----------+
+    +-----------------------------+---+----+-----+-----------+
+    |             Name            | FF| LUT| Bits| Const Bits|
+    +-----------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                    |  1|   0|    1|          0|
+    |ap_done_reg                  |  1|   0|    1|          0|
+    |countingSort_counter2_fu_26  |  3|   0|    3|          0|
+    +-----------------------------+---+----+-----+-----------+
+    |Total                        |  5|   0|    5|          0|
+    +-----------------------------+---+----+-----+-----------+
 
 
 
@@ -179,22 +179,22 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.53>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i_2 = alloca i32 1"   --->   Operation 4 'alloca' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%countingSort_counter2 = alloca i32 1"   --->   Operation 4 'alloca' 'countingSort_counter2' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%max_5_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %max_5_reload"   --->   Operation 5 'read' 'max_5_reload_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.46ns)   --->   "%store_ln0 = store i3 0, i3 %i_2"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc14.i.i"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i = load i3 %i_2" [../../Code/radix/radix.c:26]   --->   Operation 8 'load' 'i' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i_2_cast = zext i3 %i" [../../Code/radix/radix.c:26]   --->   Operation 9 'zext' 'i_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.46ns)   --->   "%store_ln0 = store i3 0, i3 %countingSort_counter2"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc13.i.i"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%countingSort_counter2_1 = load i3 %countingSort_counter2" [../../Code/radix/radix.c:26]   --->   Operation 8 'load' 'countingSort_counter2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%countingSort_counter2_cast = zext i3 %countingSort_counter2_1" [../../Code/radix/radix.c:26]   --->   Operation 9 'zext' 'countingSort_counter2_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 10 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.80ns)   --->   "%icmp_ln26 = icmp_slt  i32 %i_2_cast, i32 %max_5_reload_read" [../../Code/radix/radix.c:26]   --->   Operation 11 'icmp' 'icmp_ln26' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 12 [1/1] (0.71ns)   --->   "%add_ln26 = add i3 %i, i3 1" [../../Code/radix/radix.c:26]   --->   Operation 12 'add' 'add_ln26' <Predicate = true> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln26 = br i1 %icmp_ln26, void %for.inc29.i.i.preheader.exitStub, void %for.inc14.i.i.split" [../../Code/radix/radix.c:26]   --->   Operation 13 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_2_cast1 = zext i3 %i" [../../Code/radix/radix.c:26]   --->   Operation 14 'zext' 'i_2_cast1' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.80ns)   --->   "%icmp_ln26 = icmp_slt  i32 %countingSort_counter2_cast, i32 %max_5_reload_read" [../../Code/radix/radix.c:26]   --->   Operation 11 'icmp' 'icmp_ln26' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.71ns)   --->   "%add_ln26 = add i3 %countingSort_counter2_1, i3 1" [../../Code/radix/radix.c:26]   --->   Operation 12 'add' 'add_ln26' <Predicate = true> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln26 = br i1 %icmp_ln26, void %for.inc27.i.i.preheader.exitStub, void %for.inc13.i.i.split" [../../Code/radix/radix.c:26]   --->   Operation 13 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%countingSort_counter2_cast1 = zext i3 %countingSort_counter2_1" [../../Code/radix/radix.c:26]   --->   Operation 14 'zext' 'countingSort_counter2_cast1' <Predicate = (icmp_ln26)> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln26 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [../../Code/radix/radix.c:26]   --->   Operation 15 'specloopname' 'specloopname_ln26' <Predicate = (icmp_ln26)> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%count_addr = getelementptr i32 %count, i64 0, i64 %i_2_cast1" [../../Code/radix/radix.c:27]   --->   Operation 16 'getelementptr' 'count_addr' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%count_addr = getelementptr i32 %count, i64 0, i64 %countingSort_counter2_cast1" [../../Code/radix/radix.c:27]   --->   Operation 16 'getelementptr' 'count_addr' <Predicate = (icmp_ln26)> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.73ns)   --->   "%store_ln27 = store i32 0, i3 %count_addr" [../../Code/radix/radix.c:27]   --->   Operation 17 'store' 'store_ln27' <Predicate = (icmp_ln26)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
-ST_1 : Operation 18 [1/1] (0.46ns)   --->   "%store_ln26 = store i3 %add_ln26, i3 %i_2" [../../Code/radix/radix.c:26]   --->   Operation 18 'store' 'store_ln26' <Predicate = (icmp_ln26)> <Delay = 0.46>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln26 = br void %for.inc14.i.i" [../../Code/radix/radix.c:26]   --->   Operation 19 'br' 'br_ln26' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.46ns)   --->   "%store_ln26 = store i3 %add_ln26, i3 %countingSort_counter2" [../../Code/radix/radix.c:26]   --->   Operation 18 'store' 'store_ln26' <Predicate = (icmp_ln26)> <Delay = 0.46>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln26 = br void %for.inc13.i.i" [../../Code/radix/radix.c:26]   --->   Operation 19 'br' 'br_ln26' <Predicate = (icmp_ln26)> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 20 'ret' 'ret_ln0' <Predicate = (!icmp_ln26)> <Delay = 0.00>
 
 
@@ -217,23 +217,23 @@ Port [ count]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; exte
 
 <LifeTime>
 <method=bitvector/>
-i_2               (alloca       ) [ 01]
-max_5_reload_read (read         ) [ 00]
-store_ln0         (store        ) [ 00]
-br_ln0            (br           ) [ 00]
-i                 (load         ) [ 00]
-i_2_cast          (zext         ) [ 00]
-specpipeline_ln0  (specpipeline ) [ 00]
-icmp_ln26         (icmp         ) [ 01]
-add_ln26          (add          ) [ 00]
-br_ln26           (br           ) [ 00]
-i_2_cast1         (zext         ) [ 00]
-specloopname_ln26 (specloopname ) [ 00]
-count_addr        (getelementptr) [ 00]
-store_ln27        (store        ) [ 00]
-store_ln26        (store        ) [ 00]
-br_ln26           (br           ) [ 00]
-ret_ln0           (ret          ) [ 00]
+countingSort_counter2       (alloca       ) [ 01]
+max_5_reload_read           (read         ) [ 00]
+store_ln0                   (store        ) [ 00]
+br_ln0                      (br           ) [ 00]
+countingSort_counter2_1     (load         ) [ 00]
+countingSort_counter2_cast  (zext         ) [ 00]
+specpipeline_ln0            (specpipeline ) [ 00]
+icmp_ln26                   (icmp         ) [ 01]
+add_ln26                    (add          ) [ 00]
+br_ln26                     (br           ) [ 00]
+countingSort_counter2_cast1 (zext         ) [ 00]
+specloopname_ln26           (specloopname ) [ 00]
+count_addr                  (getelementptr) [ 00]
+store_ln27                  (store        ) [ 00]
+store_ln26                  (store        ) [ 00]
+br_ln26                     (br           ) [ 00]
+ret_ln0                     (ret          ) [ 00]
 </LifeTime>
 
 <model>
@@ -357,14 +357,14 @@ ret_ln0           (ret          ) [ 00]
 </bind>
 </comp>
 
-<comp id="26" class="1004" name="i_2_fu_26">
+<comp id="26" class="1004" name="countingSort_counter2_fu_26">
 <pin_list>
 <pin id="27" dir="0" index="0" bw="1" slack="0"/>
 <pin id="28" dir="1" index="1" bw="3" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="i_2/1 "/>
+<opset="countingSort_counter2/1 "/>
 </bind>
 </comp>
 
@@ -418,25 +418,25 @@ ret_ln0           (ret          ) [ 00]
 </bind>
 </comp>
 
-<comp id="55" class="1004" name="i_load_fu_55">
+<comp id="55" class="1004" name="countingSort_counter2_1_load_fu_55">
 <pin_list>
 <pin id="56" dir="0" index="0" bw="3" slack="0"/>
 <pin id="57" dir="1" index="1" bw="3" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="i/1 "/>
+<opset="countingSort_counter2_1/1 "/>
 </bind>
 </comp>
 
-<comp id="58" class="1004" name="i_2_cast_fu_58">
+<comp id="58" class="1004" name="countingSort_counter2_cast_fu_58">
 <pin_list>
 <pin id="59" dir="0" index="0" bw="3" slack="0"/>
 <pin id="60" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="i_2_cast/1 "/>
+<opset="countingSort_counter2_cast/1 "/>
 </bind>
 </comp>
 
@@ -464,14 +464,14 @@ ret_ln0           (ret          ) [ 00]
 </bind>
 </comp>
 
-<comp id="74" class="1004" name="i_2_cast1_fu_74">
+<comp id="74" class="1004" name="countingSort_counter2_cast1_fu_74">
 <pin_list>
 <pin id="75" dir="0" index="0" bw="3" slack="0"/>
 <pin id="76" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="i_2_cast1/1 "/>
+<opset="countingSort_counter2_cast1/1 "/>
 </bind>
 </comp>
 
@@ -487,13 +487,13 @@ ret_ln0           (ret          ) [ 00]
 </bind>
 </comp>
 
-<comp id="84" class="1005" name="i_2_reg_84">
+<comp id="84" class="1005" name="countingSort_counter2_reg_84">
 <pin_list>
 <pin id="85" dir="0" index="0" bw="3" slack="0"/>
 <pin id="86" dir="1" index="1" bw="3" slack="0"/>
 </pin_list>
 <bind>
-<opset="i_2 "/>
+<opset="countingSort_counter2 "/>
 </bind>
 </comp>
 
@@ -553,12 +553,12 @@ ret_ln0           (ret          ) [ 00]
   - Chain level:
 	State 1
 		store_ln0 : 1
-		i : 1
-		i_2_cast : 2
+		countingSort_counter2_1 : 1
+		countingSort_counter2_cast : 2
 		icmp_ln26 : 3
 		add_ln26 : 2
 		br_ln26 : 4
-		i_2_cast1 : 2
+		countingSort_counter2_cast1 : 2
 		count_addr : 3
 		store_ln27 : 4
 		store_ln26 : 3
@@ -569,32 +569,32 @@ ret_ln0           (ret          ) [ 00]
 ============================================================
 
 * Functional unit list:
-|----------|------------------------------|---------|---------|
-| Operation|        Functional Unit       |    FF   |   LUT   |
-|----------|------------------------------|---------|---------|
-|   icmp   |        icmp_ln26_fu_62       |    0    |    20   |
-|----------|------------------------------|---------|---------|
-|    add   |        add_ln26_fu_68        |    0    |    10   |
-|----------|------------------------------|---------|---------|
-|   read   | max_5_reload_read_read_fu_30 |    0    |    0    |
-|----------|------------------------------|---------|---------|
-|   zext   |        i_2_cast_fu_58        |    0    |    0    |
-|          |        i_2_cast1_fu_74       |    0    |    0    |
-|----------|------------------------------|---------|---------|
-|   Total  |                              |    0    |    30   |
-|----------|------------------------------|---------|---------|
+|----------|-----------------------------------|---------|---------|
+| Operation|          Functional Unit          |    FF   |   LUT   |
+|----------|-----------------------------------|---------|---------|
+|   icmp   |          icmp_ln26_fu_62          |    0    |    20   |
+|----------|-----------------------------------|---------|---------|
+|    add   |           add_ln26_fu_68          |    0    |    10   |
+|----------|-----------------------------------|---------|---------|
+|   read   |    max_5_reload_read_read_fu_30   |    0    |    0    |
+|----------|-----------------------------------|---------|---------|
+|   zext   |  countingSort_counter2_cast_fu_58 |    0    |    0    |
+|          | countingSort_counter2_cast1_fu_74 |    0    |    0    |
+|----------|-----------------------------------|---------|---------|
+|   Total  |                                   |    0    |    30   |
+|----------|-----------------------------------|---------|---------|
 
 Memories:
 N/A
 
 * Register list:
-+----------+--------+
-|          |   FF   |
-+----------+--------+
-|i_2_reg_84|    3   |
-+----------+--------+
-|   Total  |    3   |
-+----------+--------+
++----------------------------+--------+
+|                            |   FF   |
++----------------------------+--------+
+|countingSort_counter2_reg_84|    3   |
++----------------------------+--------+
+|            Total           |    3   |
++----------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |--------|------|------|------|--------|

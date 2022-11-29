@@ -25,10 +25,10 @@
 
 <Node id="3" bw="4" op_0_bw="32">
 <![CDATA[
-newFuncRoot:0 %i = alloca i32 1
+newFuncRoot:0 %countingSort_counter4 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="i"/></StgValue>
+<StgValue><ssdm name="countingSort_counter4"/></StgValue>
 </operation>
 
 <operation id="6" st_id="1" stage="1" lat="1">
@@ -85,7 +85,7 @@ newFuncRoot:3 %store_ln0 = store i32 %count_load_read, i32 %store_forwarded
 
 <Node id="7" bw="0" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:4 %store_ln0 = store i4 1, i4 %i
+newFuncRoot:4 %store_ln0 = store i4 1, i4 %countingSort_counter4
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -100,7 +100,7 @@ newFuncRoot:4 %store_ln0 = store i4 1, i4 %i
 
 <Node id="8" bw="0" op_0_bw="0">
 <![CDATA[
-newFuncRoot:5 %br_ln0 = br void %for.inc42.i.i
+newFuncRoot:5 %br_ln0 = br void %for.inc39.i.i
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -115,10 +115,10 @@ newFuncRoot:5 %br_ln0 = br void %for.inc42.i.i
 
 <Node id="10" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-for.inc42.i.i:0 %i_4 = load i4 %i
+for.inc39.i.i:0 %countingSort_counter4_1 = load i4 %countingSort_counter4
 
 ]]></Node>
-<StgValue><ssdm name="i_4"/></StgValue>
+<StgValue><ssdm name="countingSort_counter4_1"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -130,7 +130,7 @@ for.inc42.i.i:0 %i_4 = load i4 %i
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc42.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+for.inc39.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln0"/></StgValue>
@@ -145,7 +145,7 @@ for.inc42.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i3
 
 <Node id="12" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.inc42.i.i:2 %icmp_ln34 = icmp_eq  i4 %i_4, i4 10
+for.inc39.i.i:2 %icmp_ln34 = icmp_eq  i4 %countingSort_counter4_1, i4 10
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln34"/></StgValue>
@@ -160,7 +160,7 @@ for.inc42.i.i:2 %icmp_ln34 = icmp_eq  i4 %i_4, i4 10
 
 <Node id="13" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc42.i.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9
+for.inc39.i.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -175,7 +175,7 @@ for.inc42.i.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 
 
 <Node id="14" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.inc42.i.i:4 %br_ln34 = br i1 %icmp_ln34, void %for.inc42.i.i.split, void %for.inc68.i.i.preheader.exitStub
+for.inc39.i.i:4 %br_ln34 = br i1 %icmp_ln34, void %for.inc39.i.i.split, void %for.inc64.i.i.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln34"/></StgValue>
@@ -191,10 +191,10 @@ for.inc42.i.i:4 %br_ln34 = br i1 %icmp_ln34, void %for.inc42.i.i.split, void %fo
 
 <Node id="17" bw="64" op_0_bw="4">
 <![CDATA[
-for.inc42.i.i.split:1 %i_4_cast = zext i4 %i_4
+for.inc39.i.i.split:1 %countingSort_counter4_cast = zext i4 %countingSort_counter4_1
 
 ]]></Node>
-<StgValue><ssdm name="i_4_cast"/></StgValue>
+<StgValue><ssdm name="countingSort_counter4_cast"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -207,7 +207,7 @@ for.inc42.i.i.split:1 %i_4_cast = zext i4 %i_4
 
 <Node id="19" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc42.i.i.split:3 %count_addr = getelementptr i32 %count, i64 0, i64 %i_4_cast
+for.inc39.i.i.split:3 %count_addr = getelementptr i32 %count, i64 0, i64 %countingSort_counter4_cast
 
 ]]></Node>
 <StgValue><ssdm name="count_addr"/></StgValue>
@@ -223,7 +223,7 @@ for.inc42.i.i.split:3 %count_addr = getelementptr i32 %count, i64 0, i64 %i_4_ca
 
 <Node id="20" bw="32" op_0_bw="3">
 <![CDATA[
-for.inc42.i.i.split:4 %count_load_1 = load i3 %count_addr
+for.inc39.i.i.split:4 %count_load_1 = load i3 %count_addr
 
 ]]></Node>
 <StgValue><ssdm name="count_load_1"/></StgValue>
@@ -239,7 +239,7 @@ for.inc42.i.i.split:4 %count_load_1 = load i3 %count_addr
 
 <Node id="23" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.inc42.i.i.split:7 %add_ln34 = add i4 %i_4, i4 1
+for.inc39.i.i.split:7 %add_ln34 = add i4 %countingSort_counter4_1, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34"/></StgValue>
@@ -255,7 +255,7 @@ for.inc42.i.i.split:7 %add_ln34 = add i4 %i_4, i4 1
 
 <Node id="25" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc42.i.i.split:9 %store_ln34 = store i4 %add_ln34, i4 %i
+for.inc39.i.i.split:9 %store_ln34 = store i4 %add_ln34, i4 %countingSort_counter4
 
 ]]></Node>
 <StgValue><ssdm name="store_ln34"/></StgValue>
@@ -271,7 +271,7 @@ for.inc42.i.i.split:9 %store_ln34 = store i4 %add_ln34, i4 %i
 
 <Node id="28" bw="0">
 <![CDATA[
-for.inc68.i.i.preheader.exitStub:0 %ret_ln0 = ret
+for.inc64.i.i.preheader.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>
@@ -289,7 +289,7 @@ for.inc68.i.i.preheader.exitStub:0 %ret_ln0 = ret
 
 <Node id="16" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-for.inc42.i.i.split:0 %store_forwarded_load = load i32 %store_forwarded
+for.inc39.i.i.split:0 %store_forwarded_load = load i32 %store_forwarded
 
 ]]></Node>
 <StgValue><ssdm name="store_forwarded_load"/></StgValue>
@@ -304,7 +304,7 @@ for.inc42.i.i.split:0 %store_forwarded_load = load i32 %store_forwarded
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc42.i.i.split:2 %specloopname_ln34 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
+for.inc39.i.i.split:2 %specloopname_ln34 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln34"/></StgValue>
@@ -319,7 +319,7 @@ for.inc42.i.i.split:2 %specloopname_ln34 = specloopname void @_ssdm_op_SpecLoopN
 
 <Node id="20" bw="32" op_0_bw="3">
 <![CDATA[
-for.inc42.i.i.split:4 %count_load_1 = load i3 %count_addr
+for.inc39.i.i.split:4 %count_load_1 = load i3 %count_addr
 
 ]]></Node>
 <StgValue><ssdm name="count_load_1"/></StgValue>
@@ -334,7 +334,7 @@ for.inc42.i.i.split:4 %count_load_1 = load i3 %count_addr
 
 <Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc42.i.i.split:5 %add_ln35 = add i32 %count_load_1, i32 %store_forwarded_load
+for.inc39.i.i.split:5 %add_ln35 = add i32 %count_load_1, i32 %store_forwarded_load
 
 ]]></Node>
 <StgValue><ssdm name="add_ln35"/></StgValue>
@@ -349,7 +349,7 @@ for.inc42.i.i.split:5 %add_ln35 = add i32 %count_load_1, i32 %store_forwarded_lo
 
 <Node id="22" bw="0" op_0_bw="32" op_1_bw="3" op_2_bw="0">
 <![CDATA[
-for.inc42.i.i.split:6 %store_ln35 = store i32 %add_ln35, i3 %count_addr
+for.inc39.i.i.split:6 %store_ln35 = store i32 %add_ln35, i3 %count_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln35"/></StgValue>
@@ -364,7 +364,7 @@ for.inc42.i.i.split:6 %store_ln35 = store i32 %add_ln35, i3 %count_addr
 
 <Node id="24" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc42.i.i.split:8 %store_ln34 = store i32 %add_ln35, i32 %store_forwarded
+for.inc39.i.i.split:8 %store_ln34 = store i32 %add_ln35, i32 %store_forwarded
 
 ]]></Node>
 <StgValue><ssdm name="store_ln34"/></StgValue>
@@ -379,7 +379,7 @@ for.inc42.i.i.split:8 %store_ln34 = store i32 %add_ln35, i32 %store_forwarded
 
 <Node id="26" bw="0" op_0_bw="0">
 <![CDATA[
-for.inc42.i.i.split:10 %br_ln34 = br void %for.inc42.i.i
+for.inc39.i.i.split:10 %br_ln34 = br void %for.inc39.i.i
 
 ]]></Node>
 <StgValue><ssdm name="br_ln34"/></StgValue>

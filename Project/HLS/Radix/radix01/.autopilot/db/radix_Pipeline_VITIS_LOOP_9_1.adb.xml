@@ -40,10 +40,10 @@ newFuncRoot:0 %max_1 = alloca i32 1
 
 <Node id="5" bw="4" op_0_bw="32">
 <![CDATA[
-newFuncRoot:1 %i = alloca i32 1
+newFuncRoot:1 %getMax_counter = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="i"/></StgValue>
+<StgValue><ssdm name="getMax_counter"/></StgValue>
 </operation>
 
 <operation id="7" st_id="1" stage="1" lat="1">
@@ -70,7 +70,7 @@ newFuncRoot:2 %max_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %max
 
 <Node id="7" bw="0" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:3 %store_ln0 = store i4 1, i4 %i
+newFuncRoot:3 %store_ln0 = store i4 1, i4 %getMax_counter
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -115,10 +115,10 @@ newFuncRoot:5 %br_ln0 = br void %for.body.i.i
 
 <Node id="11" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-for.body.i.i:0 %i_1 = load i4 %i
+for.body.i.i:0 %getMax_counter_1 = load i4 %getMax_counter
 
 ]]></Node>
-<StgValue><ssdm name="i_1"/></StgValue>
+<StgValue><ssdm name="getMax_counter_1"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -145,7 +145,7 @@ for.body.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="13" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.body.i.i:2 %icmp_ln9 = icmp_eq  i4 %i_1, i4 8
+for.body.i.i:2 %icmp_ln9 = icmp_eq  i4 %getMax_counter_1, i4 8
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln9"/></StgValue>
@@ -191,10 +191,10 @@ for.body.i.i:4 %br_ln9 = br i1 %icmp_ln9, void %for.body.i.i.split, void %getMax
 
 <Node id="18" bw="64" op_0_bw="4">
 <![CDATA[
-for.body.i.i.split:1 %i_cast = zext i4 %i_1
+for.body.i.i.split:1 %getMax_counter_cast = zext i4 %getMax_counter_1
 
 ]]></Node>
-<StgValue><ssdm name="i_cast"/></StgValue>
+<StgValue><ssdm name="getMax_counter_cast"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -207,7 +207,7 @@ for.body.i.i.split:1 %i_cast = zext i4 %i_1
 
 <Node id="20" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i.i.split:3 %vla13_addr = getelementptr i32 %vla13, i64 0, i64 %i_cast
+for.body.i.i.split:3 %vla13_addr = getelementptr i32 %vla13, i64 0, i64 %getMax_counter_cast
 
 ]]></Node>
 <StgValue><ssdm name="vla13_addr"/></StgValue>
@@ -239,7 +239,7 @@ for.body.i.i.split:4 %vla13_load = load i3 %vla13_addr
 
 <Node id="24" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.body.i.i.split:7 %add_ln9 = add i4 %i_1, i4 1
+for.body.i.i.split:7 %add_ln9 = add i4 %getMax_counter_1, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln9"/></StgValue>
@@ -255,7 +255,7 @@ for.body.i.i.split:7 %add_ln9 = add i4 %i_1, i4 1
 
 <Node id="25" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.body.i.i.split:8 %store_ln9 = store i4 %add_ln9, i4 %i
+for.body.i.i.split:8 %store_ln9 = store i4 %add_ln9, i4 %getMax_counter
 
 ]]></Node>
 <StgValue><ssdm name="store_ln9"/></StgValue>
@@ -437,7 +437,7 @@ for.body.i.i.split:10 %br_ln9 = br void %for.body.i.i
 <dataflows>
 <dataflow id="44" from="StgValue_43" to="max_1" fromId="43" toId="5">
 </dataflow>
-<dataflow id="45" from="StgValue_43" to="i" fromId="43" toId="6">
+<dataflow id="45" from="StgValue_43" to="getMax_counter" fromId="43" toId="6">
 </dataflow>
 <dataflow id="47" from="_ssdm_op_Read.ap_auto.i32" to="max_read" fromId="46" toId="7">
 </dataflow>
@@ -445,13 +445,13 @@ for.body.i.i.split:10 %br_ln9 = br void %for.body.i.i
 </dataflow>
 <dataflow id="50" from="StgValue_49" to="store_ln0" fromId="49" toId="8">
 </dataflow>
-<dataflow id="51" from="i" to="store_ln0" fromId="6" toId="8">
+<dataflow id="51" from="getMax_counter" to="store_ln0" fromId="6" toId="8">
 </dataflow>
 <dataflow id="52" from="max_read" to="store_ln0" fromId="7" toId="9">
 </dataflow>
 <dataflow id="53" from="max_1" to="store_ln0" fromId="5" toId="9">
 </dataflow>
-<dataflow id="54" from="i" to="i_1" fromId="6" toId="11">
+<dataflow id="54" from="getMax_counter" to="getMax_counter_1" fromId="6" toId="11">
 </dataflow>
 <dataflow id="56" from="_ssdm_op_SpecPipeline" to="specpipeline_ln0" fromId="55" toId="12">
 </dataflow>
@@ -465,7 +465,7 @@ for.body.i.i.split:10 %br_ln9 = br void %for.body.i.i
 </dataflow>
 <dataflow id="64" from="p_str" to="specpipeline_ln0" fromId="63" toId="12">
 </dataflow>
-<dataflow id="65" from="i_1" to="icmp_ln9" fromId="11" toId="13">
+<dataflow id="65" from="getMax_counter_1" to="icmp_ln9" fromId="11" toId="13">
 </dataflow>
 <dataflow id="67" from="StgValue_66" to="icmp_ln9" fromId="66" toId="13">
 </dataflow>
@@ -479,23 +479,23 @@ for.body.i.i.split:10 %br_ln9 = br void %for.body.i.i
 </dataflow>
 <dataflow id="74" from="icmp_ln9" to="br_ln9" fromId="13" toId="15">
 </dataflow>
-<dataflow id="75" from="i_1" to="i_cast" fromId="11" toId="16">
+<dataflow id="75" from="getMax_counter_1" to="getMax_counter_cast" fromId="11" toId="16">
 </dataflow>
 <dataflow id="76" from="vla13" to="vla13_addr" fromId="41" toId="17">
 </dataflow>
 <dataflow id="78" from="StgValue_77" to="vla13_addr" fromId="77" toId="17">
 </dataflow>
-<dataflow id="79" from="i_cast" to="vla13_addr" fromId="16" toId="17">
+<dataflow id="79" from="getMax_counter_cast" to="vla13_addr" fromId="16" toId="17">
 </dataflow>
 <dataflow id="80" from="vla13_addr" to="vla13_load" fromId="17" toId="18">
 </dataflow>
-<dataflow id="81" from="i_1" to="add_ln9" fromId="11" toId="19">
+<dataflow id="81" from="getMax_counter_1" to="add_ln9" fromId="11" toId="19">
 </dataflow>
 <dataflow id="82" from="StgValue_49" to="add_ln9" fromId="49" toId="19">
 </dataflow>
 <dataflow id="83" from="add_ln9" to="store_ln9" fromId="19" toId="20">
 </dataflow>
-<dataflow id="84" from="i" to="store_ln9" fromId="6" toId="20">
+<dataflow id="84" from="getMax_counter" to="store_ln9" fromId="6" toId="20">
 </dataflow>
 <dataflow id="85" from="max_1" to="max_1_load_1" fromId="5" toId="21">
 </dataflow>

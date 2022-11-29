@@ -58,12 +58,12 @@ attribute shreg_extract : string;
     signal ap_ready_int : STD_LOGIC;
     signal count_addr_reg_128 : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
-    signal i_4_cast_fu_80_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal countingSort_counter4_cast_fu_80_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal i_fu_30 : STD_LOGIC_VECTOR (3 downto 0);
+    signal countingSort_counter4_fu_30 : STD_LOGIC_VECTOR (3 downto 0);
     signal add_ln34_fu_85_p2 : STD_LOGIC_VECTOR (3 downto 0);
     signal ap_loop_init : STD_LOGIC;
-    signal ap_sig_allocacmp_i_4 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_sig_allocacmp_countingSort_counter4_1 : STD_LOGIC_VECTOR (3 downto 0);
     signal store_forwarded_fu_34 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln35_fu_99_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
@@ -156,14 +156,14 @@ begin
     end process;
 
 
-    i_fu_30_assign_proc : process (ap_clk)
+    countingSort_counter4_fu_30_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
                 if (((icmp_ln34_fu_74_p2 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then 
-                    i_fu_30 <= add_ln34_fu_85_p2;
+                    countingSort_counter4_fu_30 <= add_ln34_fu_85_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
-                    i_fu_30 <= ap_const_lv4_1;
+                    countingSort_counter4_fu_30 <= ap_const_lv4_1;
                 end if;
             end if; 
         end if;
@@ -185,7 +185,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((icmp_ln34_fu_74_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                count_addr_reg_128 <= i_4_cast_fu_80_p1(3 - 1 downto 0);
+                count_addr_reg_128 <= countingSort_counter4_cast_fu_80_p1(3 - 1 downto 0);
             end if;
         end if;
     end process;
@@ -199,7 +199,7 @@ begin
                 ap_NS_fsm <= "X";
         end case;
     end process;
-    add_ln34_fu_85_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i_4) + unsigned(ap_const_lv4_1));
+    add_ln34_fu_85_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_countingSort_counter4_1) + unsigned(ap_const_lv4_1));
     add_ln35_fu_99_p2 <= std_logic_vector(unsigned(count_q1) + unsigned(store_forwarded_fu_34));
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(0);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -261,17 +261,17 @@ begin
     end process;
 
 
-    ap_sig_allocacmp_i_4_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0, i_fu_30, ap_loop_init)
+    ap_sig_allocacmp_countingSort_counter4_1_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0, countingSort_counter4_fu_30, ap_loop_init)
     begin
         if (((ap_loop_init = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            ap_sig_allocacmp_i_4 <= ap_const_lv4_1;
+            ap_sig_allocacmp_countingSort_counter4_1 <= ap_const_lv4_1;
         else 
-            ap_sig_allocacmp_i_4 <= i_fu_30;
+            ap_sig_allocacmp_countingSort_counter4_1 <= countingSort_counter4_fu_30;
         end if; 
     end process;
 
     count_address0 <= count_addr_reg_128;
-    count_address1 <= i_4_cast_fu_80_p1(3 - 1 downto 0);
+    count_address1 <= countingSort_counter4_cast_fu_80_p1(3 - 1 downto 0);
 
     count_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
@@ -303,6 +303,6 @@ begin
         end if; 
     end process;
 
-    i_4_cast_fu_80_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_i_4),64));
-    icmp_ln34_fu_74_p2 <= "1" when (ap_sig_allocacmp_i_4 = ap_const_lv4_A) else "0";
+    countingSort_counter4_cast_fu_80_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_countingSort_counter4_1),64));
+    icmp_ln34_fu_74_p2 <= "1" when (ap_sig_allocacmp_countingSort_counter4_1 = ap_const_lv4_A) else "0";
 end behav;

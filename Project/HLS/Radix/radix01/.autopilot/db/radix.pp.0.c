@@ -1085,9 +1085,9 @@ __attribute__((sdx_kernel("radix", 0))) void radix(const char* input, int* outpu
 
 int getMax(int array[], int n) {
     int max = array[0];
-    VITIS_LOOP_9_1: for (int i = 1; i < n; i++)
-        if (array[i] > max)
-            max = array[i];
+    VITIS_LOOP_9_1: for (int getMax_counter = 1; getMax_counter < n; getMax_counter++)
+        if (array[getMax_counter] > max)
+            max = array[getMax_counter];
     return max;
 }
 
@@ -1096,31 +1096,31 @@ void countingSort(int array[], int size, int place) {
     int output[size + 1];
     int max = (array[0] / place) % 10;
 
-    VITIS_LOOP_20_1: for (int i = 1; i < size; i++) {
-        if (((array[i] / place) % 10) > max)
-            max = array[i];
+    VITIS_LOOP_20_1: for (int countingSort_counter1 = 1; countingSort_counter1 < size; countingSort_counter1++) {
+        if (((array[countingSort_counter1] / place) % 10) > max)
+            max = array[countingSort_counter1];
     }
     int count[6];
 
-    VITIS_LOOP_26_2: for (int i = 0; i < max; ++i)
-        count[i] = 0;
+    VITIS_LOOP_26_2: for (int countingSort_counter2 = 0; countingSort_counter2 < max; ++countingSort_counter2)
+        count[countingSort_counter2] = 0;
 
 
-    VITIS_LOOP_30_3: for (int i = 0; i < size; i++)
-        count[(array[i] / place) % 10]++;
+    VITIS_LOOP_30_3: for (int countingSort_counter3 = 0; countingSort_counter3 < size; countingSort_counter3++)
+        count[(array[countingSort_counter3] / place) % 10]++;
 
 
-    VITIS_LOOP_34_4: for (int i = 1; i < 10; i++)
-        count[i] += count[i - 1];
+    VITIS_LOOP_34_4: for (int countingSort_counter4 = 1; countingSort_counter4 < 10; countingSort_counter4++)
+        count[countingSort_counter4] += count[countingSort_counter4 - 1];
 
 
-    VITIS_LOOP_38_5: for (int i = size - 1; i >= 0; i--) {
-        output[count[(array[i] / place) % 10] - 1] = array[i];
-        count[(array[i] / place) % 10]--;
+    VITIS_LOOP_38_5: for (int countingSort_counter5 = size - 1; countingSort_counter5 >= 0; countingSort_counter5--) {
+        output[count[(array[countingSort_counter5] / place) % 10] - 1] = array[countingSort_counter5];
+        count[(array[countingSort_counter5] / place) % 10]--;
     }
 
-    VITIS_LOOP_43_6: for (int i = 0; i < size; i++)
-        array[i] = output[i];
+    VITIS_LOOP_43_6: for (int countingSort_counter6 = 0; countingSort_counter6 < size; countingSort_counter6++)
+        array[countingSort_counter6] = output[countingSort_counter6];
 }
 
 

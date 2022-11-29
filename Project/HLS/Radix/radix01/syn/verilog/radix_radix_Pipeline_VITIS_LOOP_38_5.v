@@ -293,7 +293,7 @@ wire   [31:0] grp_fu_145_p2;
 reg   [2:0] count_addr_reg_252;
 wire   [0:0] addr_cmp_fu_168_p2;
 reg   [0:0] addr_cmp_reg_258;
-wire   [63:0] i_5_cast_fu_129_p1;
+wire   [63:0] countingSort_counter5_cast_fu_129_p1;
 wire    ap_block_pp0_stage0;
 wire   [63:0] zext_ln39_fu_160_p1;
 wire   [63:0] zext_ln39_1_fu_196_p1;
@@ -301,9 +301,9 @@ reg   [63:0] reuse_addr_reg_fu_42;
 wire    ap_loop_init;
 reg   [31:0] reuse_reg_fu_46;
 wire   [31:0] add_ln39_fu_189_p2;
-reg   [3:0] i_fu_50;
+reg   [3:0] countingSort_counter5_fu_50;
 wire   [3:0] add_ln38_fu_134_p2;
-reg   [3:0] ap_sig_allocacmp_i_3;
+reg   [3:0] ap_sig_allocacmp_countingSort_counter5_1;
 wire   [4:0] grp_fu_150_p1;
 wire   [2:0] grp_fu_150_p2;
 wire   [2:0] trunc_ln39_fu_156_p1;
@@ -1255,9 +1255,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((tmp_fu_121_p3 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_fu_50 <= add_ln38_fu_134_p2;
+            countingSort_counter5_fu_50 <= add_ln38_fu_134_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_50 <= 4'd7;
+            countingSort_counter5_fu_50 <= 4'd7;
         end
     end
 end
@@ -1478,9 +1478,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_3 = 4'd7;
+        ap_sig_allocacmp_countingSort_counter5_1 = 4'd7;
     end else begin
-        ap_sig_allocacmp_i_3 = i_fu_50;
+        ap_sig_allocacmp_countingSort_counter5_1 = countingSort_counter5_fu_50;
     end
 end
 
@@ -1543,7 +1543,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln38_fu_134_p2 = ($signed(ap_sig_allocacmp_i_3) + $signed(4'd15));
+assign add_ln38_fu_134_p2 = ($signed(ap_sig_allocacmp_countingSort_counter5_1) + $signed(4'd15));
 
 assign add_ln39_fu_189_p2 = ($signed(reuse_select_fu_182_p3) + $signed(32'd4294967295));
 
@@ -1715,9 +1715,9 @@ assign count_address1 = zext_ln39_fu_160_p1;
 
 assign count_d0 = add_ln39_fu_189_p2;
 
-assign grp_fu_150_p1 = 32'd10;
+assign countingSort_counter5_cast_fu_129_p1 = ap_sig_allocacmp_countingSort_counter5_1;
 
-assign i_5_cast_fu_129_p1 = ap_sig_allocacmp_i_3;
+assign grp_fu_150_p1 = 32'd10;
 
 assign output_r_address0 = zext_ln39_1_fu_196_p1;
 
@@ -1725,11 +1725,11 @@ assign output_r_d0 = vla13_load_reg_241_pp0_iter71_reg;
 
 assign reuse_select_fu_182_p3 = ((addr_cmp_reg_258[0:0] == 1'b1) ? reuse_reg_fu_46 : count_q1);
 
-assign tmp_fu_121_p3 = ap_sig_allocacmp_i_3[32'd3];
+assign tmp_fu_121_p3 = ap_sig_allocacmp_countingSort_counter5_1[32'd3];
 
 assign trunc_ln39_fu_156_p1 = grp_fu_150_p2[2:0];
 
-assign vla13_address0 = i_5_cast_fu_129_p1;
+assign vla13_address0 = countingSort_counter5_cast_fu_129_p1;
 
 assign zext_ln39_1_fu_196_p1 = add_ln39_fu_189_p2;
 

@@ -54,14 +54,14 @@ reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_block_pp0_stage0_11001;
-wire   [63:0] i_cast_fu_87_p1;
+wire   [63:0] getMax_counter_cast_fu_87_p1;
 wire    ap_block_pp0_stage0;
 reg   [31:0] max_1_fu_34;
 wire   [31:0] max_2_fu_112_p3;
 wire    ap_loop_init;
-reg   [3:0] i_fu_38;
+reg   [3:0] getMax_counter_fu_38;
 wire   [3:0] add_ln9_fu_92_p2;
-reg   [3:0] ap_sig_allocacmp_i_1;
+reg   [3:0] ap_sig_allocacmp_getMax_counter_1;
 wire    ap_block_pp0_stage0_01001;
 wire   [0:0] icmp_ln10_fu_106_p2;
 reg    ap_done_reg;
@@ -129,9 +129,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln9_fu_81_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_fu_38 <= add_ln9_fu_92_p2;
+            getMax_counter_fu_38 <= add_ln9_fu_92_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_38 <= 4'd1;
+            getMax_counter_fu_38 <= 4'd1;
         end
     end
 end
@@ -188,9 +188,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_1 = 4'd1;
+        ap_sig_allocacmp_getMax_counter_1 = 4'd1;
     end else begin
-        ap_sig_allocacmp_i_1 = i_fu_38;
+        ap_sig_allocacmp_getMax_counter_1 = getMax_counter_fu_38;
     end
 end
 
@@ -221,7 +221,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln9_fu_92_p2 = (ap_sig_allocacmp_i_1 + 4'd1);
+assign add_ln9_fu_92_p2 = (ap_sig_allocacmp_getMax_counter_1 + 4'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -243,16 +243,16 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign i_cast_fu_87_p1 = ap_sig_allocacmp_i_1;
+assign getMax_counter_cast_fu_87_p1 = ap_sig_allocacmp_getMax_counter_1;
 
 assign icmp_ln10_fu_106_p2 = (($signed(max_1_fu_34) < $signed(vla13_q0)) ? 1'b1 : 1'b0);
 
-assign icmp_ln9_fu_81_p2 = ((ap_sig_allocacmp_i_1 == 4'd8) ? 1'b1 : 1'b0);
+assign icmp_ln9_fu_81_p2 = ((ap_sig_allocacmp_getMax_counter_1 == 4'd8) ? 1'b1 : 1'b0);
 
 assign max_2_fu_112_p3 = ((icmp_ln10_fu_106_p2[0:0] == 1'b1) ? vla13_q0 : max_1_fu_34);
 
 assign max_2_out = max_1_fu_34;
 
-assign vla13_address0 = i_cast_fu_87_p1;
+assign vla13_address0 = getMax_counter_cast_fu_87_p1;
 
 endmodule //radix_radix_Pipeline_VITIS_LOOP_9_1

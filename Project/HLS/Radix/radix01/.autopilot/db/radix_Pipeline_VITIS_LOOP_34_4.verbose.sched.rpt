@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_Pipeline_VITIS_LOOP_34_4'
 ================================================================
-* Date:           Fri Nov 25 09:13:45 2022
+* Date:           Mon Nov 28 20:43:50 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        Radix
@@ -85,22 +85,22 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.26>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%countingSort_counter4 = alloca i32 1"   --->   Operation 5 'alloca' 'countingSort_counter4' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%store_forwarded = alloca i32 1"   --->   Operation 6 'alloca' 'store_forwarded' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%count_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %count_load"   --->   Operation 7 'read' 'count_load_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.46ns)   --->   "%store_ln0 = store i32 %count_load_read, i32 %store_forwarded"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
-ST_1 : Operation 9 [1/1] (0.46ns)   --->   "%store_ln0 = store i4 1, i4 %i"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc42.i.i"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i_4 = load i4 %i" [../../Code/radix/radix.c:34]   --->   Operation 11 'load' 'i_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.46ns)   --->   "%store_ln0 = store i4 1, i4 %countingSort_counter4"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc39.i.i"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%countingSort_counter4_1 = load i4 %countingSort_counter4" [../../Code/radix/radix.c:34]   --->   Operation 11 'load' 'countingSort_counter4_1' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 12 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.72ns)   --->   "%icmp_ln34 = icmp_eq  i4 %i_4, i4 10" [../../Code/radix/radix.c:34]   --->   Operation 13 'icmp' 'icmp_ln34' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.72ns)   --->   "%icmp_ln34 = icmp_eq  i4 %countingSort_counter4_1, i4 10" [../../Code/radix/radix.c:34]   --->   Operation 13 'icmp' 'icmp_ln34' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9"   --->   Operation 14 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln34 = br i1 %icmp_ln34, void %for.inc42.i.i.split, void %for.inc68.i.i.preheader.exitStub" [../../Code/radix/radix.c:34]   --->   Operation 15 'br' 'br_ln34' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%i_4_cast = zext i4 %i_4" [../../Code/radix/radix.c:34]   --->   Operation 16 'zext' 'i_4_cast' <Predicate = (!icmp_ln34)> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%count_addr = getelementptr i32 %count, i64 0, i64 %i_4_cast" [../../Code/radix/radix.c:35]   --->   Operation 17 'getelementptr' 'count_addr' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln34 = br i1 %icmp_ln34, void %for.inc39.i.i.split, void %for.inc64.i.i.preheader.exitStub" [../../Code/radix/radix.c:34]   --->   Operation 15 'br' 'br_ln34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%countingSort_counter4_cast = zext i4 %countingSort_counter4_1" [../../Code/radix/radix.c:34]   --->   Operation 16 'zext' 'countingSort_counter4_cast' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%count_addr = getelementptr i32 %count, i64 0, i64 %countingSort_counter4_cast" [../../Code/radix/radix.c:35]   --->   Operation 17 'getelementptr' 'count_addr' <Predicate = (!icmp_ln34)> <Delay = 0.00>
 ST_1 : Operation 18 [2/2] (0.73ns)   --->   "%count_load_1 = load i3 %count_addr" [../../Code/radix/radix.c:35]   --->   Operation 18 'load' 'count_load_1' <Predicate = (!icmp_ln34)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
-ST_1 : Operation 19 [1/1] (0.80ns)   --->   "%add_ln34 = add i4 %i_4, i4 1" [../../Code/radix/radix.c:34]   --->   Operation 19 'add' 'add_ln34' <Predicate = (!icmp_ln34)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 20 [1/1] (0.46ns)   --->   "%store_ln34 = store i4 %add_ln34, i4 %i" [../../Code/radix/radix.c:34]   --->   Operation 20 'store' 'store_ln34' <Predicate = (!icmp_ln34)> <Delay = 0.46>
+ST_1 : Operation 19 [1/1] (0.80ns)   --->   "%add_ln34 = add i4 %countingSort_counter4_1, i4 1" [../../Code/radix/radix.c:34]   --->   Operation 19 'add' 'add_ln34' <Predicate = (!icmp_ln34)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.46ns)   --->   "%store_ln34 = store i4 %add_ln34, i4 %countingSort_counter4" [../../Code/radix/radix.c:34]   --->   Operation 20 'store' 'store_ln34' <Predicate = (!icmp_ln34)> <Delay = 0.46>
 ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = (icmp_ln34)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 2.60>
@@ -110,7 +110,7 @@ ST_2 : Operation 23 [1/2] (0.73ns)   --->   "%count_load_1 = load i3 %count_addr
 ST_2 : Operation 24 [1/1] (1.14ns)   --->   "%add_ln35 = add i32 %count_load_1, i32 %store_forwarded_load" [../../Code/radix/radix.c:35]   --->   Operation 24 'add' 'add_ln35' <Predicate = true> <Delay = 1.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 25 [1/1] (0.73ns)   --->   "%store_ln35 = store i32 %add_ln35, i3 %count_addr" [../../Code/radix/radix.c:35]   --->   Operation 25 'store' 'store_ln35' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
 ST_2 : Operation 26 [1/1] (0.46ns)   --->   "%store_ln34 = store i32 %add_ln35, i32 %store_forwarded" [../../Code/radix/radix.c:34]   --->   Operation 26 'store' 'store_ln34' <Predicate = true> <Delay = 0.46>
-ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln34 = br void %for.inc42.i.i" [../../Code/radix/radix.c:34]   --->   Operation 27 'br' 'br_ln34' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln34 = br void %for.inc39.i.i" [../../Code/radix/radix.c:34]   --->   Operation 27 'br' 'br_ln34' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -120,10 +120,10 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
 
  <State 1>: 1.27ns
 The critical path consists of the following:
-	'alloca' operation ('i') [3]  (0 ns)
-	'load' operation ('i', ../../Code/radix/radix.c:34) on local variable 'i' [10]  (0 ns)
+	'alloca' operation ('countingSort_counter4') [3]  (0 ns)
+	'load' operation ('countingSort_counter4', ../../Code/radix/radix.c:34) on local variable 'countingSort_counter4' [10]  (0 ns)
 	'add' operation ('add_ln34', ../../Code/radix/radix.c:34) [23]  (0.809 ns)
-	'store' operation ('store_ln34', ../../Code/radix/radix.c:34) of variable 'add_ln34', ../../Code/radix/radix.c:34 on local variable 'i' [25]  (0.46 ns)
+	'store' operation ('store_ln34', ../../Code/radix/radix.c:34) of variable 'add_ln34', ../../Code/radix/radix.c:34 on local variable 'countingSort_counter4' [25]  (0.46 ns)
 
  <State 2>: 2.6ns
 The critical path consists of the following:

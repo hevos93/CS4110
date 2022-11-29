@@ -25,10 +25,10 @@
 
 <Node id="3" bw="4" op_0_bw="32">
 <![CDATA[
-newFuncRoot:0 %i = alloca i32 1
+newFuncRoot:0 %countingSort_counter6 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="i"/></StgValue>
+<StgValue><ssdm name="countingSort_counter6"/></StgValue>
 </operation>
 
 <operation id="6" st_id="1" stage="1" lat="1">
@@ -40,7 +40,7 @@ newFuncRoot:0 %i = alloca i32 1
 
 <Node id="4" bw="0" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:1 %store_ln0 = store i4 0, i4 %i
+newFuncRoot:1 %store_ln0 = store i4 0, i4 %countingSort_counter6
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -55,7 +55,7 @@ newFuncRoot:1 %store_ln0 = store i4 0, i4 %i
 
 <Node id="5" bw="0" op_0_bw="0">
 <![CDATA[
-newFuncRoot:2 %br_ln0 = br void %for.inc80.i.i
+newFuncRoot:2 %br_ln0 = br void %for.inc75.i.i
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -70,10 +70,10 @@ newFuncRoot:2 %br_ln0 = br void %for.inc80.i.i
 
 <Node id="7" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-for.inc80.i.i:0 %i_2 = load i4 %i
+for.inc75.i.i:0 %countingSort_counter6_1 = load i4 %countingSort_counter6
 
 ]]></Node>
-<StgValue><ssdm name="i_2"/></StgValue>
+<StgValue><ssdm name="countingSort_counter6_1"/></StgValue>
 </operation>
 
 <operation id="9" st_id="1" stage="1" lat="1">
@@ -85,7 +85,7 @@ for.inc80.i.i:0 %i_2 = load i4 %i
 
 <Node id="8" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc80.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+for.inc75.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln0"/></StgValue>
@@ -100,7 +100,7 @@ for.inc80.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i3
 
 <Node id="9" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.inc80.i.i:2 %icmp_ln43 = icmp_eq  i4 %i_2, i4 8
+for.inc75.i.i:2 %icmp_ln43 = icmp_eq  i4 %countingSort_counter6_1, i4 8
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln43"/></StgValue>
@@ -115,7 +115,7 @@ for.inc80.i.i:2 %icmp_ln43 = icmp_eq  i4 %i_2, i4 8
 
 <Node id="10" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc80.i.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8
+for.inc75.i.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -130,7 +130,7 @@ for.inc80.i.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 
 
 <Node id="11" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.inc80.i.i:4 %add_ln43 = add i4 %i_2, i4 1
+for.inc75.i.i:4 %add_ln43 = add i4 %countingSort_counter6_1, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln43"/></StgValue>
@@ -145,7 +145,7 @@ for.inc80.i.i:4 %add_ln43 = add i4 %i_2, i4 1
 
 <Node id="12" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.inc80.i.i:5 %br_ln43 = br i1 %icmp_ln43, void %for.inc80.i.i.split, void %countingSort.exit.i.exitStub
+for.inc75.i.i:5 %br_ln43 = br i1 %icmp_ln43, void %for.inc75.i.i.split, void %countingSort.exit.i.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln43"/></StgValue>
@@ -161,10 +161,10 @@ for.inc80.i.i:5 %br_ln43 = br i1 %icmp_ln43, void %for.inc80.i.i.split, void %co
 
 <Node id="14" bw="64" op_0_bw="4">
 <![CDATA[
-for.inc80.i.i.split:0 %i_6_cast = zext i4 %i_2
+for.inc75.i.i.split:0 %countingSort_counter6_cast = zext i4 %countingSort_counter6_1
 
 ]]></Node>
-<StgValue><ssdm name="i_6_cast"/></StgValue>
+<StgValue><ssdm name="countingSort_counter6_cast"/></StgValue>
 </operation>
 
 <operation id="15" st_id="1" stage="1" lat="1">
@@ -177,7 +177,7 @@ for.inc80.i.i.split:0 %i_6_cast = zext i4 %i_2
 
 <Node id="16" bw="4" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc80.i.i.split:2 %output_addr = getelementptr i32 %output_r, i64 0, i64 %i_6_cast
+for.inc75.i.i.split:2 %output_addr = getelementptr i32 %output_r, i64 0, i64 %countingSort_counter6_cast
 
 ]]></Node>
 <StgValue><ssdm name="output_addr"/></StgValue>
@@ -193,7 +193,7 @@ for.inc80.i.i.split:2 %output_addr = getelementptr i32 %output_r, i64 0, i64 %i_
 
 <Node id="17" bw="32" op_0_bw="4">
 <![CDATA[
-for.inc80.i.i.split:3 %output_load = load i4 %output_addr
+for.inc75.i.i.split:3 %output_load = load i4 %output_addr
 
 ]]></Node>
 <StgValue><ssdm name="output_load"/></StgValue>
@@ -209,7 +209,7 @@ for.inc80.i.i.split:3 %output_load = load i4 %output_addr
 
 <Node id="20" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc80.i.i.split:6 %store_ln43 = store i4 %add_ln43, i4 %i
+for.inc75.i.i.split:6 %store_ln43 = store i4 %add_ln43, i4 %countingSort_counter6
 
 ]]></Node>
 <StgValue><ssdm name="store_ln43"/></StgValue>
@@ -243,7 +243,7 @@ countingSort.exit.i.exitStub:0 %ret_ln0 = ret
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc80.i.i.split:1 %specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
+for.inc75.i.i.split:1 %specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln43"/></StgValue>
@@ -258,7 +258,7 @@ for.inc80.i.i.split:1 %specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopN
 
 <Node id="17" bw="32" op_0_bw="4">
 <![CDATA[
-for.inc80.i.i.split:3 %output_load = load i4 %output_addr
+for.inc75.i.i.split:3 %output_load = load i4 %output_addr
 
 ]]></Node>
 <StgValue><ssdm name="output_load"/></StgValue>
@@ -273,7 +273,7 @@ for.inc80.i.i.split:3 %output_load = load i4 %output_addr
 
 <Node id="18" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc80.i.i.split:4 %vla13_addr = getelementptr i32 %vla13, i64 0, i64 %i_6_cast
+for.inc75.i.i.split:4 %vla13_addr = getelementptr i32 %vla13, i64 0, i64 %countingSort_counter6_cast
 
 ]]></Node>
 <StgValue><ssdm name="vla13_addr"/></StgValue>
@@ -288,7 +288,7 @@ for.inc80.i.i.split:4 %vla13_addr = getelementptr i32 %vla13, i64 0, i64 %i_6_ca
 
 <Node id="19" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-for.inc80.i.i.split:5 %store_ln44 = store i32 %output_load, i3 %vla13_addr
+for.inc75.i.i.split:5 %store_ln44 = store i32 %output_load, i3 %vla13_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln44"/></StgValue>
@@ -303,7 +303,7 @@ for.inc80.i.i.split:5 %store_ln44 = store i32 %output_load, i3 %vla13_addr
 
 <Node id="21" bw="0" op_0_bw="0">
 <![CDATA[
-for.inc80.i.i.split:7 %br_ln43 = br void %for.inc80.i.i
+for.inc75.i.i.split:7 %br_ln43 = br void %for.inc75.i.i
 
 ]]></Node>
 <StgValue><ssdm name="br_ln43"/></StgValue>
@@ -325,13 +325,13 @@ for.inc80.i.i.split:7 %br_ln43 = br void %for.inc80.i.i
 
 
 <dataflows>
-<dataflow id="36" from="StgValue_35" to="i" fromId="35" toId="5">
+<dataflow id="36" from="StgValue_35" to="countingSort_counter6" fromId="35" toId="5">
 </dataflow>
 <dataflow id="38" from="StgValue_37" to="store_ln0" fromId="37" toId="6">
 </dataflow>
-<dataflow id="39" from="i" to="store_ln0" fromId="5" toId="6">
+<dataflow id="39" from="countingSort_counter6" to="store_ln0" fromId="5" toId="6">
 </dataflow>
-<dataflow id="40" from="i" to="i_2" fromId="5" toId="8">
+<dataflow id="40" from="countingSort_counter6" to="countingSort_counter6_1" fromId="5" toId="8">
 </dataflow>
 <dataflow id="42" from="_ssdm_op_SpecPipeline" to="specpipeline_ln0" fromId="41" toId="9">
 </dataflow>
@@ -345,7 +345,7 @@ for.inc80.i.i.split:7 %br_ln43 = br void %for.inc80.i.i
 </dataflow>
 <dataflow id="50" from="p_str" to="specpipeline_ln0" fromId="49" toId="9">
 </dataflow>
-<dataflow id="51" from="i_2" to="icmp_ln43" fromId="8" toId="10">
+<dataflow id="51" from="countingSort_counter6_1" to="icmp_ln43" fromId="8" toId="10">
 </dataflow>
 <dataflow id="53" from="StgValue_52" to="icmp_ln43" fromId="52" toId="10">
 </dataflow>
@@ -357,25 +357,25 @@ for.inc80.i.i.split:7 %br_ln43 = br void %for.inc80.i.i
 </dataflow>
 <dataflow id="59" from="StgValue_56" to="empty" fromId="56" toId="11">
 </dataflow>
-<dataflow id="60" from="i_2" to="add_ln43" fromId="8" toId="12">
+<dataflow id="60" from="countingSort_counter6_1" to="add_ln43" fromId="8" toId="12">
 </dataflow>
 <dataflow id="62" from="StgValue_61" to="add_ln43" fromId="61" toId="12">
 </dataflow>
 <dataflow id="63" from="icmp_ln43" to="br_ln43" fromId="10" toId="13">
 </dataflow>
-<dataflow id="64" from="i_2" to="i_6_cast" fromId="8" toId="14">
+<dataflow id="64" from="countingSort_counter6_1" to="countingSort_counter6_cast" fromId="8" toId="14">
 </dataflow>
 <dataflow id="65" from="output_r" to="output_addr" fromId="33" toId="15">
 </dataflow>
 <dataflow id="67" from="StgValue_66" to="output_addr" fromId="66" toId="15">
 </dataflow>
-<dataflow id="68" from="i_6_cast" to="output_addr" fromId="14" toId="15">
+<dataflow id="68" from="countingSort_counter6_cast" to="output_addr" fromId="14" toId="15">
 </dataflow>
 <dataflow id="69" from="output_addr" to="output_load" fromId="15" toId="16">
 </dataflow>
 <dataflow id="70" from="add_ln43" to="store_ln43" fromId="12" toId="17">
 </dataflow>
-<dataflow id="71" from="i" to="store_ln43" fromId="5" toId="17">
+<dataflow id="71" from="countingSort_counter6" to="store_ln43" fromId="5" toId="17">
 </dataflow>
 <dataflow id="73" from="_ssdm_op_SpecLoopName" to="specloopname_ln43" fromId="72" toId="18">
 </dataflow>
@@ -387,7 +387,7 @@ for.inc80.i.i.split:7 %br_ln43 = br void %for.inc80.i.i
 </dataflow>
 <dataflow id="78" from="StgValue_66" to="vla13_addr" fromId="66" toId="20">
 </dataflow>
-<dataflow id="79" from="i_6_cast" to="vla13_addr" fromId="14" toId="20">
+<dataflow id="79" from="countingSort_counter6_cast" to="vla13_addr" fromId="14" toId="20">
 </dataflow>
 <dataflow id="80" from="output_load" to="store_ln44" fromId="19" toId="21">
 </dataflow>

@@ -20,7 +20,7 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../Code/radix/radix.c:57:0" msg_body="Inlining function 'radixsort' into 'radix'">
         <args Callee="radixsort" Caller="radix"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:35:21" msg_body="The program may have out of bound array access"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:35:18" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:35:41" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:35:38" msg_body="The program may have out of bound array access"/>
 </xilinx:hls_fe_msgs>
 

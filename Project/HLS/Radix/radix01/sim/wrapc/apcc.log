@@ -1,0 +1,8 @@
+INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Mon Nov 28 20:45:54 +0100 2022
+INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.585 seconds; peak allocated memory: 7.078 MB.

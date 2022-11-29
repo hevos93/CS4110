@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1669364027836">
-  <ports id="1" name="input_r" type="PortType" originalName="input" coreId="0" bitwidth="8">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1669664633228">
+  <ports id="1" name="input_r" type="PortType" originalName="input" coreId="4294967295" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="output_r" type="PortType" originalName="output" coreId="0" bitwidth="32" direction="DirOut">
+  <ports id="2" name="output_r" type="PortType" originalName="output" coreId="522" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="64" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.6"/>
@@ -92,18 +92,18 @@
   <edges id="279" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.2/@node_objs.11"/>
   <blocks id="26" name="entry" type="BlockType">
     <controlOutputObjs>for.cond.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="place_1" originalName="place" coreId="892247408" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="place_1" originalName="place" coreId="536894775" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="max_5_loc" coreId="892247408" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="max_5_loc" coreId="1000" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="max_2_loc" coreId="544108393" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="max_2_loc" coreId="3002326304" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -146,14 +146,14 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln70" lineNumber="70" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_67_1_fu_129" coreId="1953046628" contextFuncName="radix" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln70" lineNumber="70" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_67_1_fu_129" coreId="0" contextFuncName="radix" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="70" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <constName>radix_Pipeline_VITIS_LOOP_67_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="array" lineNumber="65" originalName="array" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1701080899" contextFuncName="radix" bitwidth="3" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="array" lineNumber="65" originalName="array" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1886930210" contextFuncName="radix" bitwidth="3" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="65" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -165,28 +165,28 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln8" lineNumber="8" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_9_1_fu_138" coreId="540767076" contextFuncName="getMax" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="0.46" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln8" lineNumber="8" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_9_1_fu_138" coreId="0" contextFuncName="getMax" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="0.46" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="8" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>radix_Pipeline_VITIS_LOOP_9_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="max_2_loc_load" coreId="43" bitwidth="32" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="max_2_loc_load" coreId="4294967295" bitwidth="32" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>sdiv</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="count_addr" coreId="0" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="count_addr" coreId="1344405620" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="place_1_write_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radixsort" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="place_1_write_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1797259357" contextFuncName="radixsort" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="53" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radixsort"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radixsort" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="6775156" contextFuncName="radixsort" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="53" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radixsort"/>
       <controlInputObjs>for.cond.i</controlInputObjs>
     </node_objs>
@@ -207,7 +207,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.inc.i</controlOutputObjs>
     <controlOutputObjs>radixsort.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="place_2" lineNumber="53" originalName="place" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="840972901" contextFuncName="radixsort" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="place_2" lineNumber="53" originalName="place" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1953852527" contextFuncName="radixsort" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="53" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radixsort"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>sdiv</dataOutputObjs>
@@ -230,7 +230,7 @@
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="br_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radixsort" opcode="br" nodeLabel="42.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="br_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1868767232" contextFuncName="radixsort" opcode="br" nodeLabel="42.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="53" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radixsort"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>radixsort.exit</controlInputObjs>
@@ -261,12 +261,12 @@
       <dataOutputObjs>trunc</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="trunc_ln18" lineNumber="18" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="trunc_ln18_fu_252_p1" coreId="0" contextFuncName="countingSort" bitwidth="5" opcode="trunc" nodeLabel="113.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="trunc_ln18" lineNumber="18" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="trunc_ln18_fu_252_p1" coreId="5195342" contextFuncName="countingSort" bitwidth="5" opcode="trunc" nodeLabel="113.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="18" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="countingSort"/>
       <dataInputObjs>srem</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln18" lineNumber="18" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_20_1_fu_145" coreId="149" contextFuncName="countingSort" opcode="call" nodeLabel="113.0" nodeLatency="1" m_display="0" m_delay="0.46" m_topoIndex="31" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln18" lineNumber="18" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_20_1_fu_145" coreId="1635000320" contextFuncName="countingSort" opcode="call" nodeLabel="113.0" nodeLatency="1" m_display="0" m_delay="0.46" m_topoIndex="31" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="18" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="countingSort"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
@@ -274,16 +274,16 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>radix_Pipeline_VITIS_LOOP_20_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="max_5_loc_load" coreId="29" bitwidth="32" opcode="load" nodeLabel="115.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="max_5_loc_load" coreId="3002326304" bitwidth="32" opcode="load" nodeLabel="115.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="_ln0" rtlName="grp_radix_Pipeline_VITIS_LOOP_26_2_fu_153" coreId="34" opcode="call" nodeLabel="115.0" nodeLatency="1" m_display="0" m_delay="1.53" m_topoIndex="33" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="_ln0" rtlName="grp_radix_Pipeline_VITIS_LOOP_26_2_fu_153" coreId="757203060" opcode="call" nodeLabel="115.0" nodeLatency="1" m_display="0" m_delay="1.53" m_topoIndex="33" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>radix_Pipeline_VITIS_LOOP_26_2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln65" lineNumber="65" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_30_3_fu_159" coreId="72" contextFuncName="radix" opcode="call" nodeLabel="117.0" nodeLatency="1" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln65" lineNumber="65" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_30_3_fu_159" coreId="1970040691" contextFuncName="radix" opcode="call" nodeLabel="117.0" nodeLatency="1" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="65" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
@@ -294,12 +294,12 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="_ln0" rtlName="grp_radix_Pipeline_VITIS_LOOP_34_4_fu_166" coreId="120" opcode="call" nodeLabel="121.0" nodeLatency="1" m_display="0" m_delay="0.46" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="_ln0" rtlName="grp_radix_Pipeline_VITIS_LOOP_34_4_fu_166" coreId="1868767266" opcode="call" nodeLabel="121.0" nodeLatency="1" m_display="0" m_delay="0.46" m_topoIndex="36" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>radix_Pipeline_VITIS_LOOP_34_4</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="_ln65" lineNumber="65" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_38_5_fu_172" coreId="4294967295" contextFuncName="radix" opcode="call" nodeLabel="123.0" nodeLatency="1" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="_ln65" lineNumber="65" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_38_5_fu_172" coreId="1953067621" contextFuncName="radix" opcode="call" nodeLabel="123.0" nodeLatency="1" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="65" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
@@ -307,19 +307,19 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>radix_Pipeline_VITIS_LOOP_38_5</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln17" lineNumber="17" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_43_6_fu_180" coreId="28" contextFuncName="countingSort" opcode="call" nodeLabel="125.0" nodeLatency="1" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln17" lineNumber="17" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="grp_radix_Pipeline_VITIS_LOOP_43_6_fu_180" coreId="1629910126" contextFuncName="countingSort" opcode="call" nodeLabel="125.0" nodeLatency="1" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="17" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="countingSort"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>radix_Pipeline_VITIS_LOOP_43_6</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="shl_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="shl_ln53_fu_220_p2" coreId="95" contextFuncName="radixsort" bitwidth="32" opcode="shl" nodeLabel="42.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="shl_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="shl_ln53_fu_220_p2" coreId="1597059377" contextFuncName="radixsort" bitwidth="32" opcode="shl" nodeLabel="42.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="53" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radixsort"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="shl_ln53_1" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="shl_ln53_1_fu_225_p2" coreId="892260848" contextFuncName="radixsort" bitwidth="32" opcode="shl" nodeLabel="42.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="shl_ln53_1" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="shl_ln53_1_fu_225_p2" coreId="575620686" contextFuncName="radixsort" bitwidth="32" opcode="shl" nodeLabel="42.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="53" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radixsort"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -331,12 +331,12 @@
       <dataInputObjs>shl</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="place_1_write_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radixsort" opcode="store" nodeLabel="42.0" m_display="0" m_delay="0.46" m_topoIndex="25" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="place_1_write_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1936025716" contextFuncName="radixsort" opcode="store" nodeLabel="42.0" m_display="0" m_delay="0.46" m_topoIndex="25" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="53" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radixsort"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="br_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radixsort" opcode="br" nodeLabel="126.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="br_ln53" lineNumber="53" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1919252069" contextFuncName="radixsort" opcode="br" nodeLabel="126.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="53" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radixsort"/>
       <controlInputObjs>for.cond.i</controlInputObjs>
     </node_objs>
@@ -355,7 +355,7 @@
       <dataOutputObjs>output_r</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="_ln89" lineNumber="89" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radix" opcode="ret" nodeLabel="42.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="_ln89" lineNumber="89" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="539111470" contextFuncName="radix" opcode="ret" nodeLabel="42.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="89" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
     </node_objs>
     <fileValidLineNumbers fileName="../../Code/radix/radix.c">

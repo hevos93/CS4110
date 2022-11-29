@@ -1,0 +1,31 @@
+   Build using "S:/Xilinx/Vitis_HLS/2022.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_radix.cpp
+   Compiling (apcc) tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Mon Nov 28 20:45:52 +0100 2022
+INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/tb.c:1:
+S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/tb.c:14:14: warning: format specifies type 'int' but the argument has type 'int *' [-Wformat]
+    printf("%c", &out);
+            ~^   ~~~~
+S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/tb.c:15:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.54 seconds; peak allocated memory: 7.219 MB.
+   Compiling (apcc) radix.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Mon Nov 28 20:45:54 +0100 2022
+INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.585 seconds; peak allocated memory: 7.078 MB.
+   Compiling apatb_radix_ir.ll
+   Generating cosim.tv.exe
+Makefile.rules:322: recipe for target 'cosim.tv.exe' failed

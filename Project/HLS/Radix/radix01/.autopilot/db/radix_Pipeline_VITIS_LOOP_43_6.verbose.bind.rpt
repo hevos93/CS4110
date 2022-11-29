@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_Pipeline_VITIS_LOOP_43_6'
 ================================================================
-* Date:           Fri Nov 25 09:13:45 2022
+* Date:           Mon Nov 28 20:43:51 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        Radix
@@ -85,27 +85,27 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.26>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.46ns)   --->   "%store_ln0 = store i4 0, i4 %i"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc80.i.i"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i_2 = load i4 %i" [../../Code/radix/radix.c:43]   --->   Operation 8 'load' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%countingSort_counter6 = alloca i32 1"   --->   Operation 5 'alloca' 'countingSort_counter6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.46ns)   --->   "%store_ln0 = store i4 0, i4 %countingSort_counter6"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc75.i.i"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%countingSort_counter6_1 = load i4 %countingSort_counter6" [../../Code/radix/radix.c:43]   --->   Operation 8 'load' 'countingSort_counter6_1' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.72ns)   --->   "%icmp_ln43 = icmp_eq  i4 %i_2, i4 8" [../../Code/radix/radix.c:43]   --->   Operation 10 'icmp' 'icmp_ln43' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.72ns)   --->   "%icmp_ln43 = icmp_eq  i4 %countingSort_counter6_1, i4 8" [../../Code/radix/radix.c:43]   --->   Operation 10 'icmp' 'icmp_ln43' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.80ns)   --->   "%add_ln43 = add i4 %i_2, i4 1" [../../Code/radix/radix.c:43]   --->   Operation 12 'add' 'add_ln43' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln43 = br i1 %icmp_ln43, void %for.inc80.i.i.split, void %countingSort.exit.i.exitStub" [../../Code/radix/radix.c:43]   --->   Operation 13 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_6_cast = zext i4 %i_2" [../../Code/radix/radix.c:43]   --->   Operation 14 'zext' 'i_6_cast' <Predicate = (!icmp_ln43)> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%output_addr = getelementptr i32 %output_r, i64 0, i64 %i_6_cast" [../../Code/radix/radix.c:44]   --->   Operation 15 'getelementptr' 'output_addr' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.80ns)   --->   "%add_ln43 = add i4 %countingSort_counter6_1, i4 1" [../../Code/radix/radix.c:43]   --->   Operation 12 'add' 'add_ln43' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln43 = br i1 %icmp_ln43, void %for.inc75.i.i.split, void %countingSort.exit.i.exitStub" [../../Code/radix/radix.c:43]   --->   Operation 13 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%countingSort_counter6_cast = zext i4 %countingSort_counter6_1" [../../Code/radix/radix.c:43]   --->   Operation 14 'zext' 'countingSort_counter6_cast' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%output_addr = getelementptr i32 %output_r, i64 0, i64 %countingSort_counter6_cast" [../../Code/radix/radix.c:44]   --->   Operation 15 'getelementptr' 'output_addr' <Predicate = (!icmp_ln43)> <Delay = 0.00>
 ST_1 : Operation 16 [2/2] (0.73ns)   --->   "%output_load = load i4 %output_addr" [../../Code/radix/radix.c:44]   --->   Operation 16 'load' 'output_load' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
-ST_1 : Operation 17 [1/1] (0.46ns)   --->   "%store_ln43 = store i4 %add_ln43, i4 %i" [../../Code/radix/radix.c:43]   --->   Operation 17 'store' 'store_ln43' <Predicate = (!icmp_ln43)> <Delay = 0.46>
+ST_1 : Operation 17 [1/1] (0.46ns)   --->   "%store_ln43 = store i4 %add_ln43, i4 %countingSort_counter6" [../../Code/radix/radix.c:43]   --->   Operation 17 'store' 'store_ln43' <Predicate = (!icmp_ln43)> <Delay = 0.46>
 ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 23 'ret' 'ret_ln0' <Predicate = (icmp_ln43)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 1.46>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [../../Code/radix/radix.c:43]   --->   Operation 18 'specloopname' 'specloopname_ln43' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 19 [1/2] (0.73ns)   --->   "%output_load = load i4 %output_addr" [../../Code/radix/radix.c:44]   --->   Operation 19 'load' 'output_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%vla13_addr = getelementptr i32 %vla13, i64 0, i64 %i_6_cast" [../../Code/radix/radix.c:44]   --->   Operation 20 'getelementptr' 'vla13_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%vla13_addr = getelementptr i32 %vla13, i64 0, i64 %countingSort_counter6_cast" [../../Code/radix/radix.c:44]   --->   Operation 20 'getelementptr' 'vla13_addr' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 21 [1/1] (0.73ns)   --->   "%store_ln44 = store i32 %output_load, i3 %vla13_addr" [../../Code/radix/radix.c:44]   --->   Operation 21 'store' 'store_ln44' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln43 = br void %for.inc80.i.i" [../../Code/radix/radix.c:43]   --->   Operation 22 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln43 = br void %for.inc75.i.i" [../../Code/radix/radix.c:43]   --->   Operation 22 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -127,24 +127,24 @@ Port [ vla13]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; exte
 
 <LifeTime>
 <method=bitvector/>
-i                 (alloca           ) [ 010]
-store_ln0         (store            ) [ 000]
-br_ln0            (br               ) [ 000]
-i_2               (load             ) [ 000]
-specpipeline_ln0  (specpipeline     ) [ 000]
-icmp_ln43         (icmp             ) [ 010]
-empty             (speclooptripcount) [ 000]
-add_ln43          (add              ) [ 000]
-br_ln43           (br               ) [ 000]
-i_6_cast          (zext             ) [ 011]
-output_addr       (getelementptr    ) [ 011]
-store_ln43        (store            ) [ 000]
-specloopname_ln43 (specloopname     ) [ 000]
-output_load       (load             ) [ 000]
-vla13_addr        (getelementptr    ) [ 000]
-store_ln44        (store            ) [ 000]
-br_ln43           (br               ) [ 000]
-ret_ln0           (ret              ) [ 000]
+countingSort_counter6      (alloca           ) [ 010]
+store_ln0                  (store            ) [ 000]
+br_ln0                     (br               ) [ 000]
+countingSort_counter6_1    (load             ) [ 000]
+specpipeline_ln0           (specpipeline     ) [ 000]
+icmp_ln43                  (icmp             ) [ 010]
+empty                      (speclooptripcount) [ 000]
+add_ln43                   (add              ) [ 000]
+br_ln43                    (br               ) [ 000]
+countingSort_counter6_cast (zext             ) [ 011]
+output_addr                (getelementptr    ) [ 011]
+store_ln43                 (store            ) [ 000]
+specloopname_ln43          (specloopname     ) [ 000]
+output_load                (load             ) [ 000]
+vla13_addr                 (getelementptr    ) [ 000]
+store_ln44                 (store            ) [ 000]
+br_ln43                    (br               ) [ 000]
+ret_ln0                    (ret              ) [ 000]
 </LifeTime>
 
 <model>
@@ -287,14 +287,14 @@ ret_ln0           (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="30" class="1004" name="i_fu_30">
+<comp id="30" class="1004" name="countingSort_counter6_fu_30">
 <pin_list>
 <pin id="31" dir="0" index="0" bw="1" slack="0"/>
 <pin id="32" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="i/1 "/>
+<opset="countingSort_counter6/1 "/>
 </bind>
 </comp>
 
@@ -362,14 +362,14 @@ ret_ln0           (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="66" class="1004" name="i_2_load_fu_66">
+<comp id="66" class="1004" name="countingSort_counter6_1_load_fu_66">
 <pin_list>
 <pin id="67" dir="0" index="0" bw="4" slack="0"/>
 <pin id="68" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="i_2/1 "/>
+<opset="countingSort_counter6_1/1 "/>
 </bind>
 </comp>
 
@@ -397,14 +397,14 @@ ret_ln0           (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="81" class="1004" name="i_6_cast_fu_81">
+<comp id="81" class="1004" name="countingSort_counter6_cast_fu_81">
 <pin_list>
 <pin id="82" dir="0" index="0" bw="4" slack="0"/>
 <pin id="83" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="i_6_cast/1 "/>
+<opset="countingSort_counter6_cast/1 "/>
 </bind>
 </comp>
 
@@ -420,23 +420,23 @@ ret_ln0           (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="91" class="1005" name="i_reg_91">
+<comp id="91" class="1005" name="countingSort_counter6_reg_91">
 <pin_list>
 <pin id="92" dir="0" index="0" bw="4" slack="0"/>
 <pin id="93" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
-<opset="i "/>
+<opset="countingSort_counter6 "/>
 </bind>
 </comp>
 
-<comp id="101" class="1005" name="i_6_cast_reg_101">
+<comp id="101" class="1005" name="countingSort_counter6_cast_reg_101">
 <pin_list>
 <pin id="102" dir="0" index="0" bw="64" slack="1"/>
 <pin id="103" dir="1" index="1" bw="64" slack="1"/>
 </pin_list>
 <bind>
-<opset="i_6_cast "/>
+<opset="countingSort_counter6_cast "/>
 </bind>
 </comp>
 
@@ -514,11 +514,11 @@ ret_ln0           (ret              ) [ 000]
   - Chain level:
 	State 1
 		store_ln0 : 1
-		i_2 : 1
+		countingSort_counter6_1 : 1
 		icmp_ln43 : 2
 		add_ln43 : 2
 		br_ln43 : 3
-		i_6_cast : 2
+		countingSort_counter6_cast : 2
 		output_addr : 3
 		output_load : 4
 		store_ln43 : 3
@@ -531,31 +531,31 @@ ret_ln0           (ret              ) [ 000]
 ============================================================
 
 * Functional unit list:
-|----------|-----------------|---------|---------|
-| Operation| Functional Unit |    FF   |   LUT   |
-|----------|-----------------|---------|---------|
-|    add   |  add_ln43_fu_75 |    0    |    12   |
-|----------|-----------------|---------|---------|
-|   icmp   | icmp_ln43_fu_69 |    0    |    9    |
-|----------|-----------------|---------|---------|
-|   zext   |  i_6_cast_fu_81 |    0    |    0    |
-|----------|-----------------|---------|---------|
-|   Total  |                 |    0    |    21   |
-|----------|-----------------|---------|---------|
+|----------|----------------------------------|---------|---------|
+| Operation|          Functional Unit         |    FF   |   LUT   |
+|----------|----------------------------------|---------|---------|
+|    add   |          add_ln43_fu_75          |    0    |    12   |
+|----------|----------------------------------|---------|---------|
+|   icmp   |          icmp_ln43_fu_69         |    0    |    9    |
+|----------|----------------------------------|---------|---------|
+|   zext   | countingSort_counter6_cast_fu_81 |    0    |    0    |
+|----------|----------------------------------|---------|---------|
+|   Total  |                                  |    0    |    21   |
+|----------|----------------------------------|---------|---------|
 
 Memories:
 N/A
 
 * Register list:
-+-------------------+--------+
-|                   |   FF   |
-+-------------------+--------+
-|  i_6_cast_reg_101 |   64   |
-|      i_reg_91     |    4   |
-|output_addr_reg_106|    4   |
-+-------------------+--------+
-|       Total       |   72   |
-+-------------------+--------+
++----------------------------------+--------+
+|                                  |   FF   |
++----------------------------------+--------+
+|countingSort_counter6_cast_reg_101|   64   |
+|   countingSort_counter6_reg_91   |    4   |
+|        output_addr_reg_106       |    4   |
++----------------------------------+--------+
+|               Total              |   72   |
++----------------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |------------------|------|------|------|--------||---------||---------|

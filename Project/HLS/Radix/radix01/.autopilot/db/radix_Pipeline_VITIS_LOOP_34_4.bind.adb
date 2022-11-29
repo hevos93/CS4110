@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -92,7 +92,7 @@
 					<Obj>
 						<type>0</type>
 						<id>3</id>
-						<name>i</name>
+						<name>countingSort_counter4</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -102,7 +102,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>i</originalName>
+						<originalName>countingSort_counter4</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -110,7 +110,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>15</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -152,7 +152,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>767747184</coreId>
+						<coreId>1597059377</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -194,7 +194,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330405203</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -237,7 +237,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>540703090</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -262,7 +262,7 @@
 					<Obj>
 						<type>0</type>
 						<id>7</id>
-						<name>i_write_ln0</name>
+						<name>countingSort_counter4_write_ln0</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -280,7 +280,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1886930210</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -323,7 +323,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1919252069</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -347,7 +347,7 @@
 					<Obj>
 						<type>0</type>
 						<id>10</id>
-						<name>i_4</name>
+						<name>countingSort_counter4_1</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>34</lineNumber>
@@ -371,7 +371,7 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>i</originalName>
+						<originalName>countingSort_counter4</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -551,7 +551,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2020173413</coreId>
+						<coreId>539122999</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -576,7 +576,7 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>i_4_cast</name>
+						<name>countingSort_counter4_cast</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>34</lineNumber>
@@ -608,7 +608,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>771762481</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -664,7 +664,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1768713801</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -950,7 +950,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702259823</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -977,7 +977,7 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>i_write_ln34</name>
+						<name>countingSort_counter4_write_ln34</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>34</lineNumber>
@@ -1009,7 +1009,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1868721781</coreId>
+						<coreId>997420912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1068,7 +1068,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>14</coreId>
+						<coreId>1635000354</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1110,7 +1110,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1918989395</coreId>
+						<coreId>1634561908</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1217,7 +1217,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>40</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -1248,7 +1248,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>40</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1282,7 +1282,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4228300630</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1300,7 +1300,7 @@
 				<Obj>
 					<type>3</type>
 					<id>15</id>
-					<name>for.inc42.i.i</name>
+					<name>for.inc39.i.i</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1318,7 +1318,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>795173999</coreId>
+					<coreId>4228300630</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1333,7 +1333,7 @@
 				<Obj>
 					<type>3</type>
 					<id>27</id>
-					<name>for.inc42.i.i.split</name>
+					<name>for.inc39.i.i.split</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1351,7 +1351,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4018132312</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1373,7 +1373,7 @@
 				<Obj>
 					<type>3</type>
 					<id>29</id>
-					<name>for.inc68.i.i.preheader.exitStub</name>
+					<name>for.inc64.i.i.preheader.exitStub</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1391,7 +1391,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>7891302</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2314,7 +2314,7 @@
 			</second>
 		</item>
 		<item>
-			<first>i_4_cast_fu_80</first>
+			<first>countingSort_counter4_cast_fu_80</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2322,7 +2322,7 @@
 			</second>
 		</item>
 		<item>
-			<first>i_fu_30</first>
+			<first>countingSort_counter4_fu_30</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2362,7 +2362,7 @@
 			</second>
 		</item>
 		<item>
-			<first>i_4_load_fu_71</first>
+			<first>countingSort_counter4_1_load_fu_71</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2481,7 +2481,7 @@
 			</second>
 		</item>
 		<item>
-			<first>i_reg_111</first>
+			<first>countingSort_counter4_reg_111</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

@@ -337,15 +337,15 @@ reg   [31:0] vla13_load_reg_184_pp0_iter68_reg;
 reg   [31:0] vla13_load_reg_184_pp0_iter69_reg;
 reg   [31:0] vla13_load_reg_184_pp0_iter70_reg;
 wire   [31:0] grp_fu_119_p2;
-wire   [63:0] i_1_cast_fu_103_p1;
+wire   [63:0] countingSort_counter1_cast_fu_103_p1;
 wire    ap_block_pp0_stage0;
 reg   [31:0] max_fu_40;
 wire   [31:0] max_3_fu_139_p3;
 wire  signed [31:0] max_4_cast_fu_80_p1;
 wire    ap_loop_init;
-reg   [3:0] i_1_fu_44;
+reg   [3:0] countingSort_counter1_fu_44;
 wire   [3:0] add_ln20_fu_108_p2;
-reg   [3:0] ap_sig_allocacmp_i;
+reg   [3:0] ap_sig_allocacmp_countingSort_counter1_1;
 wire    ap_block_pp0_stage0_01001;
 wire   [4:0] grp_fu_124_p1;
 wire   [31:0] grp_fu_124_p2;
@@ -1285,9 +1285,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln20_fu_97_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_1_fu_44 <= add_ln20_fu_108_p2;
+            countingSort_counter1_fu_44 <= add_ln20_fu_108_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_1_fu_44 <= 4'd1;
+            countingSort_counter1_fu_44 <= 4'd1;
         end
     end
 end
@@ -1564,9 +1564,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i = 4'd1;
+        ap_sig_allocacmp_countingSort_counter1_1 = 4'd1;
     end else begin
-        ap_sig_allocacmp_i = i_1_fu_44;
+        ap_sig_allocacmp_countingSort_counter1_1 = countingSort_counter1_fu_44;
     end
 end
 
@@ -1597,7 +1597,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln20_fu_108_p2 = (ap_sig_allocacmp_i + 4'd1);
+assign add_ln20_fu_108_p2 = (ap_sig_allocacmp_countingSort_counter1_1 + 4'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -1759,11 +1759,11 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
+assign countingSort_counter1_cast_fu_103_p1 = ap_sig_allocacmp_countingSort_counter1_1;
+
 assign grp_fu_124_p1 = 32'd10;
 
-assign i_1_cast_fu_103_p1 = ap_sig_allocacmp_i;
-
-assign icmp_ln20_fu_97_p2 = ((ap_sig_allocacmp_i == 4'd8) ? 1'b1 : 1'b0);
+assign icmp_ln20_fu_97_p2 = ((ap_sig_allocacmp_countingSort_counter1_1 == 4'd8) ? 1'b1 : 1'b0);
 
 assign icmp_ln21_fu_133_p2 = (($signed(max_fu_40) < $signed(grp_fu_124_p2)) ? 1'b1 : 1'b0);
 
@@ -1773,6 +1773,6 @@ assign max_4_cast_fu_80_p1 = $signed(max_4);
 
 assign max_5_out = max_fu_40;
 
-assign vla13_address0 = i_1_cast_fu_103_p1;
+assign vla13_address0 = countingSort_counter1_cast_fu_103_p1;
 
 endmodule //radix_radix_Pipeline_VITIS_LOOP_20_1

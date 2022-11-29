@@ -60,12 +60,12 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 reg   [2:0] count_addr_reg_128;
 wire    ap_block_pp0_stage0_11001;
-wire   [63:0] i_4_cast_fu_80_p1;
+wire   [63:0] countingSort_counter4_cast_fu_80_p1;
 wire    ap_block_pp0_stage0;
-reg   [3:0] i_fu_30;
+reg   [3:0] countingSort_counter4_fu_30;
 wire   [3:0] add_ln34_fu_85_p2;
 wire    ap_loop_init;
-reg   [3:0] ap_sig_allocacmp_i_4;
+reg   [3:0] ap_sig_allocacmp_countingSort_counter4_1;
 reg   [31:0] store_forwarded_fu_34;
 wire   [31:0] add_ln35_fu_99_p2;
 reg    ap_done_reg;
@@ -133,9 +133,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln34_fu_74_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_fu_30 <= add_ln34_fu_85_p2;
+            countingSort_counter4_fu_30 <= add_ln34_fu_85_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_30 <= 4'd1;
+            countingSort_counter4_fu_30 <= 4'd1;
         end
     end
 end
@@ -152,7 +152,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln34_fu_74_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        count_addr_reg_128 <= i_4_cast_fu_80_p1;
+        count_addr_reg_128 <= countingSort_counter4_cast_fu_80_p1;
     end
 end
 
@@ -198,9 +198,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_4 = 4'd1;
+        ap_sig_allocacmp_countingSort_counter4_1 = 4'd1;
     end else begin
-        ap_sig_allocacmp_i_4 = i_fu_30;
+        ap_sig_allocacmp_countingSort_counter4_1 = countingSort_counter4_fu_30;
     end
 end
 
@@ -239,7 +239,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln34_fu_85_p2 = (ap_sig_allocacmp_i_4 + 4'd1);
+assign add_ln34_fu_85_p2 = (ap_sig_allocacmp_countingSort_counter4_1 + 4'd1);
 
 assign add_ln35_fu_99_p2 = (count_q1 + store_forwarded_fu_34);
 
@@ -263,12 +263,12 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign count_address0 = count_addr_reg_128;
 
-assign count_address1 = i_4_cast_fu_80_p1;
+assign count_address1 = countingSort_counter4_cast_fu_80_p1;
 
 assign count_d0 = (count_q1 + store_forwarded_fu_34);
 
-assign i_4_cast_fu_80_p1 = ap_sig_allocacmp_i_4;
+assign countingSort_counter4_cast_fu_80_p1 = ap_sig_allocacmp_countingSort_counter4_1;
 
-assign icmp_ln34_fu_74_p2 = ((ap_sig_allocacmp_i_4 == 4'd10) ? 1'b1 : 1'b0);
+assign icmp_ln34_fu_74_p2 = ((ap_sig_allocacmp_countingSort_counter4_1 == 4'd10) ? 1'b1 : 1'b0);
 
 endmodule //radix_radix_Pipeline_VITIS_LOOP_34_4

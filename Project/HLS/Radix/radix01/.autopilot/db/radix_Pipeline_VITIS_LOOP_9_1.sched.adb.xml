@@ -40,10 +40,10 @@ newFuncRoot:0 %max_1 = alloca i32 1
 
 <Node id="5" bw="4" op_0_bw="32">
 <![CDATA[
-newFuncRoot:1 %i = alloca i32 1
+newFuncRoot:1 %getMax_counter = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="i"/></StgValue>
+<StgValue><ssdm name="getMax_counter"/></StgValue>
 </operation>
 
 <operation id="7" st_id="1" stage="1" lat="1">
@@ -70,7 +70,7 @@ newFuncRoot:2 %max_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %max
 
 <Node id="7" bw="0" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:3 %store_ln0 = store i4 1, i4 %i
+newFuncRoot:3 %store_ln0 = store i4 1, i4 %getMax_counter
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -115,10 +115,10 @@ newFuncRoot:5 %br_ln0 = br void %for.body.i.i
 
 <Node id="11" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-for.body.i.i:0 %i_1 = load i4 %i
+for.body.i.i:0 %getMax_counter_1 = load i4 %getMax_counter
 
 ]]></Node>
-<StgValue><ssdm name="i_1"/></StgValue>
+<StgValue><ssdm name="getMax_counter_1"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -145,7 +145,7 @@ for.body.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="13" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.body.i.i:2 %icmp_ln9 = icmp_eq  i4 %i_1, i4 8
+for.body.i.i:2 %icmp_ln9 = icmp_eq  i4 %getMax_counter_1, i4 8
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln9"/></StgValue>
@@ -191,10 +191,10 @@ for.body.i.i:4 %br_ln9 = br i1 %icmp_ln9, void %for.body.i.i.split, void %getMax
 
 <Node id="18" bw="64" op_0_bw="4">
 <![CDATA[
-for.body.i.i.split:1 %i_cast = zext i4 %i_1
+for.body.i.i.split:1 %getMax_counter_cast = zext i4 %getMax_counter_1
 
 ]]></Node>
-<StgValue><ssdm name="i_cast"/></StgValue>
+<StgValue><ssdm name="getMax_counter_cast"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -207,7 +207,7 @@ for.body.i.i.split:1 %i_cast = zext i4 %i_1
 
 <Node id="20" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i.i.split:3 %vla13_addr = getelementptr i32 %vla13, i64 0, i64 %i_cast
+for.body.i.i.split:3 %vla13_addr = getelementptr i32 %vla13, i64 0, i64 %getMax_counter_cast
 
 ]]></Node>
 <StgValue><ssdm name="vla13_addr"/></StgValue>
@@ -239,7 +239,7 @@ for.body.i.i.split:4 %vla13_load = load i3 %vla13_addr
 
 <Node id="24" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.body.i.i.split:7 %add_ln9 = add i4 %i_1, i4 1
+for.body.i.i.split:7 %add_ln9 = add i4 %getMax_counter_1, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln9"/></StgValue>
@@ -255,7 +255,7 @@ for.body.i.i.split:7 %add_ln9 = add i4 %i_1, i4 1
 
 <Node id="25" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.body.i.i.split:8 %store_ln9 = store i4 %add_ln9, i4 %i
+for.body.i.i.split:8 %store_ln9 = store i4 %add_ln9, i4 %getMax_counter
 
 ]]></Node>
 <StgValue><ssdm name="store_ln9"/></StgValue>
