@@ -14,11 +14,11 @@ set C_modelName {radix}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ input_r int 8 regular {axi_slave 0}  }
-	{ output_r int 32 regular {axi_slave 1}  }
+	{ output_r int 32 unused {axi_slave 0}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "input_r", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
- 	{ "Name" : "output_r", "interface" : "axi_slave", "bundle":"control","type":"ap_vld","bitwidth" : 32, "direction" : "WRITEONLY", "offset" : {"out":24}, "offset_end" : {"out":31}} ]}
+ 	{ "Name" : "output_r", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":31}} ]}
 # RTL Port declarations: 
 set portNum 23
 set portList { 
@@ -47,14 +47,14 @@ set portList {
 	{ s_axi_control_BRESP sc_out sc_lv 2 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"input_r","role":"data","value":"16"}] },
+	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"input_r","role":"data","value":"16"},{"name":"output_r","role":"data","value":"24"}] },
 	{ "name": "s_axi_control_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWVALID" } },
 	{ "name": "s_axi_control_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWREADY" } },
 	{ "name": "s_axi_control_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WVALID" } },
 	{ "name": "s_axi_control_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WREADY" } },
 	{ "name": "s_axi_control_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "control", "role": "WDATA" } },
 	{ "name": "s_axi_control_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control", "role": "WSTRB" } },
-	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[{"name":"output_r","role":"data","value":"24"}, {"name":"output_r","role":"valid","value":"28","valid_bit":"0"}] },
+	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[] },
 	{ "name": "s_axi_control_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARVALID" } },
 	{ "name": "s_axi_control_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARREADY" } },
 	{ "name": "s_axi_control_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "RVALID" } },
@@ -88,14 +88,14 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "input_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "output_r", "Type" : "Vld", "Direction" : "O"}],
+			{"Name" : "output_r", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_53_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "127", "FirstState" : "ap_ST_fsm_state8", "LastState" : ["ap_ST_fsm_state127"], "QuitState" : ["ap_ST_fsm_state8"], "PreState" : ["ap_ST_fsm_state7"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.count_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.output_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.vla13_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_67_1_fu_129", "Parent" : "0", "Child" : ["5"],
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_67_1_fu_117", "Parent" : "0", "Child" : ["5"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_67_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -116,8 +116,8 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_67_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_67_1_fu_129.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_9_1_fu_138", "Parent" : "0", "Child" : ["7"],
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_67_1_fu_117.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_9_1_fu_126", "Parent" : "0", "Child" : ["7"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_9_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -138,8 +138,8 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_9_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_9_1_fu_138.flow_control_loop_pipe_sequential_init_U", "Parent" : "6"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_145", "Parent" : "0", "Child" : ["9", "10", "11"],
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_9_1_fu_126.flow_control_loop_pipe_sequential_init_U", "Parent" : "6"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_133", "Parent" : "0", "Child" : ["9", "10", "11"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_20_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -161,10 +161,10 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_20_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter71", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter71", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_145.sdiv_32ns_32ns_32_36_1_U7", "Parent" : "8"},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_145.srem_32ns_5ns_32_36_1_U8", "Parent" : "8"},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_145.flow_control_loop_pipe_sequential_init_U", "Parent" : "8"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_26_2_fu_153", "Parent" : "0", "Child" : ["13"],
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_133.sdiv_32ns_32ns_32_36_1_U7", "Parent" : "8"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_133.srem_32ns_5ns_32_36_1_U8", "Parent" : "8"},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_133.flow_control_loop_pipe_sequential_init_U", "Parent" : "8"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_26_2_fu_141", "Parent" : "0", "Child" : ["13"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_26_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -183,8 +183,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "count", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_26_2", "PipelineType" : "NotSupport"}]},
-	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_26_2_fu_153.flow_control_loop_pipe_sequential_init_U", "Parent" : "12"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_159", "Parent" : "0", "Child" : ["15", "16", "17"],
+	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_26_2_fu_141.flow_control_loop_pipe_sequential_init_U", "Parent" : "12"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_147", "Parent" : "0", "Child" : ["15", "16", "17"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_30_3",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -205,10 +205,10 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_30_3", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter72", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter72", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_159.sdiv_32ns_32ns_32_36_1_U17", "Parent" : "14"},
-	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_159.srem_32ns_5ns_3_36_1_U18", "Parent" : "14"},
-	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_159.flow_control_loop_pipe_sequential_init_U", "Parent" : "14"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_34_4_fu_166", "Parent" : "0", "Child" : ["19"],
+	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_147.sdiv_32ns_32ns_32_36_1_U17", "Parent" : "14"},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_147.srem_32ns_5ns_3_36_1_U18", "Parent" : "14"},
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_147.flow_control_loop_pipe_sequential_init_U", "Parent" : "14"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_34_4_fu_154", "Parent" : "0", "Child" : ["19"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_34_4",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -228,8 +228,8 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_34_4", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_34_4_fu_166.flow_control_loop_pipe_sequential_init_U", "Parent" : "18"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_172", "Parent" : "0", "Child" : ["21", "22", "23"],
+	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_34_4_fu_154.flow_control_loop_pipe_sequential_init_U", "Parent" : "18"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_160", "Parent" : "0", "Child" : ["21", "22", "23"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_38_5",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -251,10 +251,10 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_38_5", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter72", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter72", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_172.sdiv_32ns_32ns_32_36_1_U25", "Parent" : "20"},
-	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_172.srem_32ns_5ns_3_36_1_U26", "Parent" : "20"},
-	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_172.flow_control_loop_pipe_sequential_init_U", "Parent" : "20"},
-	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_43_6_fu_180", "Parent" : "0", "Child" : ["25"],
+	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_160.sdiv_32ns_32ns_32_36_1_U25", "Parent" : "20"},
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_160.srem_32ns_5ns_3_36_1_U26", "Parent" : "20"},
+	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_160.flow_control_loop_pipe_sequential_init_U", "Parent" : "20"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_43_6_fu_168", "Parent" : "0", "Child" : ["25"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_43_6",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -274,7 +274,7 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_43_6", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_43_6_fu_180.flow_control_loop_pipe_sequential_init_U", "Parent" : "24"},
+	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_43_6_fu_168.flow_control_loop_pipe_sequential_init_U", "Parent" : "24"},
 	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
 	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sdiv_32ns_32ns_32_36_seq_1_U33", "Parent" : "0"},
 	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sdiv_32ns_32ns_32_36_seq_1_U34", "Parent" : "0"},
@@ -284,7 +284,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	radix {
 		input_r {Type I LastRead 0 FirstWrite -1}
-		output_r {Type O LastRead -1 FirstWrite 42}}
+		output_r {Type I LastRead -1 FirstWrite -1}}
 	radix_Pipeline_VITIS_LOOP_67_1 {
 		icmp_ln70 {Type I LastRead 0 FirstWrite -1}
 		vla13 {Type O LastRead -1 FirstWrite 1}

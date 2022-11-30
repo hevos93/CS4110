@@ -36,6 +36,13 @@ u32 XRadix_Get_input_r(XRadix *InstancePtr) {
     return Data;
 }
 
+void XRadix_Set_output_r(XRadix *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XRadix_WriteReg(InstancePtr->Control_BaseAddress, XRADIX_CONTROL_ADDR_OUTPUT_R_DATA, Data);
+}
+
 u32 XRadix_Get_output_r(XRadix *InstancePtr) {
     u32 Data;
 
@@ -44,15 +51,5 @@ u32 XRadix_Get_output_r(XRadix *InstancePtr) {
 
     Data = XRadix_ReadReg(InstancePtr->Control_BaseAddress, XRADIX_CONTROL_ADDR_OUTPUT_R_DATA);
     return Data;
-}
-
-u32 XRadix_Get_output_r_vld(XRadix *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XRadix_ReadReg(InstancePtr->Control_BaseAddress, XRADIX_CONTROL_ADDR_OUTPUT_R_CTRL);
-    return Data & 0x1;
 }
 

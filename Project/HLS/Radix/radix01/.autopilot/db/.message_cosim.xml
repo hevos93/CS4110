@@ -2,14 +2,14 @@
 <Messages>
 	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Hevos&apos; on host &apos;desktop-75mlgfj&apos; (Windows NT_amd64 version 6.2) on Mon Nov 28 20:45:52 +0100 2022" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/sim/wrapc&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;hevos&apos; on host &apos;laptop-usrghin7&apos; (Windows NT_amd64 version 6.2) on Wed Nov 30 10:24:09 +0100 2022" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/sim/wrapc&apos;" resolution=""/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db" resolution=""/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Hevos&apos; on host &apos;desktop-75mlgfj&apos; (Windows NT_amd64 version 6.2) on Mon Nov 28 20:45:54 +0100 2022" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/sim/wrapc&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;hevos&apos; on host &apos;laptop-usrghin7&apos; (Windows NT_amd64 version 6.2) on Wed Nov 30 10:24:12 +0100 2022" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/sim/wrapc&apos;" resolution=""/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db" resolution=""/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done." resolution=""/>
 	<Message severity="ERROR" prefix="[COSIM 212-317]" key="COSIM_TCL_317_1189" tag="" content="C++ compile error." resolution=""/>
@@ -18,5 +18,5 @@
 	<Message severity="ERROR" prefix="[COSIM 212-331]" key="COSIM_TCL_331_1203" tag="" content="Aborting co-simulation: C simulation failed, compilation errors." resolution=""/>
 	<Message severity="ERROR" prefix="[COSIM 212-5]" key="COSIM_TCL_5_1075" tag="" content="*** C/RTL co-simulation file generation failed. ***" resolution=""/>
 	<Message severity="ERROR" prefix="[COSIM 212-4]" key="COSIM_TCL_4_1074" tag="" content="*** C/RTL co-simulation finished: FAIL ***" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.043 seconds; current allocated memory: 3.898 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.563 seconds; current allocated memory: 3.930 MB." resolution=""/>
 </Messages>

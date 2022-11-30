@@ -30,8 +30,7 @@ module radix_control_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire [7:0]                    input_r,
-    input  wire [31:0]                   output_r,
-    input  wire                          output_r_ap_vld
+    output wire [31:0]                   output_r
 );
 //------------------------Address Info-------------------
 // 0x00 : reserved
@@ -43,10 +42,8 @@ module radix_control_s_axi
 //        others  - reserved
 // 0x14 : reserved
 // 0x18 : Data signal of output_r
-//        bit 31~0 - output_r[31:0] (Read)
-// 0x1c : Control signal of output_r
-//        bit 0  - output_r_ap_vld (Read/COR)
-//        others - reserved
+//        bit 31~0 - output_r[31:0] (Read/Write)
+// 0x1c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
@@ -78,7 +75,6 @@ localparam
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
     reg  [7:0]                    int_input_r = 'b0;
-    reg                           int_output_r_ap_vld;
     reg  [31:0]                   int_output_r = 'b0;
 
 //------------------------Instantiation------------------
@@ -178,9 +174,6 @@ always @(posedge ACLK) begin
                 ADDR_OUTPUT_R_DATA_0: begin
                     rdata <= int_output_r[31:0];
                 end
-                ADDR_OUTPUT_R_CTRL: begin
-                    rdata[0] <= int_output_r_ap_vld;
-                end
             endcase
         end
     end
@@ -188,7 +181,8 @@ end
 
 
 //------------------------Register logic-----------------
-assign input_r = int_input_r;
+assign input_r  = int_input_r;
+assign output_r = int_output_r;
 // int_input_r[7:0]
 always @(posedge ACLK) begin
     if (ARESET)
@@ -199,25 +193,13 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_output_r
+// int_output_r[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_output_r <= 0;
+        int_output_r[31:0] <= 0;
     else if (ACLK_EN) begin
-        if (output_r_ap_vld)
-            int_output_r <= output_r;
-    end
-end
-
-// int_output_r_ap_vld
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_output_r_ap_vld <= 1'b0;
-    else if (ACLK_EN) begin
-        if (output_r_ap_vld)
-            int_output_r_ap_vld <= 1'b1;
-        else if (ar_hs && raddr == ADDR_OUTPUT_R_CTRL)
-            int_output_r_ap_vld <= 1'b0; // clear on read
+        if (w_hs && waddr == ADDR_OUTPUT_R_DATA_0)
+            int_output_r[31:0] <= (WDATA[31:0] & wmask) | (int_output_r[31:0] & ~wmask);
     end
 end
 

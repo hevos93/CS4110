@@ -138,7 +138,9 @@ signed int radix();
 
 
 /* Global Variable Definitions and Initialization */
-static  char aesl_internal__OC_str1[3] = "%c";
+static  char aesl_internal_tb_main_OC_in[10] = "2,3,4,5,6";
+static  char aesl_internal__OC_str[11] = "\n Output: ";
+static  char aesl_internal__OC_str1[3] = "%d";
 
 
 /* Function Bodies */
@@ -158,35 +160,71 @@ static inline int llvm_fcmp_ole(double X, double Y) { return X <= Y ; }
 static inline int llvm_fcmp_oge(double X, double Y) { return X >= Y ; }
 
 signed int tb_main(void) {
-  static  unsigned long long aesl_llvm_cbe_out_count = 0;
-  signed int llvm_cbe_out;    /* Address-exposed local */
+  static  unsigned long long aesl_llvm_cbe_in_count = 0;
+   char llvm_cbe_in[10];    /* Address-exposed local */
   static  unsigned long long aesl_llvm_cbe_1_count = 0;
   static  unsigned long long aesl_llvm_cbe_2_count = 0;
+   char *llvm_cbe_tmp__1;
   static  unsigned long long aesl_llvm_cbe_3_count = 0;
-  unsigned int llvm_cbe_tmp__1;
+   char *llvm_cbe_tmp__2;
   static  unsigned long long aesl_llvm_cbe_4_count = 0;
-  unsigned int llvm_cbe_tmp__2;
+  unsigned int llvm_cbe_tmp__3;
   static  unsigned long long aesl_llvm_cbe_5_count = 0;
+  unsigned int llvm_cbe_tmp__4;
+  static  unsigned long long aesl_llvm_cbe_6_count = 0;
+  unsigned int llvm_cbe_tmp__5;
+  static  unsigned long long aesl_llvm_cbe_7_count = 0;
 
 const char* AESL_DEBUG_TRACE = getenv("DEBUG_TRACE");
 if (AESL_DEBUG_TRACE)
 printf("\n\{ BEGIN @tb_main\n");
 if (AESL_DEBUG_TRACE)
-printf("\n  %%1 = call i32 bitcast (i32 (...)* @radix to i32 (i32, i32*)*)(i32 50, i32* %%out) nounwind, !dbg !2 for 0x%I64xth hint within @tb_main  --> \n", ++aesl_llvm_cbe_3_count);
-  radix(50u, (signed int *)(&llvm_cbe_out));
+printf("\n  %%1 = getelementptr inbounds [10 x i8]* %%in, i64 0, i64 0, !dbg !2 for 0x%I64xth hint within @tb_main  --> \n", ++aesl_llvm_cbe_2_count);
+  llvm_cbe_tmp__1 = ( char *)(&llvm_cbe_in[(((signed long long )0ull))
+#ifdef AESL_BC_SIM
+ % 10
+#endif
+]);
 if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",50u);
-printf("\nReturn  = 0x%X",llvm_cbe_tmp__1);
 }
 if (AESL_DEBUG_TRACE)
-printf("\n  %%2 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([3 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32* %%out) nounwind, !dbg !2 for 0x%I64xth hint within @tb_main  --> \n", ++aesl_llvm_cbe_4_count);
+printf("\n  %%2 = call i8* @memcpy(i8* %%1, i8* getelementptr inbounds ([10 x i8]* @aesl_internal_tb_main.in, i64 0, i64 0), i64 10 for 0x%I64xth hint within @tb_main  --> \n", ++aesl_llvm_cbe_3_count);
+  ( char *)memcpy(( char *)llvm_cbe_tmp__1, ( char *)((&aesl_internal_tb_main_OC_in[(((signed long long )0ull))
+#ifdef AESL_BC_SIM
+ % 10
+#endif
+])), 10ull);
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument  = 0x%I64X",10ull);
+printf("\nReturn  = 0x%X",llvm_cbe_tmp__2);
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%3 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([11 x i8]* @aesl_internal_.str, i64 0, i64 0)) nounwind, !dbg !2 for 0x%I64xth hint within @tb_main  --> \n", ++aesl_llvm_cbe_4_count);
+  printf(( char *)((&aesl_internal__OC_str[(((signed long long )0ull))
+#ifdef AESL_BC_SIM
+ % 11
+#endif
+])));
+if (AESL_DEBUG_TRACE) {
+printf("\nReturn  = 0x%X",llvm_cbe_tmp__3);
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%4 = call i32 bitcast (i32 (...)* @radix to i32 (i8*, i32)*)(i8* %%1, i32 undef) nounwind, !dbg !2 for 0x%I64xth hint within @tb_main  --> \n", ++aesl_llvm_cbe_5_count);
+  radix(( char *)llvm_cbe_tmp__1, ((unsigned int )/*UNDEF*/0));
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument  = 0x%X",((unsigned int )/*UNDEF*/0));
+printf("\nReturn  = 0x%X",llvm_cbe_tmp__4);
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%5 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([3 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 undef) nounwind, !dbg !2 for 0x%I64xth hint within @tb_main  --> \n", ++aesl_llvm_cbe_6_count);
   printf(( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 3
 #endif
-])), (signed int *)(&llvm_cbe_out));
+])), ((unsigned int )/*UNDEF*/0));
 if (AESL_DEBUG_TRACE) {
-printf("\nReturn  = 0x%X",llvm_cbe_tmp__2);
+printf("\nArgument  = 0x%X",((unsigned int )/*UNDEF*/0));
+printf("\nReturn  = 0x%X",llvm_cbe_tmp__5);
 }
   if (AESL_DEBUG_TRACE)
       printf("\nEND @tb_main}\n");

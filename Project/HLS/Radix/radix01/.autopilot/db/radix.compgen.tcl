@@ -45,10 +45,10 @@ input_r {
 	offset_end 23
 }
 output_r { 
-	dir O
+	dir I
 	width 32
 	depth 1
-	mode ap_vld
+	mode ap_none
 	offset 24
 	offset_end 31
 }

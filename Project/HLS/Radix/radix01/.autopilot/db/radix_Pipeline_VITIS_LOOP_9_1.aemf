@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1669664632074">
-  <ports id="1" name="max" type="PortType" coreId="0" bitwidth="32">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1669800211463">
+  <ports id="1" name="max" type="PortType" coreId="1953394531" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="vla13" type="PortType" coreName="RAM" coreId="1953394531" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="2" name="vla13" type="PortType" coreName="RAM" coreId="99" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="3" name="max_2_out" type="PortType" coreId="1953394531" bitwidth="32" direction="DirOut">
+  <ports id="3" name="max_2_out" type="PortType" coreId="0" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="38" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.2"/>
@@ -51,43 +51,43 @@
   <edges id="106" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
   <blocks id="10" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.body.i.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="max_1" originalName="max" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="max_1" originalName="max" coreId="539119430" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="getMax_counter" originalName="getMax_counter" coreId="544435055" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="getMax_counter" originalName="getMax_counter" coreId="1768186226" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="max_read" coreId="0" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="max_read" coreId="1869635878" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>max</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="getMax_counter_write_ln0" coreId="694428968" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="getMax_counter_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="max_1_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="max_1_write_ln0" coreId="1599294464" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="1680154669" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <controlInputObjs>for.body.i.i</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="32" name="getMax.exit.i.exitStub" type="BlockType">
     <controlInputObjs>for.body.i.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="max_1_load" coreId="1680154669" bitwidth="32" opcode="load" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="max_1_load" coreId="1936942336" bitwidth="32" opcode="load" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="max_2_out_write_ln0" coreId="0" opcode="write" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="max_2_out_write_ln0" coreId="7955712" opcode="write" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>max_2_out</dataOutputObjs>
     </node_objs>
@@ -101,21 +101,21 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>getMax.exit.i.exitStub</controlOutputObjs>
       <controlOutputObjs>for.body.i.i.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="getMax_counter_1" lineNumber="9" originalName="getMax_counter" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" bitwidth="4" opcode="load" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="getMax_counter_1" lineNumber="9" originalName="getMax_counter" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1699919680" contextFuncName="getMax" bitwidth="4" opcode="load" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="13" name="icmp_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="icmp_ln9_fu_81_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="getMax" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.72" m_topoIndex="8" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1699924672" contextFuncName="getMax" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.body.i.i.split</controlInputObjs>
         <controlInputObjs>getMax.exit.i.exitStub</controlInputObjs>
@@ -129,60 +129,60 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.body.i.i</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="17" name="max_1_load_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="18" name="getMax_counter_cast" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="getMax_counter_cast_fu_87_p1" coreId="0" contextFuncName="getMax" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="vla13_addr" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1008755749" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="vla13_addr" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>vla13</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="21" name="vla13_load" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="getMax" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="12" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="22" name="icmp_ln10" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="icmp_ln10_fu_106_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="getMax" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.8" m_topoIndex="19" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="23" name="max_2" lineNumber="10" originalName="max" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="max_2_fu_112_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="getMax" bitwidth="32" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.28" m_topoIndex="20" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="24" name="add_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="add_ln9_fu_92_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="getMax" bitwidth="4" opcode="add" m_display="0" m_delay="0.8" m_topoIndex="13" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="25" name="getMax_counter_write_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="14" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="26" name="max_1_write_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.46" m_topoIndex="21" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="27" name="br_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
+        <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="C:\Users\hevos\Documents\CS4110\Project\HLS" functionName="getMax"/>
         <controlInputObjs>for.body.i.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../../Code/radix/radix.c">

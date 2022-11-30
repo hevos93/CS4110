@@ -6,4 +6,4 @@
 
 extern void AESL_WRAP_radix (
 volatile void* input_r,
-volatile void* output_r);
+int output_r);

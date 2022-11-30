@@ -33,8 +33,7 @@ port (
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
     input_r               :out  STD_LOGIC_VECTOR(7 downto 0);
-    output_r              :in   STD_LOGIC_VECTOR(31 downto 0);
-    output_r_ap_vld       :in   STD_LOGIC
+    output_r              :out  STD_LOGIC_VECTOR(31 downto 0)
 );
 end entity radix_control_s_axi;
 
@@ -48,10 +47,8 @@ end entity radix_control_s_axi;
 --        others  - reserved
 -- 0x14 : reserved
 -- 0x18 : Data signal of output_r
---        bit 31~0 - output_r[31:0] (Read)
--- 0x1c : Control signal of output_r
---        bit 0  - output_r_ap_vld (Read/COR)
---        others - reserved
+--        bit 31~0 - output_r[31:0] (Read/Write)
+-- 0x1c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of radix_control_s_axi is
@@ -78,7 +75,6 @@ architecture behave of radix_control_s_axi is
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
     signal int_input_r         : UNSIGNED(7 downto 0) := (others => '0');
-    signal int_output_r_ap_vld : STD_LOGIC;
     signal int_output_r        : UNSIGNED(31 downto 0) := (others => '0');
 
 
@@ -199,8 +195,6 @@ begin
                         rdata_data <= RESIZE(int_input_r(7 downto 0), 32);
                     when ADDR_OUTPUT_R_DATA_0 =>
                         rdata_data <= RESIZE(int_output_r(31 downto 0), 32);
-                    when ADDR_OUTPUT_R_CTRL =>
-                        rdata_data(0) <= int_output_r_ap_vld;
                     when others =>
                         NULL;
                     end case;
@@ -211,6 +205,7 @@ begin
 
 -- ----------------------- Register logic ----------------
     input_r              <= STD_LOGIC_VECTOR(int_input_r);
+    output_r             <= STD_LOGIC_VECTOR(int_output_r);
 
     process (ACLK)
     begin
@@ -226,26 +221,9 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
-                int_output_r <= (others => '0');
-            elsif (ACLK_EN = '1') then
-                if (output_r_ap_vld = '1') then
-                    int_output_r <= UNSIGNED(output_r);
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
-                int_output_r_ap_vld <= '0';
-            elsif (ACLK_EN = '1') then
-                if (output_r_ap_vld = '1') then
-                    int_output_r_ap_vld <= '1';
-                elsif (ar_hs = '1' and raddr = ADDR_OUTPUT_R_CTRL) then
-                    int_output_r_ap_vld <= '0'; -- clear on read
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_OUTPUT_R_DATA_0) then
+                    int_output_r(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_output_r(31 downto 0));
                 end if;
             end if;
         end if;

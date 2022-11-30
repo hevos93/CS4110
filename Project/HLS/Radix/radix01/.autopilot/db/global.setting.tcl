@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xcvu11p:-flga2577:-1-e
 set SourceFiles {sc {} c ../../../../Code/radix/radix.c}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/radix01.directive
+set DirectiveFile C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/radix01.directive
 set TBFiles {verilog ../../../../Code/radix/tb.c bc ../../../../Code/radix/tb.c vhdl ../../../../Code/radix/tb.c sc ../../../../Code/radix/tb.c cas ../../../../Code/radix/tb.c c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

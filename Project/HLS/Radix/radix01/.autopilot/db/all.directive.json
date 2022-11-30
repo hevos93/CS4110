@@ -6,7 +6,7 @@
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "S:\/Dokumenter\/Skole\/CS-Master\/CS4110\/Project\/HLS\/Radix\/radix01\/directives.tcl",
+          "sourceFile": "C:\/Users\/hevos\/Documents\/CS4110\/Project\/HLS\/Radix\/radix01\/directives.tcl",
           "sourceLine": "6",
           "pragma": {
             "name": "TOP",
@@ -21,7 +21,7 @@
           "label": "",
           "functionLabel": "",
           "id": "2",
-          "sourceFile": "S:\/Dokumenter\/Skole\/CS-Master\/CS4110\/Project\/HLS\/Radix\/radix01\/csynth.tcl",
+          "sourceFile": "C:\/Users\/hevos\/Documents\/CS4110\/Project\/HLS\/Radix\/radix01\/csynth.tcl",
           "sourceLine": "15",
           "pragma": {
             "name": "TOP",

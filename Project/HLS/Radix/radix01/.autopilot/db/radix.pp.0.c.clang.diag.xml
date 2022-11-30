@@ -1,13 +1,13 @@
 <dict>
   <key>main-file</key>
-  <string>S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c</string>
+  <string>C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c</string>
   <key>diagnostics</key>
   <array>
     <dict>
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csynth.tcl</string>
+      <string>C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/csynth.tcl</string>
       <key>line</key>
       <integer>15</integer>
       <key>column</key>
@@ -23,7 +23,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/directives.tcl</string>
+      <string>C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/directives.tcl</string>
       <key>line</key>
       <integer>6</integer>
       <key>column</key>

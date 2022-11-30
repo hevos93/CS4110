@@ -1,19 +1,19 @@
-INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Fri Nov 25 10:08:36 +0100 2022
-INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS'
-Sourcing Tcl script 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl'
-INFO: [HLS 200-1510] Running: source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'hevos' on host 'laptop-usrghin7' (Windows NT_amd64 version 6.2) on Wed Nov 30 10:23:48 +0100 2022
+INFO: [HLS 200-10] In directory 'C:/Users/hevos/Documents/CS4110/Project/HLS'
+Sourcing Tcl script 'C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/cosim.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/cosim.tcl
 INFO: [HLS 200-1510] Running: open_project Radix 
-INFO: [HLS 200-10] Opening project 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix'.
+INFO: [HLS 200-10] Opening project 'C:/Users/hevos/Documents/CS4110/Project/HLS/Radix'.
 INFO: [HLS 200-1510] Running: set_top radix 
 INFO: [HLS 200-1510] Running: add_files ../../Code/radix/radix.c 
 INFO: [HLS 200-10] Adding design file '../../Code/radix/radix.c' to the project
 INFO: [HLS 200-1510] Running: add_files ../../Code/radix/radix.h 
 INFO: [HLS 200-10] Adding design file '../../Code/radix/radix.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb ../../Code/radix/tb.c 
+INFO: [HLS 200-1510] Running: add_files -tb ../../Code/radix/tb.c -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file '../../Code/radix/tb.c' to the project
 INFO: [HLS 200-1510] Running: open_solution radix01 -flow_target vivado 
-INFO: [HLS 200-10] Opening solution 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
@@ -22,86 +22,79 @@ INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
-INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
-Running Dispatch Server on port: 61002
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../../../../Code/radix/tb.c in debug mode
-INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Fri Nov 25 10:08:50 +0100 2022
-INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim/build'
-../../../../../../Code/radix/tb.c:10:10: warning: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char [10]' [-Wint-conversion]
-    char in = "2,3,4,5,6";
-         ^    ~~~~~~~~~~~
-../../../../../../Code/radix/tb.c:13:11: error: indirection requires pointer operand ('int' invalid)
-    radix(*in, &out);
-          ^~~
-../../../../../../Code/radix/tb.c:14:23: error: use of undeclared identifier 'i'
-    printf("%c", &out[i]);
-                      ^
-1 warning and 2 errors generated.
-ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
-ERROR: [APCC 202-1] ProcessSources failed
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+Running Dispatch Server on port: 63923
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis_HLS/2022.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_radix.cpp
+   Compiling (apcc) tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'hevos' on host 'laptop-usrghin7' (Windows NT_amd64 version 6.2) on Wed Nov 30 10:24:09 +0100 2022
+INFO: [HLS 200-10] In directory 'C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/Users/hevos/Documents/CS4110/Code/radix/tb.c:1:
+C:/Users/hevos/Documents/CS4110/Code/radix/tb.c:17:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
 INFO: [APCC 202-3] Tmp directory is apcc_db
-ERROR: [APCC 202-1] APCC failed.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.379 seconds; peak allocated memory: 7.562 MB.
-   Compiling(apcc) ../../../../../../Code/radix/radix.c in debug mode
-INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Fri Nov 25 10:08:52 +0100 2022
-INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim/build'
-../../../../../../Code/radix/radix.c:26:14: error: redefinition of 'i'
-    for (int i = 0; i < max; ++i)
-             ^
-../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
-    for (int i = 1; i < size; i++) {
-             ^
-../../../../../../Code/radix/radix.c:30:14: error: redefinition of 'i'
-    for (int i = 0; i < size; i++)
-             ^
-../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
-    for (int i = 1; i < size; i++) {
-             ^
-../../../../../../Code/radix/radix.c:34:14: error: redefinition of 'i'
-    for (int i = 1; i < 10; i++)
-             ^
-../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
-    for (int i = 1; i < size; i++) {
-             ^
-../../../../../../Code/radix/radix.c:38:14: error: redefinition of 'i'
-    for (int i = size - 1; i >= 0; i--) {
-             ^
-../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
-    for (int i = 1; i < size; i++) {
-             ^
-../../../../../../Code/radix/radix.c:43:14: error: redefinition of 'i'
-    for (int i = 0; i < size; i++)
-             ^
-../../../../../../Code/radix/radix.c:20:14: note: previous definition is here
-    for (int i = 1; i < size; i++) {
-             ^
-5 errors generated.
-ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
-ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.033 seconds; peak allocated memory: 7.438 MB.
+   Compiling (apcc) radix.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'hevos' on host 'laptop-usrghin7' (Windows NT_amd64 version 6.2) on Wed Nov 30 10:24:12 +0100 2022
+INFO: [HLS 200-10] In directory 'C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
 INFO: [APCC 202-3] Tmp directory is apcc_db
-ERROR: [APCC 202-1] APCC failed.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.38 seconds; peak allocated memory: 7.449 MB.
-   Generating csim.exe
-Makefile.rules:322: recipe for target 'csim.exe' failed
-g++.exe: error: obj/tb.o: No such file or directory
-g++.exe: error: obj/radix.o: No such file or directory
-make: *** [csim.exe] Error 1
-ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.714 seconds; current allocated memory: 0.234 MB.
-5
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.066 seconds; peak allocated memory: 7.645 MB.
+   Compiling apatb_radix_ir.ll
+   Generating cosim.tv.exe
+Makefile.rules:322: recipe for target 'cosim.tv.exe' failed
+In file included from C:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
+                 from apatb_radix.cpp:11:
+C:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
+                 from apatb_radix.cpp:11:
+C:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024C:/Xilinx/Vitis_HLS/2022.2/tps/win64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o): In function `main':
+C:/repo/mingw-w64-crt-git/src/mingw-w64/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+make: *** [cosim.tv.exe] Error 1
+ERROR: [COSIM 212-317] C++ compile error.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.563 seconds; current allocated memory: 3.930 MB.
+command 'ap_source' returned error code
     while executing
-"source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl"
+"source C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/cosim.tcl"
     invoked from within
-"hls::main S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl"
+"hls::main C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/cosim.tcl"
     ("uplevel" body line 1)
     invoked from within
 "uplevel 1 hls::main {*}$newargs"
     (procedure "hls_proc" line 16)
     invoked from within
 "hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 16.336 seconds; peak allocated memory: 676.652 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 25.533 seconds; peak allocated memory: 681.324 MB.

@@ -29,47 +29,47 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/.apc/.src</location>
+			<location>C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/.apc/.tb</location>
+			<location>C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/.apc/.tb</location>
 		</link>
 		<link>
 			<name>radix01/constraints</name>
 			<type>2</type>
-			<location>S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.tcls</location>
+			<location>C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/.tcls</location>
 		</link>
 		<link>
 			<name>source/radix.c</name>
 			<type>1</type>
-			<location>S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/radix.c</location>
+			<location>C:/Users/hevos/Documents/CS4110/Code/radix/radix.c</location>
 		</link>
 		<link>
 			<name>source/radix.h</name>
 			<type>1</type>
-			<location>S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/radix.h</location>
+			<location>C:/Users/hevos/Documents/CS4110/Code/radix/radix.h</location>
 		</link>
 		<link>
 			<name>testbench/tb.c</name>
 			<type>1</type>
-			<location>S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/tb.c</location>
+			<location>C:/Users/hevos/Documents/CS4110/Code/radix/tb.c</location>
 		</link>
 		<link>
 			<name>radix01/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/radix01.directive</location>
+			<location>C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/radix01.directive</location>
 		</link>
 		<link>
 			<name>radix01/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/directives.tcl</location>
+			<location>C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/directives.tcl</location>
 		</link>
 		<link>
 			<name>radix01/constraints/script.tcl</name>
 			<type>1</type>
-			<location>S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/script.tcl</location>
+			<location>C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

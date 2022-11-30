@@ -1,20 +1,14 @@
-INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Mon Nov 28 20:34:57 +0100 2022
-INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim/build'
-../../../../../../Code/radix/tb.c:14:14: warning: format specifies type 'int' but the argument has type 'int *' [-Wformat]
-    printf("%c", &out);
-            ~^   ~~~~
-../../../../../../Code/radix/tb.c:15:1: warning: control reaches end of non-void function [-Wreturn-type]
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'hevos' on host 'laptop-usrghin7' (Windows NT_amd64 version 6.2) on Wed Nov 30 10:20:20 +0100 2022
+INFO: [HLS 200-10] In directory 'C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/csim/build'
+../../../../../../Code/radix/tb.c:17:1: warning: control reaches end of non-void function [-Wreturn-type]
 }
 ^
-2 warnings generated.
-../../../../../../Code/radix/tb.c:14:14: warning: format specifies type 'int' but the argument has type 'int *' [-Wformat]
-    printf("%c", &out);
-            ~^   ~~~~
-../../../../../../Code/radix/tb.c:15:1: warning: control reaches end of non-void function [-Wreturn-type]
+1 warning generated.
+../../../../../../Code/radix/tb.c:17:1: warning: control reaches end of non-void function [-Wreturn-type]
 }
 ^
-2 warnings generated.
+1 warning generated.
 INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.56 seconds; peak allocated memory: 7.180 MB.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.05 seconds; peak allocated memory: 8.059 MB.

@@ -84,8 +84,8 @@ int XRadix_Release(XRadix *InstancePtr);
 
 void XRadix_Set_input_r(XRadix *InstancePtr, u32 Data);
 u32 XRadix_Get_input_r(XRadix *InstancePtr);
+void XRadix_Set_output_r(XRadix *InstancePtr, u32 Data);
 u32 XRadix_Get_output_r(XRadix *InstancePtr);
-u32 XRadix_Get_output_r_vld(XRadix *InstancePtr);
 
 #ifdef __cplusplus
 }

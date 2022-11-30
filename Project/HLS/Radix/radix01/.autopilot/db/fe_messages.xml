@@ -1,8 +1,8 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csynth.tcl:15:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/csynth.tcl:15:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=radix" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/directives.tcl:6:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/directives.tcl:6:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=radix" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:58:9" msg_body="HLS pragma dump">

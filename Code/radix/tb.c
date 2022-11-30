@@ -7,9 +7,11 @@
 #include <string.h>
 
 int tb_main(){
-    char in = "2,3,4,5,6";
+    char in[] = "2,3,4,5,6";
     int out;
 
-    radix(*in, &out);
-    printf("%c", &out[i]);
+    printf("\n Output: ");
+
+    radix(in, out);
+    printf("%d", out);
 }

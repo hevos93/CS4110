@@ -2148,3 +2148,1210 @@ ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
 INFO: [SIM 211-3] *************** CSIM finish ***************
 INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.138 seconds; current allocated memory: 0.434 MB.
 INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 13.87 seconds; peak allocated memory: 678.074 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.092 seconds; current allocated memory: 678.809 MB.
+INFO: [HLS 200-10] Analyzing design file '../../Code/radix/radix.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.384 seconds; current allocated memory: 679.523 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'getMax' into 'radixsort' (../../Code/radix/radix.c:48:0)
+INFO: [HLS 214-178] Inlining function 'countingSort' into 'radixsort' (../../Code/radix/radix.c:48:0)
+INFO: [HLS 214-178] Inlining function 'radixsort' into 'radix' (../../Code/radix/radix.c:57:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:21)
+WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:18)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.353 seconds; current allocated memory: 680.293 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 680.293 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 685.898 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 687.262 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_67_1' (../../Code/radix/radix.c:68) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_9_1' (../../Code/radix/radix.c:8) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_26_2' (../../Code/radix/radix.c:26) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_3' (../../Code/radix/radix.c:30) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_34_4' (../../Code/radix/radix.c:34) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_5' (../../Code/radix/radix.c:38) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_43_6' (../../Code/radix/radix.c:43) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_20_1' (../../Code/radix/radix.c:20) in function 'radix' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.363 seconds; current allocated memory: 709.320 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_53_1' (../../Code/radix/radix.c:16:23) in function 'radix' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'vla13' (../../Code/radix/radix.c:74:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:27:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:31:39)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:35:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'output' (../../Code/radix/radix.c:39:52)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:40:39)
+INFO: [HLS 200-472] Inferring partial write operation for 'vla13' (../../Code/radix/radix.c:44:18)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.284 seconds; current allocated memory: 772.914 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'radix' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_67_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_67_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.412 seconds; current allocated memory: 777.258 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.109 seconds; current allocated memory: 778.590 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.146 seconds; current allocated memory: 779.152 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 779.207 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 72, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.311 seconds; current allocated memory: 779.730 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.581 seconds; current allocated memory: 779.793 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_26_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_26_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.271 seconds; current allocated memory: 780.020 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 780.020 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_30_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'VITIS_LOOP_30_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.35 seconds; current allocated memory: 780.414 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.645 seconds; current allocated memory: 780.812 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_34_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_34_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_34_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 781.137 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 781.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_38_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'VITIS_LOOP_38_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.394 seconds; current allocated memory: 781.594 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.762 seconds; current allocated memory: 782.000 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_43_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_43_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_43_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.311 seconds; current allocated memory: 782.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 782.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 783.168 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.058 seconds; current allocated memory: 783.426 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_67_1' pipeline 'VITIS_LOOP_67_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_67_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.459 seconds; current allocated memory: 785.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_9_1' pipeline 'VITIS_LOOP_9_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_9_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 786.703 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_20_1' pipeline 'VITIS_LOOP_20_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_20_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.406 seconds; current allocated memory: 789.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_26_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.487 seconds; current allocated memory: 790.312 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_30_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_30_3' pipeline 'VITIS_LOOP_30_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_30_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.311 seconds; current allocated memory: 792.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_34_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_34_4' pipeline 'VITIS_LOOP_34_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_34_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.497 seconds; current allocated memory: 794.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_38_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_38_5' pipeline 'VITIS_LOOP_38_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_38_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.373 seconds; current allocated memory: 795.922 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_43_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_43_6' pipeline 'VITIS_LOOP_43_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_43_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.535 seconds; current allocated memory: 797.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radix/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radix/output_r' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'radix' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'input_r' and 'output_r' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_5_36_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix'.
+INFO: [RTMG 210-278] Implementing memory 'radix_count_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'radix_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'radix_vla13_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.509 seconds; current allocated memory: 800.199 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.905 seconds; current allocated memory: 806.105 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.147 seconds; current allocated memory: 811.203 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for radix.
+INFO: [VLOG 209-307] Generating Verilog RTL for radix.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 309.31 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 11 seconds. CPU system time: 2 seconds. Elapsed time: 23.486 seconds; current allocated memory: 132.738 MB.
+INFO: [HLS 200-112] Total CPU user time: 16 seconds. Total CPU system time: 4 seconds. Total elapsed time: 40.566 seconds; peak allocated memory: 811.570 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.142 seconds; current allocated memory: 0.215 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 24.048 seconds; peak allocated memory: 677.109 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.174 seconds; current allocated memory: 675.910 MB.
+INFO: [HLS 200-10] Analyzing design file '../../Code/radix/radix.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.575 seconds; current allocated memory: 677.215 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'getMax' into 'radixsort' (../../Code/radix/radix.c:48:0)
+INFO: [HLS 214-178] Inlining function 'countingSort' into 'radixsort' (../../Code/radix/radix.c:48:0)
+INFO: [HLS 214-178] Inlining function 'radixsort' into 'radix' (../../Code/radix/radix.c:57:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:41)
+WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:38)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.005 seconds; current allocated memory: 678.109 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 678.109 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.212 seconds; current allocated memory: 683.988 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 685.355 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_67_1' (../../Code/radix/radix.c:68) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_9_1' (../../Code/radix/radix.c:8) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_26_2' (../../Code/radix/radix.c:26) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_3' (../../Code/radix/radix.c:30) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_34_4' (../../Code/radix/radix.c:34) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_5' (../../Code/radix/radix.c:38) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_43_6' (../../Code/radix/radix.c:43) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_20_1' (../../Code/radix/radix.c:20) in function 'radix' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.314 seconds; current allocated memory: 707.379 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_53_1' (../../Code/radix/radix.c:16:23) in function 'radix' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'vla13' (../../Code/radix/radix.c:74:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:27:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:31:59)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:35:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'output' (../../Code/radix/radix.c:39:72)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:40:59)
+INFO: [HLS 200-472] Inferring partial write operation for 'vla13' (../../Code/radix/radix.c:44:38)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.288 seconds; current allocated memory: 771.000 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'radix' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_67_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_67_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.311 seconds; current allocated memory: 775.590 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 776.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.113 seconds; current allocated memory: 777.301 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.073 seconds; current allocated memory: 777.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 72, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.231 seconds; current allocated memory: 778.281 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.365 seconds; current allocated memory: 778.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_26_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_26_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.206 seconds; current allocated memory: 778.680 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 778.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_30_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'VITIS_LOOP_30_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.345 seconds; current allocated memory: 779.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.363 seconds; current allocated memory: 779.230 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_34_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_34_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_34_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 779.664 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 779.664 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_38_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'VITIS_LOOP_38_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 780.094 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.424 seconds; current allocated memory: 780.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_43_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_43_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_43_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.216 seconds; current allocated memory: 780.691 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 780.773 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.277 seconds; current allocated memory: 781.344 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.669 seconds; current allocated memory: 781.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_67_1' pipeline 'VITIS_LOOP_67_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_67_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.382 seconds; current allocated memory: 783.707 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_9_1' pipeline 'VITIS_LOOP_9_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_9_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 785.195 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_20_1' pipeline 'VITIS_LOOP_20_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_20_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.335 seconds; current allocated memory: 787.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_26_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.371 seconds; current allocated memory: 789.195 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_30_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_30_3' pipeline 'VITIS_LOOP_30_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_30_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.275 seconds; current allocated memory: 791.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_34_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_34_4' pipeline 'VITIS_LOOP_34_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_34_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.443 seconds; current allocated memory: 792.953 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_38_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_38_5' pipeline 'VITIS_LOOP_38_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_38_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.258 seconds; current allocated memory: 794.883 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_43_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_43_6' pipeline 'VITIS_LOOP_43_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_43_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.437 seconds; current allocated memory: 796.059 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radix/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radix/output_r' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'radix' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'input_r' and 'output_r' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_5_36_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix'.
+INFO: [RTMG 210-278] Implementing memory 'radix_count_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'radix_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'radix_vla13_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.407 seconds; current allocated memory: 799.109 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.489 seconds; current allocated memory: 804.629 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.842 seconds; current allocated memory: 810.160 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for radix.
+INFO: [VLOG 209-307] Generating Verilog RTL for radix.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 309.31 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 8 seconds. CPU system time: 2 seconds. Elapsed time: 19.877 seconds; current allocated memory: 134.656 MB.
+INFO: [HLS 200-112] Total CPU user time: 12 seconds. Total CPU system time: 4 seconds. Total elapsed time: 36.515 seconds; peak allocated memory: 810.590 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 11.485 seconds; current allocated memory: 0.262 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 26.512 seconds; peak allocated memory: 677.914 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 3.348 seconds; current allocated memory: 0.219 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 18.308 seconds; peak allocated memory: 676.910 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 8.027 seconds; current allocated memory: 0.219 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 25.945 seconds; peak allocated memory: 683.137 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.068 seconds; current allocated memory: 677.188 MB.
+INFO: [HLS 200-10] Analyzing design file '../../Code/radix/radix.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.666 seconds; current allocated memory: 678.434 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'getMax' into 'radixsort' (../../Code/radix/radix.c:48:0)
+INFO: [HLS 214-178] Inlining function 'countingSort' into 'radixsort' (../../Code/radix/radix.c:48:0)
+INFO: [HLS 214-178] Inlining function 'radixsort' into 'radix' (../../Code/radix/radix.c:57:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:41)
+WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:38)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.905 seconds; current allocated memory: 679.129 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 679.129 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.189 seconds; current allocated memory: 684.965 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 686.391 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_67_1' (../../Code/radix/radix.c:68) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_9_1' (../../Code/radix/radix.c:8) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_26_2' (../../Code/radix/radix.c:26) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_3' (../../Code/radix/radix.c:30) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_34_4' (../../Code/radix/radix.c:34) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_5' (../../Code/radix/radix.c:38) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_43_6' (../../Code/radix/radix.c:43) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_20_1' (../../Code/radix/radix.c:20) in function 'radix' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.268 seconds; current allocated memory: 708.633 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_53_1' (../../Code/radix/radix.c:16:23) in function 'radix' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'vla13' (../../Code/radix/radix.c:74:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:27:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:31:59)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:35:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'output' (../../Code/radix/radix.c:39:72)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:40:59)
+INFO: [HLS 200-472] Inferring partial write operation for 'vla13' (../../Code/radix/radix.c:44:38)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.206 seconds; current allocated memory: 772.012 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'radix' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_67_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_67_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.266 seconds; current allocated memory: 776.414 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 777.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.082 seconds; current allocated memory: 778.070 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 778.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 72, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.175 seconds; current allocated memory: 778.934 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.333 seconds; current allocated memory: 779.020 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_26_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_26_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.152 seconds; current allocated memory: 779.312 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 779.312 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_30_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'VITIS_LOOP_30_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.184 seconds; current allocated memory: 779.797 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.359 seconds; current allocated memory: 779.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_34_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_34_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_34_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.161 seconds; current allocated memory: 780.125 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 780.125 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_38_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'VITIS_LOOP_38_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.189 seconds; current allocated memory: 780.836 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.337 seconds; current allocated memory: 781.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_43_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_43_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_43_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.153 seconds; current allocated memory: 781.414 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 781.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.249 seconds; current allocated memory: 782.000 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.619 seconds; current allocated memory: 782.230 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_67_1' pipeline 'VITIS_LOOP_67_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_67_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.295 seconds; current allocated memory: 783.996 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_9_1' pipeline 'VITIS_LOOP_9_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_9_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 785.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_20_1' pipeline 'VITIS_LOOP_20_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_20_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 788.152 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_26_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.264 seconds; current allocated memory: 789.520 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_30_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_30_3' pipeline 'VITIS_LOOP_30_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_30_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 791.758 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_34_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_34_4' pipeline 'VITIS_LOOP_34_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_34_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.284 seconds; current allocated memory: 793.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_38_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_38_5' pipeline 'VITIS_LOOP_38_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_38_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.191 seconds; current allocated memory: 795.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_43_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_43_6' pipeline 'VITIS_LOOP_43_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_43_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.281 seconds; current allocated memory: 796.828 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radix/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radix/output_r' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'radix' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'input_r' and 'output_r' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_5_36_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix'.
+INFO: [RTMG 210-278] Implementing memory 'radix_count_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'radix_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'radix_vla13_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.288 seconds; current allocated memory: 799.594 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.058 seconds; current allocated memory: 805.457 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.754 seconds; current allocated memory: 810.551 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for radix.
+INFO: [VLOG 209-307] Generating Verilog RTL for radix.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 309.31 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 2 seconds. Elapsed time: 15.063 seconds; current allocated memory: 133.723 MB.
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 3 seconds. Total elapsed time: 29.852 seconds; peak allocated memory: 810.918 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.715 seconds; current allocated memory: 0.352 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 17.465 seconds; peak allocated memory: 677.250 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.421 seconds; current allocated memory: 0.223 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 21.752 seconds; peak allocated memory: 682.559 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.686 seconds; current allocated memory: 0.219 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 17.489 seconds; peak allocated memory: 677.035 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.66 seconds; current allocated memory: 0.219 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 17.406 seconds; peak allocated memory: 676.922 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.177 seconds; current allocated memory: 0.258 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 17.96 seconds; peak allocated memory: 677.637 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.156 seconds; current allocated memory: 0.215 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 18.01 seconds; peak allocated memory: 677.602 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.068 seconds; current allocated memory: 676.902 MB.
+INFO: [HLS 200-10] Analyzing design file '../../Code/radix/radix.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.402 seconds; current allocated memory: 677.621 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'getMax' into 'radixsort' (../../Code/radix/radix.c:48:0)
+INFO: [HLS 214-178] Inlining function 'countingSort' into 'radixsort' (../../Code/radix/radix.c:48:0)
+INFO: [HLS 214-178] Inlining function 'radixsort' into 'radix' (../../Code/radix/radix.c:57:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:41)
+WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:38)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.298 seconds; current allocated memory: 678.355 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 678.355 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 683.953 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'radix' (../../Code/radix/radix.c:57) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 685.348 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_67_1' (../../Code/radix/radix.c:68) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_9_1' (../../Code/radix/radix.c:8) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_26_2' (../../Code/radix/radix.c:26) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_3' (../../Code/radix/radix.c:30) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_34_4' (../../Code/radix/radix.c:34) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_5' (../../Code/radix/radix.c:38) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_43_6' (../../Code/radix/radix.c:43) in function 'radix' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_20_1' (../../Code/radix/radix.c:20) in function 'radix' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.231 seconds; current allocated memory: 707.660 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_53_1' (../../Code/radix/radix.c:16:23) in function 'radix' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'vla13' (../../Code/radix/radix.c:74:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:27:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:31:59)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:35:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'output' (../../Code/radix/radix.c:39:72)
+INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:40:59)
+INFO: [HLS 200-472] Inferring partial write operation for 'vla13' (../../Code/radix/radix.c:44:38)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.151 seconds; current allocated memory: 771.105 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'radix' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_67_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_67_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.193 seconds; current allocated memory: 775.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 776.672 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 777.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 777.109 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 72, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.175 seconds; current allocated memory: 778.035 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 778.203 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_26_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_26_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.153 seconds; current allocated memory: 778.477 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 778.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_30_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'VITIS_LOOP_30_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.183 seconds; current allocated memory: 779.055 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.342 seconds; current allocated memory: 779.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_34_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_34_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_34_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 779.566 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 779.629 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_38_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'VITIS_LOOP_38_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.183 seconds; current allocated memory: 779.863 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.348 seconds; current allocated memory: 779.984 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix_Pipeline_VITIS_LOOP_43_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_43_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_43_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 780.293 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 780.457 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.253 seconds; current allocated memory: 781.137 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.581 seconds; current allocated memory: 781.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_67_1' pipeline 'VITIS_LOOP_67_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_67_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 783.449 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_9_1' pipeline 'VITIS_LOOP_9_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_9_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 784.871 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_20_1' pipeline 'VITIS_LOOP_20_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_20_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.208 seconds; current allocated memory: 787.434 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_26_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 788.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_30_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_30_3' pipeline 'VITIS_LOOP_30_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_30_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 790.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_34_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_34_4' pipeline 'VITIS_LOOP_34_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_34_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.275 seconds; current allocated memory: 792.367 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_38_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_38_5' pipeline 'VITIS_LOOP_38_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_38_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.192 seconds; current allocated memory: 794.164 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_43_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_43_6' pipeline 'VITIS_LOOP_43_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_43_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.289 seconds; current allocated memory: 795.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radix/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'radix/output_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'radix' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'input_r' and 'output_r' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_5_36_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix'.
+INFO: [RTMG 210-278] Implementing memory 'radix_count_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'radix_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'radix_vla13_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.291 seconds; current allocated memory: 798.984 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.05 seconds; current allocated memory: 804.641 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.735 seconds; current allocated memory: 809.789 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for radix.
+INFO: [VLOG 209-307] Generating Verilog RTL for radix.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 336.47 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 2 seconds. Elapsed time: 13.754 seconds; current allocated memory: 133.242 MB.
+INFO: [HLS 200-112] Total CPU user time: 9 seconds. Total CPU system time: 3 seconds. Total elapsed time: 28.507 seconds; peak allocated memory: 810.188 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+ERROR: [COSIM 212-317] C++ compile error.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.563 seconds; current allocated memory: 3.930 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 25.533 seconds; peak allocated memory: 681.324 MB.

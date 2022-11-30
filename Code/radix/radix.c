@@ -6,9 +6,9 @@
 // Function to get the largest element from an array
 int getMax(int array[], int n) {
     int max = array[0];
-    for (int i = 1; i < n; i++)
-        if (array[i] > max)
-            max = array[i];
+    for (int getMax_counter = 1; getMax_counter < n; getMax_counter++)
+        if (array[getMax_counter] > max)
+            max = array[getMax_counter];
     return max;
 }
 
@@ -17,31 +17,31 @@ void countingSort(int array[], int size, int place) {
     int output[size + 1];
     int max = (array[0] / place) % 10;
 
-    for (int i = 1; i < size; i++) {
-        if (((array[i] / place) % 10) > max)
-            max = array[i];
+    for (int countingSort_counter1 = 1; countingSort_counter1 < size; countingSort_counter1++) {
+        if (((array[countingSort_counter1] / place) % 10) > max)
+            max = array[countingSort_counter1];
     }
     int count[6];
 
-    for (int i = 0; i < max; ++i)
-        count[i] = 0;
+    for (int countingSort_counter2 = 0; countingSort_counter2 < max; ++countingSort_counter2)
+        count[countingSort_counter2] = 0;
 
     // Calculate count of elements
-    for (int i = 0; i < size; i++)
-        count[(array[i] / place) % 10]++;
+    for (int countingSort_counter3 = 0; countingSort_counter3 < size; countingSort_counter3++)
+        count[(array[countingSort_counter3] / place) % 10]++;
 
     // Calculate cumulative count
-    for (int i = 1; i < 10; i++)
-        count[i] += count[i - 1];
+    for (int countingSort_counter4 = 1; countingSort_counter4 < 10; countingSort_counter4++)
+        count[countingSort_counter4] += count[countingSort_counter4 - 1];
 
     // Place the elements in sorted order
-    for (int i = size - 1; i >= 0; i--) {
-        output[count[(array[i] / place) % 10] - 1] = array[i];
-        count[(array[i] / place) % 10]--;
+    for (int countingSort_counter5 = size - 1; countingSort_counter5 >= 0; countingSort_counter5--) {
+        output[count[(array[countingSort_counter5] / place) % 10] - 1] = array[countingSort_counter5];
+        count[(array[countingSort_counter5] / place) % 10]--;
     }
 
-    for (int i = 0; i < size; i++)
-        array[i] = output[i];
+    for (int countingSort_counter6 = 0; countingSort_counter6 < size; countingSort_counter6++)
+        array[countingSort_counter6] = output[countingSort_counter6];
 }
 
 // Main function to implement radix sort
@@ -54,7 +54,7 @@ void radixsort(int array[], int size) {
         countingSort(array, size, place);
 }
 
-void radix(const char* input, int* output){
+void radix(const char* input, int output){
     #pragma HLS INTERFACE mode=s_axilite port=input
     #pragma HLS INTERFACE mode=s_axilite port=output
 
@@ -85,5 +85,5 @@ void radix(const char* input, int* output){
 
     //Sort the array
     radixsort(array, n);
-    *output = (int) array;
+    output = (int) array;
 }
