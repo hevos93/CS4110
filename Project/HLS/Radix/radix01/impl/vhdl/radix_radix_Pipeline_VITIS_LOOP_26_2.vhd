@@ -47,7 +47,7 @@ attribute shreg_extract : string;
     signal ap_condition_exit_pp0_iter0_stage0 : STD_LOGIC;
     signal ap_loop_exit_ready : STD_LOGIC;
     signal ap_ready_int : STD_LOGIC;
-    signal countingSort_counter2_cast1_fu_74_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal countingSort_counter2_cast2_fu_74_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal countingSort_counter2_fu_26 : STD_LOGIC_VECTOR (2 downto 0);
     signal add_ln26_fu_68_p2 : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_loop_init : STD_LOGIC;
@@ -218,7 +218,7 @@ begin
         end if; 
     end process;
 
-    count_address0 <= countingSort_counter2_cast1_fu_74_p1(3 - 1 downto 0);
+    count_address0 <= countingSort_counter2_cast2_fu_74_p1(3 - 1 downto 0);
 
     count_ce0_assign_proc : process(ap_CS_fsm_state1, ap_start_int)
     begin
@@ -240,7 +240,7 @@ begin
         end if; 
     end process;
 
-    countingSort_counter2_cast1_fu_74_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_countingSort_counter2_1),64));
+    countingSort_counter2_cast2_fu_74_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_countingSort_counter2_1),64));
     countingSort_counter2_cast_fu_58_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_countingSort_counter2_1),32));
     icmp_ln26_fu_62_p2 <= "1" when (signed(countingSort_counter2_cast_fu_58_p1) < signed(max_5_reload)) else "0";
 end behav;

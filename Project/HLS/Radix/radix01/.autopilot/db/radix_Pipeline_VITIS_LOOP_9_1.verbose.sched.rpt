@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_Pipeline_VITIS_LOOP_9_1'
 ================================================================
-* Date:           Wed Nov 30 10:23:27 2022
+* Date:           Fri Dec  2 13:12:25 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        Radix
@@ -25,12 +25,12 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+-----+-----+---------+
-    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
-    |   min   |   max   |    min    |    max    | min | max |   Type  |
-    +---------+---------+-----------+-----------+-----+-----+---------+
-    |        9|        9|  90.000 ns|  90.000 ns|    9|    9|       no|
-    +---------+---------+-----------+-----------+-----+-----+---------+
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|   16|   16|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
@@ -41,7 +41,7 @@
         |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_9_1  |        7|        7|         2|          1|          1|     7|       yes|
+        |- VITIS_LOOP_9_1  |       14|       14|         3|          2|          1|     7|       yes|
         +------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -67,52 +67,73 @@ HasImplIP: 0
 IsGatedGlobalClock: 0
 
 + Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-0: initiation interval (II) = 2, depth = 3
 
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 2
+* Number of FSM states : 3
 * Pipeline : 1
-  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+  Pipeline-0 : II = 2, D = 3, States = { 1 2 3 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 2 
-2 --> 
+2 --> 3 
+3 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.26>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%max_1 = alloca i32 1"   --->   Operation 5 'alloca' 'max_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%getMax_counter = alloca i32 1"   --->   Operation 6 'alloca' 'getMax_counter' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%max_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %max"   --->   Operation 7 'read' 'max_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.46ns)   --->   "%store_ln0 = store i4 1, i4 %getMax_counter"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
-ST_1 : Operation 9 [1/1] (0.46ns)   --->   "%store_ln0 = store i32 %max_read, i32 %max_1"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.i.i"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%getMax_counter_1 = load i4 %getMax_counter" [../../Code/radix/radix.c:9]   --->   Operation 11 'load' 'getMax_counter_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 12 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.72ns)   --->   "%icmp_ln9 = icmp_eq  i4 %getMax_counter_1, i4 8" [../../Code/radix/radix.c:9]   --->   Operation 13 'icmp' 'icmp_ln9' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 7, i64 7, i64 7"   --->   Operation 14 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln9 = br i1 %icmp_ln9, void %for.body.i.i.split, void %getMax.exit.i.exitStub" [../../Code/radix/radix.c:9]   --->   Operation 15 'br' 'br_ln9' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%getMax_counter_cast = zext i4 %getMax_counter_1" [../../Code/radix/radix.c:9]   --->   Operation 16 'zext' 'getMax_counter_cast' <Predicate = (!icmp_ln9)> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%vla13_addr = getelementptr i32 %vla13, i64 0, i64 %getMax_counter_cast" [../../Code/radix/radix.c:10]   --->   Operation 17 'getelementptr' 'vla13_addr' <Predicate = (!icmp_ln9)> <Delay = 0.00>
-ST_1 : Operation 18 [2/2] (0.73ns)   --->   "%vla13_load = load i3 %vla13_addr" [../../Code/radix/radix.c:10]   --->   Operation 18 'load' 'vla13_load' <Predicate = (!icmp_ln9)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
-ST_1 : Operation 19 [1/1] (0.80ns)   --->   "%add_ln9 = add i4 %getMax_counter_1, i4 1" [../../Code/radix/radix.c:9]   --->   Operation 19 'add' 'add_ln9' <Predicate = (!icmp_ln9)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 20 [1/1] (0.46ns)   --->   "%store_ln9 = store i4 %add_ln9, i4 %getMax_counter" [../../Code/radix/radix.c:9]   --->   Operation 20 'store' 'store_ln9' <Predicate = (!icmp_ln9)> <Delay = 0.46>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%max_1_load = load i32 %max_1"   --->   Operation 28 'load' 'max_1_load' <Predicate = (icmp_ln9)> <Delay = 0.00>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %max_2_out, i32 %max_1_load"   --->   Operation 29 'write' 'write_ln0' <Predicate = (icmp_ln9)> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 30 'ret' 'ret_ln0' <Predicate = (icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%max_1 = alloca i32 1"   --->   Operation 6 'alloca' 'max_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%getMax_counter = alloca i32 1"   --->   Operation 7 'alloca' 'getMax_counter' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%max_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %max"   --->   Operation 8 'read' 'max_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.46ns)   --->   "%store_ln0 = store i4 1, i4 %getMax_counter"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 10 [1/1] (0.46ns)   --->   "%store_ln0 = store i32 %max_read, i32 %max_1"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.i.i"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%getMax_counter_1 = load i4 %getMax_counter" [../../Code/radix/radix.c:10]   --->   Operation 12 'load' 'getMax_counter_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 13 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.72ns)   --->   "%icmp_ln9 = icmp_eq  i4 %getMax_counter_1, i4 8" [../../Code/radix/radix.c:9]   --->   Operation 14 'icmp' 'icmp_ln9' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 7, i64 7, i64 7"   --->   Operation 15 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln9 = br i1 %icmp_ln9, void %for.body.i.i.split, void %getMax.exit.i.exitStub" [../../Code/radix/radix.c:9]   --->   Operation 16 'br' 'br_ln9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln10 = trunc i4 %getMax_counter_1" [../../Code/radix/radix.c:10]   --->   Operation 17 'trunc' 'trunc_ln10' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i3 @_ssdm_op_BitConcatenate.i3.i1.i2, i1 %trunc_ln10, i2 0" [../../Code/radix/radix.c:10]   --->   Operation 18 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln10 = zext i3 %shl_ln" [../../Code/radix/radix.c:10]   --->   Operation 19 'zext' 'zext_ln10' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%vla13_addr = getelementptr i8 %vla13, i64 0, i64 %zext_ln10" [../../Code/radix/radix.c:10]   --->   Operation 20 'getelementptr' 'vla13_addr' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 21 [2/2] (0.73ns)   --->   "%vla13_load = load i3 %vla13_addr" [../../Code/radix/radix.c:10]   --->   Operation 21 'load' 'vla13_load' <Predicate = (!icmp_ln9)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%or_ln10 = or i3 %shl_ln, i3 1" [../../Code/radix/radix.c:10]   --->   Operation 22 'or' 'or_ln10' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln10_1 = zext i3 %or_ln10" [../../Code/radix/radix.c:10]   --->   Operation 23 'zext' 'zext_ln10_1' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%vla13_addr_1 = getelementptr i8 %vla13, i64 0, i64 %zext_ln10_1" [../../Code/radix/radix.c:10]   --->   Operation 24 'getelementptr' 'vla13_addr_1' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 25 [2/2] (0.73ns)   --->   "%vla13_load_1 = load i3 %vla13_addr_1" [../../Code/radix/radix.c:10]   --->   Operation 25 'load' 'vla13_load_1' <Predicate = (!icmp_ln9)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_1 : Operation 26 [1/1] (0.80ns)   --->   "%add_ln9 = add i4 %getMax_counter_1, i4 1" [../../Code/radix/radix.c:9]   --->   Operation 26 'add' 'add_ln9' <Predicate = (!icmp_ln9)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.46ns)   --->   "%store_ln9 = store i4 %add_ln9, i4 %getMax_counter" [../../Code/radix/radix.c:9]   --->   Operation 27 'store' 'store_ln9' <Predicate = (!icmp_ln9)> <Delay = 0.46>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%max_1_load = load i32 %max_1"   --->   Operation 47 'load' 'max_1_load' <Predicate = (icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %max_2_out, i32 %max_1_load"   --->   Operation 48 'write' 'write_ln0' <Predicate = (icmp_ln9)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 49 'ret' 'ret_ln0' <Predicate = (icmp_ln9)> <Delay = 0.00>
 
-State 2 <SV = 1> <Delay = 2.27>
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%max_1_load_1 = load i32 %max_1" [../../Code/radix/radix.c:10]   --->   Operation 21 'load' 'max_1_load_1' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln8 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [../../Code/radix/radix.c:8]   --->   Operation 22 'specloopname' 'specloopname_ln8' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 23 [1/2] (0.73ns)   --->   "%vla13_load = load i3 %vla13_addr" [../../Code/radix/radix.c:10]   --->   Operation 23 'load' 'vla13_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
-ST_2 : Operation 24 [1/1] (0.80ns)   --->   "%icmp_ln10 = icmp_slt  i32 %max_1_load_1, i32 %vla13_load" [../../Code/radix/radix.c:10]   --->   Operation 24 'icmp' 'icmp_ln10' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 25 [1/1] (0.28ns)   --->   "%max_2 = select i1 %icmp_ln10, i32 %vla13_load, i32 %max_1_load_1" [../../Code/radix/radix.c:10]   --->   Operation 25 'select' 'max_2' <Predicate = true> <Delay = 0.28> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 26 [1/1] (0.46ns)   --->   "%store_ln9 = store i32 %max_2, i32 %max_1" [../../Code/radix/radix.c:9]   --->   Operation 26 'store' 'store_ln9' <Predicate = true> <Delay = 0.46>
-ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln9 = br void %for.body.i.i" [../../Code/radix/radix.c:9]   --->   Operation 27 'br' 'br_ln9' <Predicate = true> <Delay = 0.00>
+State 2 <SV = 1> <Delay = 0.73>
+ST_2 : Operation 28 [1/2] (0.73ns)   --->   "%vla13_load = load i3 %vla13_addr" [../../Code/radix/radix.c:10]   --->   Operation 28 'load' 'vla13_load' <Predicate = (!icmp_ln9)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 29 [1/2] (0.73ns)   --->   "%vla13_load_1 = load i3 %vla13_addr_1" [../../Code/radix/radix.c:10]   --->   Operation 29 'load' 'vla13_load_1' <Predicate = (!icmp_ln9)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%or_ln10_1 = or i3 %shl_ln, i3 2" [../../Code/radix/radix.c:10]   --->   Operation 30 'or' 'or_ln10_1' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%zext_ln10_2 = zext i3 %or_ln10_1" [../../Code/radix/radix.c:10]   --->   Operation 31 'zext' 'zext_ln10_2' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%vla13_addr_2 = getelementptr i8 %vla13, i64 0, i64 %zext_ln10_2" [../../Code/radix/radix.c:10]   --->   Operation 32 'getelementptr' 'vla13_addr_2' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 33 [2/2] (0.73ns)   --->   "%vla13_load_2 = load i3 %vla13_addr_2" [../../Code/radix/radix.c:10]   --->   Operation 33 'load' 'vla13_load_2' <Predicate = (!icmp_ln9)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%or_ln10_2 = or i3 %shl_ln, i3 3" [../../Code/radix/radix.c:10]   --->   Operation 34 'or' 'or_ln10_2' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln10_3 = zext i3 %or_ln10_2" [../../Code/radix/radix.c:10]   --->   Operation 35 'zext' 'zext_ln10_3' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%vla13_addr_3 = getelementptr i8 %vla13, i64 0, i64 %zext_ln10_3" [../../Code/radix/radix.c:10]   --->   Operation 36 'getelementptr' 'vla13_addr_3' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 37 [2/2] (0.73ns)   --->   "%vla13_load_3 = load i3 %vla13_addr_3" [../../Code/radix/radix.c:10]   --->   Operation 37 'load' 'vla13_load_3' <Predicate = (!icmp_ln9)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 3 <SV = 2> <Delay = 2.27>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%max_1_load_1 = load i32 %max_1" [../../Code/radix/radix.c:10]   --->   Operation 38 'load' 'max_1_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln8 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [../../Code/radix/radix.c:8]   --->   Operation 39 'specloopname' 'specloopname_ln8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/2] (0.73ns)   --->   "%vla13_load_2 = load i3 %vla13_addr_2" [../../Code/radix/radix.c:10]   --->   Operation 40 'load' 'vla13_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 41 [1/2] (0.73ns)   --->   "%vla13_load_3 = load i3 %vla13_addr_3" [../../Code/radix/radix.c:10]   --->   Operation 41 'load' 'vla13_load_3' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%or_ln10_5 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %vla13_load_3, i8 %vla13_load_2, i8 %vla13_load_1, i8 %vla13_load" [../../Code/radix/radix.c:10]   --->   Operation 42 'bitconcatenate' 'or_ln10_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.80ns)   --->   "%icmp_ln10 = icmp_slt  i32 %max_1_load_1, i32 %or_ln10_5" [../../Code/radix/radix.c:10]   --->   Operation 43 'icmp' 'icmp_ln10' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.28ns)   --->   "%max_2 = select i1 %icmp_ln10, i32 %or_ln10_5, i32 %max_1_load_1" [../../Code/radix/radix.c:10]   --->   Operation 44 'select' 'max_2' <Predicate = true> <Delay = 0.28> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.46ns)   --->   "%store_ln9 = store i32 %max_2, i32 %max_1" [../../Code/radix/radix.c:9]   --->   Operation 45 'store' 'store_ln9' <Predicate = true> <Delay = 0.46>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln9 = br void %for.body.i.i" [../../Code/radix/radix.c:9]   --->   Operation 46 'br' 'br_ln9' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -123,16 +144,20 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
  <State 1>: 1.27ns
 The critical path consists of the following:
 	'alloca' operation ('getMax_counter') [5]  (0 ns)
-	'load' operation ('getMax_counter', ../../Code/radix/radix.c:9) on local variable 'getMax_counter' [11]  (0 ns)
-	'add' operation ('add_ln9', ../../Code/radix/radix.c:9) [24]  (0.809 ns)
-	'store' operation ('store_ln9', ../../Code/radix/radix.c:9) of variable 'add_ln9', ../../Code/radix/radix.c:9 on local variable 'getMax_counter' [25]  (0.46 ns)
+	'load' operation ('getMax_counter', ../../Code/radix/radix.c:10) on local variable 'getMax_counter' [11]  (0 ns)
+	'add' operation ('add_ln9', ../../Code/radix/radix.c:9) [39]  (0.809 ns)
+	'store' operation ('store_ln9', ../../Code/radix/radix.c:9) of variable 'add_ln9', ../../Code/radix/radix.c:9 on local variable 'getMax_counter' [40]  (0.46 ns)
 
- <State 2>: 2.28ns
+ <State 2>: 0.73ns
 The critical path consists of the following:
-	'load' operation ('vla13_load', ../../Code/radix/radix.c:10) on array 'vla13' [21]  (0.73 ns)
-	'icmp' operation ('icmp_ln10', ../../Code/radix/radix.c:10) [22]  (0.802 ns)
-	'select' operation ('max', ../../Code/radix/radix.c:10) [23]  (0.286 ns)
-	'store' operation ('store_ln9', ../../Code/radix/radix.c:9) of variable 'max', ../../Code/radix/radix.c:10 on local variable 'max' [26]  (0.46 ns)
+	'load' operation ('vla13_load', ../../Code/radix/radix.c:10) on array 'vla13' [23]  (0.73 ns)
+
+ <State 3>: 2.28ns
+The critical path consists of the following:
+	'load' operation ('vla13_load_2', ../../Code/radix/radix.c:10) on array 'vla13' [31]  (0.73 ns)
+	'icmp' operation ('icmp_ln10', ../../Code/radix/radix.c:10) [37]  (0.802 ns)
+	'select' operation ('max', ../../Code/radix/radix.c:10) [38]  (0.286 ns)
+	'store' operation ('store_ln9', ../../Code/radix/radix.c:9) of variable 'max', ../../Code/radix/radix.c:10 on local variable 'max' [41]  (0.46 ns)
 
 
 ============================================================
@@ -145,6 +170,7 @@ N/A
   - Chain level:
 	State 1
 	State 2
+	State 3
 
 
 ============================================================

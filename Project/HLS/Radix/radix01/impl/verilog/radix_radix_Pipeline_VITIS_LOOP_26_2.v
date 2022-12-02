@@ -46,7 +46,7 @@ wire   [0:0] icmp_ln26_fu_62_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] countingSort_counter2_cast1_fu_74_p1;
+wire   [63:0] countingSort_counter2_cast2_fu_74_p1;
 reg   [2:0] countingSort_counter2_fu_26;
 wire   [2:0] add_ln26_fu_68_p2;
 wire    ap_loop_init;
@@ -196,11 +196,11 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign count_address0 = countingSort_counter2_cast1_fu_74_p1;
+assign count_address0 = countingSort_counter2_cast2_fu_74_p1;
 
 assign count_d0 = 32'd0;
 
-assign countingSort_counter2_cast1_fu_74_p1 = ap_sig_allocacmp_countingSort_counter2_1;
+assign countingSort_counter2_cast2_fu_74_p1 = ap_sig_allocacmp_countingSort_counter2_1;
 
 assign countingSort_counter2_cast_fu_58_p1 = ap_sig_allocacmp_countingSort_counter2_1;
 

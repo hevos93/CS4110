@@ -1,7 +1,7 @@
-C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/csynth.tcl:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=radix_XLX_SEP_ PragmaOptions=name=radix_XLX_SEP_ [-Wdump-hls-pragmas]
+S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csynth.tcl:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=radix_XLX_SEP_ PragmaOptions=name=radix_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=radix
         ^
-C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/directives.tcl:6:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=radix_XLX_SEP_ PragmaOptions=name=radix_XLX_SEP_ [-Wdump-hls-pragmas]
+S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/directives.tcl:6:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=radix_XLX_SEP_ PragmaOptions=name=radix_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=radix
         ^
 ../../Code/radix/radix.c:58:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_XLX_SEP_ PragmaOptions=mode=s_axilite port=input_XLX_SEP_ [-Wdump-hls-pragmas]
@@ -10,4 +10,22 @@ C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/directives.tcl:6:9: wa
 ../../Code/radix/radix.c:59:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_XLX_SEP_ PragmaOptions=mode=s_axilite port=output_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=s_axilite port=output
         ^
-4 warnings generated.
+../../Code/radix/radix.c:60:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_XLX_SEP_ PragmaOptions=mode=s_axilite port=radix_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=radix
+        ^
+../../Code/radix/radix.c:62:27: warning: sizeof on array function parameter will return size of 'const char *' instead of 'const char []' [-Wsizeof-array-argument]
+ uint8_t size_str = sizeof(input);
+                          ^
+../../Code/radix/radix.c:57:63: note: declared here
+__attribute__((sdx_kernel("radix", 0))) void radix(const char input[], uint8_t* output){
+                                                              ^
+../../Code/radix/radix.c:88:15: warning: incompatible pointer types passing 'uint8_t [size_str]' to parameter of type 'int *' [-Wincompatible-pointer-types]
+    radixsort(array, n);
+              ^~~~~
+../../Code/radix/radix.c:48:20: note: passing argument to parameter 'array' here
+void radixsort(int array[], int size) {
+                   ^
+../../Code/radix/radix.c:89:13: warning: incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [size_str]' [-Wint-conversion]
+    *output = array;
+            ^ ~~~~~
+8 warnings generated.

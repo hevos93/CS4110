@@ -1,23 +1,8 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../../../../Code/radix/tb.c in debug mode
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'hevos' on host 'laptop-usrghin7' (Windows NT_amd64 version 6.2) on Wed Nov 30 10:20:20 +0100 2022
-INFO: [HLS 200-10] In directory 'C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/csim/build'
-../../../../../../Code/radix/tb.c:17:1: warning: control reaches end of non-void function [-Wreturn-type]
-}
-^
-1 warning generated.
-../../../../../../Code/radix/tb.c:17:1: warning: control reaches end of non-void function [-Wreturn-type]
-}
-^
-1 warning generated.
-INFO: [APCC 202-3] Tmp directory is apcc_db
-INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.05 seconds; peak allocated memory: 8.059 MB.
    Generating csim.exe
 Makefile.rules:322: recipe for target 'csim.exe' failed
-C:/Xilinx/Vitis_HLS/2022.2/tps/win64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o): In function `main':
+S:/Xilinx/Vitis_HLS/2022.2/tps/win64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o): In function `main':
 C:/repo/mingw-w64-crt-git/src/mingw-w64/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain'
 collect2.exe: error: ld returned 1 exit status
 make: *** [csim.exe] Error 1

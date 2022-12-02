@@ -237,8 +237,8 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void radix(volatile void *, int);
-extern "C" void apatb_radix_hw(volatile void * __xlx_apatb_param_input_r, int __xlx_apatb_param_output_r) {
+extern "C" void radix(volatile void *, volatile void *);
+extern "C" void apatb_radix_hw(volatile void * __xlx_apatb_param_input_r, volatile void * __xlx_apatb_param_output_r) {
 using hls::sim::createStream;
   // DUT call
   radix(__xlx_apatb_param_input_r, __xlx_apatb_param_output_r);

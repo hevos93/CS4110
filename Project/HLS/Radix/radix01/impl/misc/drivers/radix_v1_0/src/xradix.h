@@ -81,11 +81,25 @@ int XRadix_Initialize(XRadix *InstancePtr, const char* InstanceName);
 int XRadix_Release(XRadix *InstancePtr);
 #endif
 
+void XRadix_Start(XRadix *InstancePtr);
+u32 XRadix_IsDone(XRadix *InstancePtr);
+u32 XRadix_IsIdle(XRadix *InstancePtr);
+u32 XRadix_IsReady(XRadix *InstancePtr);
+void XRadix_EnableAutoRestart(XRadix *InstancePtr);
+void XRadix_DisableAutoRestart(XRadix *InstancePtr);
 
 void XRadix_Set_input_r(XRadix *InstancePtr, u32 Data);
 u32 XRadix_Get_input_r(XRadix *InstancePtr);
-void XRadix_Set_output_r(XRadix *InstancePtr, u32 Data);
 u32 XRadix_Get_output_r(XRadix *InstancePtr);
+u32 XRadix_Get_output_r_vld(XRadix *InstancePtr);
+
+void XRadix_InterruptGlobalEnable(XRadix *InstancePtr);
+void XRadix_InterruptGlobalDisable(XRadix *InstancePtr);
+void XRadix_InterruptEnable(XRadix *InstancePtr, u32 Mask);
+void XRadix_InterruptDisable(XRadix *InstancePtr, u32 Mask);
+void XRadix_InterruptClear(XRadix *InstancePtr, u32 Mask);
+u32 XRadix_InterruptGetEnabled(XRadix *InstancePtr);
+u32 XRadix_InterruptGetStatus(XRadix *InstancePtr);
 
 #ifdef __cplusplus
 }

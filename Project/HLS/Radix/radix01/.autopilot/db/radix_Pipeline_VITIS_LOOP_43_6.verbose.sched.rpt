@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_Pipeline_VITIS_LOOP_43_6'
 ================================================================
-* Date:           Wed Nov 30 10:23:30 2022
+* Date:           Fri Dec  2 13:12:26 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        Radix
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |       10|       10|  0.100 us|  0.100 us|   10|   10|       no|
+    |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_43_6  |        8|        8|         2|          1|          1|     8|       yes|
+        |- VITIS_LOOP_43_6  |       16|       16|         3|          2|          1|     8|       yes|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -67,45 +67,67 @@ HasImplIP: 0
 IsGatedGlobalClock: 0
 
 + Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-0: initiation interval (II) = 2, depth = 3
 
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 2
+* Number of FSM states : 3
 * Pipeline : 1
-  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+  Pipeline-0 : II = 2, D = 3, States = { 1 2 3 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 2 
-2 --> 
+2 --> 3 
+3 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.26>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%countingSort_counter6 = alloca i32 1"   --->   Operation 5 'alloca' 'countingSort_counter6' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.46ns)   --->   "%store_ln0 = store i4 0, i4 %countingSort_counter6"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc75.i.i"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%countingSort_counter6_1 = load i4 %countingSort_counter6" [../../Code/radix/radix.c:43]   --->   Operation 8 'load' 'countingSort_counter6_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.72ns)   --->   "%icmp_ln43 = icmp_eq  i4 %countingSort_counter6_1, i4 8" [../../Code/radix/radix.c:43]   --->   Operation 10 'icmp' 'icmp_ln43' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.80ns)   --->   "%add_ln43 = add i4 %countingSort_counter6_1, i4 1" [../../Code/radix/radix.c:43]   --->   Operation 12 'add' 'add_ln43' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln43 = br i1 %icmp_ln43, void %for.inc75.i.i.split, void %countingSort.exit.i.exitStub" [../../Code/radix/radix.c:43]   --->   Operation 13 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%countingSort_counter6_cast = zext i4 %countingSort_counter6_1" [../../Code/radix/radix.c:43]   --->   Operation 14 'zext' 'countingSort_counter6_cast' <Predicate = (!icmp_ln43)> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%output_addr = getelementptr i32 %output_r, i64 0, i64 %countingSort_counter6_cast" [../../Code/radix/radix.c:44]   --->   Operation 15 'getelementptr' 'output_addr' <Predicate = (!icmp_ln43)> <Delay = 0.00>
-ST_1 : Operation 16 [2/2] (0.73ns)   --->   "%output_load = load i4 %output_addr" [../../Code/radix/radix.c:44]   --->   Operation 16 'load' 'output_load' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
-ST_1 : Operation 17 [1/1] (0.46ns)   --->   "%store_ln43 = store i4 %add_ln43, i4 %countingSort_counter6" [../../Code/radix/radix.c:43]   --->   Operation 17 'store' 'store_ln43' <Predicate = (!icmp_ln43)> <Delay = 0.46>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 23 'ret' 'ret_ln0' <Predicate = (icmp_ln43)> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%countingSort_counter6 = alloca i32 1"   --->   Operation 6 'alloca' 'countingSort_counter6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.46ns)   --->   "%store_ln0 = store i4 0, i4 %countingSort_counter6"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc75.i.i"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%countingSort_counter6_1 = load i4 %countingSort_counter6" [../../Code/radix/radix.c:44]   --->   Operation 9 'load' 'countingSort_counter6_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 10 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.72ns)   --->   "%icmp_ln43 = icmp_eq  i4 %countingSort_counter6_1, i4 8" [../../Code/radix/radix.c:43]   --->   Operation 11 'icmp' 'icmp_ln43' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.80ns)   --->   "%add_ln43 = add i4 %countingSort_counter6_1, i4 1" [../../Code/radix/radix.c:43]   --->   Operation 13 'add' 'add_ln43' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln43 = br i1 %icmp_ln43, void %for.inc75.i.i.split, void %countingSort.exit.i.exitStub" [../../Code/radix/radix.c:43]   --->   Operation 14 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%countingSort_counter6_cast3 = zext i4 %countingSort_counter6_1" [../../Code/radix/radix.c:44]   --->   Operation 15 'zext' 'countingSort_counter6_cast3' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%output_addr = getelementptr i32 %output_r, i64 0, i64 %countingSort_counter6_cast3" [../../Code/radix/radix.c:44]   --->   Operation 16 'getelementptr' 'output_addr' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (0.73ns)   --->   "%output_load = load i4 %output_addr" [../../Code/radix/radix.c:44]   --->   Operation 17 'load' 'output_load' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%trunc_ln44 = trunc i4 %countingSort_counter6_1" [../../Code/radix/radix.c:44]   --->   Operation 18 'trunc' 'trunc_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.46ns)   --->   "%store_ln43 = store i4 %add_ln43, i4 %countingSort_counter6" [../../Code/radix/radix.c:43]   --->   Operation 19 'store' 'store_ln43' <Predicate = (!icmp_ln43)> <Delay = 0.46>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 43 'ret' 'ret_ln0' <Predicate = (icmp_ln43)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 1.46>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [../../Code/radix/radix.c:43]   --->   Operation 18 'specloopname' 'specloopname_ln43' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 19 [1/2] (0.73ns)   --->   "%output_load = load i4 %output_addr" [../../Code/radix/radix.c:44]   --->   Operation 19 'load' 'output_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%vla13_addr = getelementptr i32 %vla13, i64 0, i64 %countingSort_counter6_cast" [../../Code/radix/radix.c:44]   --->   Operation 20 'getelementptr' 'vla13_addr' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 21 [1/1] (0.73ns)   --->   "%store_ln44 = store i32 %output_load, i3 %vla13_addr" [../../Code/radix/radix.c:44]   --->   Operation 21 'store' 'store_ln44' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln43 = br void %for.inc75.i.i" [../../Code/radix/radix.c:43]   --->   Operation 22 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/2] (0.73ns)   --->   "%output_load = load i4 %output_addr" [../../Code/radix/radix.c:44]   --->   Operation 20 'load' 'output_load' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%shl_ln5 = bitconcatenate i3 @_ssdm_op_BitConcatenate.i3.i1.i2, i1 %trunc_ln44, i2 0" [../../Code/radix/radix.c:44]   --->   Operation 21 'bitconcatenate' 'shl_ln5' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln44 = zext i3 %shl_ln5" [../../Code/radix/radix.c:44]   --->   Operation 22 'zext' 'zext_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln44_4 = trunc i32 %output_load" [../../Code/radix/radix.c:44]   --->   Operation 23 'trunc' 'trunc_ln44_4' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%vla13_addr = getelementptr i8 %vla13, i64 0, i64 %zext_ln44" [../../Code/radix/radix.c:44]   --->   Operation 24 'getelementptr' 'vla13_addr' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_4, i3 %vla13_addr" [../../Code/radix/radix.c:44]   --->   Operation 25 'store' 'store_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln44_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %output_load, i32 8, i32 15" [../../Code/radix/radix.c:44]   --->   Operation 26 'partselect' 'trunc_ln44_1' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%or_ln44 = or i3 %shl_ln5, i3 1" [../../Code/radix/radix.c:44]   --->   Operation 27 'or' 'or_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln44_1 = zext i3 %or_ln44" [../../Code/radix/radix.c:44]   --->   Operation 28 'zext' 'zext_ln44_1' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%vla13_addr_4 = getelementptr i8 %vla13, i64 0, i64 %zext_ln44_1" [../../Code/radix/radix.c:44]   --->   Operation 29 'getelementptr' 'vla13_addr_4' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_1, i3 %vla13_addr_4" [../../Code/radix/radix.c:44]   --->   Operation 30 'store' 'store_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln44_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %output_load, i32 16, i32 23" [../../Code/radix/radix.c:44]   --->   Operation 31 'partselect' 'trunc_ln44_2' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln44_3 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %output_load, i32 24, i32 31" [../../Code/radix/radix.c:44]   --->   Operation 32 'partselect' 'trunc_ln44_3' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.73>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [../../Code/radix/radix.c:43]   --->   Operation 33 'specloopname' 'specloopname_ln43' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%or_ln44_1 = or i3 %shl_ln5, i3 2" [../../Code/radix/radix.c:44]   --->   Operation 34 'or' 'or_ln44_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln44_2 = zext i3 %or_ln44_1" [../../Code/radix/radix.c:44]   --->   Operation 35 'zext' 'zext_ln44_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%vla13_addr_5 = getelementptr i8 %vla13, i64 0, i64 %zext_ln44_2" [../../Code/radix/radix.c:44]   --->   Operation 36 'getelementptr' 'vla13_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_2, i3 %vla13_addr_5" [../../Code/radix/radix.c:44]   --->   Operation 37 'store' 'store_ln44' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%or_ln44_2 = or i3 %shl_ln5, i3 3" [../../Code/radix/radix.c:44]   --->   Operation 38 'or' 'or_ln44_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln44_3 = zext i3 %or_ln44_2" [../../Code/radix/radix.c:44]   --->   Operation 39 'zext' 'zext_ln44_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%vla13_addr_6 = getelementptr i8 %vla13, i64 0, i64 %zext_ln44_3" [../../Code/radix/radix.c:44]   --->   Operation 40 'getelementptr' 'vla13_addr_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_3, i3 %vla13_addr_6" [../../Code/radix/radix.c:44]   --->   Operation 41 'store' 'store_ln44' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln43 = br void %for.inc75.i.i" [../../Code/radix/radix.c:43]   --->   Operation 42 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -116,14 +138,20 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
  <State 1>: 1.27ns
 The critical path consists of the following:
 	'alloca' operation ('countingSort_counter6') [3]  (0 ns)
-	'load' operation ('countingSort_counter6', ../../Code/radix/radix.c:43) on local variable 'countingSort_counter6' [7]  (0 ns)
+	'load' operation ('countingSort_counter6', ../../Code/radix/radix.c:44) on local variable 'countingSort_counter6' [7]  (0 ns)
 	'add' operation ('add_ln43', ../../Code/radix/radix.c:43) [11]  (0.809 ns)
-	'store' operation ('store_ln43', ../../Code/radix/radix.c:43) of variable 'add_ln43', ../../Code/radix/radix.c:43 on local variable 'countingSort_counter6' [20]  (0.46 ns)
+	'store' operation ('store_ln43', ../../Code/radix/radix.c:43) of variable 'add_ln43', ../../Code/radix/radix.c:43 on local variable 'countingSort_counter6' [39]  (0.46 ns)
 
  <State 2>: 1.46ns
 The critical path consists of the following:
 	'load' operation ('output_load', ../../Code/radix/radix.c:44) on array 'output_r' [17]  (0.73 ns)
-	'store' operation ('store_ln44', ../../Code/radix/radix.c:44) of variable 'output_load', ../../Code/radix/radix.c:44 on array 'vla13' [19]  (0.73 ns)
+	'store' operation ('store_ln44', ../../Code/radix/radix.c:44) of variable 'trunc_ln44_4', ../../Code/radix/radix.c:44 on array 'vla13' [23]  (0.73 ns)
+
+ <State 3>: 0.73ns
+The critical path consists of the following:
+	'or' operation ('or_ln44_1', ../../Code/radix/radix.c:44) [30]  (0 ns)
+	'getelementptr' operation ('vla13_addr_5', ../../Code/radix/radix.c:44) [32]  (0 ns)
+	'store' operation ('store_ln44', ../../Code/radix/radix.c:44) of variable 'trunc_ln44_2', ../../Code/radix/radix.c:44 on array 'vla13' [33]  (0.73 ns)
 
 
 ============================================================
@@ -136,6 +164,7 @@ N/A
   - Chain level:
 	State 1
 	State 2
+	State 3
 
 
 ============================================================

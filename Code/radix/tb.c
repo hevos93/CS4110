@@ -5,10 +5,11 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+//#include <radix.h>
 
 int tb_main(){
     char in[] = "2,3,4,5,6";
-    int out;
+    uint8_t out;
 
     printf("\n Output: ");
 

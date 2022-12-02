@@ -1,13 +1,6 @@
 # ninja log v5
 1	49	6907605370371526	CMakeFiles/radix.dir/main.c.obj	680d67d8505c562c
 49	109	6907605370942042	radix.exe	4eab00ec1e109e27
-3	188	6908975650350508	CMakeFiles/radix.dir/radix.c.obj	5983bae4f60b99c0
-0	189	6908975650350508	CMakeFiles/radix.dir/original.c.obj	22c69427046e0c26
-4	81	6909785001497396	CMakeFiles/radix.dir/tb.c.obj	b01c94c636276efb
-2	83	6909785001507400	CMakeFiles/radix.dir/radix.c.obj	5983bae4f60b99c0
-1	42	6909786635733398	CMakeFiles/radix.dir/radix.c.obj	5983bae4f60b99c0
-3	39	6909787359721345	CMakeFiles/radix.dir/tb.c.obj	b01c94c636276efb
-1	52	6909787359871488	CMakeFiles/radix.dir/radix.c.obj	5983bae4f60b99c0
-5	52	6909787359881491	CMakeFiles/radix.dir/original.c.obj	22c69427046e0c26
-1	43	6909787497859464	CMakeFiles/radix.dir/radix.c.obj	5983bae4f60b99c0
 1	41	6909796379443432	CMakeFiles/radix.dir/radix.c.obj	5983bae4f60b99c0
+5	52	6909787359881491	CMakeFiles/radix.dir/original.c.obj	22c69427046e0c26
+3	39	6909787359721345	CMakeFiles/radix.dir/tb.c.obj	b01c94c636276efb

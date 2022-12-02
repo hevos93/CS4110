@@ -9,6 +9,6 @@
 #include <stdio.h>
 #include <string.h>
 
-void radix(const char* input, int output);
+void radix(const char input[], uint8_t* output);
 
 #endif //RADIX_RADIX_H

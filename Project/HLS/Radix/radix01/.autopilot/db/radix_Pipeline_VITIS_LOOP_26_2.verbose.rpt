@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_Pipeline_VITIS_LOOP_26_2'
 ================================================================
-* Date:           Wed Nov 30 10:23:31 2022
+* Date:           Fri Dec  2 13:12:27 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        Radix
@@ -189,9 +189,9 @@ ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline vo
 ST_1 : Operation 11 [1/1] (0.80ns)   --->   "%icmp_ln26 = icmp_slt  i32 %countingSort_counter2_cast, i32 %max_5_reload_read" [../../Code/radix/radix.c:26]   --->   Operation 11 'icmp' 'icmp_ln26' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 12 [1/1] (0.71ns)   --->   "%add_ln26 = add i3 %countingSort_counter2_1, i3 1" [../../Code/radix/radix.c:26]   --->   Operation 12 'add' 'add_ln26' <Predicate = true> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln26 = br i1 %icmp_ln26, void %for.inc27.i.i.preheader.exitStub, void %for.inc13.i.i.split" [../../Code/radix/radix.c:26]   --->   Operation 13 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%countingSort_counter2_cast1 = zext i3 %countingSort_counter2_1" [../../Code/radix/radix.c:26]   --->   Operation 14 'zext' 'countingSort_counter2_cast1' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%countingSort_counter2_cast2 = zext i3 %countingSort_counter2_1" [../../Code/radix/radix.c:26]   --->   Operation 14 'zext' 'countingSort_counter2_cast2' <Predicate = (icmp_ln26)> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln26 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [../../Code/radix/radix.c:26]   --->   Operation 15 'specloopname' 'specloopname_ln26' <Predicate = (icmp_ln26)> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%count_addr = getelementptr i32 %count, i64 0, i64 %countingSort_counter2_cast1" [../../Code/radix/radix.c:27]   --->   Operation 16 'getelementptr' 'count_addr' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%count_addr = getelementptr i32 %count, i64 0, i64 %countingSort_counter2_cast2" [../../Code/radix/radix.c:27]   --->   Operation 16 'getelementptr' 'count_addr' <Predicate = (icmp_ln26)> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.73ns)   --->   "%store_ln27 = store i32 0, i3 %count_addr" [../../Code/radix/radix.c:27]   --->   Operation 17 'store' 'store_ln27' <Predicate = (icmp_ln26)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
 ST_1 : Operation 18 [1/1] (0.46ns)   --->   "%store_ln26 = store i3 %add_ln26, i3 %countingSort_counter2" [../../Code/radix/radix.c:26]   --->   Operation 18 'store' 'store_ln26' <Predicate = (icmp_ln26)> <Delay = 0.46>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln26 = br void %for.inc13.i.i" [../../Code/radix/radix.c:26]   --->   Operation 19 'br' 'br_ln26' <Predicate = (icmp_ln26)> <Delay = 0.00>
@@ -227,7 +227,7 @@ specpipeline_ln0            (specpipeline ) [ 00]
 icmp_ln26                   (icmp         ) [ 01]
 add_ln26                    (add          ) [ 00]
 br_ln26                     (br           ) [ 00]
-countingSort_counter2_cast1 (zext         ) [ 00]
+countingSort_counter2_cast2 (zext         ) [ 00]
 specloopname_ln26           (specloopname ) [ 00]
 count_addr                  (getelementptr) [ 00]
 store_ln27                  (store        ) [ 00]
@@ -464,14 +464,14 @@ ret_ln0                     (ret          ) [ 00]
 </bind>
 </comp>
 
-<comp id="74" class="1004" name="countingSort_counter2_cast1_fu_74">
+<comp id="74" class="1004" name="countingSort_counter2_cast2_fu_74">
 <pin_list>
 <pin id="75" dir="0" index="0" bw="3" slack="0"/>
 <pin id="76" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="countingSort_counter2_cast1/1 "/>
+<opset="countingSort_counter2_cast2/1 "/>
 </bind>
 </comp>
 
@@ -558,7 +558,7 @@ ret_ln0                     (ret          ) [ 00]
 		icmp_ln26 : 3
 		add_ln26 : 2
 		br_ln26 : 4
-		countingSort_counter2_cast1 : 2
+		countingSort_counter2_cast2 : 2
 		count_addr : 3
 		store_ln27 : 4
 		store_ln26 : 3
@@ -579,7 +579,7 @@ ret_ln0                     (ret          ) [ 00]
 |   read   |    max_5_reload_read_read_fu_30   |    0    |    0    |
 |----------|-----------------------------------|---------|---------|
 |   zext   |  countingSort_counter2_cast_fu_58 |    0    |    0    |
-|          | countingSort_counter2_cast1_fu_74 |    0    |    0    |
+|          | countingSort_counter2_cast2_fu_74 |    0    |    0    |
 |----------|-----------------------------------|---------|---------|
 |   Total  |                                   |    0    |    30   |
 |----------|-----------------------------------|---------|---------|

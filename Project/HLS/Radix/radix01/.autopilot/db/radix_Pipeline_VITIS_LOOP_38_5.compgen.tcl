@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename vla13 \
     op interface \
-    ports { vla13_address0 { O 3 vector } vla13_ce0 { O 1 bit } vla13_q0 { I 32 vector } } \
+    ports { vla13_address0 { O 3 vector } vla13_ce0 { O 1 bit } vla13_q0 { I 8 vector } vla13_address1 { O 3 vector } vla13_ce1 { O 1 bit } vla13_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'vla13'"
@@ -37,7 +37,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename count \
     op interface \
-    ports { count_address0 { O 3 vector } count_ce0 { O 1 bit } count_we0 { O 1 bit } count_d0 { O 32 vector } count_address1 { O 3 vector } count_ce1 { O 1 bit } count_q1 { I 32 vector } } \
+    ports { count_address0 { O 3 vector } count_ce0 { O 1 bit } count_we0 { O 1 bit } count_d0 { O 32 vector } count_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'count'"

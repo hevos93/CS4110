@@ -43,6 +43,30 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 10, Column: 13 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 21, Column: 15 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 31, Column: 16 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
 DebugLoc:        { File: ../../Code/radix/radix.c, Line: 35, Column: 41 }
 Function:        radix
 Args:            
@@ -60,6 +84,22 @@ Args:
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
 DebugLoc:        { File: ../../Code/radix/radix.c, Line: 35, Column: 38 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 39, Column: 74 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 44, Column: 38 }
 Function:        radix
 Args:            
   - String:          The program may have out of bound array access
@@ -83,6 +123,30 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 10, Column: 13 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 21, Column: 15 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 31, Column: 16 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
 DebugLoc:        { File: ../../Code/radix/radix.c, Line: 35, Column: 38 }
 Function:        radix
 Args:            
@@ -92,6 +156,22 @@ Args:
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
 DebugLoc:        { File: ../../Code/radix/radix.c, Line: 35, Column: 38 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 39, Column: 74 }
+Function:        radix
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../../Code/radix/radix.c, Line: 44, Column: 38 }
 Function:        radix
 Args:            
   - String:          The program may have out of bound array access

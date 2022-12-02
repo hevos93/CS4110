@@ -1,8 +1,26 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/csynth.tcl:15:9" msg_body="HLS pragma dump">
+    <msg msg_groups="" msg_id="207-5176" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:62:27" msg_body="sizeof on array function parameter will return size of 'const char *' instead of 'const char []'">
+        <args ClangWarningOption="sizeof-array-argument"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-62" msg_severity="INFO" msg_loc="../../Code/radix/radix.c:57:23" msg_body="declared here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4053" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:88:15" msg_body="incompatible pointer types passing 'uint8_t [size_str]' to parameter of type 'int *'">
+        <args ClangWarningOption="incompatible-pointer-types"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="../../Code/radix/radix.c:48:20" msg_body="passing argument to parameter 'array' here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4056" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:89:13" msg_body="incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [size_str]'">
+        <args ClangWarningOption="int-conversion"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-62" msg_severity="INFO" msg_loc="../../Code/radix/radix.c:57:63" msg_body="declared here">
+        <args/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csynth.tcl:15:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=radix" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/directives.tcl:6:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/directives.tcl:6:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=radix" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:58:9" msg_body="HLS pragma dump">
@@ -10,6 +28,9 @@
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:59:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:60:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=radix" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../Code/radix/radix.c:48:0" msg_body="Inlining function 'getMax' into 'radixsort'">
         <args Callee="getMax" Caller="radixsort"/>
@@ -20,7 +41,12 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../Code/radix/radix.c:57:0" msg_body="Inlining function 'radixsort' into 'radix'">
         <args Callee="radixsort" Caller="radix"/>
     </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:10:13" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:21:15" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:31:16" msg_body="The program may have out of bound array access"/>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:35:41" msg_body="The program may have out of bound array access"/>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:35:38" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:39:74" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../../Code/radix/radix.c:44:38" msg_body="The program may have out of bound array access"/>
 </xilinx:hls_fe_msgs>
 

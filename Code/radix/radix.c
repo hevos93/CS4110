@@ -54,15 +54,16 @@ void radixsort(int array[], int size) {
         countingSort(array, size, place);
 }
 
-void radix(const char* input, int output){
+void radix(const char input[], uint8_t* output){
     #pragma HLS INTERFACE mode=s_axilite port=input
     #pragma HLS INTERFACE mode=s_axilite port=output
+    #pragma HLS INTERFACE mode=s_axilite port=radix
 
-    int size_str = sizeof(input);
-    int arr_counter=0;
-    int counter = 0;
+	uint8_t size_str = sizeof(input);
+    uint8_t arr_counter = 0;
+    uint8_t counter = 0;
     char str[size_str];
-    int array[size_str];
+    uint8_t array[size_str];
 
     while (counter<size_str){
         str[counter] = input[counter];
@@ -81,9 +82,9 @@ void radix(const char* input, int output){
     //int array[] = input;
 
     //Get the size of array
-    int n = sizeof(array) / sizeof(array[0]);
+    uint8_t n = sizeof(array) / sizeof(array[0]);
 
     //Sort the array
     radixsort(array, n);
-    output = (int) array;
+    *output = array;
 }

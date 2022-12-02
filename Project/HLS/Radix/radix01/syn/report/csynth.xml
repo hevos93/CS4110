@@ -15,7 +15,7 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>2.972</EstimatedClockPeriod>
+            <EstimatedClockPeriod>3.233</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
@@ -42,8 +42,8 @@
     <AreaEstimates>
         <Resources>
             <BRAM_18K>0</BRAM_18K>
-            <FF>16469</FF>
-            <LUT>13341</LUT>
+            <FF>16294</FF>
+            <LUT>14058</LUT>
             <URAM>0</URAM>
             <DSP>0</DSP>
         </Resources>
@@ -59,189 +59,189 @@
         <RtlPorts>
             <name>s_axi_control_AWVALID</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_AWREADY</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_AWADDR</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>5</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_WVALID</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_WREADY</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_WDATA</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_WSTRB</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>4</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_ARVALID</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_ARREADY</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_ARADDR</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>5</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_RVALID</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_RREADY</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_RDATA</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_RRESP</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_BVALID</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_BREADY</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_BRESP</name>
             <Object>control</Object>
-            <Type>scalar</Type>
+            <Type>pointer</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>ap_clk</name>
@@ -266,18 +266,7 @@
             <Attribute>control</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>ap_start</name>
-            <Object>radix</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_done</name>
+            <name>interrupt</name>
             <Object>radix</Object>
             <Type>return value</Type>
             <Scope/>
@@ -285,29 +274,7 @@
             <IOConfig/>
             <Dir>out</Dir>
             <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_idle</name>
-            <Object>radix</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_ready</name>
-            <Object>radix</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
+            <Attribute>unknown</Attribute>
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
@@ -315,76 +282,76 @@
             <ModuleName>radix</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_radix_Pipeline_VITIS_LOOP_67_1_fu_117</InstName>
-                    <ModuleName>radix_Pipeline_VITIS_LOOP_67_1</ModuleName>
+                    <InstName>grp_radix_Pipeline_VITIS_LOOP_68_1_fu_163</InstName>
+                    <ModuleName>radix_Pipeline_VITIS_LOOP_68_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>117</ID>
-                    <BindInstances>add_ln71_fu_92_p2 arr_counter_1_fu_106_p2</BindInstances>
+                    <ID>163</ID>
+                    <BindInstances>add_ln72_fu_93_p2 arr_counter_1_fu_107_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_Pipeline_VITIS_LOOP_9_1_fu_126</InstName>
+                    <InstName>grp_radix_Pipeline_VITIS_LOOP_9_1_fu_172</InstName>
                     <ModuleName>radix_Pipeline_VITIS_LOOP_9_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>126</ID>
-                    <BindInstances>add_ln9_fu_92_p2</BindInstances>
+                    <ID>172</ID>
+                    <BindInstances>add_ln9_fu_155_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_Pipeline_VITIS_LOOP_20_1_fu_133</InstName>
+                    <InstName>grp_radix_Pipeline_VITIS_LOOP_20_1_fu_179</InstName>
                     <ModuleName>radix_Pipeline_VITIS_LOOP_20_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>133</ID>
-                    <BindInstances>add_ln20_fu_108_p2</BindInstances>
+                    <ID>179</ID>
+                    <BindInstances>add_ln20_fu_171_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_Pipeline_VITIS_LOOP_26_2_fu_141</InstName>
+                    <InstName>grp_radix_Pipeline_VITIS_LOOP_26_2_fu_187</InstName>
                     <ModuleName>radix_Pipeline_VITIS_LOOP_26_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>141</ID>
+                    <ID>187</ID>
                     <BindInstances>add_ln26_fu_68_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_Pipeline_VITIS_LOOP_30_3_fu_147</InstName>
+                    <InstName>grp_radix_Pipeline_VITIS_LOOP_30_3_fu_193</InstName>
                     <ModuleName>radix_Pipeline_VITIS_LOOP_30_3</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>147</ID>
-                    <BindInstances>add_ln30_fu_110_p2 count_d0</BindInstances>
+                    <ID>193</ID>
+                    <BindInstances>add_ln30_fu_146_p2 count_d0</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_Pipeline_VITIS_LOOP_34_4_fu_154</InstName>
+                    <InstName>grp_radix_Pipeline_VITIS_LOOP_34_4_fu_200</InstName>
                     <ModuleName>radix_Pipeline_VITIS_LOOP_34_4</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>154</ID>
+                    <ID>200</ID>
                     <BindInstances>count_d0 add_ln34_fu_85_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_Pipeline_VITIS_LOOP_38_5_fu_160</InstName>
+                    <InstName>grp_radix_Pipeline_VITIS_LOOP_38_5_fu_206</InstName>
                     <ModuleName>radix_Pipeline_VITIS_LOOP_38_5</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>160</ID>
-                    <BindInstances>add_ln39_fu_189_p2 add_ln38_fu_134_p2</BindInstances>
+                    <ID>206</ID>
+                    <BindInstances>add_ln39_fu_278_p2 add_ln38_fu_193_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_Pipeline_VITIS_LOOP_43_6_fu_168</InstName>
+                    <InstName>grp_radix_Pipeline_VITIS_LOOP_43_6_fu_214</InstName>
                     <ModuleName>radix_Pipeline_VITIS_LOOP_43_6</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>168</ID>
-                    <BindInstances>add_ln43_fu_75_p2</BindInstances>
+                    <ID>214</ID>
+                    <BindInstances>add_ln43_fu_126_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>count_U output_U vla13_U place_fu_218_p2</BindInstances>
+            <BindInstances>vla13_U count_U output_U place_fu_278_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>radix_Pipeline_VITIS_LOOP_67_1</Name>
+            <Name>radix_Pipeline_VITIS_LOOP_68_1</Name>
             <Loops>
-                <VITIS_LOOP_67_1/>
+                <VITIS_LOOP_68_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>1.602</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.454</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>10</Best-caseLatency>
@@ -397,8 +364,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_67_1>
-                        <Name>VITIS_LOOP_67_1</Name>
+                    <VITIS_LOOP_68_1>
+                        <Name>VITIS_LOOP_68_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>8</TripCount>
                         <Latency>8</Latency>
@@ -407,15 +374,15 @@
                         <PipelineDepth>1</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_67_1>
+                    </VITIS_LOOP_68_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>71</FF>
+                    <FF>14</FF>
                     <AVAIL_FF>2592000</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>100</LUT>
+                    <LUT>81</LUT>
                     <AVAIL_LUT>1296000</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -430,8 +397,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_fu_92_p2" SOURCE="../../Code/radix/radix.c:71" URAM="0" VARIABLE="add_ln71"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_67_1" OPTYPE="add" PRAGMA="" RTLNAME="arr_counter_1_fu_106_p2" SOURCE="../../Code/radix/radix.c:76" URAM="0" VARIABLE="arr_counter_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_68_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln72_fu_93_p2" SOURCE="../../Code/radix/radix.c:72" URAM="0" VARIABLE="add_ln72"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_68_1" OPTYPE="add" PRAGMA="" RTLNAME="arr_counter_1_fu_107_p2" SOURCE="../../Code/radix/radix.c:77" URAM="0" VARIABLE="arr_counter_1"/>
             </BindNodes>
         </Module>
         <Module>
@@ -446,13 +413,13 @@
                     <EstimatedClockPeriod>2.278</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>9</Best-caseLatency>
-                    <Average-caseLatency>9</Average-caseLatency>
-                    <Worst-caseLatency>9</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>90.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>90.000 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>90.000 ns</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>9</PipelineInitiationInterval>
+                    <Best-caseLatency>16</Best-caseLatency>
+                    <Average-caseLatency>16</Average-caseLatency>
+                    <Worst-caseLatency>16</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.160 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.160 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.160 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>16</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -460,10 +427,10 @@
                         <Name>VITIS_LOOP_9_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>7</TripCount>
-                        <Latency>7</Latency>
-                        <AbsoluteTimeLatency>70.000 ns</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>2</PipelineDepth>
+                        <Latency>14</Latency>
+                        <AbsoluteTimeLatency>0.140 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </VITIS_LOOP_9_1>
@@ -471,10 +438,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>39</FF>
+                    <FF>59</FF>
                     <AVAIL_FF>2592000</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>120</LUT>
+                    <LUT>189</LUT>
                     <AVAIL_LUT>1296000</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -489,7 +456,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_9_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln9_fu_92_p2" SOURCE="../../Code/radix/radix.c:9" URAM="0" VARIABLE="add_ln9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_9_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln9_fu_155_p2" SOURCE="../../Code/radix/radix.c:9" URAM="0" VARIABLE="add_ln9"/>
             </BindNodes>
         </Module>
         <Module>
@@ -504,13 +471,13 @@
                     <EstimatedClockPeriod>2.972</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>79</Best-caseLatency>
-                    <Average-caseLatency>79</Average-caseLatency>
-                    <Worst-caseLatency>79</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.790 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.790 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.790 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>79</PipelineInitiationInterval>
+                    <Best-caseLatency>86</Best-caseLatency>
+                    <Average-caseLatency>86</Average-caseLatency>
+                    <Worst-caseLatency>86</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.860 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.860 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.860 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>86</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -518,10 +485,10 @@
                         <Name>VITIS_LOOP_20_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>7</TripCount>
-                        <Latency>77</Latency>
-                        <AbsoluteTimeLatency>0.770 us</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>72</PipelineDepth>
+                        <Latency>84</Latency>
+                        <AbsoluteTimeLatency>0.840 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>73</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </VITIS_LOOP_20_1>
@@ -529,10 +496,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>4906</FF>
+                    <FF>4855</FF>
                     <AVAIL_FF>2592000</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>3660</LUT>
+                    <LUT>4044</LUT>
                     <AVAIL_LUT>1296000</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -547,7 +514,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln20_fu_108_p2" SOURCE="../../Code/radix/radix.c:20" URAM="0" VARIABLE="add_ln20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln20_fu_171_p2" SOURCE="../../Code/radix/radix.c:20" URAM="0" VARIABLE="add_ln20"/>
             </BindNodes>
         </Module>
         <Module>
@@ -620,13 +587,13 @@
                     <EstimatedClockPeriod>2.848</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>81</Best-caseLatency>
-                    <Average-caseLatency>81</Average-caseLatency>
-                    <Worst-caseLatency>81</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.810 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.810 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.810 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>81</PipelineInitiationInterval>
+                    <Best-caseLatency>89</Best-caseLatency>
+                    <Average-caseLatency>89</Average-caseLatency>
+                    <Worst-caseLatency>89</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.890 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.890 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.890 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>89</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -634,10 +601,10 @@
                         <Name>VITIS_LOOP_30_3</Name>
                         <Slack>7.30</Slack>
                         <TripCount>8</TripCount>
-                        <Latency>79</Latency>
-                        <AbsoluteTimeLatency>0.790 us</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>73</PipelineDepth>
+                        <Latency>87</Latency>
+                        <AbsoluteTimeLatency>0.870 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>74</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </VITIS_LOOP_30_3>
@@ -645,10 +612,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>4815</FF>
+                    <FF>4763</FF>
                     <AVAIL_FF>2592000</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>3653</LUT>
+                    <LUT>3727</LUT>
                     <AVAIL_LUT>1296000</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -663,7 +630,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_110_p2" SOURCE="../../Code/radix/radix.c:30" URAM="0" VARIABLE="add_ln30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_146_p2" SOURCE="../../Code/radix/radix.c:30" URAM="0" VARIABLE="add_ln30"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="count_d0" SOURCE="../../Code/radix/radix.c:31" URAM="0" VARIABLE="add_ln31"/>
             </BindNodes>
         </Module>
@@ -738,13 +705,13 @@
                     <EstimatedClockPeriod>2.848</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>81</Best-caseLatency>
-                    <Average-caseLatency>81</Average-caseLatency>
-                    <Worst-caseLatency>81</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.810 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.810 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.810 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>81</PipelineInitiationInterval>
+                    <Best-caseLatency>89</Best-caseLatency>
+                    <Average-caseLatency>89</Average-caseLatency>
+                    <Worst-caseLatency>89</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.890 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.890 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.890 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>89</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -752,10 +719,10 @@
                         <Name>VITIS_LOOP_38_5</Name>
                         <Slack>7.30</Slack>
                         <TripCount>8</TripCount>
-                        <Latency>79</Latency>
-                        <AbsoluteTimeLatency>0.790 us</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>73</PipelineDepth>
+                        <Latency>87</Latency>
+                        <AbsoluteTimeLatency>0.870 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>74</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </VITIS_LOOP_38_5>
@@ -763,10 +730,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>4911</FF>
+                    <FF>4859</FF>
                     <AVAIL_FF>2592000</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>3676</LUT>
+                    <LUT>3750</LUT>
                     <AVAIL_LUT>1296000</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -781,8 +748,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_fu_189_p2" SOURCE="../../Code/radix/radix.c:39" URAM="0" VARIABLE="add_ln39"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_fu_134_p2" SOURCE="../../Code/radix/radix.c:38" URAM="0" VARIABLE="add_ln38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_fu_278_p2" SOURCE="../../Code/radix/radix.c:39" URAM="0" VARIABLE="add_ln39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_fu_193_p2" SOURCE="../../Code/radix/radix.c:38" URAM="0" VARIABLE="add_ln38"/>
             </BindNodes>
         </Module>
         <Module>
@@ -797,13 +764,13 @@
                     <EstimatedClockPeriod>1.460</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>10</Best-caseLatency>
-                    <Average-caseLatency>10</Average-caseLatency>
-                    <Worst-caseLatency>10</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>10</PipelineInitiationInterval>
+                    <Best-caseLatency>18</Best-caseLatency>
+                    <Average-caseLatency>18</Average-caseLatency>
+                    <Worst-caseLatency>18</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.180 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.180 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.180 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>18</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -811,10 +778,10 @@
                         <Name>VITIS_LOOP_43_6</Name>
                         <Slack>7.30</Slack>
                         <TripCount>8</TripCount>
-                        <Latency>8</Latency>
-                        <AbsoluteTimeLatency>80.000 ns</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>2</PipelineDepth>
+                        <Latency>16</Latency>
+                        <AbsoluteTimeLatency>0.160 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </VITIS_LOOP_43_6>
@@ -822,10 +789,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>11</FF>
+                    <FF>28</FF>
                     <AVAIL_FF>2592000</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>59</LUT>
+                    <LUT>156</LUT>
                     <AVAIL_LUT>1296000</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -840,7 +807,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_43_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_75_p2" SOURCE="../../Code/radix/radix.c:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_43_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_126_p2" SOURCE="../../Code/radix/radix.c:43" URAM="0" VARIABLE="add_ln43"/>
             </BindNodes>
         </Module>
         <Module>
@@ -852,7 +819,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>2.972</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.233</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -875,12 +842,12 @@
                         <PipelineDepth>undef</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_radix_Pipeline_VITIS_LOOP_20_1_fu_133</Instance>
-                            <Instance>grp_radix_Pipeline_VITIS_LOOP_26_2_fu_141</Instance>
-                            <Instance>grp_radix_Pipeline_VITIS_LOOP_30_3_fu_147</Instance>
-                            <Instance>grp_radix_Pipeline_VITIS_LOOP_34_4_fu_154</Instance>
-                            <Instance>grp_radix_Pipeline_VITIS_LOOP_38_5_fu_160</Instance>
-                            <Instance>grp_radix_Pipeline_VITIS_LOOP_43_6_fu_168</Instance>
+                            <Instance>grp_radix_Pipeline_VITIS_LOOP_20_1_fu_179</Instance>
+                            <Instance>grp_radix_Pipeline_VITIS_LOOP_26_2_fu_187</Instance>
+                            <Instance>grp_radix_Pipeline_VITIS_LOOP_30_3_fu_193</Instance>
+                            <Instance>grp_radix_Pipeline_VITIS_LOOP_34_4_fu_200</Instance>
+                            <Instance>grp_radix_Pipeline_VITIS_LOOP_38_5_fu_206</Instance>
+                            <Instance>grp_radix_Pipeline_VITIS_LOOP_43_6_fu_214</Instance>
                         </InstanceList>
                     </VITIS_LOOP_53_1>
                 </SummaryOfLoopLatency>
@@ -890,10 +857,10 @@
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <FF>16469</FF>
+                    <FF>16294</FF>
                     <AVAIL_FF>2592000</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>13341</LUT>
+                    <LUT>14058</LUT>
                     <AVAIL_LUT>1296000</AVAIL_LUT>
                     <UTIL_LUT>1</UTIL_LUT>
                     <URAM>0</URAM>
@@ -905,10 +872,10 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="vla13_U" SOURCE="../../Code/radix/radix.c:66" URAM="0" VARIABLE="vla13"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="count_U" SOURCE="../../Code/radix/radix.c:24" URAM="0" VARIABLE="count"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="output_U" SOURCE="../../Code/radix/radix.c:17" URAM="0" VARIABLE="output"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="vla13_U" SOURCE="../../Code/radix/radix.c:65" URAM="0" VARIABLE="vla13"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_53_1" OPTYPE="add" PRAGMA="" RTLNAME="place_fu_218_p2" SOURCE="../../Code/radix/radix.c:53" URAM="0" VARIABLE="place"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_53_1" OPTYPE="add" PRAGMA="" RTLNAME="place_fu_278_p2" SOURCE="../../Code/radix/radix.c:53" URAM="0" VARIABLE="place"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -920,9 +887,9 @@
                 <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="output" index="1" direction="in" srcType="int" srcSize="32">
+        <Arg ArgName="output" index="1" direction="out" srcType="unsigned char*" srcSize="8">
             <hwRefs>
-                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
     </Args>
@@ -948,15 +915,55 @@
                 <port>s_axi_control_WVALID</port>
             </ports>
             <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
                 <register offset="0x10" name="input_r" access="W" description="Data signal of input_r" range="32">
                     <fields>
                         <field offset="0" width="8" name="input_r" access="W" description="Bit 7 to 0 of input_r"/>
                         <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
                     </fields>
                 </register>
-                <register offset="0x18" name="output_r" access="W" description="Data signal of output_r" range="32">
+                <register offset="0x18" name="output_r" access="R" description="Data signal of output_r" range="32">
                     <fields>
-                        <field offset="0" width="32" name="output_r" access="W" description="Bit 31 to 0 of output_r"/>
+                        <field offset="0" width="8" name="output_r" access="R" description="Bit 7 to 0 of output_r"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x1c" name="output_r_ctrl" access="R" description="Control signal of output_r" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="output_r_ap_vld" access="R" description="Control signal output_r_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
                     </fields>
                 </register>
             </registers>
@@ -988,18 +995,15 @@
                 <port>ap_rst_n</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
             <portMaps>
-                <portMap portMapName="ap_start">start</portMap>
-                <portMap portMapName="ap_done">done</portMap>
-                <portMap portMapName="ap_idle">idle</portMap>
-                <portMap portMapName="ap_ready">ready</portMap>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
             </portMaps>
             <ports>
-                <port>ap_done</port>
-                <port>ap_idle</port>
-                <port>ap_ready</port>
-                <port>ap_start</port>
+                <port>interrupt</port>
             </ports>
         </Interface>
     </Interfaces>
@@ -1013,9 +1017,14 @@
             </item>
             <item name="S_AXILITE Registers">
                 <table isCollapsed="0">
-                    <keys size="6">Interface, Register, Offset, Width, Access, Description</keys>
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_control">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_control">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_control">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
                     <column name="s_axi_control">input_r, 0x10, 32, W, Data signal of input_r, </column>
-                    <column name="s_axi_control">output_r, 0x18, 32, W, Data signal of output_r, </column>
+                    <column name="s_axi_control">output_r, 0x18, 32, R, Data signal of output_r, </column>
+                    <column name="s_axi_control">output_r_ctrl, 0x1c, 32, R, Control signal of output_r, 0=output_r_ap_vld</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -1023,7 +1032,8 @@
                     <keys size="3">Interface, Type, Ports</keys>
                     <column name="ap_clk">clock, ap_clk, </column>
                     <column name="ap_rst_n">reset, ap_rst_n, </column>
-                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                    <column name="interrupt">interrupt, interrupt, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, , </column>
                 </table>
             </item>
         </section>
@@ -1034,7 +1044,7 @@
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
                     <column name="input">in, char const *</column>
-                    <column name="output">in, int</column>
+                    <column name="output">out, unsigned char*</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
@@ -1052,6 +1062,7 @@
     <PragmaReport>
         <Pragma type="interface" location="../../Code/radix/radix.c:58" status="valid" parentFunction="radix" variable="input" isDirective="0" options="mode=s_axilite port=input"/>
         <Pragma type="interface" location="../../Code/radix/radix.c:59" status="valid" parentFunction="radix" variable="output" isDirective="0" options="mode=s_axilite port=output"/>
+        <Pragma type="interface" location="../../Code/radix/radix.c:60" status="valid" parentFunction="radix" variable="radix" isDirective="0" options="mode=s_axilite port=radix"/>
     </PragmaReport>
 </profile>
 

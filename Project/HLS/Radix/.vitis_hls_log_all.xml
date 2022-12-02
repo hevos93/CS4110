@@ -3,26 +3,40 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog>
-        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***" projectName="Radix" solutionName="radix01" date="2022-11-30T10:24:13.530+0100"/>
-        <logs message="ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***" projectName="Radix" solutionName="radix01" date="2022-11-30T10:24:13.431+0100"/>
-        <logs message="ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors." projectName="Radix" solutionName="radix01" date="2022-11-30T10:24:13.418+0100"/>
-        <logs message="ERROR: [COSIM 212-321] EXE file generate failed." projectName="Radix" solutionName="radix01" date="2022-11-30T10:24:13.403+0100"/>
-        <logs message="ERROR: [COSIM 212-317] C++ compile error." projectName="Radix" solutionName="radix01" date="2022-11-30T10:24:13.380+0100"/>
-      </simLog>
+      <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="Radix" solutionName="radix01" date="2022-12-02T13:24:58.046+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="Radix" solutionName="radix01" date="2022-12-02T13:21:19.429+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="Radix" solutionName="radix01" date="2022-12-02T13:16:03.565+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="Radix" solutionName="radix01" date="2022-12-02T13:14:32.553+0100"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="Radix" solutionName="radix01" date="2022-12-02T13:14:32.520+0100"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="Radix" solutionName="radix01" date="2022-12-02T13:14:32.513+0100"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="Radix" solutionName="radix01" date="2022-12-02T13:14:32.506+0100"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Radix" solutionName="radix01" date="2022-11-30T10:23:32.940+0100" type="Warning"/>
-        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_53_1' (../../Code/radix/radix.c:16:23) in function 'radix' more than one sub loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html" projectName="Radix" solutionName="radix01" date="2022-11-30T10:23:27.300+0100" type="Warning"/>
-        <logs message="WARNING: [SYNCHK 200-77] The top function 'radix' (../../Code/radix/radix.c:57) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops." projectName="Radix" solutionName="radix01" date="2022-11-30T10:23:27.027+0100" type="Warning"/>
-        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:38)" projectName="Radix" solutionName="radix01" date="2022-11-30T10:23:26.929+0100" type="Warning"/>
-        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:41)" projectName="Radix" solutionName="radix01" date="2022-11-30T10:23:26.919+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:28.580+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_43_6' (loop 'VITIS_LOOP_43_6'): Unable to schedule 'store' operation ('vla13_addr_4_write_ln44', ../../Code/radix/radix.c:44) of variable 'trunc_ln44_1', ../../Code/radix/radix.c:44 on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:26.663+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_38_5' (loop 'VITIS_LOOP_38_5'): Unable to schedule 'load' operation ('vla13_load_4', ../../Code/radix/radix.c:39) on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:26.214+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_30_3' (loop 'VITIS_LOOP_30_3'): Unable to schedule 'load' operation ('vla13_load_7', ../../Code/radix/radix.c:31) on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:25.696+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_20_1' (loop 'VITIS_LOOP_20_1'): Unable to schedule 'load' operation ('vla13_load_10', ../../Code/radix/radix.c:21) on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:25.206+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_9_1' (loop 'VITIS_LOOP_9_1'): Unable to schedule 'load' operation ('vla13_load_1', ../../Code/radix/radix.c:10) on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:25.099+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_53_1' (../../Code/radix/radix.c:16:23) in function 'radix' more than one sub loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:24.715+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:44:38)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:24.311+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:39:74)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:24.303+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:38)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:24.292+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:35:41)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:24.285+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:31:16)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:24.268+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:21:15)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:24.261+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:10:13)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:24.254+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-4056] incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [size_str]' (../../Code/radix/radix.c:89:13)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:20.660+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-4053] incompatible pointer types passing 'uint8_t [size_str]' to parameter of type 'int *' (../../Code/radix/radix.c:88:15)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:19.925+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5176] sizeof on array function parameter will return size of 'const char *' instead of 'const char []' (../../Code/radix/radix.c:62:27)" projectName="Radix" solutionName="radix01" date="2022-12-02T13:12:19.919+0100" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

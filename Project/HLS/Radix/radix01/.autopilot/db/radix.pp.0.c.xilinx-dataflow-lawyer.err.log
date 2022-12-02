@@ -1,0 +1,6 @@
+sizeof on array function parameter will return size of 'const char *' instead of 'const char []'
+declared here
+incompatible pointer types passing 'uint8_t [size_str]' to parameter of type 'int *'
+passing argument to parameter 'array' here
+incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [size_str]'
+3 warnings generated.

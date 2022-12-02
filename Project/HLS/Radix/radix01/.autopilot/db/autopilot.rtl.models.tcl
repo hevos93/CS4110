@@ -1,5 +1,5 @@
 set SynModuleInfo {
-  {SRCNAME radix_Pipeline_VITIS_LOOP_67_1 MODELNAME radix_Pipeline_VITIS_LOOP_67_1 RTLNAME radix_radix_Pipeline_VITIS_LOOP_67_1
+  {SRCNAME radix_Pipeline_VITIS_LOOP_68_1 MODELNAME radix_Pipeline_VITIS_LOOP_68_1 RTLNAME radix_radix_Pipeline_VITIS_LOOP_68_1
     SUBMODULES {
       {MODELNAME radix_flow_control_loop_pipe_sequential_init RTLNAME radix_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME radix_flow_control_loop_pipe_sequential_init_U}
     }
@@ -24,9 +24,9 @@ set SynModuleInfo {
     SUBMODULES {
       {MODELNAME radix_sdiv_32ns_32ns_32_36_seq_1 RTLNAME radix_sdiv_32ns_32ns_32_36_seq_1 BINDTYPE op TYPE sdiv IMPL auto_seq LATENCY 35 ALLOW_PRAGMA 1}
       {MODELNAME radix_srem_32ns_5ns_5_36_seq_1 RTLNAME radix_srem_32ns_5ns_5_36_seq_1 BINDTYPE op TYPE srem IMPL auto_seq LATENCY 35 ALLOW_PRAGMA 1}
+      {MODELNAME radix_vla13_RAM_AUTO_1R1W RTLNAME radix_vla13_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME radix_count_RAM_AUTO_1R1W RTLNAME radix_count_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME radix_output_RAM_AUTO_1R1W RTLNAME radix_output_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME radix_vla13_RAM_AUTO_1R1W RTLNAME radix_vla13_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME radix_control_s_axi RTLNAME radix_control_s_axi BINDTYPE interface TYPE interface_s_axilite}
     }
   }

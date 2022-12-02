@@ -1,0 +1,16 @@
+../../Code/radix/radix.c:62:27: warning: sizeof on array function parameter will return size of 'const char *' instead of 'const char []' [-Wsizeof-array-argument]
+ uint8_t size_str = sizeof(input);
+                          ^
+../../Code/radix/radix.c:57:23: note: declared here
+void radix(const char input[], uint8_t* output){
+                      ^
+../../Code/radix/radix.c:88:15: warning: incompatible pointer types passing 'uint8_t [size_str]' to parameter of type 'int *' [-Wincompatible-pointer-types]
+    radixsort(array, n);
+              ^~~~~
+../../Code/radix/radix.c:48:20: note: passing argument to parameter 'array' here
+void radixsort(int array[], int size) {
+                   ^
+../../Code/radix/radix.c:89:13: warning: incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [size_str]' [-Wint-conversion]
+    *output = array;
+            ^ ~~~~~
+3 warnings generated.

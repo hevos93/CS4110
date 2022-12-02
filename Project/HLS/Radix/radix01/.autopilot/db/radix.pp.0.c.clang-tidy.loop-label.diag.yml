@@ -1,85 +1,85 @@
 ---
-MainSourceFile:  'C:/Users/hevos/Documents/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c'
+MainSourceFile:  'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c'
 Diagnostics:     
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_9_1:  '
     FileOffset:      9
-    FilePath:        'C:\Users\hevos\Documents\CS4110\Code\radix\radix.c'
+    FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
-      - FilePath:        'C:\Users\hevos\Documents\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          59910
+      - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
+        Offset:          59916
         Length:          0
         ReplacementText: 'VITIS_LOOP_9_1: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_20_1:  '
     FileOffset:      20
-    FilePath:        'C:\Users\hevos\Documents\CS4110\Code\radix\radix.c'
+    FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
-      - FilePath:        'C:\Users\hevos\Documents\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60203
+      - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
+        Offset:          60209
         Length:          0
         ReplacementText: 'VITIS_LOOP_20_1: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_26_2:  '
     FileOffset:      26
-    FilePath:        'C:\Users\hevos\Documents\CS4110\Code\radix\radix.c'
+    FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
-      - FilePath:        'C:\Users\hevos\Documents\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60438
+      - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
+        Offset:          60444
         Length:          0
         ReplacementText: 'VITIS_LOOP_26_2: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_30_3:  '
     FileOffset:      30
-    FilePath:        'C:\Users\hevos\Documents\CS4110\Code\radix\radix.c'
+    FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
-      - FilePath:        'C:\Users\hevos\Documents\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60576
+      - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
+        Offset:          60582
         Length:          0
         ReplacementText: 'VITIS_LOOP_30_3: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_34_4:  '
     FileOffset:      34
-    FilePath:        'C:\Users\hevos\Documents\CS4110\Code\radix\radix.c'
+    FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
-      - FilePath:        'C:\Users\hevos\Documents\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60735
+      - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
+        Offset:          60741
         Length:          0
         ReplacementText: 'VITIS_LOOP_34_4: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_38_5:  '
     FileOffset:      38
-    FilePath:        'C:\Users\hevos\Documents\CS4110\Code\radix\radix.c'
+    FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
-      - FilePath:        'C:\Users\hevos\Documents\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          60904
+      - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
+        Offset:          60910
         Length:          0
         ReplacementText: 'VITIS_LOOP_38_5: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_43_6:  '
     FileOffset:      43
-    FilePath:        'C:\Users\hevos\Documents\CS4110\Code\radix\radix.c'
+    FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
-      - FilePath:        'C:\Users\hevos\Documents\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          61178
+      - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
+        Offset:          61184
         Length:          0
         ReplacementText: 'VITIS_LOOP_43_6: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_53_1:  '
     FileOffset:      53
-    FilePath:        'C:\Users\hevos\Documents\CS4110\Code\radix\radix.c'
+    FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
-      - FilePath:        'C:\Users\hevos\Documents\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          61425
+      - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
+        Offset:          61431
         Length:          0
         ReplacementText: 'VITIS_LOOP_53_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_67_1:  '
-    FileOffset:      67
-    FilePath:        'C:\Users\hevos\Documents\CS4110\Code\radix\radix.c'
+    Message:         'Added loop label VITIS_LOOP_68_1:  '
+    FileOffset:      68
+    FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c'
     Replacements:    
-      - FilePath:        'C:\Users\hevos\Documents\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
-        Offset:          62131
+      - FilePath:        'S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS\Radix\radix01\.autopilot\db\radix.pp.0.c'
+        Offset:          62219
         Length:          0
-        ReplacementText: 'VITIS_LOOP_67_1: '
+        ReplacementText: 'VITIS_LOOP_68_1: '
 ...

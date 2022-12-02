@@ -170,10 +170,10 @@ for.inc13.i.i:5 %br_ln26 = br i1 %icmp_ln26, void %for.inc27.i.i.preheader.exitS
 
 <Node id="15" bw="64" op_0_bw="3">
 <![CDATA[
-for.inc13.i.i.split:0 %countingSort_counter2_cast1 = zext i3 %countingSort_counter2_1
+for.inc13.i.i.split:0 %countingSort_counter2_cast2 = zext i3 %countingSort_counter2_1
 
 ]]></Node>
-<StgValue><ssdm name="countingSort_counter2_cast1"/></StgValue>
+<StgValue><ssdm name="countingSort_counter2_cast2"/></StgValue>
 </operation>
 
 <operation id="15" st_id="1" stage="1" lat="1">
@@ -202,7 +202,7 @@ for.inc13.i.i.split:1 %specloopname_ln26 = specloopname void @_ssdm_op_SpecLoopN
 
 <Node id="17" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc13.i.i.split:2 %count_addr = getelementptr i32 %count, i64 0, i64 %countingSort_counter2_cast1
+for.inc13.i.i.split:2 %count_addr = getelementptr i32 %count, i64 0, i64 %countingSort_counter2_cast2
 
 ]]></Node>
 <StgValue><ssdm name="count_addr"/></StgValue>
@@ -323,7 +323,7 @@ for.inc27.i.i.preheader.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="54" from="icmp_ln26" to="br_ln26" fromId="11" toId="13">
 </dataflow>
-<dataflow id="55" from="countingSort_counter2_1" to="countingSort_counter2_cast1" fromId="8" toId="14">
+<dataflow id="55" from="countingSort_counter2_1" to="countingSort_counter2_cast2" fromId="8" toId="14">
 </dataflow>
 <dataflow id="57" from="_ssdm_op_SpecLoopName" to="specloopname_ln26" fromId="56" toId="15">
 </dataflow>
@@ -333,7 +333,7 @@ for.inc27.i.i.preheader.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="62" from="StgValue_61" to="count_addr" fromId="61" toId="16">
 </dataflow>
-<dataflow id="63" from="countingSort_counter2_cast1" to="count_addr" fromId="14" toId="16">
+<dataflow id="63" from="countingSort_counter2_cast2" to="count_addr" fromId="14" toId="16">
 </dataflow>
 <dataflow id="64" from="StgValue_43" to="store_ln27" fromId="43" toId="17">
 </dataflow>
