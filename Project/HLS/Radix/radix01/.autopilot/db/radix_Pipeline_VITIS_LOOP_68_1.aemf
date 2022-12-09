@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1669983147562">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670426022364">
   <ports id="1" name="icmp_ln71" type="PortType" coreId="1953394531" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="2" name="vla13" type="PortType" coreName="RAM" coreId="1953394531" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="3" name="str" type="PortType" originalName="str" coreId="1953394531" bitwidth="8">
+  <ports id="3" name="str" type="PortType" originalName="str" coreId="1375644248" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="40" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.2"/>
@@ -51,35 +51,35 @@
   <edges id="113" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
   <blocks id="11" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>while.cond</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="counter" originalName="counter" coreId="1078921136" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="counter" originalName="counter" coreId="1821520952" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="arr_counter" originalName="arr_counter" coreId="892621224" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="arr_counter" originalName="arr_counter" coreId="16" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="str_read" coreId="1078929936" bitwidth="8" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="str_read" coreId="15" bitwidth="8" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>str</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="icmp_ln71_read" coreId="892618984" bitwidth="1" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="icmp_ln71_read" coreId="1407129344" bitwidth="1" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>icmp_ln71</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="arr_counter_write_ln0" coreId="892615624" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="arr_counter_write_ln0" coreId="1821519272" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="counter_write_ln0" coreId="1061529856" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="counter_write_ln0" coreId="10" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln0" coreId="1078871376" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln0" coreId="1821519832" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <controlInputObjs>while.cond</controlInputObjs>
     </node_objs>
   </blocks>
@@ -96,7 +96,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>while.end.exitStub</controlOutputObjs>
       <controlOutputObjs>while.body</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="counter_1" lineNumber="72" originalName="counter" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="892616744" contextFuncName="radix" bitwidth="4" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="counter_1" lineNumber="72" originalName="counter" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1821523752" contextFuncName="radix" bitwidth="4" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="72" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -114,7 +114,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="br_ln68" lineNumber="68" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1078879936" contextFuncName="radix" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="br_ln68" lineNumber="68" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="3305071" contextFuncName="radix" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="68" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>while.body</controlInputObjs>
@@ -130,7 +130,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>if.end</controlOutputObjs>
       <controlOutputObjs>if.else</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln71" lineNumber="71" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="892620664" contextFuncName="radix" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln71" lineNumber="71" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1852404336" contextFuncName="radix" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="71" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
         <dataInputObjs>read</dataInputObjs>
         <controlInputObjs>if.else</controlInputObjs>
@@ -144,18 +144,18 @@
       <controlInputObjs>while.body</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>if.end</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="arr_counter_load" lineNumber="77" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radix" bitwidth="8" opcode="load" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="arr_counter_load" lineNumber="77" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1821517592" contextFuncName="radix" bitwidth="8" opcode="load" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="77" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="zext_ln75" lineNumber="75" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln75_fu_102_p1" coreId="0" contextFuncName="radix" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="zext_ln75" lineNumber="75" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln75_fu_102_p1" coreId="79" contextFuncName="radix" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="75" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="vla13_addr" lineNumber="75" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1460382496" contextFuncName="radix" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="vla13_addr" lineNumber="75" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radix" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="75" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>vla13</dataOutputObjs>
@@ -173,12 +173,12 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="arr_counter_write_ln77" lineNumber="77" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radix" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="arr_counter_write_ln77" lineNumber="77" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="4294967294" contextFuncName="radix" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="77" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln0" coreId="47" opcode="br" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <controlInputObjs>if.end</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../../Code/radix/radix.c">
@@ -192,12 +192,12 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>while.cond</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="counter_write_ln68" lineNumber="68" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="7" contextFuncName="radix" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="counter_write_ln68" lineNumber="68" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radix" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="68" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln68" lineNumber="68" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="radix" opcode="br" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln68" lineNumber="68" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="4294967294" contextFuncName="radix" opcode="br" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="68" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="radix"/>
         <controlInputObjs>while.cond</controlInputObjs>
       </node_objs>

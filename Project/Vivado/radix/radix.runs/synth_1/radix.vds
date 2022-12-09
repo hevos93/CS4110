@@ -1,0 +1,437 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Dec  9 19:04:45 2022
+# Process ID: 39856
+# Current directory: S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/radix/radix.runs/synth_1
+# Command line: vivado.exe -log radix.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source radix.tcl
+# Log file: S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/radix/radix.runs/synth_1/radix.vds
+# Journal file: S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/radix/radix.runs/synth_1\vivado.jou
+# Running On: DESKTOP-75MLGFJ, OS: Windows, CPU Frequency: 3700 MHz, CPU Physical cores: 12, Host memory: 34270 MB
+#-----------------------------------------------------------
+source radix.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/radix/radix.srcs/utils_1/imports/synth_1/radix.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/radix/radix.srcs/utils_1/imports/synth_1/radix.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top radix -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 48084
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [S:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1443.457 ; gain = 407.914
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'radix' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/top_level.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'ctr_path' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'ctr_path' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/uart_rx.vhd:19]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/uart_rx.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/uart_tx.vhd:20]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/uart_tx.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'input_ram_counter' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/input_ram_counter.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'input_ram_counter' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/input_ram_counter.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'input_ram' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/async_ram.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'input_ram' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/async_ram.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'input_mux_shift' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/input_mux_shift.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'input_mux_shift' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/input_mux_shift.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'shift_rom_counter' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_rom_counter.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'shift_rom_counter' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_rom_counter.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'shift_rom' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_rom.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'shift_rom' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_rom.vhd:12]
+INFO: [Synth 8-638] synthesizing module 'shift' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'shift' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift.vhd:12]
+INFO: [Synth 8-638] synthesizing module 'shift_mux_ram_block' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'shift_mux_ram_block' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'ram_block_rom_counter' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block_rom_counter.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'ram_block_rom_counter' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block_rom_counter.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'ram_block_rom' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block_rom.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'ram_block_rom' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block_rom.vhd:12]
+INFO: [Synth 8-638] synthesizing module 'ram_block_mux_temp_ram' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block_mux_temp_ram.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'ram_block_mux_temp_ram' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block_mux_temp_ram.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'temp_ram_counter' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/temp_ram_counter.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'temp_ram_counter' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/temp_ram_counter.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'temp_ram' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/temp_ram.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'temp_ram' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/temp_ram.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'output_ram_counter' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/output_ram_counter.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'output_ram_counter' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/output_ram_counter.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'output_ram' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/output_ram.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'output_ram' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/output_ram.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'ram_block_counter' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block_counter.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'ram_block_counter' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block_counter.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'ram_block' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'ram_block' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/ram_block.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'radix' (0#1) [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/top_level.vhd:24]
+WARNING: [Synth 8-3848] Net input_ram_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:17]
+WARNING: [Synth 8-3848] Net input_ram_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:17]
+WARNING: [Synth 8-3848] Net input_ram_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:20]
+WARNING: [Synth 8-3848] Net input_mux_switch in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:23]
+WARNING: [Synth 8-3848] Net shift_rom_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:26]
+WARNING: [Synth 8-3848] Net shift_rom_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:26]
+WARNING: [Synth 8-3848] Net ram0_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:29]
+WARNING: [Synth 8-3848] Net ram1_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:29]
+WARNING: [Synth 8-3848] Net ram2_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:29]
+WARNING: [Synth 8-3848] Net ram3_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:29]
+WARNING: [Synth 8-3848] Net ram4_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:29]
+WARNING: [Synth 8-3848] Net ram5_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:29]
+WARNING: [Synth 8-3848] Net ram6_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:29]
+WARNING: [Synth 8-3848] Net ram7_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:29]
+WARNING: [Synth 8-3848] Net ram0_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:30]
+WARNING: [Synth 8-3848] Net ram1_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:30]
+WARNING: [Synth 8-3848] Net ram2_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:30]
+WARNING: [Synth 8-3848] Net ram3_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:30]
+WARNING: [Synth 8-3848] Net ram4_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:30]
+WARNING: [Synth 8-3848] Net ram5_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:30]
+WARNING: [Synth 8-3848] Net ram6_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:30]
+WARNING: [Synth 8-3848] Net ram7_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:30]
+WARNING: [Synth 8-3848] Net ram0_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:31]
+WARNING: [Synth 8-3848] Net ram1_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:31]
+WARNING: [Synth 8-3848] Net ram2_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:31]
+WARNING: [Synth 8-3848] Net ram3_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:31]
+WARNING: [Synth 8-3848] Net ram4_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:31]
+WARNING: [Synth 8-3848] Net ram5_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:31]
+WARNING: [Synth 8-3848] Net ram6_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:31]
+WARNING: [Synth 8-3848] Net ram7_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:31]
+WARNING: [Synth 8-3848] Net ram_block_rom_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:34]
+WARNING: [Synth 8-3848] Net ram_block_rom_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:34]
+WARNING: [Synth 8-3848] Net temp_ram_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:37]
+WARNING: [Synth 8-3848] Net temp_ram_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:37]
+WARNING: [Synth 8-3848] Net temp_ram_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:40]
+WARNING: [Synth 8-3848] Net output_ram_counter_clr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:43]
+WARNING: [Synth 8-3848] Net output_ram_counter_inc in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:43]
+WARNING: [Synth 8-3848] Net output_ram_wr in module/entity ctr_path does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/fsm.vhd:46]
+WARNING: [Synth 8-3936] Found unconnected internal register 'shifted_signal_reg' and it is trimmed from '8' to '3' bits. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift.vhd:24]
+WARNING: [Synth 8-3848] Net tick in module/entity radix does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/top_level.vhd:25]
+WARNING: [Synth 8-3848] Net temp_ram_input_mux in module/entity radix does not have driver. [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/top_level.vhd:33]
+WARNING: [Synth 8-7129] Port clk in module ram_block_mux_temp_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module ram_block_mux_temp_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module shift_mux_ram_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module shift_mux_ram_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module input_mux_shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module input_mux_shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_ram_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_ram_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_ram_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_mux_switch in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_rom_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_rom_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram0_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram1_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram2_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram3_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram4_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram5_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram6_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram7_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram0_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram1_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram2_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram3_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram4_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram5_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram6_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram7_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram0_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram1_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram2_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram3_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram4_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram5_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram6_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram7_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_block_rom_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_block_rom_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port temp_ram_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port temp_ram_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port temp_ram_wr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_ram_counter_clr in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_ram_counter_inc in module ctr_path is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_ram_wr in module ctr_path is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1539.055 ; gain = 503.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1539.055 ; gain = 503.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1539.055 ; gain = 503.512
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'ctr_path'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                               00 |                               00
+                      s1 |                               01 |                               01
+                      s2 |                               10 |                               10
+                      s3 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'ctr_path'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   start |                               01 |                               01
+                    data |                               10 |                               10
+                    stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   start |                               01 |                               01
+                    data |                               10 |                               10
+                    stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_tx'
+WARNING: [Synth 8-327] inferring latch for variable 'out0_reg' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:46]
+WARNING: [Synth 8-327] inferring latch for variable 'out1_reg' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:48]
+WARNING: [Synth 8-327] inferring latch for variable 'out2_reg' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'out3_reg' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:52]
+WARNING: [Synth 8-327] inferring latch for variable 'out4_reg' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:54]
+WARNING: [Synth 8-327] inferring latch for variable 'out5_reg' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:56]
+WARNING: [Synth 8-327] inferring latch for variable 'out6_reg' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:58]
+WARNING: [Synth 8-327] inferring latch for variable 'out7_reg' [S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/Source/shift_mux_ram_block.vhd:60]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1539.055 ; gain = 503.512
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 13    
+	   2 Input    3 Bit       Adders := 3     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 13    
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 25    
+	   4 Input    4 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 79    
+	   4 Input    1 Bit        Muxes := 18    
+	   8 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (ctr_path/FSM_sequential_state_reg_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (ctr_path/FSM_sequential_state_reg_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (uart_rx_unit/FSM_sequential_state_reg_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (uart_rx_unit/FSM_sequential_state_reg_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (uart_tx_unit/FSM_sequential_state_reg_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (uart_tx_unit/FSM_sequential_state_reg_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out0_reg[7]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out0_reg[6]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out0_reg[5]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out0_reg[4]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out0_reg[3]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out0_reg[2]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out0_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out0_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out1_reg[7]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out1_reg[6]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out1_reg[5]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out1_reg[4]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out1_reg[3]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out1_reg[2]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out1_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out1_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out2_reg[7]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out2_reg[6]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out2_reg[5]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out2_reg[4]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out2_reg[3]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out2_reg[2]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out2_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out2_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out3_reg[7]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out3_reg[6]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out3_reg[5]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out3_reg[4]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out3_reg[3]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out3_reg[2]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out3_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out3_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out4_reg[7]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out4_reg[6]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out4_reg[5]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out4_reg[4]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out4_reg[3]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out4_reg[2]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out4_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out4_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out5_reg[7]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out5_reg[6]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out5_reg[5]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out5_reg[4]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out5_reg[3]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out5_reg[2]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out5_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out5_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out6_reg[7]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out6_reg[6]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out6_reg[5]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out6_reg[4]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out6_reg[3]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out6_reg[2]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out6_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out6_reg[0]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out7_reg[7]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out7_reg[6]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out7_reg[5]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out7_reg[4]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out7_reg[3]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out7_reg[2]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out7_reg[1]) is unused and will be removed from module radix.
+WARNING: [Synth 8-3332] Sequential element (shift_mux_ram_block/out7_reg[0]) is unused and will be removed from module radix.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     1|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1723.523 ; gain = 687.980
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 164 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1723.523 ; gain = 687.980
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1723.523 ; gain = 687.980
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1724.434 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1828.316 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 17df5f3f
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 164 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1828.316 ; gain = 800.477
+INFO: [Common 17-1381] The checkpoint 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/radix/radix.runs/synth_1/radix.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file radix_utilization_synth.rpt -pb radix_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  9 19:05:15 2022...

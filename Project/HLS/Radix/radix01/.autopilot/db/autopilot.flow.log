@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01 opened at Fri Dec 02 13:12:07 +0100 2022
+INFO-FLOW: Workspace S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01 opened at Wed Dec 07 16:13:20 +0100 2022
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xcvu11p-flga2577-1-e 
@@ -7,7 +7,7 @@ DBG:HLSDevice: Trying to load device library: S:/Xilinx/Vitis_HLS/2022.2\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: S:/Xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
-Command       create_platform done; 2.031 sec.
+Command       create_platform done; 3.27 sec.
 Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -20,12 +20,13 @@ Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/ut
 Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.135 sec.
 Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.136 sec.
+Command     set_part done; 3.435 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 2.212 sec.
+Command   open_solution done; 3.533 sec.
 Execute   set_part xcvu11p-flga2577-1-e 
 INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
 Execute     create_platform xcvu11p-flga2577-1-e -board  
@@ -43,7 +44,7 @@ Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir
 Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.122 sec.
+Command   set_part done; 0.116 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   source ./Radix/radix01/directives.tcl 
@@ -53,7 +54,7 @@ INFO: [HLS 200-1510] Running: set_directive_top -name radix radix
 Execute   csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.033 seconds; current allocated memory: 677.215 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.054 seconds; current allocated memory: 681.410 MB.
 INFO: [HLS 200-10] Analyzing design file '../../Code/radix/radix.c' ... 
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling ../../Code/radix/radix.c as C
@@ -61,14 +62,14 @@ Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 Execute       ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang ../../Code/radix/radix.c -foptimization-record-file=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot S:/Xilinx/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-mingw32 -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I S:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I S:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c {-hls-platform-db-name=S:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.c.clang.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.c.clang.err.log 
-Command       ap_eval done; 0.137 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Command       ap_eval done; 0.377 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.4 seconds per iteration
 Execute       set_directive_top radix -name=radix 
 Execute       source S:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source S:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute       ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c {-hls-platform-db-name=S:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/clang.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.134 sec.
+Command       ap_eval done; 0.197 sec.
 WARNING: [HLS 207-5176] sizeof on array function parameter will return size of 'const char *' instead of 'const char []' (../../Code/radix/radix.c:62:27)
 INFO: [HLS 207-62] declared here (../../Code/radix/radix.c:57:23)
 WARNING: [HLS 207-4053] incompatible pointer types passing 'uint8_t [size_str]' to parameter of type 'int *' (../../Code/radix/radix.c:88:15)
@@ -76,7 +77,7 @@ INFO: [HLS 207-4414] passing argument to parameter 'array' here (../../Code/radi
 WARNING: [HLS 207-4056] incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [size_str]' (../../Code/radix/radix.c:89:13)
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c std=gnu99 -target fpga  -directive=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/.systemc_flag -fix-errors S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.178 sec.
+Command       clang_tidy done; 0.168 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c std=gnu99 -target fpga  -directive=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/all.directive.json 
 INFO-FLOW: exec S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/all.directive.json -fix-errors S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
@@ -89,13 +90,13 @@ Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xil
 Execute         ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c.clang-tidy.loop-label.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c.clang-tidy.loop-label.err.log 
 Execute         source S:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute       ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c.xilinx-dataflow-lawyer.diag.yml S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c.xilinx-dataflow-lawyer.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c.xilinx-dataflow-lawyer.err.log 
-Command       ap_eval done; 0.141 sec.
+Command       ap_eval done; 0.145 sec.
 Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute       ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I S:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I S:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.bc {-hls-platform-db-name=S:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c.clang.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.pp.0.c.clang.err.log 
-Command       ap_eval done; 0.187 sec.
+Command       ap_eval done; 0.177 sec.
 INFO: [HLS 207-62] declared here (../../Code/radix/radix.c:57:63)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.089 seconds; current allocated memory: 678.449 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.397 seconds; current allocated memory: 683.219 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.0.bc -args  "S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.g.bc"  
@@ -103,20 +104,20 @@ Execute         ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tool
 INFO-FLOW: 
 Execute       run_link_or_opt -opt -out S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.1.lower.bc -args S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
 Execute         ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.1.lower.bc > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
-Command         ap_eval done; 0.154 sec.
+Command         ap_eval done; 0.155 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.155 sec.
+Command       run_link_or_opt done; 0.156 sec.
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.2.m1.bc -args S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.1.lower.bc -only-needed S:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsm_39.bc S:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsmc++_39.bc 
 Execute         ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.1.lower.bc -only-needed S:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsm_39.bc S:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsmc++_39.bc -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.2.m1.bc > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command         ap_eval done; 2.142 sec.
+Command         ap_eval done; 2.115 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 2.142 sec.
+Command       run_link_or_opt done; 2.116 sec.
 Execute       run_link_or_opt -opt -out S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.3.fpc.bc -args S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=radix -reflow-float-conversion 
 Execute         ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=radix -reflow-float-conversion -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.3.fpc.bc > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command         ap_eval done; 0.725 sec.
+Command         ap_eval done; 0.724 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.727 sec.
+Command       run_link_or_opt done; 0.726 sec.
 Execute       run_link_or_opt -out S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.4.m2.bc -args S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.3.fpc.bc -only-needed S:/Xilinx/Vitis_HLS/2022.2/win64/lib/libfloatconversion_39.bc 
 Execute         ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.3.fpc.bc -only-needed S:/Xilinx/Vitis_HLS/2022.2/win64/lib/libfloatconversion_39.bc -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.4.m2.bc > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
 INFO-FLOW: 
@@ -128,7 +129,7 @@ INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
 Execute       ap_eval exec -ignorestderr S:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=radix -mllvm -hls-db-dir -mllvm S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.5.gdce.bc -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=S:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command       ap_eval done; 0.327 sec.
+Command       ap_eval done; 0.285 sec.
 INFO: [HLS 214-178] Inlining function 'getMax' into 'radixsort' (../../Code/radix/radix.c:48:0)
 INFO: [HLS 214-178] Inlining function 'countingSort' into 'radixsort' (../../Code/radix/radix.c:48:0)
 INFO: [HLS 214-178] Inlining function 'radixsort' into 'radix' (../../Code/radix/radix.c:57:0)
@@ -140,21 +141,21 @@ WARNING: [HLS 214-167] The program may have out of bound array access (../../Cod
 WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:39:74)
 WARNING: [HLS 214-167] The program may have out of bound array access (../../Code/radix/radix.c:44:38)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 3.621 seconds; current allocated memory: 679.375 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 679.375 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.556 seconds; current allocated memory: 684.008 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 684.008 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top radix -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.0.bc -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 0.113 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 685.266 MB.
+Command         transform done; 0.121 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.139 seconds; current allocated memory: 689.836 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.1.bc -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.2.prechk.bc -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 686.801 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 691.449 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.g.1.bc to S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -167,10 +168,10 @@ INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_34_4' (../../Code/radix/radix.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_5' (../../Code/radix/radix.c:38) in function 'radix' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_43_6' (../../Code/radix/radix.c:43) in function 'radix' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_20_1' (../../Code/radix/radix.c:20) in function 'radix' automatically.
-Command         transform done; 0.182 sec.
+Command         transform done; 0.167 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.o.1.tmp.bc -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 709.441 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.198 seconds; current allocated memory: 713.840 MB.
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.o.2.bc -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_53_1' (../../Code/radix/radix.c:16:23) in function 'radix' more than one sub loop.
@@ -181,11 +182,11 @@ INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/ra
 INFO: [HLS 200-472] Inferring partial write operation for 'output' (../../Code/radix/radix.c:39:72)
 INFO: [HLS 200-472] Inferring partial write operation for 'count' (../../Code/radix/radix.c:40:59)
 INFO: [HLS 200-472] Inferring partial write operation for 'vla13' (../../Code/radix/radix.c:44:38)
-Command         transform done; 0.153 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.155 seconds; current allocated memory: 773.055 MB.
+Command         transform done; 0.134 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 777.891 MB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.539 sec.
-Command     elaborate done; 5.265 sec.
+Command       opt_and_import_c done; 0.512 sec.
+Command     elaborate done; 5.484 sec.
 Execute     ap_eval exec zip -j S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -278,7 +279,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_68_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_68_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 777.508 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.203 seconds; current allocated memory: 782.207 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_68_1.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_68_1.sched.adb -f 
@@ -290,7 +291,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 778.699 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 783.383 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_68_1.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_68_1.bind.adb -f 
@@ -305,7 +306,7 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
 WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_9_1' (loop 'VITIS_LOOP_9_1'): Unable to schedule 'load' operation ('vla13_load_1', ../../Code/radix/radix.c:10) on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'VITIS_LOOP_9_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 779.121 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 783.953 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_9_1.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_9_1.sched.adb -f 
@@ -317,7 +318,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 779.141 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 783.977 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_9_1.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_9_1.bind.adb -f 
@@ -332,10 +333,11 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
 WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_20_1' (loop 'VITIS_LOOP_20_1'): Unable to schedule 'load' operation ('vla13_load_10', ../../Code/radix/radix.c:21) on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 73, loop 'VITIS_LOOP_20_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 779.820 MB.
+Command       schedule done; 0.116 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.147 seconds; current allocated memory: 784.715 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_20_1.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.137 sec.
+Command       syn_report done; 0.139 sec.
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_20_1.sched.adb -f 
 INFO-FLOW: Finish scheduling radix_Pipeline_VITIS_LOOP_20_1.
 Execute       set_default_model radix_Pipeline_VITIS_LOOP_20_1 
@@ -345,7 +347,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 780.035 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.232 seconds; current allocated memory: 784.875 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_20_1.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_20_1.bind.adb -f 
@@ -359,7 +361,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_26_2'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_26_2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 780.312 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 785.328 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_26_2.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_26_2.sched.adb -f 
@@ -371,7 +373,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 780.438 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 785.332 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_26_2.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_26_2.bind.adb -f 
@@ -386,11 +388,11 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_3'.
 WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_30_3' (loop 'VITIS_LOOP_30_3'): Unable to schedule 'load' operation ('vla13_load_7', ../../Code/radix/radix.c:31) on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 74, loop 'VITIS_LOOP_30_3'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.101 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 781.414 MB.
+Command       schedule done; 0.107 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 786.180 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_30_3.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.14 sec.
+Command       syn_report done; 0.146 sec.
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_30_3.sched.adb -f 
 INFO-FLOW: Finish scheduling radix_Pipeline_VITIS_LOOP_30_3.
 Execute       set_default_model radix_Pipeline_VITIS_LOOP_30_3 
@@ -400,7 +402,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 781.750 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.245 seconds; current allocated memory: 786.289 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_30_3.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_30_3.bind.adb -f 
@@ -414,7 +416,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_34_4'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_34_4'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 782.102 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 786.676 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_34_4.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_34_4.sched.adb -f 
@@ -426,7 +428,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 782.191 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 786.676 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_34_4.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_34_4.bind.adb -f 
@@ -441,11 +443,11 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_5'.
 WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_38_5' (loop 'VITIS_LOOP_38_5'): Unable to schedule 'load' operation ('vla13_load_4', ../../Code/radix/radix.c:39) on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 74, loop 'VITIS_LOOP_38_5'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.114 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.139 seconds; current allocated memory: 782.590 MB.
+Command       schedule done; 0.111 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.141 seconds; current allocated memory: 787.188 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_38_5.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.167 sec.
+Command       syn_report done; 0.155 sec.
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_38_5.sched.adb -f 
 INFO-FLOW: Finish scheduling radix_Pipeline_VITIS_LOOP_38_5.
 Execute       set_default_model radix_Pipeline_VITIS_LOOP_38_5 
@@ -455,7 +457,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.264 seconds; current allocated memory: 782.777 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.255 seconds; current allocated memory: 787.332 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_38_5.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_38_5.bind.adb -f 
@@ -470,7 +472,7 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_43_6'.
 WARNING: [HLS 200-885] The II Violation in module 'radix_Pipeline_VITIS_LOOP_43_6' (loop 'VITIS_LOOP_43_6'): Unable to schedule 'store' operation ('vla13_addr_4_write_ln44', ../../Code/radix/radix.c:44) of variable 'trunc_ln44_1', ../../Code/radix/radix.c:44 on array 'vla13' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'vla13'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'VITIS_LOOP_43_6'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 783.312 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 787.906 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_43_6.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_43_6.sched.adb -f 
@@ -482,7 +484,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 783.375 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 787.910 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_43_6.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_43_6.bind.adb -f 
@@ -494,11 +496,11 @@ Execute       set_default_model radix
 Execute       schedule -model radix 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.148 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 783.918 MB.
+Command       schedule done; 0.151 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.178 seconds; current allocated memory: 788.508 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.247 sec.
+Command       syn_report done; 0.233 sec.
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.sched.adb -f 
 INFO-FLOW: Finish scheduling radix.
 Execute       set_default_model radix 
@@ -508,11 +510,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.163 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.416 seconds; current allocated memory: 784.152 MB.
+Command       bind done; 0.162 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.402 seconds; current allocated memory: 788.965 MB.
 Execute       syn_report -verbosereport -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.14 sec.
+Command       syn_report done; 0.144 sec.
 Execute       db_write -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.bind.adb -f 
 INFO-FLOW: Finish binding radix.
 Execute       get_model_list radix -filter all-wo-channel 
@@ -532,7 +534,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_68_1'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model radix_Pipeline_VITIS_LOOP_68_1 -top_prefix radix_ -sub_prefix radix_ -mg_file S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_68_1.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_68_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.194 seconds; current allocated memory: 786.000 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.199 seconds; current allocated memory: 790.422 MB.
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.rtl_wrap.cfg.tcl 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_68_1 -style xilinx -f -lang vhdl -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/vhdl/radix_radix_Pipeline_VITIS_LOOP_68_1 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_68_1 -style xilinx -f -lang vlog -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/verilog/radix_radix_Pipeline_VITIS_LOOP_68_1 
@@ -550,7 +552,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model radix_Pipeline_VITIS_LOOP_9_1 -top_prefix radix_ -sub_prefix radix_ -mg_file S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_9_1.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_9_1' pipeline 'VITIS_LOOP_9_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_9_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 787.844 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 792.582 MB.
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.rtl_wrap.cfg.tcl 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_9_1 -style xilinx -f -lang vhdl -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/vhdl/radix_radix_Pipeline_VITIS_LOOP_9_1 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_9_1 -style xilinx -f -lang vlog -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/verilog/radix_radix_Pipeline_VITIS_LOOP_9_1 
@@ -570,7 +572,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VI
 INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_32_36_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_20_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.148 seconds; current allocated memory: 790.016 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.152 seconds; current allocated memory: 794.531 MB.
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.rtl_wrap.cfg.tcl 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_20_1 -style xilinx -f -lang vhdl -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/vhdl/radix_radix_Pipeline_VITIS_LOOP_20_1 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_20_1 -style xilinx -f -lang vlog -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/verilog/radix_radix_Pipeline_VITIS_LOOP_20_1 
@@ -587,7 +589,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'radix_Pipeline_VITIS_LOOP_26_2'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model radix_Pipeline_VITIS_LOOP_26_2 -top_prefix radix_ -sub_prefix radix_ -mg_file S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_26_2.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_26_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 791.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.175 seconds; current allocated memory: 796.066 MB.
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.rtl_wrap.cfg.tcl 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_26_2 -style xilinx -f -lang vhdl -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/vhdl/radix_radix_Pipeline_VITIS_LOOP_26_2 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_26_2 -style xilinx -f -lang vlog -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/verilog/radix_radix_Pipeline_VITIS_LOOP_26_2 
@@ -607,7 +609,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VI
 INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_30_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 793.000 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 797.488 MB.
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.rtl_wrap.cfg.tcl 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_30_3 -style xilinx -f -lang vhdl -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/vhdl/radix_radix_Pipeline_VITIS_LOOP_30_3 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_30_3 -style xilinx -f -lang vlog -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/verilog/radix_radix_Pipeline_VITIS_LOOP_30_3 
@@ -625,7 +627,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model radix_Pipeline_VITIS_LOOP_34_4 -top_prefix radix_ -sub_prefix radix_ -mg_file S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_34_4.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_34_4' pipeline 'VITIS_LOOP_34_4' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_34_4'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.176 seconds; current allocated memory: 794.504 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 798.883 MB.
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.rtl_wrap.cfg.tcl 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_34_4 -style xilinx -f -lang vhdl -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/vhdl/radix_radix_Pipeline_VITIS_LOOP_34_4 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_34_4 -style xilinx -f -lang vlog -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/verilog/radix_radix_Pipeline_VITIS_LOOP_34_4 
@@ -645,7 +647,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VI
 INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'srem_32ns_5ns_3_36_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_38_5'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 796.605 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 800.895 MB.
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.rtl_wrap.cfg.tcl 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_38_5 -style xilinx -f -lang vhdl -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/vhdl/radix_radix_Pipeline_VITIS_LOOP_38_5 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_38_5 -style xilinx -f -lang vlog -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/verilog/radix_radix_Pipeline_VITIS_LOOP_38_5 
@@ -663,7 +665,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model radix_Pipeline_VITIS_LOOP_43_6 -top_prefix radix_ -sub_prefix radix_ -mg_file S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_43_6.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix_Pipeline_VITIS_LOOP_43_6' pipeline 'VITIS_LOOP_43_6' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'radix_Pipeline_VITIS_LOOP_43_6'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.183 seconds; current allocated memory: 798.176 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.188 seconds; current allocated memory: 802.848 MB.
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.rtl_wrap.cfg.tcl 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_43_6 -style xilinx -f -lang vhdl -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/vhdl/radix_radix_Pipeline_VITIS_LOOP_43_6 
 Execute       gen_rtl radix_Pipeline_VITIS_LOOP_43_6 -style xilinx -f -lang vlog -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/verilog/radix_radix_Pipeline_VITIS_LOOP_43_6 
@@ -690,8 +692,8 @@ INFO: [RTGEN 206-100] Finished creating RTL model for 'radix'.
 INFO: [RTMG 210-278] Implementing memory 'radix_vla13_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'radix_count_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'radix_output_RAM_AUTO_1R1W' using auto RAMs.
-Command       create_rtl_model done; 0.108 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.192 seconds; current allocated memory: 801.520 MB.
+Command       create_rtl_model done; 0.125 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.206 seconds; current allocated memory: 806.207 MB.
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.rtl_wrap.cfg.tcl 
 Execute       gen_rtl radix -istop -style xilinx -f -lang vhdl -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/vhdl/radix 
 Execute       gen_rtl radix -istop -style xilinx -f -lang vlog -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/verilog/radix 
@@ -700,7 +702,7 @@ Execute         AP::get_flow_target_display_name
 Execute       syn_report -rtlxml -model radix -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/syn/report/radix_csynth.xml 
 Execute       syn_report -verbosereport -model radix -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.147 sec.
+Command       syn_report done; 0.153 sec.
 Execute       db_write -model radix -f -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.adb 
 Execute       db_write -model radix -bindview -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info radix -p S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db -o S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix 
@@ -873,7 +875,7 @@ Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radi
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix_Pipeline_VITIS_LOOP_43_6.compgen.tcl 
 Execute       source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/radix.compgen.tcl 
 Execute         source ./control.slave.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.653 seconds; current allocated memory: 806.734 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.662 seconds; current allocated memory: 811.824 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='radix_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -940,18 +942,18 @@ INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.469 seconds; current allocated memory: 812.309 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.469 seconds; current allocated memory: 816.820 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for radix.
 INFO: [VLOG 209-307] Generating Verilog RTL for radix.
 Execute       syn_report -model radix -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 309.31 MHz
-Command     autosyn done; 4.931 sec.
-Command   csynth_design done; 10.276 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 10.276 seconds; current allocated memory: 135.809 MB.
-Command ap_source done; 22.652 sec.
+Command     autosyn done; 5.066 sec.
+Command   csynth_design done; 10.644 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 10.644 seconds; current allocated memory: 136.164 MB.
+Command ap_source done; 24.367 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01 opened at Fri Dec 02 13:14:14 +0100 2022
+INFO-FLOW: Workspace S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01 opened at Wed Dec 07 16:13:57 +0100 2022
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xcvu11p-flga2577-1-e 
@@ -960,7 +962,7 @@ DBG:HLSDevice: Trying to load device library: S:/Xilinx/Vitis_HLS/2022.2\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: S:/Xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
-Command       create_platform done; 2.053 sec.
+Command       create_platform done; 2.005 sec.
 Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -975,10 +977,10 @@ Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xf
 Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.157 sec.
+Command     set_part done; 2.114 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 2.23 sec.
+Command   open_solution done; 2.191 sec.
 Execute   set_part xcvu11p-flga2577-1-e 
 INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
 Execute     create_platform xcvu11p-flga2577-1-e -board  
@@ -996,7 +998,7 @@ Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir
 Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.114 sec.
+Command   set_part done; 0.118 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   source ./Radix/radix01/directives.tcl 
@@ -1015,211 +1017,7 @@ INFO: [SIM 211-3] *************** CSIM finish ***************
 INFO-FLOW: Caught error in csim_design: 5
     while executing
 "ap_internal_csim_design "
-Command   csim_design done; error code: 2; 5.685 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.685 seconds; current allocated memory: 0.215 MB.
-Command ap_source done; error code: 1; 18.079 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01 opened at Fri Dec 02 13:15:48 +0100 2022
-Execute     ap_set_clock -name default -period 10 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xcvu11p-flga2577-1-e 
-Execute       create_platform xcvu11p-flga2577-1-e -board  
-DBG:HLSDevice: Trying to load device library: S:/Xilinx/Vitis_HLS/2022.2\lib\win64.o\xv_hlsvwrap.dll
-DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: S:/Xilinx/Vivado/2022.2/data/parts/arch.xml
-DBG:HLSDevice: init success
-INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
-Command       create_platform done; 2.002 sec.
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
-Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.102 sec.
-Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
-INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 2.174 sec.
-Execute   set_part xcvu11p-flga2577-1-e 
-INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
-Execute     create_platform xcvu11p-flga2577-1-e -board  
-Execute     source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
-Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.112 sec.
-Execute   create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   source ./Radix/radix01/directives.tcl 
-INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
-Execute     set_directive_top -name radix radix 
-INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
-Execute   csim_design -setup -quiet 
-INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
-Execute     source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/global.setting.tcl 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     source csim/.lst_opt.tcl 
-Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
-ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO-FLOW: Caught error in csim_design: 5
-    while executing
-"ap_internal_csim_design "
-Command   csim_design done; error code: 2; 2.668 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.668 seconds; current allocated memory: 0.262 MB.
-Command ap_source done; error code: 1; 14.992 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01 opened at Fri Dec 02 13:21:06 +0100 2022
-Execute     ap_set_clock -name default -period 10 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xcvu11p-flga2577-1-e 
-Execute       create_platform xcvu11p-flga2577-1-e -board  
-DBG:HLSDevice: Trying to load device library: S:/Xilinx/Vitis_HLS/2022.2\lib\win64.o\xv_hlsvwrap.dll
-DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: S:/Xilinx/Vivado/2022.2/data/parts/arch.xml
-DBG:HLSDevice: init success
-INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
-Command       create_platform done; 2.089 sec.
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
-Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.197 sec.
-Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
-INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 2.273 sec.
-Execute   set_part xcvu11p-flga2577-1-e 
-INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
-Execute     create_platform xcvu11p-flga2577-1-e -board  
-Execute     source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
-Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.149 sec.
-Execute   create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   source ./Radix/radix01/directives.tcl 
-INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
-Execute     set_directive_top -name radix radix 
-INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
-Execute   csim_design -argv -municode -setup -quiet 
-INFO: [HLS 200-1510] Running: csim_design -argv -municode -setup -quiet 
-Execute     source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/global.setting.tcl 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     source csim/.lst_opt.tcl 
-Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
-ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO-FLOW: Caught error in csim_design: 5
-    while executing
-"ap_internal_csim_design "
-Command   csim_design done; error code: 2; 0.299 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.299 seconds; current allocated memory: 0.207 MB.
-Command ap_source done; error code: 1; 12.772 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01 opened at Fri Dec 02 13:24:45 +0100 2022
-Execute     ap_set_clock -name default -period 10 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xcvu11p-flga2577-1-e 
-Execute       create_platform xcvu11p-flga2577-1-e -board  
-DBG:HLSDevice: Trying to load device library: S:/Xilinx/Vitis_HLS/2022.2\lib\win64.o\xv_hlsvwrap.dll
-DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: S:/Xilinx/Vivado/2022.2/data/parts/arch.xml
-DBG:HLSDevice: init success
-INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
-Command       create_platform done; 2.083 sec.
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
-Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.197 sec.
-Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
-INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 2.277 sec.
-Execute   set_part xcvu11p-flga2577-1-e 
-INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
-Execute     create_platform xcvu11p-flga2577-1-e -board  
-Execute     source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute       source S:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
-Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.126 sec.
-Execute   create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   source ./Radix/radix01/directives.tcl 
-INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
-Execute     set_directive_top -name radix radix 
-INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
-Execute   csim_design -setup -quiet 
-INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
-Execute     source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/.autopilot/db/global.setting.tcl 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     source csim/.lst_opt.tcl 
-Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
-ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO-FLOW: Caught error in csim_design: 5
-    while executing
-"ap_internal_csim_design "
-Command   csim_design done; error code: 2; 0.292 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.292 seconds; current allocated memory: 0.227 MB.
-Command ap_source done; error code: 1; 12.745 sec.
+Command   csim_design done; error code: 2; 4.438 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.438 seconds; current allocated memory: 0.574 MB.
+Command ap_source done; error code: 1; 16.806 sec.
 Execute cleanup_all 

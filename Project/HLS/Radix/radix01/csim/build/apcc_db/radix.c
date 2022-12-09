@@ -140,8 +140,8 @@ void radix( char *llvm_cbe_input,  char *llvm_cbe_output);
 
 
 /* Global Variable Definitions and Initialization */
-static  char aesl_internal__OC_str1[4] = "%c\n";
 static  char aesl_internal__OC_str[7] = "%c\t%c\n";
+static  char aesl_internal__OC_str1[4] = "%c\n";
 
 
 /* Function Bodies */

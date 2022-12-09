@@ -67,12 +67,6 @@ build CMakeFiles/radix.dir/tb.c.obj: C_COMPILER__radix_Debug S$:/Dokumenter/Skol
   OBJECT_DIR = CMakeFiles\radix.dir
   OBJECT_FILE_DIR = CMakeFiles\radix.dir
 
-build CMakeFiles/radix.dir/test.c.obj: C_COMPILER__radix_Debug S$:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/test.c || cmake_object_order_depends_target_radix
-  DEP_FILE = CMakeFiles\radix.dir\test.c.obj.d
-  FLAGS = -g -std=gnu99
-  OBJECT_DIR = CMakeFiles\radix.dir
-  OBJECT_FILE_DIR = CMakeFiles\radix.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target radix
@@ -81,7 +75,7 @@ build CMakeFiles/radix.dir/test.c.obj: C_COMPILER__radix_Debug S$:/Dokumenter/Sk
 #############################################
 # Link the executable radix.exe
 
-build radix.exe: C_EXECUTABLE_LINKER__radix_Debug CMakeFiles/radix.dir/original.c.obj CMakeFiles/radix.dir/radix.c.obj CMakeFiles/radix.dir/tb.c.obj CMakeFiles/radix.dir/test.c.obj
+build radix.exe: C_EXECUTABLE_LINKER__radix_Debug CMakeFiles/radix.dir/original.c.obj CMakeFiles/radix.dir/radix.c.obj CMakeFiles/radix.dir/tb.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\radix.dir

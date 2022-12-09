@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Dec  9 19:05:33 2022
+# Process ID: 37132
+# Current directory: S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/radix/radix.runs/impl_1
+# Command line: vivado.exe -log radix.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source radix.tcl -notrace
+# Log file: S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/radix/radix.runs/impl_1/radix.vdi
+# Journal file: S:/Dokumenter/Skole/CS-Master/CS4110/Project/Vivado/radix/radix.runs/impl_1\vivado.jou
+# Running On: DESKTOP-75MLGFJ, OS: Windows, CPU Frequency: 3700 MHz, CPU Physical cores: 12, Host memory: 34270 MB
+#-----------------------------------------------------------
+source radix.tcl -notrace
