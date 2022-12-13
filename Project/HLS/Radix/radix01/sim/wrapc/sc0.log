@@ -1,0 +1,39 @@
+   Build using "S:/Xilinx/Vitis_HLS/2022.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_radix.cpp
+   Compiling (apcc) tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Sat Dec 10 19:44:46 +0100 2022
+INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.663 seconds; peak allocated memory: 7.543 MB.
+   Compiling (apcc) radix.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Sat Dec 10 19:44:48 +0100 2022
+INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/radix.c:1:
+S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/radix.c:62:29: warning: sizeof on array function parameter will return size of 'const char *' instead of 'const char []' [-Wsizeof-array-argument]
+ uint8_t array_size = sizeof(input);
+                            ^
+S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/radix.c:57:23: note: declared here
+void radix(const char input[], uint8_t output[]){
+                      ^
+S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/radix.c:72:12: warning: incompatible pointer types passing 'uint8_t [array_size]' to parameter of type 'int *' [-Wincompatible-pointer-types]
+ radixsort(int_array, n);
+           ^~~~~~~~~
+S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/radix.c:48:20: note: passing argument to parameter 'array' here
+void radixsort(int array[], int size) {
+                   ^
+S:/Dokumenter/Skole/CS-Master/CS4110/Code/radix/radix.c:73:10: warning: incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [array_size]' [-Wint-conversion]
+ *output = int_array;
+         ^ ~~~~~~~~~
+3 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.673 seconds; peak allocated memory: 7.680 MB.
+   Compiling apatb_radix_ir.ll
+   Generating cosim.tv.exe

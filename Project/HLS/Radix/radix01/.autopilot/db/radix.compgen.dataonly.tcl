@@ -5,18 +5,26 @@ set port_control {
 input_r { 
 	dir I
 	width 8
-	depth 1
-	mode ap_none
+	depth 8
+	mode ap_memory
 	offset 16
 	offset_end 23
+	core_op ram_1p
+	core_impl auto
+	core_latency 1
+	byte_write 0
 }
 output_r { 
 	dir O
 	width 8
-	depth 1
-	mode ap_vld
+	depth 8
+	mode ap_memory
 	offset 24
 	offset_end 31
+	core_op ram_1p
+	core_impl auto
+	core_latency 1
+	byte_write 0
 }
 ap_start { }
 ap_done { }

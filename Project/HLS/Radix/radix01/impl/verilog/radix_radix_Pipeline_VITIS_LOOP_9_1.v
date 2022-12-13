@@ -15,12 +15,12 @@ module radix_radix_Pipeline_VITIS_LOOP_9_1 (
         ap_idle,
         ap_ready,
         max,
-        vla13_address0,
-        vla13_ce0,
-        vla13_q0,
-        vla13_address1,
-        vla13_ce1,
-        vla13_q1,
+        vla1_address0,
+        vla1_ce0,
+        vla1_q0,
+        vla1_address1,
+        vla1_ce1,
+        vla1_q1,
         max_2_out,
         max_2_out_ap_vld
 );
@@ -35,20 +35,20 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input  [31:0] max;
-output  [2:0] vla13_address0;
-output   vla13_ce0;
-input  [7:0] vla13_q0;
-output  [2:0] vla13_address1;
-output   vla13_ce1;
-input  [7:0] vla13_q1;
+output  [2:0] vla1_address0;
+output   vla1_ce0;
+input  [7:0] vla1_q0;
+output  [2:0] vla1_address1;
+output   vla1_ce1;
+input  [7:0] vla1_q1;
 output  [31:0] max_2_out;
 output   max_2_out_ap_vld;
 
 reg ap_idle;
-reg[2:0] vla13_address0;
-reg vla13_ce0;
-reg[2:0] vla13_address1;
-reg vla13_ce1;
+reg[2:0] vla1_address0;
+reg vla1_ce0;
+reg[2:0] vla1_address1;
+reg vla1_ce1;
 reg max_2_out_ap_vld;
 
 (* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
@@ -70,9 +70,9 @@ reg   [0:0] icmp_ln9_reg_237;
 wire    ap_block_pp0_stage0_11001;
 wire   [2:0] shl_ln_fu_131_p3;
 reg   [2:0] shl_ln_reg_241;
-reg   [7:0] vla13_load_reg_257;
+reg   [7:0] vla1_load_reg_257;
 wire    ap_block_pp0_stage1_11001;
-reg   [7:0] vla13_load_1_reg_262;
+reg   [7:0] vla1_load_1_reg_262;
 reg    ap_enable_reg_pp0_iter0_reg;
 wire   [63:0] zext_ln10_fu_139_p1;
 wire    ap_block_pp0_stage0;
@@ -203,8 +203,8 @@ end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln9_reg_237 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        vla13_load_1_reg_262 <= vla13_q0;
-        vla13_load_reg_257 <= vla13_q1;
+        vla1_load_1_reg_262 <= vla1_q0;
+        vla1_load_reg_257 <= vla1_q1;
     end
 end
 
@@ -283,44 +283,44 @@ end
 always @ (*) begin
     if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
         if (((1'b0 == ap_block_pp0_stage1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-            vla13_address0 = zext_ln10_3_fu_181_p1;
+            vla1_address0 = zext_ln10_3_fu_181_p1;
         end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            vla13_address0 = zext_ln10_1_fu_150_p1;
+            vla1_address0 = zext_ln10_1_fu_150_p1;
         end else begin
-            vla13_address0 = 'bx;
+            vla1_address0 = 'bx;
         end
     end else begin
-        vla13_address0 = 'bx;
+        vla1_address0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
         if (((1'b0 == ap_block_pp0_stage1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-            vla13_address1 = zext_ln10_2_fu_171_p1;
+            vla1_address1 = zext_ln10_2_fu_171_p1;
         end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            vla13_address1 = zext_ln10_fu_139_p1;
+            vla1_address1 = zext_ln10_fu_139_p1;
         end else begin
-            vla13_address1 = 'bx;
+            vla1_address1 = 'bx;
         end
     end else begin
-        vla13_address1 = 'bx;
+        vla1_address1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
-        vla13_ce0 = 1'b1;
+        vla1_ce0 = 1'b1;
     end else begin
-        vla13_ce0 = 1'b0;
+        vla1_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
-        vla13_ce1 = 1'b1;
+        vla1_ce1 = 1'b1;
     end else begin
-        vla13_ce1 = 1'b0;
+        vla1_ce1 = 1'b0;
     end
 end
 
@@ -390,7 +390,7 @@ assign or_ln10_1_fu_166_p2 = (shl_ln_reg_241 | 3'd2);
 
 assign or_ln10_2_fu_176_p2 = (shl_ln_reg_241 | 3'd3);
 
-assign or_ln10_5_fu_189_p5 = {{{{vla13_q0}, {vla13_q1}}, {vla13_load_1_reg_262}}, {vla13_load_reg_257}};
+assign or_ln10_5_fu_189_p5 = {{{{vla1_q0}, {vla1_q1}}, {vla1_load_1_reg_262}}, {vla1_load_reg_257}};
 
 assign or_ln10_fu_144_p2 = (shl_ln_fu_131_p3 | 3'd1);
 

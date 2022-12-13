@@ -245,10 +245,10 @@ for.body.i.i.split:4 %zext_ln10 = zext i3 %shl_ln
 
 <Node id="22" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i.i.split:5 %vla13_addr = getelementptr i8 %vla13, i64 0, i64 %zext_ln10
+for.body.i.i.split:5 %vla1_addr = getelementptr i8 %vla1, i64 0, i64 %zext_ln10
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr"/></StgValue>
+<StgValue><ssdm name="vla1_addr"/></StgValue>
 </operation>
 
 <operation id="21" st_id="1" stage="2" lat="2">
@@ -261,10 +261,10 @@ for.body.i.i.split:5 %vla13_addr = getelementptr i8 %vla13, i64 0, i64 %zext_ln1
 
 <Node id="23" bw="8" op_0_bw="3">
 <![CDATA[
-for.body.i.i.split:6 %vla13_load = load i3 %vla13_addr
+for.body.i.i.split:6 %vla1_load = load i3 %vla1_addr
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load"/></StgValue>
+<StgValue><ssdm name="vla1_load"/></StgValue>
 </operation>
 
 <operation id="22" st_id="1" stage="1" lat="1">
@@ -309,10 +309,10 @@ for.body.i.i.split:8 %zext_ln10_1 = zext i3 %or_ln10
 
 <Node id="26" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i.i.split:9 %vla13_addr_1 = getelementptr i8 %vla13, i64 0, i64 %zext_ln10_1
+for.body.i.i.split:9 %vla1_addr_1 = getelementptr i8 %vla1, i64 0, i64 %zext_ln10_1
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr_1"/></StgValue>
+<StgValue><ssdm name="vla1_addr_1"/></StgValue>
 </operation>
 
 <operation id="25" st_id="1" stage="2" lat="2">
@@ -325,10 +325,10 @@ for.body.i.i.split:9 %vla13_addr_1 = getelementptr i8 %vla13, i64 0, i64 %zext_l
 
 <Node id="27" bw="8" op_0_bw="3">
 <![CDATA[
-for.body.i.i.split:10 %vla13_load_1 = load i3 %vla13_addr_1
+for.body.i.i.split:10 %vla1_load_1 = load i3 %vla1_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_1"/></StgValue>
+<StgValue><ssdm name="vla1_load_1"/></StgValue>
 </operation>
 
 <operation id="26" st_id="1" stage="1" lat="1">
@@ -424,10 +424,10 @@ getMax.exit.i.exitStub:2 %ret_ln0 = ret
 
 <Node id="23" bw="8" op_0_bw="3">
 <![CDATA[
-for.body.i.i.split:6 %vla13_load = load i3 %vla13_addr
+for.body.i.i.split:6 %vla1_load = load i3 %vla1_addr
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load"/></StgValue>
+<StgValue><ssdm name="vla1_load"/></StgValue>
 </operation>
 
 <operation id="29" st_id="2" stage="1" lat="2">
@@ -440,10 +440,10 @@ for.body.i.i.split:6 %vla13_load = load i3 %vla13_addr
 
 <Node id="27" bw="8" op_0_bw="3">
 <![CDATA[
-for.body.i.i.split:10 %vla13_load_1 = load i3 %vla13_addr_1
+for.body.i.i.split:10 %vla1_load_1 = load i3 %vla1_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_1"/></StgValue>
+<StgValue><ssdm name="vla1_load_1"/></StgValue>
 </operation>
 
 <operation id="30" st_id="2" stage="1" lat="1">
@@ -488,10 +488,10 @@ for.body.i.i.split:12 %zext_ln10_2 = zext i3 %or_ln10_1
 
 <Node id="30" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i.i.split:13 %vla13_addr_2 = getelementptr i8 %vla13, i64 0, i64 %zext_ln10_2
+for.body.i.i.split:13 %vla1_addr_2 = getelementptr i8 %vla1, i64 0, i64 %zext_ln10_2
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr_2"/></StgValue>
+<StgValue><ssdm name="vla1_addr_2"/></StgValue>
 </operation>
 
 <operation id="33" st_id="2" stage="2" lat="2">
@@ -504,10 +504,10 @@ for.body.i.i.split:13 %vla13_addr_2 = getelementptr i8 %vla13, i64 0, i64 %zext_
 
 <Node id="31" bw="8" op_0_bw="3">
 <![CDATA[
-for.body.i.i.split:14 %vla13_load_2 = load i3 %vla13_addr_2
+for.body.i.i.split:14 %vla1_load_2 = load i3 %vla1_addr_2
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_2"/></StgValue>
+<StgValue><ssdm name="vla1_load_2"/></StgValue>
 </operation>
 
 <operation id="34" st_id="2" stage="1" lat="1">
@@ -552,10 +552,10 @@ for.body.i.i.split:16 %zext_ln10_3 = zext i3 %or_ln10_2
 
 <Node id="34" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i.i.split:17 %vla13_addr_3 = getelementptr i8 %vla13, i64 0, i64 %zext_ln10_3
+for.body.i.i.split:17 %vla1_addr_3 = getelementptr i8 %vla1, i64 0, i64 %zext_ln10_3
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr_3"/></StgValue>
+<StgValue><ssdm name="vla1_addr_3"/></StgValue>
 </operation>
 
 <operation id="37" st_id="2" stage="2" lat="2">
@@ -568,10 +568,10 @@ for.body.i.i.split:17 %vla13_addr_3 = getelementptr i8 %vla13, i64 0, i64 %zext_
 
 <Node id="35" bw="8" op_0_bw="3">
 <![CDATA[
-for.body.i.i.split:18 %vla13_load_3 = load i3 %vla13_addr_3
+for.body.i.i.split:18 %vla1_load_3 = load i3 %vla1_addr_3
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_3"/></StgValue>
+<StgValue><ssdm name="vla1_load_3"/></StgValue>
 </operation>
 </state>
 
@@ -616,10 +616,10 @@ for.body.i.i.split:1 %specloopname_ln8 = specloopname void @_ssdm_op_SpecLoopNam
 
 <Node id="31" bw="8" op_0_bw="3">
 <![CDATA[
-for.body.i.i.split:14 %vla13_load_2 = load i3 %vla13_addr_2
+for.body.i.i.split:14 %vla1_load_2 = load i3 %vla1_addr_2
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_2"/></StgValue>
+<StgValue><ssdm name="vla1_load_2"/></StgValue>
 </operation>
 
 <operation id="41" st_id="3" stage="1" lat="2">
@@ -631,10 +631,10 @@ for.body.i.i.split:14 %vla13_load_2 = load i3 %vla13_addr_2
 
 <Node id="35" bw="8" op_0_bw="3">
 <![CDATA[
-for.body.i.i.split:18 %vla13_load_3 = load i3 %vla13_addr_3
+for.body.i.i.split:18 %vla1_load_3 = load i3 %vla1_addr_3
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_3"/></StgValue>
+<StgValue><ssdm name="vla1_load_3"/></StgValue>
 </operation>
 
 <operation id="42" st_id="3" stage="1" lat="1">
@@ -646,7 +646,7 @@ for.body.i.i.split:18 %vla13_load_3 = load i3 %vla13_addr_3
 
 <Node id="36" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8">
 <![CDATA[
-for.body.i.i.split:19 %or_ln10_5 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %vla13_load_3, i8 %vla13_load_2, i8 %vla13_load_1, i8 %vla13_load
+for.body.i.i.split:19 %or_ln10_5 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %vla1_load_3, i8 %vla1_load_2, i8 %vla1_load_1, i8 %vla1_load
 
 ]]></Node>
 <StgValue><ssdm name="or_ln10_5"/></StgValue>
@@ -719,8 +719,8 @@ for.body.i.i.split:25 %br_ln9 = br void %for.body.i.i
 <port id="61" name="max" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="max"/></StgValue>
 </port>
-<port id="62" name="vla13" dir="0" iftype="1">
-<core>RAM</core><StgValue><ssdm name="vla13"/><MemPortTyVec>1 1 </MemPortTyVec>
+<port id="62" name="vla1" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="vla1"/><MemPortTyVec>1 1 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="63" name="max_2_out" dir="1" iftype="0">
@@ -784,13 +784,13 @@ for.body.i.i.split:25 %br_ln9 = br void %for.body.i.i
 </dataflow>
 <dataflow id="102" from="shl_ln" to="zext_ln10" fromId="18" toId="19">
 </dataflow>
-<dataflow id="103" from="vla13" to="vla13_addr" fromId="62" toId="20">
+<dataflow id="103" from="vla1" to="vla1_addr" fromId="62" toId="20">
 </dataflow>
-<dataflow id="105" from="StgValue_104" to="vla13_addr" fromId="104" toId="20">
+<dataflow id="105" from="StgValue_104" to="vla1_addr" fromId="104" toId="20">
 </dataflow>
-<dataflow id="106" from="zext_ln10" to="vla13_addr" fromId="19" toId="20">
+<dataflow id="106" from="zext_ln10" to="vla1_addr" fromId="19" toId="20">
 </dataflow>
-<dataflow id="107" from="vla13_addr" to="vla13_load" fromId="20" toId="21">
+<dataflow id="107" from="vla1_addr" to="vla1_load" fromId="20" toId="21">
 </dataflow>
 <dataflow id="108" from="shl_ln" to="or_ln10" fromId="18" toId="22">
 </dataflow>
@@ -798,13 +798,13 @@ for.body.i.i.split:25 %br_ln9 = br void %for.body.i.i
 </dataflow>
 <dataflow id="111" from="or_ln10" to="zext_ln10_1" fromId="22" toId="23">
 </dataflow>
-<dataflow id="112" from="vla13" to="vla13_addr_1" fromId="62" toId="24">
+<dataflow id="112" from="vla1" to="vla1_addr_1" fromId="62" toId="24">
 </dataflow>
-<dataflow id="113" from="StgValue_104" to="vla13_addr_1" fromId="104" toId="24">
+<dataflow id="113" from="StgValue_104" to="vla1_addr_1" fromId="104" toId="24">
 </dataflow>
-<dataflow id="114" from="zext_ln10_1" to="vla13_addr_1" fromId="23" toId="24">
+<dataflow id="114" from="zext_ln10_1" to="vla1_addr_1" fromId="23" toId="24">
 </dataflow>
-<dataflow id="115" from="vla13_addr_1" to="vla13_load_1" fromId="24" toId="25">
+<dataflow id="115" from="vla1_addr_1" to="vla1_load_1" fromId="24" toId="25">
 </dataflow>
 <dataflow id="116" from="getMax_counter_1" to="add_ln9" fromId="12" toId="26">
 </dataflow>
@@ -814,9 +814,9 @@ for.body.i.i.split:25 %br_ln9 = br void %for.body.i.i
 </dataflow>
 <dataflow id="119" from="getMax_counter" to="store_ln9" fromId="7" toId="27">
 </dataflow>
-<dataflow id="120" from="vla13_addr" to="vla13_load" fromId="20" toId="28">
+<dataflow id="120" from="vla1_addr" to="vla1_load" fromId="20" toId="28">
 </dataflow>
-<dataflow id="121" from="vla13_addr_1" to="vla13_load_1" fromId="24" toId="29">
+<dataflow id="121" from="vla1_addr_1" to="vla1_load_1" fromId="24" toId="29">
 </dataflow>
 <dataflow id="122" from="shl_ln" to="or_ln10_1" fromId="18" toId="30">
 </dataflow>
@@ -824,13 +824,13 @@ for.body.i.i.split:25 %br_ln9 = br void %for.body.i.i
 </dataflow>
 <dataflow id="125" from="or_ln10_1" to="zext_ln10_2" fromId="30" toId="31">
 </dataflow>
-<dataflow id="126" from="vla13" to="vla13_addr_2" fromId="62" toId="32">
+<dataflow id="126" from="vla1" to="vla1_addr_2" fromId="62" toId="32">
 </dataflow>
-<dataflow id="127" from="StgValue_104" to="vla13_addr_2" fromId="104" toId="32">
+<dataflow id="127" from="StgValue_104" to="vla1_addr_2" fromId="104" toId="32">
 </dataflow>
-<dataflow id="128" from="zext_ln10_2" to="vla13_addr_2" fromId="31" toId="32">
+<dataflow id="128" from="zext_ln10_2" to="vla1_addr_2" fromId="31" toId="32">
 </dataflow>
-<dataflow id="129" from="vla13_addr_2" to="vla13_load_2" fromId="32" toId="33">
+<dataflow id="129" from="vla1_addr_2" to="vla1_load_2" fromId="32" toId="33">
 </dataflow>
 <dataflow id="130" from="shl_ln" to="or_ln10_2" fromId="18" toId="34">
 </dataflow>
@@ -838,13 +838,13 @@ for.body.i.i.split:25 %br_ln9 = br void %for.body.i.i
 </dataflow>
 <dataflow id="133" from="or_ln10_2" to="zext_ln10_3" fromId="34" toId="35">
 </dataflow>
-<dataflow id="134" from="vla13" to="vla13_addr_3" fromId="62" toId="36">
+<dataflow id="134" from="vla1" to="vla1_addr_3" fromId="62" toId="36">
 </dataflow>
-<dataflow id="135" from="StgValue_104" to="vla13_addr_3" fromId="104" toId="36">
+<dataflow id="135" from="StgValue_104" to="vla1_addr_3" fromId="104" toId="36">
 </dataflow>
-<dataflow id="136" from="zext_ln10_3" to="vla13_addr_3" fromId="35" toId="36">
+<dataflow id="136" from="zext_ln10_3" to="vla1_addr_3" fromId="35" toId="36">
 </dataflow>
-<dataflow id="137" from="vla13_addr_3" to="vla13_load_3" fromId="36" toId="37">
+<dataflow id="137" from="vla1_addr_3" to="vla1_load_3" fromId="36" toId="37">
 </dataflow>
 <dataflow id="138" from="max_1" to="max_1_load_1" fromId="6" toId="38">
 </dataflow>
@@ -852,19 +852,19 @@ for.body.i.i.split:25 %br_ln9 = br void %for.body.i.i
 </dataflow>
 <dataflow id="142" from="empty_13" to="specloopname_ln8" fromId="141" toId="39">
 </dataflow>
-<dataflow id="143" from="vla13_addr_2" to="vla13_load_2" fromId="32" toId="40">
+<dataflow id="143" from="vla1_addr_2" to="vla1_load_2" fromId="32" toId="40">
 </dataflow>
-<dataflow id="144" from="vla13_addr_3" to="vla13_load_3" fromId="36" toId="41">
+<dataflow id="144" from="vla1_addr_3" to="vla1_load_3" fromId="36" toId="41">
 </dataflow>
 <dataflow id="146" from="_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8" to="or_ln10_5" fromId="145" toId="42">
 </dataflow>
-<dataflow id="147" from="vla13_load_3" to="or_ln10_5" fromId="41" toId="42">
+<dataflow id="147" from="vla1_load_3" to="or_ln10_5" fromId="41" toId="42">
 </dataflow>
-<dataflow id="148" from="vla13_load_2" to="or_ln10_5" fromId="40" toId="42">
+<dataflow id="148" from="vla1_load_2" to="or_ln10_5" fromId="40" toId="42">
 </dataflow>
-<dataflow id="149" from="vla13_load_1" to="or_ln10_5" fromId="29" toId="42">
+<dataflow id="149" from="vla1_load_1" to="or_ln10_5" fromId="29" toId="42">
 </dataflow>
-<dataflow id="150" from="vla13_load" to="or_ln10_5" fromId="28" toId="42">
+<dataflow id="150" from="vla1_load" to="or_ln10_5" fromId="28" toId="42">
 </dataflow>
 <dataflow id="151" from="max_1_load_1" to="icmp_ln10" fromId="38" toId="43">
 </dataflow>

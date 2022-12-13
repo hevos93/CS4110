@@ -716,10 +716,10 @@ for.inc27.i.i.split:3 %zext_ln31 = zext i3 %shl_ln2
 
 <Node id="24" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc27.i.i.split:4 %vla13_addr = getelementptr i8 %vla13, i64 0, i64 %zext_ln31
+for.inc27.i.i.split:4 %vla1_addr = getelementptr i8 %vla1, i64 0, i64 %zext_ln31
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr"/></StgValue>
+<StgValue><ssdm name="vla1_addr"/></StgValue>
 </operation>
 
 <operation id="95" st_id="1" stage="2" lat="2">
@@ -732,10 +732,10 @@ for.inc27.i.i.split:4 %vla13_addr = getelementptr i8 %vla13, i64 0, i64 %zext_ln
 
 <Node id="25" bw="8" op_0_bw="3">
 <![CDATA[
-for.inc27.i.i.split:5 %vla13_load = load i3 %vla13_addr
+for.inc27.i.i.split:5 %vla1_load = load i3 %vla1_addr
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load"/></StgValue>
+<StgValue><ssdm name="vla1_load"/></StgValue>
 </operation>
 
 <operation id="96" st_id="1" stage="1" lat="1">
@@ -780,10 +780,10 @@ for.inc27.i.i.split:7 %zext_ln31_1 = zext i3 %or_ln31
 
 <Node id="28" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc27.i.i.split:8 %vla13_addr_10 = getelementptr i8 %vla13, i64 0, i64 %zext_ln31_1
+for.inc27.i.i.split:8 %vla1_addr_10 = getelementptr i8 %vla1, i64 0, i64 %zext_ln31_1
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr_10"/></StgValue>
+<StgValue><ssdm name="vla1_addr_10"/></StgValue>
 </operation>
 
 <operation id="99" st_id="1" stage="2" lat="2">
@@ -796,10 +796,10 @@ for.inc27.i.i.split:8 %vla13_addr_10 = getelementptr i8 %vla13, i64 0, i64 %zext
 
 <Node id="29" bw="8" op_0_bw="3">
 <![CDATA[
-for.inc27.i.i.split:9 %vla13_load_7 = load i3 %vla13_addr_10
+for.inc27.i.i.split:9 %vla1_load_7 = load i3 %vla1_addr_10
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_7"/></StgValue>
+<StgValue><ssdm name="vla1_load_7"/></StgValue>
 </operation>
 
 <operation id="100" st_id="1" stage="1" lat="1">
@@ -831,10 +831,10 @@ for.inc27.i.i.split:33 %store_ln30 = store i4 %add_ln30, i4 %countingSort_counte
 
 <Node id="25" bw="8" op_0_bw="3">
 <![CDATA[
-for.inc27.i.i.split:5 %vla13_load = load i3 %vla13_addr
+for.inc27.i.i.split:5 %vla1_load = load i3 %vla1_addr
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load"/></StgValue>
+<StgValue><ssdm name="vla1_load"/></StgValue>
 </operation>
 
 <operation id="102" st_id="2" stage="1" lat="2">
@@ -847,10 +847,10 @@ for.inc27.i.i.split:5 %vla13_load = load i3 %vla13_addr
 
 <Node id="29" bw="8" op_0_bw="3">
 <![CDATA[
-for.inc27.i.i.split:9 %vla13_load_7 = load i3 %vla13_addr_10
+for.inc27.i.i.split:9 %vla1_load_7 = load i3 %vla1_addr_10
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_7"/></StgValue>
+<StgValue><ssdm name="vla1_load_7"/></StgValue>
 </operation>
 
 <operation id="103" st_id="2" stage="1" lat="1">
@@ -895,10 +895,10 @@ for.inc27.i.i.split:11 %zext_ln31_2 = zext i3 %or_ln31_1
 
 <Node id="32" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc27.i.i.split:12 %vla13_addr_11 = getelementptr i8 %vla13, i64 0, i64 %zext_ln31_2
+for.inc27.i.i.split:12 %vla1_addr_11 = getelementptr i8 %vla1, i64 0, i64 %zext_ln31_2
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr_11"/></StgValue>
+<StgValue><ssdm name="vla1_addr_11"/></StgValue>
 </operation>
 
 <operation id="106" st_id="2" stage="2" lat="2">
@@ -911,10 +911,10 @@ for.inc27.i.i.split:12 %vla13_addr_11 = getelementptr i8 %vla13, i64 0, i64 %zex
 
 <Node id="33" bw="8" op_0_bw="3">
 <![CDATA[
-for.inc27.i.i.split:13 %vla13_load_8 = load i3 %vla13_addr_11
+for.inc27.i.i.split:13 %vla1_load_8 = load i3 %vla1_addr_11
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_8"/></StgValue>
+<StgValue><ssdm name="vla1_load_8"/></StgValue>
 </operation>
 
 <operation id="107" st_id="2" stage="1" lat="1">
@@ -959,10 +959,10 @@ for.inc27.i.i.split:15 %zext_ln31_3 = zext i3 %or_ln31_2
 
 <Node id="36" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc27.i.i.split:16 %vla13_addr_12 = getelementptr i8 %vla13, i64 0, i64 %zext_ln31_3
+for.inc27.i.i.split:16 %vla1_addr_12 = getelementptr i8 %vla1, i64 0, i64 %zext_ln31_3
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr_12"/></StgValue>
+<StgValue><ssdm name="vla1_addr_12"/></StgValue>
 </operation>
 
 <operation id="110" st_id="2" stage="2" lat="2">
@@ -975,10 +975,10 @@ for.inc27.i.i.split:16 %vla13_addr_12 = getelementptr i8 %vla13, i64 0, i64 %zex
 
 <Node id="37" bw="8" op_0_bw="3">
 <![CDATA[
-for.inc27.i.i.split:17 %vla13_load_9 = load i3 %vla13_addr_12
+for.inc27.i.i.split:17 %vla1_load_9 = load i3 %vla1_addr_12
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_9"/></StgValue>
+<StgValue><ssdm name="vla1_load_9"/></StgValue>
 </operation>
 </state>
 
@@ -993,10 +993,10 @@ for.inc27.i.i.split:17 %vla13_load_9 = load i3 %vla13_addr_12
 
 <Node id="33" bw="8" op_0_bw="3">
 <![CDATA[
-for.inc27.i.i.split:13 %vla13_load_8 = load i3 %vla13_addr_11
+for.inc27.i.i.split:13 %vla1_load_8 = load i3 %vla1_addr_11
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_8"/></StgValue>
+<StgValue><ssdm name="vla1_load_8"/></StgValue>
 </operation>
 
 <operation id="112" st_id="3" stage="1" lat="2">
@@ -1008,10 +1008,10 @@ for.inc27.i.i.split:13 %vla13_load_8 = load i3 %vla13_addr_11
 
 <Node id="37" bw="8" op_0_bw="3">
 <![CDATA[
-for.inc27.i.i.split:17 %vla13_load_9 = load i3 %vla13_addr_12
+for.inc27.i.i.split:17 %vla1_load_9 = load i3 %vla1_addr_12
 
 ]]></Node>
-<StgValue><ssdm name="vla13_load_9"/></StgValue>
+<StgValue><ssdm name="vla1_load_9"/></StgValue>
 </operation>
 
 <operation id="113" st_id="3" stage="1" lat="1">
@@ -1023,7 +1023,7 @@ for.inc27.i.i.split:17 %vla13_load_9 = load i3 %vla13_addr_12
 
 <Node id="38" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8">
 <![CDATA[
-for.inc27.i.i.split:18 %or_ln31_5 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %vla13_load_9, i8 %vla13_load_8, i8 %vla13_load_7, i8 %vla13_load
+for.inc27.i.i.split:18 %or_ln31_5 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %vla1_load_9, i8 %vla1_load_8, i8 %vla1_load_7, i8 %vla1_load
 
 ]]></Node>
 <StgValue><ssdm name="or_ln31_5"/></StgValue>
@@ -2568,8 +2568,8 @@ for.inc27.i.i.split:34 %br_ln30 = br void %for.inc27.i.i
 
 
 <ports>
-<port id="355" name="vla13" dir="0" iftype="1">
-<core>RAM</core><StgValue><ssdm name="vla13"/><MemPortTyVec>1 1 </MemPortTyVec>
+<port id="355" name="vla1" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="vla1"/><MemPortTyVec>1 1 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="356" name="place_1" dir="0" iftype="0">
@@ -2647,13 +2647,13 @@ for.inc27.i.i.split:34 %br_ln30 = br void %for.inc27.i.i
 </dataflow>
 <dataflow id="403" from="shl_ln2" to="zext_ln31" fromId="92" toId="93">
 </dataflow>
-<dataflow id="404" from="vla13" to="vla13_addr" fromId="355" toId="94">
+<dataflow id="404" from="vla1" to="vla1_addr" fromId="355" toId="94">
 </dataflow>
-<dataflow id="406" from="StgValue_405" to="vla13_addr" fromId="405" toId="94">
+<dataflow id="406" from="StgValue_405" to="vla1_addr" fromId="405" toId="94">
 </dataflow>
-<dataflow id="407" from="zext_ln31" to="vla13_addr" fromId="93" toId="94">
+<dataflow id="407" from="zext_ln31" to="vla1_addr" fromId="93" toId="94">
 </dataflow>
-<dataflow id="408" from="vla13_addr" to="vla13_load" fromId="94" toId="95">
+<dataflow id="408" from="vla1_addr" to="vla1_load" fromId="94" toId="95">
 </dataflow>
 <dataflow id="409" from="shl_ln2" to="or_ln31" fromId="92" toId="96">
 </dataflow>
@@ -2661,21 +2661,21 @@ for.inc27.i.i.split:34 %br_ln30 = br void %for.inc27.i.i
 </dataflow>
 <dataflow id="412" from="or_ln31" to="zext_ln31_1" fromId="96" toId="97">
 </dataflow>
-<dataflow id="413" from="vla13" to="vla13_addr_10" fromId="355" toId="98">
+<dataflow id="413" from="vla1" to="vla1_addr_10" fromId="355" toId="98">
 </dataflow>
-<dataflow id="414" from="StgValue_405" to="vla13_addr_10" fromId="405" toId="98">
+<dataflow id="414" from="StgValue_405" to="vla1_addr_10" fromId="405" toId="98">
 </dataflow>
-<dataflow id="415" from="zext_ln31_1" to="vla13_addr_10" fromId="97" toId="98">
+<dataflow id="415" from="zext_ln31_1" to="vla1_addr_10" fromId="97" toId="98">
 </dataflow>
-<dataflow id="416" from="vla13_addr_10" to="vla13_load_7" fromId="98" toId="99">
+<dataflow id="416" from="vla1_addr_10" to="vla1_load_7" fromId="98" toId="99">
 </dataflow>
 <dataflow id="417" from="add_ln30" to="store_ln30" fromId="89" toId="100">
 </dataflow>
 <dataflow id="418" from="countingSort_counter3" to="store_ln30" fromId="79" toId="100">
 </dataflow>
-<dataflow id="419" from="vla13_addr" to="vla13_load" fromId="94" toId="101">
+<dataflow id="419" from="vla1_addr" to="vla1_load" fromId="94" toId="101">
 </dataflow>
-<dataflow id="420" from="vla13_addr_10" to="vla13_load_7" fromId="98" toId="102">
+<dataflow id="420" from="vla1_addr_10" to="vla1_load_7" fromId="98" toId="102">
 </dataflow>
 <dataflow id="421" from="shl_ln2" to="or_ln31_1" fromId="92" toId="103">
 </dataflow>
@@ -2683,13 +2683,13 @@ for.inc27.i.i.split:34 %br_ln30 = br void %for.inc27.i.i
 </dataflow>
 <dataflow id="424" from="or_ln31_1" to="zext_ln31_2" fromId="103" toId="104">
 </dataflow>
-<dataflow id="425" from="vla13" to="vla13_addr_11" fromId="355" toId="105">
+<dataflow id="425" from="vla1" to="vla1_addr_11" fromId="355" toId="105">
 </dataflow>
-<dataflow id="426" from="StgValue_405" to="vla13_addr_11" fromId="405" toId="105">
+<dataflow id="426" from="StgValue_405" to="vla1_addr_11" fromId="405" toId="105">
 </dataflow>
-<dataflow id="427" from="zext_ln31_2" to="vla13_addr_11" fromId="104" toId="105">
+<dataflow id="427" from="zext_ln31_2" to="vla1_addr_11" fromId="104" toId="105">
 </dataflow>
-<dataflow id="428" from="vla13_addr_11" to="vla13_load_8" fromId="105" toId="106">
+<dataflow id="428" from="vla1_addr_11" to="vla1_load_8" fromId="105" toId="106">
 </dataflow>
 <dataflow id="429" from="shl_ln2" to="or_ln31_2" fromId="92" toId="107">
 </dataflow>
@@ -2697,27 +2697,27 @@ for.inc27.i.i.split:34 %br_ln30 = br void %for.inc27.i.i
 </dataflow>
 <dataflow id="432" from="or_ln31_2" to="zext_ln31_3" fromId="107" toId="108">
 </dataflow>
-<dataflow id="433" from="vla13" to="vla13_addr_12" fromId="355" toId="109">
+<dataflow id="433" from="vla1" to="vla1_addr_12" fromId="355" toId="109">
 </dataflow>
-<dataflow id="434" from="StgValue_405" to="vla13_addr_12" fromId="405" toId="109">
+<dataflow id="434" from="StgValue_405" to="vla1_addr_12" fromId="405" toId="109">
 </dataflow>
-<dataflow id="435" from="zext_ln31_3" to="vla13_addr_12" fromId="108" toId="109">
+<dataflow id="435" from="zext_ln31_3" to="vla1_addr_12" fromId="108" toId="109">
 </dataflow>
-<dataflow id="436" from="vla13_addr_12" to="vla13_load_9" fromId="109" toId="110">
+<dataflow id="436" from="vla1_addr_12" to="vla1_load_9" fromId="109" toId="110">
 </dataflow>
-<dataflow id="437" from="vla13_addr_11" to="vla13_load_8" fromId="105" toId="111">
+<dataflow id="437" from="vla1_addr_11" to="vla1_load_8" fromId="105" toId="111">
 </dataflow>
-<dataflow id="438" from="vla13_addr_12" to="vla13_load_9" fromId="109" toId="112">
+<dataflow id="438" from="vla1_addr_12" to="vla1_load_9" fromId="109" toId="112">
 </dataflow>
 <dataflow id="440" from="_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8" to="or_ln31_5" fromId="439" toId="113">
 </dataflow>
-<dataflow id="441" from="vla13_load_9" to="or_ln31_5" fromId="112" toId="113">
+<dataflow id="441" from="vla1_load_9" to="or_ln31_5" fromId="112" toId="113">
 </dataflow>
-<dataflow id="442" from="vla13_load_8" to="or_ln31_5" fromId="111" toId="113">
+<dataflow id="442" from="vla1_load_8" to="or_ln31_5" fromId="111" toId="113">
 </dataflow>
-<dataflow id="443" from="vla13_load_7" to="or_ln31_5" fromId="102" toId="113">
+<dataflow id="443" from="vla1_load_7" to="or_ln31_5" fromId="102" toId="113">
 </dataflow>
-<dataflow id="444" from="vla13_load" to="or_ln31_5" fromId="101" toId="113">
+<dataflow id="444" from="vla1_load" to="or_ln31_5" fromId="101" toId="113">
 </dataflow>
 <dataflow id="445" from="or_ln31_5" to="sdiv_ln31" fromId="113" toId="114">
 </dataflow>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'radix_Pipeline_VITIS_LOOP_20_1'" level="0">
-<item name = "Date">Wed Dec  7 16:13:42 2022
+<item name = "Date">Sun Dec 11 17:47:39 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">Radix</item>
@@ -64,8 +64,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="sdiv_32ns_32ns_32_36_1_U7">sdiv_32ns_32ns_32_36_1, 0, 0, 2283, 1738, 0</column>
-<column name="srem_32ns_5ns_32_36_1_U8">srem_32ns_5ns_32_36_1, 0, 0, 2283, 1738, 0</column>
+<column name="sdiv_32ns_32ns_32_36_1_U6">sdiv_32ns_32ns_32_36_1, 0, 0, 2283, 1738, 0</column>
+<column name="srem_32ns_5ns_32_36_1_U7">srem_32ns_5ns_32_36_1, 0, 0, 2283, 1738, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -137,8 +137,8 @@
 <column name="ap_sig_allocacmp_countingSort_counter1_1">9, 2, 4, 8</column>
 <column name="countingSort_counter1_fu_56">9, 2, 4, 8</column>
 <column name="max_fu_52">9, 2, 32, 64</column>
-<column name="vla13_address0">14, 3, 3, 9</column>
-<column name="vla13_address1">14, 3, 3, 9</column>
+<column name="vla1_address0">14, 3, 3, 9</column>
+<column name="vla1_address1">14, 3, 3, 9</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -222,8 +222,8 @@
 <column name="max_fu_52">32, 0, 32, 0</column>
 <column name="or_ln21_5_reg_308">32, 0, 32, 0</column>
 <column name="shl_ln1_reg_272">1, 0, 3, 2</column>
-<column name="vla13_load_10_reg_293">8, 0, 8, 0</column>
-<column name="vla13_load_reg_288">8, 0, 8, 0</column>
+<column name="vla1_load_10_reg_293">8, 0, 8, 0</column>
+<column name="vla1_load_reg_288">8, 0, 8, 0</column>
 <column name="icmp_ln20_reg_268">64, 32, 1, 0</column>
 <column name="or_ln21_5_reg_308">64, 32, 32, 0</column>
 </table>
@@ -242,12 +242,12 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, radix_Pipeline_VITIS_LOOP_20_1, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, radix_Pipeline_VITIS_LOOP_20_1, return value</column>
 <column name="max_4">in, 5, ap_none, max_4, scalar</column>
-<column name="vla13_address0">out, 3, ap_memory, vla13, array</column>
-<column name="vla13_ce0">out, 1, ap_memory, vla13, array</column>
-<column name="vla13_q0">in, 8, ap_memory, vla13, array</column>
-<column name="vla13_address1">out, 3, ap_memory, vla13, array</column>
-<column name="vla13_ce1">out, 1, ap_memory, vla13, array</column>
-<column name="vla13_q1">in, 8, ap_memory, vla13, array</column>
+<column name="vla1_address0">out, 3, ap_memory, vla1, array</column>
+<column name="vla1_ce0">out, 1, ap_memory, vla1, array</column>
+<column name="vla1_q0">in, 8, ap_memory, vla1, array</column>
+<column name="vla1_address1">out, 3, ap_memory, vla1, array</column>
+<column name="vla1_ce1">out, 1, ap_memory, vla1, array</column>
+<column name="vla1_q1">in, 8, ap_memory, vla1, array</column>
 <column name="place_1">in, 32, ap_none, place_1, scalar</column>
 <column name="max_5_out">out, 32, ap_vld, max_5_out, pointer</column>
 <column name="max_5_out_ap_vld">out, 1, ap_vld, max_5_out, pointer</column>

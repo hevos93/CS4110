@@ -1079,7 +1079,10 @@ void __attribute__((__cdecl__)) __mingw_str_free(void *ptr);
 # 191 "S:/Xilinx/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 2 3
 # 11 "../../Code/radix/radix.h" 2
 
-__attribute__((sdx_kernel("radix", 0))) void radix(const char input[], uint8_t* output);
+
+
+
+__attribute__((sdx_kernel("radix", 0))) void radix(const char input[8], uint8_t output[8]);
 # 5 "../../Code/radix/radix.c" 2
 
 
@@ -1133,7 +1136,7 @@ void radixsort(int array[], int size) {
         countingSort(array, size, place);
 }
 
-__attribute__((sdx_kernel("radix", 0))) void radix(const char input[], uint8_t* output){
+__attribute__((sdx_kernel("radix", 0))) void radix(const char input[8], uint8_t output[8]){
 #line 15 "S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=radix
 # 57 "../../Code/radix/radix.c"
@@ -1146,32 +1149,17 @@ __attribute__((sdx_kernel("radix", 0))) void radix(const char input[], uint8_t* 
 #pragma HLS INTERFACE mode=s_axilite port=output
 #pragma HLS INTERFACE mode=s_axilite port=radix
 
- uint8_t size_str = sizeof(input);
-    uint8_t arr_counter = 0;
-    uint8_t counter = 0;
-    char str[size_str];
-    uint8_t array[size_str];
+ uint8_t array_size = 8;
+ uint8_t int_array[array_size];
+ uint8_t counter = 0;
 
-    VITIS_LOOP_68_1: while (counter<size_str){
-        str[counter] = input[counter];
-        printf("%c\t%c\n", str[counter], input[counter]);
-        if(str[counter]==','){
-            counter++;
-        } else{
-            int typecast = (int)(str[counter]);
-            array[arr_counter]=typecast;
-            printf("%c\n", array[arr_counter]);
-            arr_counter++;
-            counter++;
-        }
-    }
+ VITIS_LOOP_66_1: while (counter<array_size){
+  char temp_value = input[counter];
+  int_array[counter] = (uint8_t) temp_value;
+  counter++;
+ }
 
-
-
-
-    uint8_t n = sizeof(array) / sizeof(array[0]);
-
-
-    radixsort(array, n);
-    *output = array;
+ uint8_t n = 8;
+ radixsort(int_array, n);
+ *output = int_array;
 }

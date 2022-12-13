@@ -13,7 +13,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler radix_vla13_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler radix_vla1_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -39,18 +39,26 @@ set port_control {
 input_r { 
 	dir I
 	width 8
-	depth 1
-	mode ap_none
+	depth 8
+	mode ap_memory
 	offset 16
 	offset_end 23
+	core_op ram_1p
+	core_impl auto
+	core_latency 1
+	byte_write 0
 }
 output_r { 
 	dir O
 	width 8
-	depth 1
-	mode ap_vld
+	depth 8
+	mode ap_memory
 	offset 24
 	offset_end 31
+	core_op ram_1p
+	core_impl auto
+	core_latency 1
+	byte_write 0
 }
 ap_start { }
 ap_done { }
@@ -66,7 +74,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 41 \
+			id 40 \
 			corename radix_control_axilite \
 			name radix_control_s_axi \
 			ports {$port_control} \

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_Pipeline_VITIS_LOOP_43_6'
 ================================================================
-* Date:           Wed Dec  7 16:13:41 2022
+* Date:           Sun Dec 11 17:47:38 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        Radix
@@ -107,13 +107,13 @@ ST_2 : Operation 20 [1/2] (0.73ns)   --->   "%output_load = load i4 %output_addr
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%shl_ln5 = bitconcatenate i3 @_ssdm_op_BitConcatenate.i3.i1.i2, i1 %trunc_ln44, i2 0" [../../Code/radix/radix.c:44]   --->   Operation 21 'bitconcatenate' 'shl_ln5' <Predicate = (!icmp_ln43)> <Delay = 0.00>
 ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln44 = zext i3 %shl_ln5" [../../Code/radix/radix.c:44]   --->   Operation 22 'zext' 'zext_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.00>
 ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln44_4 = trunc i32 %output_load" [../../Code/radix/radix.c:44]   --->   Operation 23 'trunc' 'trunc_ln44_4' <Predicate = (!icmp_ln43)> <Delay = 0.00>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%vla13_addr = getelementptr i8 %vla13, i64 0, i64 %zext_ln44" [../../Code/radix/radix.c:44]   --->   Operation 24 'getelementptr' 'vla13_addr' <Predicate = (!icmp_ln43)> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_4, i3 %vla13_addr" [../../Code/radix/radix.c:44]   --->   Operation 25 'store' 'store_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%vla1_addr = getelementptr i8 %vla1, i64 0, i64 %zext_ln44" [../../Code/radix/radix.c:44]   --->   Operation 24 'getelementptr' 'vla1_addr' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_4, i3 %vla1_addr" [../../Code/radix/radix.c:44]   --->   Operation 25 'store' 'store_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
 ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln44_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %output_load, i32 8, i32 15" [../../Code/radix/radix.c:44]   --->   Operation 26 'partselect' 'trunc_ln44_1' <Predicate = (!icmp_ln43)> <Delay = 0.00>
 ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%or_ln44 = or i3 %shl_ln5, i3 1" [../../Code/radix/radix.c:44]   --->   Operation 27 'or' 'or_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.00>
 ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln44_1 = zext i3 %or_ln44" [../../Code/radix/radix.c:44]   --->   Operation 28 'zext' 'zext_ln44_1' <Predicate = (!icmp_ln43)> <Delay = 0.00>
-ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%vla13_addr_4 = getelementptr i8 %vla13, i64 0, i64 %zext_ln44_1" [../../Code/radix/radix.c:44]   --->   Operation 29 'getelementptr' 'vla13_addr_4' <Predicate = (!icmp_ln43)> <Delay = 0.00>
-ST_2 : Operation 30 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_1, i3 %vla13_addr_4" [../../Code/radix/radix.c:44]   --->   Operation 30 'store' 'store_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%vla1_addr_4 = getelementptr i8 %vla1, i64 0, i64 %zext_ln44_1" [../../Code/radix/radix.c:44]   --->   Operation 29 'getelementptr' 'vla1_addr_4' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_1, i3 %vla1_addr_4" [../../Code/radix/radix.c:44]   --->   Operation 30 'store' 'store_ln44' <Predicate = (!icmp_ln43)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
 ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln44_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %output_load, i32 16, i32 23" [../../Code/radix/radix.c:44]   --->   Operation 31 'partselect' 'trunc_ln44_2' <Predicate = (!icmp_ln43)> <Delay = 0.00>
 ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln44_3 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %output_load, i32 24, i32 31" [../../Code/radix/radix.c:44]   --->   Operation 32 'partselect' 'trunc_ln44_3' <Predicate = (!icmp_ln43)> <Delay = 0.00>
 
@@ -121,12 +121,12 @@ State 3 <SV = 2> <Delay = 0.73>
 ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [../../Code/radix/radix.c:43]   --->   Operation 33 'specloopname' 'specloopname_ln43' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%or_ln44_1 = or i3 %shl_ln5, i3 2" [../../Code/radix/radix.c:44]   --->   Operation 34 'or' 'or_ln44_1' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln44_2 = zext i3 %or_ln44_1" [../../Code/radix/radix.c:44]   --->   Operation 35 'zext' 'zext_ln44_2' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%vla13_addr_5 = getelementptr i8 %vla13, i64 0, i64 %zext_ln44_2" [../../Code/radix/radix.c:44]   --->   Operation 36 'getelementptr' 'vla13_addr_5' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 37 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_2, i3 %vla13_addr_5" [../../Code/radix/radix.c:44]   --->   Operation 37 'store' 'store_ln44' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%vla1_addr_5 = getelementptr i8 %vla1, i64 0, i64 %zext_ln44_2" [../../Code/radix/radix.c:44]   --->   Operation 36 'getelementptr' 'vla1_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_2, i3 %vla1_addr_5" [../../Code/radix/radix.c:44]   --->   Operation 37 'store' 'store_ln44' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
 ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%or_ln44_2 = or i3 %shl_ln5, i3 3" [../../Code/radix/radix.c:44]   --->   Operation 38 'or' 'or_ln44_2' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln44_3 = zext i3 %or_ln44_2" [../../Code/radix/radix.c:44]   --->   Operation 39 'zext' 'zext_ln44_3' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%vla13_addr_6 = getelementptr i8 %vla13, i64 0, i64 %zext_ln44_3" [../../Code/radix/radix.c:44]   --->   Operation 40 'getelementptr' 'vla13_addr_6' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 41 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_3, i3 %vla13_addr_6" [../../Code/radix/radix.c:44]   --->   Operation 41 'store' 'store_ln44' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%vla1_addr_6 = getelementptr i8 %vla1, i64 0, i64 %zext_ln44_3" [../../Code/radix/radix.c:44]   --->   Operation 40 'getelementptr' 'vla1_addr_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.73ns)   --->   "%store_ln44 = store i8 %trunc_ln44_3, i3 %vla1_addr_6" [../../Code/radix/radix.c:44]   --->   Operation 41 'store' 'store_ln44' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
 ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln43 = br void %for.inc75.i.i" [../../Code/radix/radix.c:43]   --->   Operation 42 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
 
 
@@ -142,7 +142,7 @@ STG Binding:
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
 Port [ output_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ vla13]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[00]; IO mode=ap_memory:ce=0
+Port [ vla1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[00]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -166,23 +166,23 @@ output_load                 (load             ) [ 0000]
 shl_ln5                     (bitconcatenate   ) [ 0101]
 zext_ln44                   (zext             ) [ 0000]
 trunc_ln44_4                (trunc            ) [ 0000]
-vla13_addr                  (getelementptr    ) [ 0000]
+vla1_addr                   (getelementptr    ) [ 0000]
 store_ln44                  (store            ) [ 0000]
 trunc_ln44_1                (partselect       ) [ 0000]
 or_ln44                     (or               ) [ 0000]
 zext_ln44_1                 (zext             ) [ 0000]
-vla13_addr_4                (getelementptr    ) [ 0000]
+vla1_addr_4                 (getelementptr    ) [ 0000]
 store_ln44                  (store            ) [ 0000]
 trunc_ln44_2                (partselect       ) [ 0101]
 trunc_ln44_3                (partselect       ) [ 0101]
 specloopname_ln43           (specloopname     ) [ 0000]
 or_ln44_1                   (or               ) [ 0000]
 zext_ln44_2                 (zext             ) [ 0000]
-vla13_addr_5                (getelementptr    ) [ 0000]
+vla1_addr_5                 (getelementptr    ) [ 0000]
 store_ln44                  (store            ) [ 0000]
 or_ln44_2                   (or               ) [ 0000]
 zext_ln44_3                 (zext             ) [ 0000]
-vla13_addr_6                (getelementptr    ) [ 0000]
+vla1_addr_6                 (getelementptr    ) [ 0000]
 store_ln44                  (store            ) [ 0000]
 br_ln43                     (br               ) [ 0000]
 ret_ln0                     (ret              ) [ 0000]
@@ -201,12 +201,12 @@ ret_ln0                     (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="2" class="1000" name="vla13">
+<comp id="2" class="1000" name="vla1">
 <pin_list>
 <pin id="3" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="vla13"/><MemPortTyVec>0 0 </MemPortTyVec>
+<StgValue><ssdm name="vla1"/><MemPortTyVec>0 0 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -473,7 +473,7 @@ ret_ln0                     (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="71" class="1004" name="vla13_addr_gep_fu_71">
+<comp id="71" class="1004" name="vla1_addr_gep_fu_71">
 <pin_list>
 <pin id="72" dir="0" index="0" bw="8" slack="0"/>
 <pin id="73" dir="0" index="1" bw="1" slack="0"/>
@@ -482,7 +482,7 @@ ret_ln0                     (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="vla13_addr/2 "/>
+<opset="vla1_addr/2 "/>
 </bind>
 </comp>
 
@@ -503,7 +503,7 @@ ret_ln0                     (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="88" class="1004" name="vla13_addr_4_gep_fu_88">
+<comp id="88" class="1004" name="vla1_addr_4_gep_fu_88">
 <pin_list>
 <pin id="89" dir="0" index="0" bw="8" slack="0"/>
 <pin id="90" dir="0" index="1" bw="1" slack="0"/>
@@ -512,11 +512,11 @@ ret_ln0                     (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="vla13_addr_4/2 "/>
+<opset="vla1_addr_4/2 "/>
 </bind>
 </comp>
 
-<comp id="96" class="1004" name="vla13_addr_5_gep_fu_96">
+<comp id="96" class="1004" name="vla1_addr_5_gep_fu_96">
 <pin_list>
 <pin id="97" dir="0" index="0" bw="8" slack="0"/>
 <pin id="98" dir="0" index="1" bw="1" slack="0"/>
@@ -525,11 +525,11 @@ ret_ln0                     (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="vla13_addr_5/3 "/>
+<opset="vla1_addr_5/3 "/>
 </bind>
 </comp>
 
-<comp id="104" class="1004" name="vla13_addr_6_gep_fu_104">
+<comp id="104" class="1004" name="vla1_addr_6_gep_fu_104">
 <pin_list>
 <pin id="105" dir="0" index="0" bw="8" slack="0"/>
 <pin id="106" dir="0" index="1" bw="1" slack="0"/>
@@ -538,7 +538,7 @@ ret_ln0                     (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="vla13_addr_6/3 "/>
+<opset="vla1_addr_6/3 "/>
 </bind>
 </comp>
 
@@ -989,7 +989,7 @@ ret_ln0                     (ret              ) [ 0000]
 
 * FSMD analyzer results:
   - Output states:
-	Port: vla13 | {2 3 }
+	Port: vla1 | {2 3 }
  - Input state : 
 	Port: radix_Pipeline_VITIS_LOOP_43_6 : output_r | {1 2 }
   - Chain level:
@@ -1007,19 +1007,19 @@ ret_ln0                     (ret              ) [ 0000]
 	State 2
 		zext_ln44 : 1
 		trunc_ln44_4 : 1
-		vla13_addr : 2
+		vla1_addr : 2
 		store_ln44 : 3
 		trunc_ln44_1 : 1
 		or_ln44 : 1
 		zext_ln44_1 : 1
-		vla13_addr_4 : 2
+		vla1_addr_4 : 2
 		store_ln44 : 3
 		trunc_ln44_2 : 1
 		trunc_ln44_3 : 1
 	State 3
-		vla13_addr_5 : 1
+		vla1_addr_5 : 1
 		store_ln44 : 2
-		vla13_addr_6 : 1
+		vla1_addr_6 : 1
 		store_ln44 : 2
 
 

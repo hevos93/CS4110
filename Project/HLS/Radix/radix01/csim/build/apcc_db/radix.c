@@ -127,8 +127,6 @@ typedef union {
   double Double;
 } llvmBitCastUnion;
 
-/* External Global Variable Declarations */
-
 /* Function Declarations */
 double fmod(double, double);
 float fmodf(float, float);
@@ -137,11 +135,6 @@ signed int getMax(signed int *llvm_cbe_array, signed int llvm_cbe_n);
 void countingSort(signed int *llvm_cbe_array, signed int llvm_cbe_size, signed int llvm_cbe_place);
 void radixsort(signed int *llvm_cbe_array, signed int llvm_cbe_size);
 void radix( char *llvm_cbe_input,  char *llvm_cbe_output);
-
-
-/* Global Variable Definitions and Initialization */
-static  char aesl_internal__OC_str[7] = "%c\t%c\n";
-static  char aesl_internal__OC_str1[4] = "%c\n";
 
 
 /* Function Bodies */
@@ -1481,15 +1474,18 @@ void radix( char *llvm_cbe_input,  char *llvm_cbe_output) {
   static  unsigned long long aesl_llvm_cbe_277_count = 0;
   static  unsigned long long aesl_llvm_cbe_278_count = 0;
   static  unsigned long long aesl_llvm_cbe_279_count = 0;
+   char llvm_cbe_tmp__81[8];    /* Address-exposed local */
   static  unsigned long long aesl_llvm_cbe_280_count = 0;
   static  unsigned long long aesl_llvm_cbe_281_count = 0;
   static  unsigned long long aesl_llvm_cbe_282_count = 0;
   static  unsigned long long aesl_llvm_cbe_283_count = 0;
   static  unsigned long long aesl_llvm_cbe_284_count = 0;
   static  unsigned long long aesl_llvm_cbe_285_count = 0;
+  unsigned char llvm_cbe_tmp__82;
   static  unsigned long long aesl_llvm_cbe_286_count = 0;
   static  unsigned long long aesl_llvm_cbe_287_count = 0;
   static  unsigned long long aesl_llvm_cbe_288_count = 0;
+   char *llvm_cbe_tmp__83;
   static  unsigned long long aesl_llvm_cbe_289_count = 0;
   static  unsigned long long aesl_llvm_cbe_290_count = 0;
   static  unsigned long long aesl_llvm_cbe_291_count = 0;
@@ -1497,235 +1493,369 @@ void radix( char *llvm_cbe_input,  char *llvm_cbe_output) {
   static  unsigned long long aesl_llvm_cbe_293_count = 0;
   static  unsigned long long aesl_llvm_cbe_294_count = 0;
   static  unsigned long long aesl_llvm_cbe_295_count = 0;
-   char llvm_cbe_tmp__81[8];    /* Address-exposed local */
-  static  unsigned long long aesl_llvm_cbe_296_count = 0;
-  static  unsigned long long aesl_llvm_cbe_297_count = 0;
-  unsigned char llvm_cbe_tmp__82;
-  unsigned char llvm_cbe_tmp__82__PHI_TEMPORARY;
-  static  unsigned long long aesl_llvm_cbe_storemerge12_count = 0;
-  unsigned char llvm_cbe_storemerge12;
-  unsigned char llvm_cbe_storemerge12__PHI_TEMPORARY;
-  static  unsigned long long aesl_llvm_cbe_298_count = 0;
-  unsigned long long llvm_cbe_tmp__83;
-  static  unsigned long long aesl_llvm_cbe_299_count = 0;
    char *llvm_cbe_tmp__84;
-  static  unsigned long long aesl_llvm_cbe_300_count = 0;
+  static  unsigned long long aesl_llvm_cbe_296_count = 0;
   unsigned char llvm_cbe_tmp__85;
+  static  unsigned long long aesl_llvm_cbe_297_count = 0;
+  static  unsigned long long aesl_llvm_cbe_298_count = 0;
+  static  unsigned long long aesl_llvm_cbe_299_count = 0;
+   char *llvm_cbe_tmp__86;
+  static  unsigned long long aesl_llvm_cbe_300_count = 0;
   static  unsigned long long aesl_llvm_cbe_301_count = 0;
-  unsigned int llvm_cbe_tmp__86;
   static  unsigned long long aesl_llvm_cbe_302_count = 0;
-  unsigned int llvm_cbe_tmp__87;
   static  unsigned long long aesl_llvm_cbe_303_count = 0;
   static  unsigned long long aesl_llvm_cbe_304_count = 0;
   static  unsigned long long aesl_llvm_cbe_305_count = 0;
   static  unsigned long long aesl_llvm_cbe_306_count = 0;
-  unsigned long long llvm_cbe_tmp__88;
+   char *llvm_cbe_tmp__87;
   static  unsigned long long aesl_llvm_cbe_307_count = 0;
-   char *llvm_cbe_tmp__89;
+  unsigned char llvm_cbe_tmp__88;
   static  unsigned long long aesl_llvm_cbe_308_count = 0;
   static  unsigned long long aesl_llvm_cbe_309_count = 0;
-  unsigned int llvm_cbe_tmp__90;
   static  unsigned long long aesl_llvm_cbe_310_count = 0;
-  unsigned int llvm_cbe_tmp__91;
+   char *llvm_cbe_tmp__89;
   static  unsigned long long aesl_llvm_cbe_311_count = 0;
-  unsigned char llvm_cbe_tmp__92;
   static  unsigned long long aesl_llvm_cbe_312_count = 0;
   static  unsigned long long aesl_llvm_cbe_313_count = 0;
   static  unsigned long long aesl_llvm_cbe_314_count = 0;
   static  unsigned long long aesl_llvm_cbe_315_count = 0;
   static  unsigned long long aesl_llvm_cbe_316_count = 0;
   static  unsigned long long aesl_llvm_cbe_317_count = 0;
-  unsigned char llvm_cbe_tmp__93;
-  unsigned char llvm_cbe_tmp__93__PHI_TEMPORARY;
-  static  unsigned long long aesl_llvm_cbe_storemerge_count = 0;
-  unsigned char llvm_cbe_storemerge;
+   char *llvm_cbe_tmp__90;
   static  unsigned long long aesl_llvm_cbe_318_count = 0;
+  unsigned char llvm_cbe_tmp__91;
   static  unsigned long long aesl_llvm_cbe_319_count = 0;
   static  unsigned long long aesl_llvm_cbe_320_count = 0;
   static  unsigned long long aesl_llvm_cbe_321_count = 0;
+   char *llvm_cbe_tmp__92;
   static  unsigned long long aesl_llvm_cbe_322_count = 0;
   static  unsigned long long aesl_llvm_cbe_323_count = 0;
   static  unsigned long long aesl_llvm_cbe_324_count = 0;
   static  unsigned long long aesl_llvm_cbe_325_count = 0;
   static  unsigned long long aesl_llvm_cbe_326_count = 0;
   static  unsigned long long aesl_llvm_cbe_327_count = 0;
-  static  unsigned long long aesl_llvm_cbe_exitcond_count = 0;
   static  unsigned long long aesl_llvm_cbe_328_count = 0;
+   char *llvm_cbe_tmp__93;
   static  unsigned long long aesl_llvm_cbe_329_count = 0;
+  unsigned char llvm_cbe_tmp__94;
   static  unsigned long long aesl_llvm_cbe_330_count = 0;
-  signed int *llvm_cbe_tmp__94;
   static  unsigned long long aesl_llvm_cbe_331_count = 0;
   static  unsigned long long aesl_llvm_cbe_332_count = 0;
+   char *llvm_cbe_tmp__95;
   static  unsigned long long aesl_llvm_cbe_333_count = 0;
-  unsigned long long llvm_cbe_tmp__95;
   static  unsigned long long aesl_llvm_cbe_334_count = 0;
-  unsigned char llvm_cbe_tmp__96;
   static  unsigned long long aesl_llvm_cbe_335_count = 0;
   static  unsigned long long aesl_llvm_cbe_336_count = 0;
+  static  unsigned long long aesl_llvm_cbe_337_count = 0;
+  static  unsigned long long aesl_llvm_cbe_338_count = 0;
+  static  unsigned long long aesl_llvm_cbe_339_count = 0;
+   char *llvm_cbe_tmp__96;
+  static  unsigned long long aesl_llvm_cbe_340_count = 0;
+  unsigned char llvm_cbe_tmp__97;
+  static  unsigned long long aesl_llvm_cbe_341_count = 0;
+  static  unsigned long long aesl_llvm_cbe_342_count = 0;
+  static  unsigned long long aesl_llvm_cbe_343_count = 0;
+   char *llvm_cbe_tmp__98;
+  static  unsigned long long aesl_llvm_cbe_344_count = 0;
+  static  unsigned long long aesl_llvm_cbe_345_count = 0;
+  static  unsigned long long aesl_llvm_cbe_346_count = 0;
+  static  unsigned long long aesl_llvm_cbe_347_count = 0;
+  static  unsigned long long aesl_llvm_cbe_348_count = 0;
+  static  unsigned long long aesl_llvm_cbe_349_count = 0;
+  static  unsigned long long aesl_llvm_cbe_350_count = 0;
+   char *llvm_cbe_tmp__99;
+  static  unsigned long long aesl_llvm_cbe_351_count = 0;
+  unsigned char llvm_cbe_tmp__100;
+  static  unsigned long long aesl_llvm_cbe_352_count = 0;
+  static  unsigned long long aesl_llvm_cbe_353_count = 0;
+  static  unsigned long long aesl_llvm_cbe_354_count = 0;
+   char *llvm_cbe_tmp__101;
+  static  unsigned long long aesl_llvm_cbe_355_count = 0;
+  static  unsigned long long aesl_llvm_cbe_356_count = 0;
+  static  unsigned long long aesl_llvm_cbe_357_count = 0;
+  static  unsigned long long aesl_llvm_cbe_358_count = 0;
+  static  unsigned long long aesl_llvm_cbe_359_count = 0;
+  static  unsigned long long aesl_llvm_cbe_360_count = 0;
+  static  unsigned long long aesl_llvm_cbe_361_count = 0;
+   char *llvm_cbe_tmp__102;
+  static  unsigned long long aesl_llvm_cbe_362_count = 0;
+  unsigned char llvm_cbe_tmp__103;
+  static  unsigned long long aesl_llvm_cbe_363_count = 0;
+  static  unsigned long long aesl_llvm_cbe_364_count = 0;
+  static  unsigned long long aesl_llvm_cbe_365_count = 0;
+   char *llvm_cbe_tmp__104;
+  static  unsigned long long aesl_llvm_cbe_366_count = 0;
+  static  unsigned long long aesl_llvm_cbe_367_count = 0;
+  static  unsigned long long aesl_llvm_cbe_368_count = 0;
+  static  unsigned long long aesl_llvm_cbe_369_count = 0;
+  static  unsigned long long aesl_llvm_cbe_370_count = 0;
+  static  unsigned long long aesl_llvm_cbe_371_count = 0;
+  static  unsigned long long aesl_llvm_cbe_372_count = 0;
+  static  unsigned long long aesl_llvm_cbe_373_count = 0;
+  signed int *llvm_cbe_tmp__105;
+  static  unsigned long long aesl_llvm_cbe_374_count = 0;
+  static  unsigned long long aesl_llvm_cbe_375_count = 0;
+  static  unsigned long long aesl_llvm_cbe_376_count = 0;
+  unsigned long long llvm_cbe_tmp__106;
+  static  unsigned long long aesl_llvm_cbe_377_count = 0;
+  unsigned char llvm_cbe_tmp__107;
+  static  unsigned long long aesl_llvm_cbe_378_count = 0;
+  static  unsigned long long aesl_llvm_cbe_379_count = 0;
 
 const char* AESL_DEBUG_TRACE = getenv("DEBUG_TRACE");
 if (AESL_DEBUG_TRACE)
 printf("\n\{ BEGIN @radix\n");
-  llvm_cbe_tmp__82__PHI_TEMPORARY = (unsigned char )((unsigned char )0);   /* for PHI node */
-  llvm_cbe_storemerge12__PHI_TEMPORARY = (unsigned char )((unsigned char )0);   /* for PHI node */
-  goto llvm_cbe_tmp__97;
-
-  do {     /* Syntactic loop '' to make GCC happy */
-llvm_cbe_tmp__97:
 if (AESL_DEBUG_TRACE)
-printf("\n  %%3 = phi i8 [ 0, %%0 ], [ %%17, %%16  for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_297_count);
-  llvm_cbe_tmp__82 = (unsigned char )llvm_cbe_tmp__82__PHI_TEMPORARY;
-if (AESL_DEBUG_TRACE) {
-printf("\n = 0x%X",llvm_cbe_tmp__82);
-printf("\n = 0x%X",((unsigned char )0));
-printf("\n = 0x%X",llvm_cbe_tmp__93);
-}
+printf("\n  %%2 = load i8* %%input, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_285_count);
+  llvm_cbe_tmp__82 = (unsigned char )*llvm_cbe_input;
 if (AESL_DEBUG_TRACE)
-printf("\n  %%storemerge12 = phi i8 [ 0, %%0 ], [ %%storemerge, %%16  for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_storemerge12_count);
-  llvm_cbe_storemerge12 = (unsigned char )llvm_cbe_storemerge12__PHI_TEMPORARY;
-if (AESL_DEBUG_TRACE) {
-printf("\nstoremerge12 = 0x%X",llvm_cbe_storemerge12);
-printf("\n = 0x%X",((unsigned char )0));
-printf("\nstoremerge = 0x%X",llvm_cbe_storemerge);
-}
+printf("\n = 0x%X\n", llvm_cbe_tmp__82);
 if (AESL_DEBUG_TRACE)
-printf("\n  %%4 = zext i8 %%storemerge12 to i64, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_298_count);
-  llvm_cbe_tmp__83 = (unsigned long long )((unsigned long long )(unsigned char )llvm_cbe_storemerge12&255U);
-if (AESL_DEBUG_TRACE)
-printf("\n = 0x%I64X\n", llvm_cbe_tmp__83);
-if (AESL_DEBUG_TRACE)
-printf("\n  %%5 = getelementptr inbounds i8* %%input, i64 %%4, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_299_count);
-  llvm_cbe_tmp__84 = ( char *)(&llvm_cbe_input[(((signed long long )llvm_cbe_tmp__83))]);
-if (AESL_DEBUG_TRACE) {
-printf("\n = 0x%I64X",((signed long long )llvm_cbe_tmp__83));
-}
-if (AESL_DEBUG_TRACE)
-printf("\n  %%6 = load i8* %%5, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_300_count);
-  llvm_cbe_tmp__85 = (unsigned char )*llvm_cbe_tmp__84;
-if (AESL_DEBUG_TRACE)
-printf("\n = 0x%X\n", llvm_cbe_tmp__85);
-if (AESL_DEBUG_TRACE)
-printf("\n  %%7 = sext i8 %%6 to i32, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_301_count);
-  llvm_cbe_tmp__86 = (unsigned int )((signed int )( char )llvm_cbe_tmp__85);
-if (AESL_DEBUG_TRACE)
-printf("\n = 0x%X\n", llvm_cbe_tmp__86);
-if (AESL_DEBUG_TRACE)
-printf("\n  %%8 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([7 x i8]* @aesl_internal_.str, i64 0, i64 0), i32 %%7, i32 %%7) nounwind, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_302_count);
-  printf(( char *)((&aesl_internal__OC_str[(((signed long long )0ull))
-#ifdef AESL_BC_SIM
- % 7
-#endif
-])), llvm_cbe_tmp__86, llvm_cbe_tmp__86);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",llvm_cbe_tmp__86);
-printf("\nArgument  = 0x%X",llvm_cbe_tmp__86);
-printf("\nReturn  = 0x%X",llvm_cbe_tmp__87);
-}
-  if (((llvm_cbe_tmp__85&255U) == (((unsigned char )44)&255U))) {
-    llvm_cbe_tmp__93__PHI_TEMPORARY = (unsigned char )llvm_cbe_tmp__82;   /* for PHI node */
-    goto llvm_cbe_tmp__98;
-  } else {
-    goto llvm_cbe_tmp__99;
-  }
-
-llvm_cbe_tmp__98:
-if (AESL_DEBUG_TRACE)
-printf("\n  %%17 = phi i8 [ %%15, %%10 ], [ %%3, %%2  for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_317_count);
-  llvm_cbe_tmp__93 = (unsigned char )llvm_cbe_tmp__93__PHI_TEMPORARY;
-if (AESL_DEBUG_TRACE) {
-printf("\n = 0x%X",llvm_cbe_tmp__93);
-printf("\n = 0x%X",llvm_cbe_tmp__92);
-printf("\n = 0x%X",llvm_cbe_tmp__82);
-}
-if (AESL_DEBUG_TRACE)
-printf("\n  %%storemerge = add i8 %%storemerge12, 1, !dbg !7 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_storemerge_count);
-  llvm_cbe_storemerge = (unsigned char )((unsigned char )(((unsigned char )(llvm_cbe_storemerge12&255ull)) + ((unsigned char )(((unsigned char )1)&255ull))));
-if (AESL_DEBUG_TRACE)
-printf("\nstoremerge = 0x%X\n", ((unsigned char )(llvm_cbe_storemerge&255ull)));
-  if (((llvm_cbe_storemerge&255U) == (((unsigned char )8)&255U))) {
-    goto llvm_cbe_tmp__100;
-  } else {
-    llvm_cbe_tmp__82__PHI_TEMPORARY = (unsigned char )llvm_cbe_tmp__93;   /* for PHI node */
-    llvm_cbe_storemerge12__PHI_TEMPORARY = (unsigned char )llvm_cbe_storemerge;   /* for PHI node */
-    goto llvm_cbe_tmp__97;
-  }
-
-llvm_cbe_tmp__99:
-if (AESL_DEBUG_TRACE)
-printf("\n  %%11 = zext i8 %%3 to i64, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_306_count);
-  llvm_cbe_tmp__88 = (unsigned long long )((unsigned long long )(unsigned char )llvm_cbe_tmp__82&255U);
-if (AESL_DEBUG_TRACE)
-printf("\n = 0x%I64X\n", llvm_cbe_tmp__88);
-if (AESL_DEBUG_TRACE)
-printf("\n  %%12 = getelementptr inbounds [8 x i8]* %%1, i64 0, i64 %%11, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_307_count);
-  llvm_cbe_tmp__89 = ( char *)(&llvm_cbe_tmp__81[(((signed long long )llvm_cbe_tmp__88))
+printf("\n  %%3 = getelementptr inbounds [8 x i8]* %%1, i64 0, i64 0, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_288_count);
+  llvm_cbe_tmp__83 = ( char *)(&llvm_cbe_tmp__81[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 8
 #endif
 ]);
 if (AESL_DEBUG_TRACE) {
-printf("\n = 0x%I64X",((signed long long )llvm_cbe_tmp__88));
 }
 
 #ifdef AESL_BC_SIM
-  assert(((signed long long )llvm_cbe_tmp__88) < 8 && "Write access out of array '' bound?");
+  assert(((signed long long )0ull) < 8 && "Write access out of array '' bound?");
 
 #endif
 if (AESL_DEBUG_TRACE)
-printf("\n  store i8 %%6, i8* %%12, align 1, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_308_count);
-  *llvm_cbe_tmp__89 = llvm_cbe_tmp__85;
+printf("\n  store i8 %%2, i8* %%3, align 16, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_289_count);
+  *llvm_cbe_tmp__83 = llvm_cbe_tmp__82;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__82);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%4 = getelementptr inbounds i8* %%input, i64 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_295_count);
+  llvm_cbe_tmp__84 = ( char *)(&llvm_cbe_input[(((signed long long )1ull))]);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%5 = load i8* %%4, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_296_count);
+  llvm_cbe_tmp__85 = (unsigned char )*llvm_cbe_tmp__84;
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__85);
 if (AESL_DEBUG_TRACE)
-printf("\n  %%13 = zext i8 %%6 to i32, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_309_count);
-  llvm_cbe_tmp__90 = (unsigned int )((unsigned int )(unsigned char )llvm_cbe_tmp__85&255U);
-if (AESL_DEBUG_TRACE)
-printf("\n = 0x%X\n", llvm_cbe_tmp__90);
-if (AESL_DEBUG_TRACE)
-printf("\n  %%14 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 %%13) nounwind, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_310_count);
-  printf(( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
+printf("\n  %%6 = getelementptr inbounds [8 x i8]* %%1, i64 0, i64 1, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_299_count);
+  llvm_cbe_tmp__86 = ( char *)(&llvm_cbe_tmp__81[(((signed long long )1ull))
 #ifdef AESL_BC_SIM
- % 4
+ % 8
 #endif
-])), llvm_cbe_tmp__90);
+]);
 if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",llvm_cbe_tmp__90);
-printf("\nReturn  = 0x%X",llvm_cbe_tmp__91);
+}
+
+#ifdef AESL_BC_SIM
+  assert(((signed long long )1ull) < 8 && "Write access out of array '' bound?");
+
+#endif
+if (AESL_DEBUG_TRACE)
+printf("\n  store i8 %%5, i8* %%6, align 1, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_300_count);
+  *llvm_cbe_tmp__86 = llvm_cbe_tmp__85;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__85);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%7 = getelementptr inbounds i8* %%input, i64 2, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_306_count);
+  llvm_cbe_tmp__87 = ( char *)(&llvm_cbe_input[(((signed long long )2ull))]);
+if (AESL_DEBUG_TRACE) {
 }
 if (AESL_DEBUG_TRACE)
-printf("\n  %%15 = add i8 %%3, 1, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_311_count);
-  llvm_cbe_tmp__92 = (unsigned char )((unsigned char )(((unsigned char )(llvm_cbe_tmp__82&255ull)) + ((unsigned char )(((unsigned char )1)&255ull))));
+printf("\n  %%8 = load i8* %%7, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_307_count);
+  llvm_cbe_tmp__88 = (unsigned char )*llvm_cbe_tmp__87;
 if (AESL_DEBUG_TRACE)
-printf("\n = 0x%X\n", ((unsigned char )(llvm_cbe_tmp__92&255ull)));
-  llvm_cbe_tmp__93__PHI_TEMPORARY = (unsigned char )llvm_cbe_tmp__92;   /* for PHI node */
-  goto llvm_cbe_tmp__98;
+printf("\n = 0x%X\n", llvm_cbe_tmp__88);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%9 = getelementptr inbounds [8 x i8]* %%1, i64 0, i64 2, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_310_count);
+  llvm_cbe_tmp__89 = ( char *)(&llvm_cbe_tmp__81[(((signed long long )2ull))
+#ifdef AESL_BC_SIM
+ % 8
+#endif
+]);
+if (AESL_DEBUG_TRACE) {
+}
 
-  } while (1); /* end of syntactic loop '' */
-llvm_cbe_tmp__100:
+#ifdef AESL_BC_SIM
+  assert(((signed long long )2ull) < 8 && "Write access out of array '' bound?");
+
+#endif
 if (AESL_DEBUG_TRACE)
-printf("\n  %%19 = bitcast [8 x i8]* %%1 to i32*, !dbg !8 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_330_count);
-  llvm_cbe_tmp__94 = (signed int *)((signed int *)(&llvm_cbe_tmp__81));
+printf("\n  store i8 %%8, i8* %%9, align 2, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_311_count);
+  *llvm_cbe_tmp__89 = llvm_cbe_tmp__88;
 if (AESL_DEBUG_TRACE)
-printf("\n  call void @radixsort(i32* %%19, i32 8), !dbg !8 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_332_count);
-  radixsort((signed int *)llvm_cbe_tmp__94, 8u);
+printf("\n = 0x%X\n", llvm_cbe_tmp__88);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%10 = getelementptr inbounds i8* %%input, i64 3, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_317_count);
+  llvm_cbe_tmp__90 = ( char *)(&llvm_cbe_input[(((signed long long )3ull))]);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%11 = load i8* %%10, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_318_count);
+  llvm_cbe_tmp__91 = (unsigned char )*llvm_cbe_tmp__90;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__91);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%12 = getelementptr inbounds [8 x i8]* %%1, i64 0, i64 3, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_321_count);
+  llvm_cbe_tmp__92 = ( char *)(&llvm_cbe_tmp__81[(((signed long long )3ull))
+#ifdef AESL_BC_SIM
+ % 8
+#endif
+]);
+if (AESL_DEBUG_TRACE) {
+}
+
+#ifdef AESL_BC_SIM
+  assert(((signed long long )3ull) < 8 && "Write access out of array '' bound?");
+
+#endif
+if (AESL_DEBUG_TRACE)
+printf("\n  store i8 %%11, i8* %%12, align 1, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_322_count);
+  *llvm_cbe_tmp__92 = llvm_cbe_tmp__91;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__91);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%13 = getelementptr inbounds i8* %%input, i64 4, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_328_count);
+  llvm_cbe_tmp__93 = ( char *)(&llvm_cbe_input[(((signed long long )4ull))]);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%14 = load i8* %%13, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_329_count);
+  llvm_cbe_tmp__94 = (unsigned char )*llvm_cbe_tmp__93;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__94);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%15 = getelementptr inbounds [8 x i8]* %%1, i64 0, i64 4, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_332_count);
+  llvm_cbe_tmp__95 = ( char *)(&llvm_cbe_tmp__81[(((signed long long )4ull))
+#ifdef AESL_BC_SIM
+ % 8
+#endif
+]);
+if (AESL_DEBUG_TRACE) {
+}
+
+#ifdef AESL_BC_SIM
+  assert(((signed long long )4ull) < 8 && "Write access out of array '' bound?");
+
+#endif
+if (AESL_DEBUG_TRACE)
+printf("\n  store i8 %%14, i8* %%15, align 4, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_333_count);
+  *llvm_cbe_tmp__95 = llvm_cbe_tmp__94;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__94);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%16 = getelementptr inbounds i8* %%input, i64 5, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_339_count);
+  llvm_cbe_tmp__96 = ( char *)(&llvm_cbe_input[(((signed long long )5ull))]);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%17 = load i8* %%16, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_340_count);
+  llvm_cbe_tmp__97 = (unsigned char )*llvm_cbe_tmp__96;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__97);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%18 = getelementptr inbounds [8 x i8]* %%1, i64 0, i64 5, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_343_count);
+  llvm_cbe_tmp__98 = ( char *)(&llvm_cbe_tmp__81[(((signed long long )5ull))
+#ifdef AESL_BC_SIM
+ % 8
+#endif
+]);
+if (AESL_DEBUG_TRACE) {
+}
+
+#ifdef AESL_BC_SIM
+  assert(((signed long long )5ull) < 8 && "Write access out of array '' bound?");
+
+#endif
+if (AESL_DEBUG_TRACE)
+printf("\n  store i8 %%17, i8* %%18, align 1, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_344_count);
+  *llvm_cbe_tmp__98 = llvm_cbe_tmp__97;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__97);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%19 = getelementptr inbounds i8* %%input, i64 6, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_350_count);
+  llvm_cbe_tmp__99 = ( char *)(&llvm_cbe_input[(((signed long long )6ull))]);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%20 = load i8* %%19, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_351_count);
+  llvm_cbe_tmp__100 = (unsigned char )*llvm_cbe_tmp__99;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__100);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%21 = getelementptr inbounds [8 x i8]* %%1, i64 0, i64 6, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_354_count);
+  llvm_cbe_tmp__101 = ( char *)(&llvm_cbe_tmp__81[(((signed long long )6ull))
+#ifdef AESL_BC_SIM
+ % 8
+#endif
+]);
+if (AESL_DEBUG_TRACE) {
+}
+
+#ifdef AESL_BC_SIM
+  assert(((signed long long )6ull) < 8 && "Write access out of array '' bound?");
+
+#endif
+if (AESL_DEBUG_TRACE)
+printf("\n  store i8 %%20, i8* %%21, align 2, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_355_count);
+  *llvm_cbe_tmp__101 = llvm_cbe_tmp__100;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__100);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%22 = getelementptr inbounds i8* %%input, i64 7, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_361_count);
+  llvm_cbe_tmp__102 = ( char *)(&llvm_cbe_input[(((signed long long )7ull))]);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%23 = load i8* %%22, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_362_count);
+  llvm_cbe_tmp__103 = (unsigned char )*llvm_cbe_tmp__102;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__103);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%24 = getelementptr inbounds [8 x i8]* %%1, i64 0, i64 7, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_365_count);
+  llvm_cbe_tmp__104 = ( char *)(&llvm_cbe_tmp__81[(((signed long long )7ull))
+#ifdef AESL_BC_SIM
+ % 8
+#endif
+]);
+if (AESL_DEBUG_TRACE) {
+}
+
+#ifdef AESL_BC_SIM
+  assert(((signed long long )7ull) < 8 && "Write access out of array '' bound?");
+
+#endif
+if (AESL_DEBUG_TRACE)
+printf("\n  store i8 %%23, i8* %%24, align 1, !dbg !6 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_366_count);
+  *llvm_cbe_tmp__104 = llvm_cbe_tmp__103;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__103);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%25 = bitcast [8 x i8]* %%1 to i32*, !dbg !7 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_373_count);
+  llvm_cbe_tmp__105 = (signed int *)((signed int *)(&llvm_cbe_tmp__81));
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @radixsort(i32* %%25, i32 8), !dbg !7 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_375_count);
+  radixsort((signed int *)llvm_cbe_tmp__105, 8u);
 if (AESL_DEBUG_TRACE) {
 printf("\nArgument  = 0x%X",8u);
 }
 if (AESL_DEBUG_TRACE)
-printf("\n  %%20 = ptrtoint [8 x i8]* %%1 to i64, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_333_count);
-  llvm_cbe_tmp__95 = (unsigned long long )((unsigned long long )(unsigned long)(&llvm_cbe_tmp__81)&18446744073709551615ULL);
+printf("\n  %%26 = ptrtoint [8 x i8]* %%1 to i64, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_376_count);
+  llvm_cbe_tmp__106 = (unsigned long long )((unsigned long long )(unsigned long)(&llvm_cbe_tmp__81)&18446744073709551615ULL);
 if (AESL_DEBUG_TRACE)
-printf("\n = 0x%I64X\n", llvm_cbe_tmp__95);
+printf("\n = 0x%I64X\n", llvm_cbe_tmp__106);
 if (AESL_DEBUG_TRACE)
-printf("\n  %%21 = trunc i64 %%20 to i8, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_334_count);
-  llvm_cbe_tmp__96 = (unsigned char )((unsigned char )llvm_cbe_tmp__95&255U);
+printf("\n  %%27 = trunc i64 %%26 to i8, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_377_count);
+  llvm_cbe_tmp__107 = (unsigned char )((unsigned char )llvm_cbe_tmp__106&255U);
 if (AESL_DEBUG_TRACE)
-printf("\n = 0x%X\n", llvm_cbe_tmp__96);
+printf("\n = 0x%X\n", llvm_cbe_tmp__107);
 if (AESL_DEBUG_TRACE)
-printf("\n  store i8 %%21, i8* %%output, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_335_count);
-  *llvm_cbe_output = llvm_cbe_tmp__96;
+printf("\n  store i8 %%27, i8* %%output, align 1, !dbg !5 for 0x%I64xth hint within @radix  --> \n", ++aesl_llvm_cbe_378_count);
+  *llvm_cbe_output = llvm_cbe_tmp__107;
 if (AESL_DEBUG_TRACE)
-printf("\n = 0x%X\n", llvm_cbe_tmp__96);
+printf("\n = 0x%X\n", llvm_cbe_tmp__107);
   if (AESL_DEBUG_TRACE)
       printf("\nEND @radix}\n");
   return;

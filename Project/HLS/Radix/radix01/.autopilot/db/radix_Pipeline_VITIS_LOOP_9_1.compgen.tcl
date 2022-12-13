@@ -11,17 +11,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 5 \
-    name vla13 \
+    id 4 \
+    name vla1 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename vla13 \
+    corename vla1 \
     op interface \
-    ports { vla13_address0 { O 3 vector } vla13_ce0 { O 1 bit } vla13_q0 { I 8 vector } vla13_address1 { O 3 vector } vla13_ce1 { O 1 bit } vla13_q1 { I 8 vector } } \
+    ports { vla1_address0 { O 3 vector } vla1_ce0 { O 1 bit } vla1_q0 { I 8 vector } vla1_address1 { O 3 vector } vla1_ce1 { O 1 bit } vla1_q1 { I 8 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'vla13'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'vla1'"
 }
 }
 
@@ -29,7 +29,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 4 \
+    id 3 \
     name max \
     type other \
     dir I \
@@ -44,7 +44,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 6 \
+    id 5 \
     name max_2_out \
     type other \
     dir O \

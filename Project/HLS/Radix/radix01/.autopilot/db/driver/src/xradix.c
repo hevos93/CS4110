@@ -74,41 +74,194 @@ void XRadix_DisableAutoRestart(XRadix *InstancePtr) {
     XRadix_WriteReg(InstancePtr->Control_BaseAddress, XRADIX_CONTROL_ADDR_AP_CTRL, 0);
 }
 
-void XRadix_Set_input_r(XRadix *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XRadix_WriteReg(InstancePtr->Control_BaseAddress, XRADIX_CONTROL_ADDR_INPUT_R_DATA, Data);
-}
-
-u32 XRadix_Get_input_r(XRadix *InstancePtr) {
-    u32 Data;
-
+u32 XRadix_Get_input_r_BaseAddress(XRadix *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XRadix_ReadReg(InstancePtr->Control_BaseAddress, XRADIX_CONTROL_ADDR_INPUT_R_DATA);
-    return Data;
+    return (InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_INPUT_R_BASE);
 }
 
-u32 XRadix_Get_output_r(XRadix *InstancePtr) {
-    u32 Data;
-
+u32 XRadix_Get_input_r_HighAddress(XRadix *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XRadix_ReadReg(InstancePtr->Control_BaseAddress, XRADIX_CONTROL_ADDR_OUTPUT_R_DATA);
-    return Data;
+    return (InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_INPUT_R_HIGH);
 }
 
-u32 XRadix_Get_output_r_vld(XRadix *InstancePtr) {
-    u32 Data;
-
+u32 XRadix_Get_input_r_TotalBytes(XRadix *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XRadix_ReadReg(InstancePtr->Control_BaseAddress, XRADIX_CONTROL_ADDR_OUTPUT_R_CTRL);
-    return Data & 0x1;
+    return (XRADIX_CONTROL_ADDR_INPUT_R_HIGH - XRADIX_CONTROL_ADDR_INPUT_R_BASE + 1);
+}
+
+u32 XRadix_Get_input_r_BitWidth(XRadix *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XRADIX_CONTROL_WIDTH_INPUT_R;
+}
+
+u32 XRadix_Get_input_r_Depth(XRadix *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XRADIX_CONTROL_DEPTH_INPUT_R;
+}
+
+u32 XRadix_Write_input_r_Words(XRadix *InstancePtr, int offset, word_type *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XRADIX_CONTROL_ADDR_INPUT_R_HIGH - XRADIX_CONTROL_ADDR_INPUT_R_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_INPUT_R_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XRadix_Read_input_r_Words(XRadix *InstancePtr, int offset, word_type *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XRADIX_CONTROL_ADDR_INPUT_R_HIGH - XRADIX_CONTROL_ADDR_INPUT_R_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_INPUT_R_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XRadix_Write_input_r_Bytes(XRadix *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XRADIX_CONTROL_ADDR_INPUT_R_HIGH - XRADIX_CONTROL_ADDR_INPUT_R_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_INPUT_R_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XRadix_Read_input_r_Bytes(XRadix *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XRADIX_CONTROL_ADDR_INPUT_R_HIGH - XRADIX_CONTROL_ADDR_INPUT_R_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_INPUT_R_BASE + offset + i);
+    }
+    return length;
+}
+
+u32 XRadix_Get_output_r_BaseAddress(XRadix *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_OUTPUT_R_BASE);
+}
+
+u32 XRadix_Get_output_r_HighAddress(XRadix *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_OUTPUT_R_HIGH);
+}
+
+u32 XRadix_Get_output_r_TotalBytes(XRadix *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (XRADIX_CONTROL_ADDR_OUTPUT_R_HIGH - XRADIX_CONTROL_ADDR_OUTPUT_R_BASE + 1);
+}
+
+u32 XRadix_Get_output_r_BitWidth(XRadix *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XRADIX_CONTROL_WIDTH_OUTPUT_R;
+}
+
+u32 XRadix_Get_output_r_Depth(XRadix *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XRADIX_CONTROL_DEPTH_OUTPUT_R;
+}
+
+u32 XRadix_Write_output_r_Words(XRadix *InstancePtr, int offset, word_type *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XRADIX_CONTROL_ADDR_OUTPUT_R_HIGH - XRADIX_CONTROL_ADDR_OUTPUT_R_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_OUTPUT_R_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XRadix_Read_output_r_Words(XRadix *InstancePtr, int offset, word_type *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XRADIX_CONTROL_ADDR_OUTPUT_R_HIGH - XRADIX_CONTROL_ADDR_OUTPUT_R_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_OUTPUT_R_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XRadix_Write_output_r_Bytes(XRadix *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XRADIX_CONTROL_ADDR_OUTPUT_R_HIGH - XRADIX_CONTROL_ADDR_OUTPUT_R_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_OUTPUT_R_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XRadix_Read_output_r_Bytes(XRadix *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XRADIX_CONTROL_ADDR_OUTPUT_R_HIGH - XRADIX_CONTROL_ADDR_OUTPUT_R_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Control_BaseAddress + XRADIX_CONTROL_ADDR_OUTPUT_R_BASE + offset + i);
+    }
+    return length;
 }
 
 void XRadix_InterruptGlobalEnable(XRadix *InstancePtr) {

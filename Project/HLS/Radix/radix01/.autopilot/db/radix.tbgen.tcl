@@ -17,8 +17,8 @@ set C_modelArgList {
 	{ output_r int 8 regular {axi_slave 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "input_r", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
- 	{ "Name" : "output_r", "interface" : "axi_slave", "bundle":"control","type":"ap_vld","bitwidth" : 8, "direction" : "WRITEONLY", "offset" : {"out":24}, "offset_end" : {"out":31}} ]}
+	{ "Name" : "input_r", "interface" : "axi_slave", "bundle":"control","type":"ap_memory","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
+ 	{ "Name" : "output_r", "interface" : "axi_slave", "bundle":"control","type":"ap_memory","bitwidth" : 8, "direction" : "WRITEONLY", "offset" : {"out":24}, "offset_end" : {"out":31}} ]}
 # RTL Port declarations: 
 set portNum 20
 set portList { 
@@ -51,7 +51,7 @@ set NewPortList {[
 	{ "name": "s_axi_control_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WREADY" } },
 	{ "name": "s_axi_control_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "control", "role": "WDATA" } },
 	{ "name": "s_axi_control_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control", "role": "WSTRB" } },
-	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[{"name":"radix","role":"start","value":"0","valid_bit":"0"},{"name":"radix","role":"done","value":"0","valid_bit":"1"},{"name":"radix","role":"idle","value":"0","valid_bit":"2"},{"name":"radix","role":"ready","value":"0","valid_bit":"3"},{"name":"radix","role":"auto_start","value":"0","valid_bit":"7"},{"name":"output_r","role":"data","value":"24"}, {"name":"output_r","role":"valid","value":"28","valid_bit":"0"}] },
+	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[{"name":"radix","role":"start","value":"0","valid_bit":"0"},{"name":"radix","role":"done","value":"0","valid_bit":"1"},{"name":"radix","role":"idle","value":"0","valid_bit":"2"},{"name":"radix","role":"ready","value":"0","valid_bit":"3"},{"name":"radix","role":"auto_start","value":"0","valid_bit":"7"},{"name":"output_r","role":"data","value":"24"}] },
 	{ "name": "s_axi_control_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARVALID" } },
 	{ "name": "s_axi_control_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARREADY" } },
 	{ "name": "s_axi_control_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "RVALID" } },
@@ -81,16 +81,18 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "input_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "output_r", "Type" : "Vld", "Direction" : "O"}],
+			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "grp_radix_Pipeline_VITIS_LOOP_66_1_fu_164", "Port" : "input_r", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_53_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "129", "FirstState" : "ap_ST_fsm_state9", "LastState" : ["ap_ST_fsm_state129"], "QuitState" : ["ap_ST_fsm_state9"], "PreState" : ["ap_ST_fsm_state8"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.vla13_U", "Parent" : "0"},
+				"LoopDec" : {"FSMBitwidth" : "130", "FirstState" : "ap_ST_fsm_state9", "LastState" : ["ap_ST_fsm_state129"], "QuitState" : ["ap_ST_fsm_state44"], "PreState" : ["ap_ST_fsm_state8"], "PostState" : ["ap_ST_fsm_state130"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.vla1_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.count_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.output_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_68_1_fu_163", "Parent" : "0", "Child" : ["5"],
-		"CDFG" : "radix_Pipeline_VITIS_LOOP_68_1",
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_66_1_fu_164", "Parent" : "0", "Child" : ["5"],
+		"CDFG" : "radix_Pipeline_VITIS_LOOP_66_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -104,12 +106,12 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "icmp_ln71", "Type" : "None", "Direction" : "I"},
-			{"Name" : "vla13", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "str", "Type" : "None", "Direction" : "I"}],
+			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "vla1", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_68_1", "PipelineType" : "NotSupport"}]},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_68_1_fu_163.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
+			{"Name" : "VITIS_LOOP_66_1", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_66_1_fu_164.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
 	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_9_1_fu_172", "Parent" : "0", "Child" : ["7"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_9_1",
 		"Protocol" : "ap_ctrl_hs",
@@ -126,7 +128,7 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "max", "Type" : "None", "Direction" : "I"},
-			{"Name" : "vla13", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "vla1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "max_2_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_9_1", "PipelineType" : "UPC",
@@ -148,14 +150,14 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "max_4", "Type" : "None", "Direction" : "I"},
-			{"Name" : "vla13", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "vla1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "place_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "max_5_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_20_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter36", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter36", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_179.sdiv_32ns_32ns_32_36_1_U7", "Parent" : "8"},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_179.srem_32ns_5ns_32_36_1_U8", "Parent" : "8"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_179.sdiv_32ns_32ns_32_36_1_U6", "Parent" : "8"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_179.srem_32ns_5ns_32_36_1_U7", "Parent" : "8"},
 	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_20_1_fu_179.flow_control_loop_pipe_sequential_init_U", "Parent" : "8"},
 	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_26_2_fu_187", "Parent" : "0", "Child" : ["13"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_26_2",
@@ -192,14 +194,14 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "vla13", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "vla1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "place_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "count", "Type" : "Memory", "Direction" : "IO"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_30_3", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter36", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter36", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_193.sdiv_32ns_32ns_32_36_1_U17", "Parent" : "14"},
-	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_193.srem_32ns_5ns_3_36_1_U18", "Parent" : "14"},
+	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_193.sdiv_32ns_32ns_32_36_1_U16", "Parent" : "14"},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_193.srem_32ns_5ns_3_36_1_U17", "Parent" : "14"},
 	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_30_3_fu_193.flow_control_loop_pipe_sequential_init_U", "Parent" : "14"},
 	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_34_4_fu_200", "Parent" : "0", "Child" : ["19"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_34_4",
@@ -237,15 +239,15 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "vla13", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "vla1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "place_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "count", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_38_5", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter36", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter36", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_206.sdiv_32ns_32ns_32_36_1_U25", "Parent" : "20"},
-	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_206.srem_32ns_5ns_3_36_1_U26", "Parent" : "20"},
+	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_206.sdiv_32ns_32ns_32_36_1_U24", "Parent" : "20"},
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_206.srem_32ns_5ns_3_36_1_U25", "Parent" : "20"},
 	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_38_5_fu_206.flow_control_loop_pipe_sequential_init_U", "Parent" : "20"},
 	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_43_6_fu_214", "Parent" : "0", "Child" : ["25"],
 		"CDFG" : "radix_Pipeline_VITIS_LOOP_43_6",
@@ -263,52 +265,51 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "vla13", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "vla1", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_43_6", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_Pipeline_VITIS_LOOP_43_6_fu_214.flow_control_loop_pipe_sequential_init_U", "Parent" : "24"},
 	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
-	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sdiv_32ns_32ns_32_36_seq_1_U33", "Parent" : "0"},
-	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sdiv_32ns_32ns_32_36_seq_1_U34", "Parent" : "0"},
-	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.srem_32ns_5ns_5_36_seq_1_U35", "Parent" : "0"}]}
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sdiv_32ns_32ns_32_36_seq_1_U32", "Parent" : "0"},
+	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sdiv_32ns_32ns_32_36_seq_1_U33", "Parent" : "0"},
+	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.srem_32ns_5ns_5_36_seq_1_U34", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	radix {
 		input_r {Type I LastRead 0 FirstWrite -1}
 		output_r {Type O LastRead -1 FirstWrite 43}}
-	radix_Pipeline_VITIS_LOOP_68_1 {
-		icmp_ln71 {Type I LastRead 0 FirstWrite -1}
-		vla13 {Type O LastRead -1 FirstWrite 0}
-		str {Type I LastRead 0 FirstWrite -1}}
+	radix_Pipeline_VITIS_LOOP_66_1 {
+		input_r {Type I LastRead 0 FirstWrite -1}
+		vla1 {Type O LastRead -1 FirstWrite 1}}
 	radix_Pipeline_VITIS_LOOP_9_1 {
 		max {Type I LastRead 0 FirstWrite -1}
-		vla13 {Type I LastRead 2 FirstWrite -1}
+		vla1 {Type I LastRead 2 FirstWrite -1}
 		max_2_out {Type O LastRead -1 FirstWrite 0}}
 	radix_Pipeline_VITIS_LOOP_20_1 {
 		max_4 {Type I LastRead 0 FirstWrite -1}
-		vla13 {Type I LastRead 2 FirstWrite -1}
+		vla1 {Type I LastRead 2 FirstWrite -1}
 		place_1 {Type I LastRead 0 FirstWrite -1}
 		max_5_out {Type O LastRead -1 FirstWrite 70}}
 	radix_Pipeline_VITIS_LOOP_26_2 {
 		max_5_reload {Type I LastRead 0 FirstWrite -1}
 		count {Type O LastRead -1 FirstWrite 0}}
 	radix_Pipeline_VITIS_LOOP_30_3 {
-		vla13 {Type I LastRead 2 FirstWrite -1}
+		vla1 {Type I LastRead 2 FirstWrite -1}
 		place_1 {Type I LastRead 0 FirstWrite -1}
 		count {Type IO LastRead 72 FirstWrite 73}}
 	radix_Pipeline_VITIS_LOOP_34_4 {
 		count_load {Type I LastRead 0 FirstWrite -1}
 		count {Type IO LastRead 0 FirstWrite 1}}
 	radix_Pipeline_VITIS_LOOP_38_5 {
-		vla13 {Type I LastRead 2 FirstWrite -1}
+		vla1 {Type I LastRead 2 FirstWrite -1}
 		place_1 {Type I LastRead 0 FirstWrite -1}
 		count {Type IO LastRead 72 FirstWrite 73}
 		output_r {Type O LastRead -1 FirstWrite 73}}
 	radix_Pipeline_VITIS_LOOP_43_6 {
 		output_r {Type I LastRead 0 FirstWrite -1}
-		vla13 {Type O LastRead -1 FirstWrite 1}}}
+		vla1 {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 

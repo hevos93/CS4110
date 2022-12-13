@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="radix.c" path="S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c"/>
     <originFiles name="radix.h" path="S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.h"/>
+    <originFiles name="radix.c" path="S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\radix.c"/>
   </source>
   <testbench>
     <originFiles name="tb.c" path="S:\Dokumenter\Skole\CS-Master\CS4110\Code\radix\tb.c"/>

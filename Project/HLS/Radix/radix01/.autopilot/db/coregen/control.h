@@ -17,24 +17,29 @@
 //        bit 0 - ap_done (Read/TOW)
 //        bit 1 - ap_ready (Read/TOW)
 //        others - reserved
-// 0x10 : Data signal of input_r
-//        bit 7~0 - input_r[7:0] (Read/Write)
-//        others  - reserved
-// 0x14 : reserved
-// 0x18 : Data signal of output_r
-//        bit 7~0 - output_r[7:0] (Read)
-//        others  - reserved
-// 0x1c : Control signal of output_r
-//        bit 0  - output_r_ap_vld (Read/COR)
-//        others - reserved
+// 0x10 ~
+// 0x17 : Memory 'input_r' (8 * 8b)
+//        Word n : bit [ 7: 0] - input_r[4n]
+//                 bit [15: 8] - input_r[4n+1]
+//                 bit [23:16] - input_r[4n+2]
+//                 bit [31:24] - input_r[4n+3]
+// 0x18 ~
+// 0x1f : Memory 'output_r' (8 * 8b)
+//        Word n : bit [ 7: 0] - output_r[4n]
+//                 bit [15: 8] - output_r[4n+1]
+//                 bit [23:16] - output_r[4n+2]
+//                 bit [31:24] - output_r[4n+3]
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define CONTROL_ADDR_AP_CTRL       0x00
 #define CONTROL_ADDR_GIE           0x04
 #define CONTROL_ADDR_IER           0x08
 #define CONTROL_ADDR_ISR           0x0c
-#define CONTROL_ADDR_INPUT_R_DATA  0x10
-#define CONTROL_BITS_INPUT_R_DATA  8
-#define CONTROL_ADDR_OUTPUT_R_DATA 0x18
-#define CONTROL_BITS_OUTPUT_R_DATA 8
-#define CONTROL_ADDR_OUTPUT_R_CTRL 0x1c
+#define CONTROL_ADDR_INPUT_R_BASE  0x10
+#define CONTROL_ADDR_INPUT_R_HIGH  0x17
+#define CONTROL_WIDTH_INPUT_R      8
+#define CONTROL_DEPTH_INPUT_R      8
+#define CONTROL_ADDR_OUTPUT_R_BASE 0x18
+#define CONTROL_ADDR_OUTPUT_R_HIGH 0x1f
+#define CONTROL_WIDTH_OUTPUT_R     8
+#define CONTROL_DEPTH_OUTPUT_R     8

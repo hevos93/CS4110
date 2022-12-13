@@ -18,12 +18,12 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     max : IN STD_LOGIC_VECTOR (31 downto 0);
-    vla13_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
-    vla13_ce0 : OUT STD_LOGIC;
-    vla13_q0 : IN STD_LOGIC_VECTOR (7 downto 0);
-    vla13_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
-    vla13_ce1 : OUT STD_LOGIC;
-    vla13_q1 : IN STD_LOGIC_VECTOR (7 downto 0);
+    vla1_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+    vla1_ce0 : OUT STD_LOGIC;
+    vla1_q0 : IN STD_LOGIC_VECTOR (7 downto 0);
+    vla1_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+    vla1_ce1 : OUT STD_LOGIC;
+    vla1_q1 : IN STD_LOGIC_VECTOR (7 downto 0);
     max_2_out : OUT STD_LOGIC_VECTOR (31 downto 0);
     max_2_out_ap_vld : OUT STD_LOGIC );
 end;
@@ -71,9 +71,9 @@ attribute shreg_extract : string;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal shl_ln_fu_131_p3 : STD_LOGIC_VECTOR (2 downto 0);
     signal shl_ln_reg_241 : STD_LOGIC_VECTOR (2 downto 0);
-    signal vla13_load_reg_257 : STD_LOGIC_VECTOR (7 downto 0);
+    signal vla1_load_reg_257 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_block_pp0_stage1_11001 : BOOLEAN;
-    signal vla13_load_1_reg_262 : STD_LOGIC_VECTOR (7 downto 0);
+    signal vla1_load_1_reg_262 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_enable_reg_pp0_iter0_reg : STD_LOGIC := '0';
     signal zext_ln10_fu_139_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
@@ -246,8 +246,8 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((icmp_ln9_reg_237 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage1_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1))) then
-                vla13_load_1_reg_262 <= vla13_q0;
-                vla13_load_reg_257 <= vla13_q1;
+                vla1_load_1_reg_262 <= vla1_q0;
+                vla1_load_reg_257 <= vla1_q1;
             end if;
         end if;
     end process;
@@ -387,59 +387,59 @@ begin
 
     or_ln10_1_fu_166_p2 <= (shl_ln_reg_241 or ap_const_lv3_2);
     or_ln10_2_fu_176_p2 <= (shl_ln_reg_241 or ap_const_lv3_3);
-    or_ln10_5_fu_189_p5 <= (((vla13_q0 & vla13_q1) & vla13_load_1_reg_262) & vla13_load_reg_257);
+    or_ln10_5_fu_189_p5 <= (((vla1_q0 & vla1_q1) & vla1_load_1_reg_262) & vla1_load_reg_257);
     or_ln10_fu_144_p2 <= (shl_ln_fu_131_p3 or ap_const_lv3_1);
     shl_ln_fu_131_p3 <= (trunc_ln10_fu_127_p1 & ap_const_lv2_0);
     trunc_ln10_fu_127_p1 <= ap_sig_allocacmp_getMax_counter_1(1 - 1 downto 0);
 
-    vla13_address0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage0, zext_ln10_1_fu_150_p1, ap_block_pp0_stage1, zext_ln10_3_fu_181_p1)
+    vla1_address0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage0, zext_ln10_1_fu_150_p1, ap_block_pp0_stage1, zext_ln10_3_fu_181_p1)
     begin
         if ((ap_enable_reg_pp0_iter0 = ap_const_logic_1)) then
             if (((ap_const_boolean_0 = ap_block_pp0_stage1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1))) then 
-                vla13_address0 <= zext_ln10_3_fu_181_p1(3 - 1 downto 0);
+                vla1_address0 <= zext_ln10_3_fu_181_p1(3 - 1 downto 0);
             elsif (((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                vla13_address0 <= zext_ln10_1_fu_150_p1(3 - 1 downto 0);
+                vla1_address0 <= zext_ln10_1_fu_150_p1(3 - 1 downto 0);
             else 
-                vla13_address0 <= "XXX";
+                vla1_address0 <= "XXX";
             end if;
         else 
-            vla13_address0 <= "XXX";
+            vla1_address0 <= "XXX";
         end if; 
     end process;
 
 
-    vla13_address1_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, zext_ln10_fu_139_p1, ap_block_pp0_stage0, zext_ln10_2_fu_171_p1, ap_block_pp0_stage1)
+    vla1_address1_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, zext_ln10_fu_139_p1, ap_block_pp0_stage0, zext_ln10_2_fu_171_p1, ap_block_pp0_stage1)
     begin
         if ((ap_enable_reg_pp0_iter0 = ap_const_logic_1)) then
             if (((ap_const_boolean_0 = ap_block_pp0_stage1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1))) then 
-                vla13_address1 <= zext_ln10_2_fu_171_p1(3 - 1 downto 0);
+                vla1_address1 <= zext_ln10_2_fu_171_p1(3 - 1 downto 0);
             elsif (((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                vla13_address1 <= zext_ln10_fu_139_p1(3 - 1 downto 0);
+                vla1_address1 <= zext_ln10_fu_139_p1(3 - 1 downto 0);
             else 
-                vla13_address1 <= "XXX";
+                vla1_address1 <= "XXX";
             end if;
         else 
-            vla13_address1 <= "XXX";
+            vla1_address1 <= "XXX";
         end if; 
     end process;
 
 
-    vla13_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage0_11001, ap_block_pp0_stage1_11001)
+    vla1_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage0_11001, ap_block_pp0_stage1_11001)
     begin
         if ((((ap_const_boolean_0 = ap_block_pp0_stage1_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then 
-            vla13_ce0 <= ap_const_logic_1;
+            vla1_ce0 <= ap_const_logic_1;
         else 
-            vla13_ce0 <= ap_const_logic_0;
+            vla1_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    vla13_ce1_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage0_11001, ap_block_pp0_stage1_11001)
+    vla1_ce1_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage0_11001, ap_block_pp0_stage1_11001)
     begin
         if ((((ap_const_boolean_0 = ap_block_pp0_stage1_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then 
-            vla13_ce1 <= ap_const_logic_1;
+            vla1_ce1 <= ap_const_logic_1;
         else 
-            vla13_ce1 <= ap_const_logic_0;
+            vla1_ce1 <= ap_const_logic_0;
         end if; 
     end process;
 

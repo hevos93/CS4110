@@ -73,7 +73,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_radix_Pipeline_VITIS_LOOP_68_1_fu_163/grp_radix_Pipeline_VITIS_LOOP_68_1_fu_163_activity": {
+				"grp_radix_Pipeline_VITIS_LOOP_66_1_fu_164/grp_radix_Pipeline_VITIS_LOOP_66_1_fu_164_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

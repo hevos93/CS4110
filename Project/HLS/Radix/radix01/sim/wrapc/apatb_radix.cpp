@@ -25,6 +25,7 @@ using namespace std;
 
 
 // tvout file define:
+#define AUTOTB_TVOUT_PC_output_r "../tv/rtldatafile/rtl.radix.autotvout_output_r.dat"
 
 
 namespace hls::sim
@@ -949,10 +950,10 @@ namespace hls::sim
 
 
 extern "C"
-void radix_hw_stub_wrapper(void*, hls::sim::Byte<4>);
+void radix_hw_stub_wrapper(void*, void*);
 
 extern "C"
-void apatb_radix_hw(void* __xlx_apatb_param_input_r, hls::sim::Byte<4> __xlx_apatb_param_output_r)
+void apatb_radix_hw(void* __xlx_apatb_param_input_r, void* __xlx_apatb_param_output_r)
 {
   static hls::sim::Register port0 {
     .name = "input_r",
@@ -967,19 +968,21 @@ void apatb_radix_hw(void* __xlx_apatb_param_input_r, hls::sim::Byte<4> __xlx_apa
 
   static hls::sim::Register port1 {
     .name = "output_r",
-    .width = 32,
+    .width = 8,
 #ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_r),
 #else
-    .owriter = nullptr,
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_r),
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_r),
 #endif
   };
-  port1.param = &__xlx_apatb_param_output_r;
+  port1.param = __xlx_apatb_param_output_r;
 
   refine_signal_handler();
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
+    check(port1);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
@@ -990,6 +993,7 @@ void apatb_radix_hw(void* __xlx_apatb_param_input_r, hls::sim::Byte<4> __xlx_apa
     CodeState = CALL_C_DUT;
     radix_hw_stub_wrapper(__xlx_apatb_param_input_r, __xlx_apatb_param_output_r);
     CodeState = DUMP_OUTPUTS;
+    dump(port1, port1.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

@@ -88,10 +88,24 @@ u32 XRadix_IsReady(XRadix *InstancePtr);
 void XRadix_EnableAutoRestart(XRadix *InstancePtr);
 void XRadix_DisableAutoRestart(XRadix *InstancePtr);
 
-void XRadix_Set_input_r(XRadix *InstancePtr, u32 Data);
-u32 XRadix_Get_input_r(XRadix *InstancePtr);
-u32 XRadix_Get_output_r(XRadix *InstancePtr);
-u32 XRadix_Get_output_r_vld(XRadix *InstancePtr);
+u32 XRadix_Get_input_r_BaseAddress(XRadix *InstancePtr);
+u32 XRadix_Get_input_r_HighAddress(XRadix *InstancePtr);
+u32 XRadix_Get_input_r_TotalBytes(XRadix *InstancePtr);
+u32 XRadix_Get_input_r_BitWidth(XRadix *InstancePtr);
+u32 XRadix_Get_input_r_Depth(XRadix *InstancePtr);
+u32 XRadix_Write_input_r_Words(XRadix *InstancePtr, int offset, word_type *data, int length);
+u32 XRadix_Read_input_r_Words(XRadix *InstancePtr, int offset, word_type *data, int length);
+u32 XRadix_Write_input_r_Bytes(XRadix *InstancePtr, int offset, char *data, int length);
+u32 XRadix_Read_input_r_Bytes(XRadix *InstancePtr, int offset, char *data, int length);
+u32 XRadix_Get_output_r_BaseAddress(XRadix *InstancePtr);
+u32 XRadix_Get_output_r_HighAddress(XRadix *InstancePtr);
+u32 XRadix_Get_output_r_TotalBytes(XRadix *InstancePtr);
+u32 XRadix_Get_output_r_BitWidth(XRadix *InstancePtr);
+u32 XRadix_Get_output_r_Depth(XRadix *InstancePtr);
+u32 XRadix_Write_output_r_Words(XRadix *InstancePtr, int offset, word_type *data, int length);
+u32 XRadix_Read_output_r_Words(XRadix *InstancePtr, int offset, word_type *data, int length);
+u32 XRadix_Write_output_r_Bytes(XRadix *InstancePtr, int offset, char *data, int length);
+u32 XRadix_Read_output_r_Bytes(XRadix *InstancePtr, int offset, char *data, int length);
 
 void XRadix_InterruptGlobalEnable(XRadix *InstancePtr);
 void XRadix_InterruptGlobalDisable(XRadix *InstancePtr);

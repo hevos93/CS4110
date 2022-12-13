@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670426022469">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670777259077">
   <ports id="1" name="max" type="PortType" coreId="1953394531" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="vla13" type="PortType" coreName="RAM" coreId="540619569" bitwidth="8" iftype="IfTypeRegister" arraysize="8">
+  <ports id="2" name="vla1" type="PortType" coreName="RAM" coreId="1953394531" bitwidth="8" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -75,14 +75,14 @@
   <edges id="157" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
   <blocks id="10" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.body.i.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="max_1" originalName="max" coreId="46" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="max_1" originalName="max" coreId="1852383744" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="getMax_counter" originalName="getMax_counter" coreId="0" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="getMax_counter" originalName="getMax_counter" coreId="7630437" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -92,7 +92,7 @@
       <dataInputObjs>max</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="getMax_counter_write_ln0" coreId="100" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="getMax_counter_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
@@ -100,24 +100,24 @@
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="7959657" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <controlInputObjs>for.body.i.i</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="47" name="getMax.exit.i.exitStub" type="BlockType">
     <controlInputObjs>for.body.i.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="max_1_load" coreId="0" bitwidth="32" opcode="load" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="max_1_load" coreId="118126162" bitwidth="32" opcode="load" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="max_2_out_write_ln0" coreId="0" opcode="write" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="max_2_out_write_ln0" coreId="751810288" opcode="write" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>max_2_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln0" coreId="0" opcode="ret" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln0" coreId="1376998752" opcode="ret" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1"/>
   </blocks>
-  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" iiViolation="Resource Limitation;mFailedII=1;mDependenceDistancedII=-1;mLimitedResource=2;nodes=31__core/RAM/vla13//load/store,23__core/RAM/vla13//load/store,27__;" id="182" pipe_depth="3" RegionName="VITIS_LOOP_9_1">
+  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" iiViolation="Resource Limitation;mFailedII=1;mDependenceDistancedII=-1;mLimitedResource=2;nodes=31__core/RAM/vla1//load/store,23__core/RAM/vla1//load/store,27__;" id="182" pipe_depth="3" RegionName="VITIS_LOOP_9_1">
     <basic_blocks id="16" name="for.body.i.i" type="BlockType">
       <controlInputObjs>newFuncRoot</controlInputObjs>
       <controlInputObjs>for.body.i.i.split</controlInputObjs>
@@ -125,7 +125,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>getMax.exit.i.exitStub</controlOutputObjs>
       <controlOutputObjs>for.body.i.i.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="getMax_counter_1" lineNumber="10" originalName="getMax_counter" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="4294967295" contextFuncName="getMax" bitwidth="4" opcode="load" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="getMax_counter_1" lineNumber="10" originalName="getMax_counter" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1701336098" contextFuncName="getMax" bitwidth="4" opcode="load" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -138,7 +138,7 @@
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="4294967294" contextFuncName="getMax" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1634541677" contextFuncName="getMax" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.body.i.i.split</controlInputObjs>
@@ -153,18 +153,18 @@
       <controlInputObjs>for.body.i.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.body.i.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="max_1_load_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" bitwidth="32" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="max_1_load_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1634871072" contextFuncName="getMax" bitwidth="32" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="trunc_ln10" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="trunc_ln10_fu_127_p1" coreId="4294967295" contextFuncName="getMax" bitwidth="1" opcode="trunc" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="trunc_ln10" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="trunc_ln10_fu_127_p1" coreId="0" contextFuncName="getMax" bitwidth="1" opcode="trunc" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="shl_ln" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="shl_ln_fu_131_p3" coreId="37" contextFuncName="getMax" bitwidth="3" opcode="bitconcatenate" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="shl_ln" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="shl_ln_fu_131_p3" coreId="1179535650" contextFuncName="getMax" bitwidth="3" opcode="bitconcatenate" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
@@ -173,19 +173,19 @@
         <dataOutputObjs>or</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="zext_ln10" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln10_fu_139_p1" coreId="2" contextFuncName="getMax" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="zext_ln10" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln10_fu_139_p1" coreId="840979276" contextFuncName="getMax" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="vla13_addr" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="vla1_addr" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
-        <dataInputObjs>vla13</dataInputObjs>
+        <dataInputObjs>vla1</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="vla13_load" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="getMax" bitwidth="8" opcode="load" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="vla1_load" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="getMax" bitwidth="8" opcode="load" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
@@ -196,65 +196,65 @@
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln10_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln10_1_fu_150_p1" coreId="0" contextFuncName="getMax" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln10_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln10_1_fu_150_p1" coreId="1936028192" contextFuncName="getMax" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>or</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="vla13_addr_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="vla1_addr_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1593847335" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
-        <dataInputObjs>vla13</dataInputObjs>
+        <dataInputObjs>vla1</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="vla13_load_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="getMax" bitwidth="8" opcode="load" nodeLatency="1" m_display="1" m_delay="0.73" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="vla1_load_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="getMax" bitwidth="8" opcode="load" nodeLatency="1" m_display="1" m_delay="0.73" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="or_ln10_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="or_ln10_1_fu_166_p2" coreId="4294967295" contextFuncName="getMax" bitwidth="3" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="or_ln10_1" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="or_ln10_1_fu_166_p2" coreId="1852403305" contextFuncName="getMax" bitwidth="3" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="zext_ln10_2" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln10_2_fu_171_p1" coreId="557547472" contextFuncName="getMax" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="zext_ln10_2" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln10_2_fu_171_p1" coreId="0" contextFuncName="getMax" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>or</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="vla13_addr_2" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1622335353" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="vla1_addr_2" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
-        <dataInputObjs>vla13</dataInputObjs>
+        <dataInputObjs>vla1</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="vla13_load_2" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="getMax" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="vla1_load_2" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="getMax" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="27" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="or_ln10_2" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="or_ln10_2_fu_176_p2" coreId="4137877710" contextFuncName="getMax" bitwidth="3" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="or_ln10_2" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="or_ln10_2_fu_176_p2" coreId="0" contextFuncName="getMax" bitwidth="3" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="zext_ln10_3" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln10_3_fu_181_p1" coreId="3018709127" contextFuncName="getMax" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="zext_ln10_3" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." rtlName="zext_ln10_3_fu_181_p1" coreId="1852142702" contextFuncName="getMax" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>or</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="vla13_addr_3" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="4228300630" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="vla1_addr_3" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="791555624" contextFuncName="getMax" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
-        <dataInputObjs>vla13</dataInputObjs>
+        <dataInputObjs>vla1</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="vla13_load_3" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="getMax" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="vla1_load_3" lineNumber="10" fileName="../../Code/radix/radix.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="getMax" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="31" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="10" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
@@ -287,17 +287,17 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="getMax_counter_write_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1162760773" contextFuncName="getMax" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="getMax_counter_write_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="1406214488" contextFuncName="getMax" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="max_1_write_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.46" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="max_1_write_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="4294967295" contextFuncName="getMax" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.46" m_topoIndex="36" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="br_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="0" contextFuncName="getMax" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="br_ln9" lineNumber="9" fileName="../../Code/radix/radix.c" fileDirectory=".." coreId="4294967295" contextFuncName="getMax" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../Code/radix/radix.c" linenumber="9" fileDirectory="S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS" functionName="getMax"/>
         <controlInputObjs>for.body.i.i</controlInputObjs>
       </node_objs>
@@ -313,11 +313,20 @@
   <regnodes realName="max_1_reg_222">
     <nodeIds>4</nodeIds>
   </regnodes>
-  <regnodes realName="vla13_addr_2_reg_267">
+  <regnodes realName="vla1_load_reg_257">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="vla1_addr_2_reg_267">
     <nodeIds>30</nodeIds>
   </regnodes>
-  <regnodes realName="vla13_addr_3_reg_272">
+  <regnodes realName="vla1_load_1_reg_262">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="vla1_addr_3_reg_272">
     <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="vla1_addr_reg_247">
+    <nodeIds>22</nodeIds>
   </regnodes>
   <regnodes realName="icmp_ln9_reg_237">
     <nodeIds>13</nodeIds>
@@ -325,19 +334,10 @@
   <regnodes realName="shl_ln_reg_241">
     <nodeIds>20</nodeIds>
   </regnodes>
-  <regnodes realName="vla13_load_1_reg_262">
-    <nodeIds>27</nodeIds>
-  </regnodes>
   <regnodes realName="getMax_counter_reg_230">
     <nodeIds>5</nodeIds>
   </regnodes>
-  <regnodes realName="vla13_addr_reg_247">
-    <nodeIds>22</nodeIds>
-  </regnodes>
-  <regnodes realName="vla13_load_reg_257">
-    <nodeIds>23</nodeIds>
-  </regnodes>
-  <regnodes realName="vla13_addr_1_reg_252">
+  <regnodes realName="vla1_addr_1_reg_252">
     <nodeIds>26</nodeIds>
   </regnodes>
   <expressionNodes realName="zext_ln10_fu_139">
@@ -346,11 +346,17 @@
   <expressionNodes realName="trunc_ln10_fu_127">
     <nodeIds>19</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="vla1_addr_1_gep_fu_84">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="or_ln10_fu_144">
     <nodeIds>24</nodeIds>
   </expressionNodes>
   <expressionNodes realName="or_ln10_5_fu_189">
     <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="vla1_addr_gep_fu_67">
+    <nodeIds>22</nodeIds>
   </expressionNodes>
   <expressionNodes realName="zext_ln10_2_fu_171">
     <nodeIds>29</nodeIds>
@@ -376,14 +382,11 @@
   <expressionNodes realName="or_ln10_1_fu_166">
     <nodeIds>28</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="vla13_addr_1_gep_fu_84">
-    <nodeIds>26</nodeIds>
+  <expressionNodes realName="vla1_addr_3_gep_fu_100">
+    <nodeIds>34</nodeIds>
   </expressionNodes>
   <expressionNodes realName="zext_ln10_1_fu_150">
     <nodeIds>25</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="vla13_addr_gep_fu_67">
-    <nodeIds>22</nodeIds>
   </expressionNodes>
   <expressionNodes realName="add_ln9_fu_155">
     <nodeIds>39</nodeIds>
@@ -394,10 +397,7 @@
   <expressionNodes realName="max_2_fu_205">
     <nodeIds>38</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="vla13_addr_3_gep_fu_100">
-    <nodeIds>34</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="vla13_addr_2_gep_fu_92">
+  <expressionNodes realName="vla1_addr_2_gep_fu_92">
     <nodeIds>30</nodeIds>
   </expressionNodes>
   <ioNodes realName="store_ln9_store_fu_213">
@@ -427,11 +427,11 @@
   <ioNodes realName="store_ln0_store_fu_113">
     <nodeIds>8</nodeIds>
   </ioNodes>
-  <memoryPorts dataString="vla13">
+  <memoryPorts dataString="vla1">
     <nodeIds>27</nodeIds>
     <nodeIds>35</nodeIds>
   </memoryPorts>
-  <memoryPorts dataString="vla13" portID="1">
+  <memoryPorts dataString="vla1" portID="1">
     <nodeIds>23</nodeIds>
     <nodeIds>31</nodeIds>
   </memoryPorts>
@@ -445,13 +445,13 @@
       <nodeIds>45</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="vla13(p0)">
+  <ioPorts name="vla1(p0)">
     <contents name="load">
       <nodeIds>27</nodeIds>
       <nodeIds>35</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="vla13(p1)">
+  <ioPorts name="vla1(p1)">
     <contents name="load">
       <nodeIds>23</nodeIds>
       <nodeIds>31</nodeIds>

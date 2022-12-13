@@ -52,7 +52,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>vla13</name>
+						<name>vla1</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -70,7 +70,7 @@
 						<coreName>RAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>540619569</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -146,7 +146,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>46</coreId>
+						<coreId>1852383744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -188,7 +188,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>7630437</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -273,7 +273,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>100</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -359,7 +359,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>7959657</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -415,7 +415,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>1701336098</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -529,7 +529,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967294</coreId>
+						<coreId>1634541677</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -587,7 +587,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1634871072</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -644,7 +644,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -700,7 +700,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>37</coreId>
+						<coreId>1179535650</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -758,7 +758,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2</coreId>
+						<coreId>840979276</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -782,7 +782,7 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>vla13_addr</name>
+						<name>vla1_addr</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>10</lineNumber>
@@ -840,7 +840,7 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>vla13_load</name>
+						<name>vla1_load</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>10</lineNumber>
@@ -985,7 +985,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1936028192</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1009,7 +1009,7 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>vla13_addr_1</name>
+						<name>vla1_addr_1</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>10</lineNumber>
@@ -1041,7 +1041,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1593847335</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -1067,7 +1067,7 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>vla13_load_1</name>
+						<name>vla1_load_1</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>10</lineNumber>
@@ -1155,7 +1155,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>1852403305</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -1212,7 +1212,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>557547472</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1236,7 +1236,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>vla13_addr_2</name>
+						<name>vla1_addr_2</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>10</lineNumber>
@@ -1268,7 +1268,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1622335353</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -1294,7 +1294,7 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>vla13_load_2</name>
+						<name>vla1_load_2</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>10</lineNumber>
@@ -1382,7 +1382,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4137877710</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -1439,7 +1439,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3018709127</coreId>
+						<coreId>1852142702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1463,7 +1463,7 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>vla13_addr_3</name>
+						<name>vla1_addr_3</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>10</lineNumber>
@@ -1495,7 +1495,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4228300630</coreId>
+						<coreId>791555624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -1521,7 +1521,7 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>vla13_load_3</name>
+						<name>vla1_load_3</name>
 						<fileName>../../Code/radix/radix.c</fileName>
 						<fileDirectory>S:\Dokumenter\Skole\CS-Master\CS4110\Project\HLS</fileDirectory>
 						<lineNumber>10</lineNumber>
@@ -1841,7 +1841,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1162760773</coreId>
+						<coreId>1406214488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1900,7 +1900,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1959,7 +1959,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2001,7 +2001,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>118126162</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2044,7 +2044,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>751810288</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2088,7 +2088,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1376998752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2133,7 +2133,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1969317477</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2164,7 +2164,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>1969317477</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -2226,7 +2226,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>909192500</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -2257,7 +2257,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2319,7 +2319,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -2350,7 +2350,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>828863805</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -2384,7 +2384,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1868787305</coreId>
+					<coreId>4294967292</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2420,7 +2420,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1936018748</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2453,7 +2453,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>840979276</coreId>
+					<coreId>1378996616</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2508,7 +2508,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3069032754</coreId>
+					<coreId>1406214488</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3756,14 +3756,14 @@
 						<item class_id="47" tracking_level="0" version="0">
 							<first class_id="48" tracking_level="0" version="0">
 								<first class_id_reference="9" object_id_reference="_26"></first>
-								<second>core:RAM:vla13::load:store</second>
+								<second>core:RAM:vla1::load:store</second>
 							</first>
 							<second>31</second>
 						</item>
 						<item>
 							<first>
 								<first class_id_reference="9" object_id_reference="_18"></first>
-								<second>core:RAM:vla13::load:store</second>
+								<second>core:RAM:vla1::load:store</second>
 							</first>
 							<second>23</second>
 						</item>
@@ -4130,7 +4130,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_addr_1_gep_fu_84</first>
+			<first>vla1_addr_1_gep_fu_84</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4138,7 +4138,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_addr_2_gep_fu_92</first>
+			<first>vla1_addr_2_gep_fu_92</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4146,7 +4146,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_addr_3_gep_fu_100</first>
+			<first>vla1_addr_3_gep_fu_100</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4154,7 +4154,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_addr_gep_fu_67</first>
+			<first>vla1_addr_gep_fu_67</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4283,7 +4283,7 @@
 		<item_version>0</item_version>
 		<item class_id="55" tracking_level="0" version="0">
 			<first class_id="56" tracking_level="0" version="0">
-				<first>vla13</first>
+				<first>vla1</first>
 				<second>0</second>
 			</first>
 			<second>
@@ -4297,7 +4297,7 @@
 		</item>
 		<item>
 			<first>
-				<first>vla13</first>
+				<first>vla1</first>
 				<second>1</second>
 			</first>
 			<second>
@@ -4430,7 +4430,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_addr_1_reg_252</first>
+			<first>vla1_addr_1_reg_252</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4438,7 +4438,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_addr_2_reg_267</first>
+			<first>vla1_addr_2_reg_267</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4446,7 +4446,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_addr_3_reg_272</first>
+			<first>vla1_addr_3_reg_272</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4454,7 +4454,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_addr_reg_247</first>
+			<first>vla1_addr_reg_247</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4462,7 +4462,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_load_1_reg_262</first>
+			<first>vla1_load_1_reg_262</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4470,7 +4470,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13_load_reg_257</first>
+			<first>vla1_load_reg_257</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4520,7 +4520,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13(p0)</first>
+			<first>vla1(p0)</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4538,7 +4538,7 @@
 			</second>
 		</item>
 		<item>
-			<first>vla13(p1)</first>
+			<first>vla1(p1)</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

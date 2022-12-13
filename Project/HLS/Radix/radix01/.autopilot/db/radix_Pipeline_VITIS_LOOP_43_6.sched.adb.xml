@@ -330,10 +330,10 @@ for.inc75.i.i.split:7 %trunc_ln44_4 = trunc i32 %output_load
 
 <Node id="22" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc75.i.i.split:8 %vla13_addr = getelementptr i8 %vla13, i64 0, i64 %zext_ln44
+for.inc75.i.i.split:8 %vla1_addr = getelementptr i8 %vla1, i64 0, i64 %zext_ln44
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr"/></StgValue>
+<StgValue><ssdm name="vla1_addr"/></StgValue>
 </operation>
 
 <operation id="25" st_id="2" stage="1" lat="1">
@@ -346,7 +346,7 @@ for.inc75.i.i.split:8 %vla13_addr = getelementptr i8 %vla13, i64 0, i64 %zext_ln
 
 <Node id="23" bw="0" op_0_bw="8" op_1_bw="3">
 <![CDATA[
-for.inc75.i.i.split:9 %store_ln44 = store i8 %trunc_ln44_4, i3 %vla13_addr
+for.inc75.i.i.split:9 %store_ln44 = store i8 %trunc_ln44_4, i3 %vla1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln44"/></StgValue>
@@ -410,10 +410,10 @@ for.inc75.i.i.split:12 %zext_ln44_1 = zext i3 %or_ln44
 
 <Node id="27" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc75.i.i.split:13 %vla13_addr_4 = getelementptr i8 %vla13, i64 0, i64 %zext_ln44_1
+for.inc75.i.i.split:13 %vla1_addr_4 = getelementptr i8 %vla1, i64 0, i64 %zext_ln44_1
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr_4"/></StgValue>
+<StgValue><ssdm name="vla1_addr_4"/></StgValue>
 </operation>
 
 <operation id="30" st_id="2" stage="1" lat="1">
@@ -426,7 +426,7 @@ for.inc75.i.i.split:13 %vla13_addr_4 = getelementptr i8 %vla13, i64 0, i64 %zext
 
 <Node id="28" bw="0" op_0_bw="8" op_1_bw="3">
 <![CDATA[
-for.inc75.i.i.split:14 %store_ln44 = store i8 %trunc_ln44_1, i3 %vla13_addr_4
+for.inc75.i.i.split:14 %store_ln44 = store i8 %trunc_ln44_1, i3 %vla1_addr_4
 
 ]]></Node>
 <StgValue><ssdm name="store_ln44"/></StgValue>
@@ -521,10 +521,10 @@ for.inc75.i.i.split:17 %zext_ln44_2 = zext i3 %or_ln44_1
 
 <Node id="32" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc75.i.i.split:18 %vla13_addr_5 = getelementptr i8 %vla13, i64 0, i64 %zext_ln44_2
+for.inc75.i.i.split:18 %vla1_addr_5 = getelementptr i8 %vla1, i64 0, i64 %zext_ln44_2
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr_5"/></StgValue>
+<StgValue><ssdm name="vla1_addr_5"/></StgValue>
 </operation>
 
 <operation id="37" st_id="3" stage="1" lat="1">
@@ -536,7 +536,7 @@ for.inc75.i.i.split:18 %vla13_addr_5 = getelementptr i8 %vla13, i64 0, i64 %zext
 
 <Node id="33" bw="0" op_0_bw="8" op_1_bw="3">
 <![CDATA[
-for.inc75.i.i.split:19 %store_ln44 = store i8 %trunc_ln44_2, i3 %vla13_addr_5
+for.inc75.i.i.split:19 %store_ln44 = store i8 %trunc_ln44_2, i3 %vla1_addr_5
 
 ]]></Node>
 <StgValue><ssdm name="store_ln44"/></StgValue>
@@ -581,10 +581,10 @@ for.inc75.i.i.split:22 %zext_ln44_3 = zext i3 %or_ln44_2
 
 <Node id="37" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc75.i.i.split:23 %vla13_addr_6 = getelementptr i8 %vla13, i64 0, i64 %zext_ln44_3
+for.inc75.i.i.split:23 %vla1_addr_6 = getelementptr i8 %vla1, i64 0, i64 %zext_ln44_3
 
 ]]></Node>
-<StgValue><ssdm name="vla13_addr_6"/></StgValue>
+<StgValue><ssdm name="vla1_addr_6"/></StgValue>
 </operation>
 
 <operation id="41" st_id="3" stage="1" lat="1">
@@ -596,7 +596,7 @@ for.inc75.i.i.split:23 %vla13_addr_6 = getelementptr i8 %vla13, i64 0, i64 %zext
 
 <Node id="38" bw="0" op_0_bw="8" op_1_bw="3">
 <![CDATA[
-for.inc75.i.i.split:24 %store_ln44 = store i8 %trunc_ln44_3, i3 %vla13_addr_6
+for.inc75.i.i.split:24 %store_ln44 = store i8 %trunc_ln44_3, i3 %vla1_addr_6
 
 ]]></Node>
 <StgValue><ssdm name="store_ln44"/></StgValue>

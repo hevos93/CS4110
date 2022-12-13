@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'radix'" level="0">
-<item name = "Date">Wed Dec  7 16:13:42 2022
+<item name = "Date">Sun Dec 11 17:47:38 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">Radix</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 3.233 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 2.972 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_radix_Pipeline_VITIS_LOOP_68_1_fu_163">radix_Pipeline_VITIS_LOOP_68_1, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_radix_Pipeline_VITIS_LOOP_66_1_fu_164">radix_Pipeline_VITIS_LOOP_66_1, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
 <column name="grp_radix_Pipeline_VITIS_LOOP_9_1_fu_172">radix_Pipeline_VITIS_LOOP_9_1, 16, 16, 0.160 us, 0.160 us, 16, 16, no</column>
 <column name="grp_radix_Pipeline_VITIS_LOOP_20_1_fu_179">radix_Pipeline_VITIS_LOOP_20_1, 86, 86, 0.860 us, 0.860 us, 86, 86, no</column>
 <column name="grp_radix_Pipeline_VITIS_LOOP_26_2_fu_187">radix_Pipeline_VITIS_LOOP_26_2, ?, ?, ?, ?, ?, ?, no</column>

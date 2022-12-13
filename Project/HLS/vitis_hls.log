@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Wed Dec 07 16:13:57 +0100 2022
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Sun Dec 11 21:09:46 +0100 2022
 INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS'
 Sourcing Tcl script 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl'
 INFO: [HLS 200-1510] Running: source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl
@@ -10,7 +10,7 @@ INFO: [HLS 200-1510] Running: add_files ../../Code/radix/radix.c
 INFO: [HLS 200-10] Adding design file '../../Code/radix/radix.c' to the project
 INFO: [HLS 200-1510] Running: add_files ../../Code/radix/radix.h 
 INFO: [HLS 200-10] Adding design file '../../Code/radix/radix.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb ../../Code/radix/tb.c -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-1510] Running: add_files -tb ../../Code/radix/tb.c -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file '../../Code/radix/tb.c' to the project
 INFO: [HLS 200-1510] Running: open_solution radix01 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01'.
@@ -22,67 +22,37 @@ INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: source ./Radix/radix01/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name radix radix 
-INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
-Running Dispatch Server on port: 56379
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+Running Dispatch Server on port: 54083
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
    Compiling(apcc) ../../../../../../Code/radix/radix.c in debug mode
 INFO: [HLS 200-10] Running 'S:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Wed Dec 07 16:14:11 +0100 2022
+INFO: [HLS 200-10] For user 'Hevos' on host 'desktop-75mlgfj' (Windows NT_amd64 version 6.2) on Sun Dec 11 21:10:00 +0100 2022
 INFO: [HLS 200-10] In directory 'S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim/build'
-../../../../../../Code/radix/radix.c:62:27: warning: sizeof on array function parameter will return size of 'const char *' instead of 'const char []' [-Wsizeof-array-argument]
-        uint8_t size_str = sizeof(input);
-                                 ^
-../../../../../../Code/radix/radix.c:57:23: note: declared here
-void radix(const char input[], uint8_t* output){
-                      ^
-../../../../../../Code/radix/radix.c:88:15: warning: incompatible pointer types passing 'uint8_t [size_str]' to parameter of type 'int *' [-Wincompatible-pointer-types]
-    radixsort(array, n);
-              ^~~~~
+../../../../../../Code/radix/radix.c:73:12: warning: incompatible pointer types passing 'uint8_t [array_size]' to parameter of type 'int *' [-Wincompatible-pointer-types]
+        radixsort(int_array, n);
+                  ^~~~~~~~~
 ../../../../../../Code/radix/radix.c:48:20: note: passing argument to parameter 'array' here
 void radixsort(int array[], int size) {
                    ^
-../../../../../../Code/radix/radix.c:89:13: warning: incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [size_str]' [-Wint-conversion]
-    *output = array;
-            ^ ~~~~~
-3 warnings generated.
-../../../../../../Code/radix/radix.c:62:27: warning: sizeof on array function parameter will return size of 'const char *' instead of 'const char []' [-Wsizeof-array-argument]
-        uint8_t size_str = sizeof(input);
-                                 ^
-../../../../../../Code/radix/radix.c:57:23: note: declared here
-void radix(const char input[], uint8_t* output){
-                      ^
-../../../../../../Code/radix/radix.c:88:15: warning: incompatible pointer types passing 'uint8_t [size_str]' to parameter of type 'int *' [-Wincompatible-pointer-types]
-    radixsort(array, n);
-              ^~~~~
+../../../../../../Code/radix/radix.c:74:10: warning: incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [array_size]' [-Wint-conversion]
+        *output = int_array;
+                ^ ~~~~~~~~~
+2 warnings generated.
+../../../../../../Code/radix/radix.c:73:12: warning: incompatible pointer types passing 'uint8_t [array_size]' to parameter of type 'int *' [-Wincompatible-pointer-types]
+        radixsort(int_array, n);
+                  ^~~~~~~~~
 ../../../../../../Code/radix/radix.c:48:20: note: passing argument to parameter 'array' here
 void radixsort(int array[], int size) {
                    ^
-../../../../../../Code/radix/radix.c:89:13: warning: incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [size_str]' [-Wint-conversion]
-    *output = array;
-            ^ ~~~~~
-3 warnings generated.
+../../../../../../Code/radix/radix.c:74:10: warning: incompatible pointer to integer conversion assigning to 'uint8_t' (aka 'unsigned char') from 'uint8_t [array_size]' [-Wint-conversion]
+        *output = int_array;
+                ^ ~~~~~~~~~
+2 warnings generated.
 INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.802 seconds; peak allocated memory: 7.723 MB.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.685 seconds; peak allocated memory: 8.016 MB.
    Generating csim.exe
-Makefile.rules:322: recipe for target 'csim.exe' failed
-S:/Xilinx/Vitis_HLS/2022.2/tps/win64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o): In function `main':
-C:/repo/mingw-w64-crt-git/src/mingw-w64/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain'
-collect2.exe: error: ld returned 1 exit status
-make: *** [csim.exe] Error 1
-ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.438 seconds; current allocated memory: 0.574 MB.
-5
-    while executing
-"source S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl"
-    invoked from within
-"hls::main S:/Dokumenter/Skole/CS-Master/CS4110/Project/HLS/Radix/radix01/csim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$newargs"
-    (procedure "hls_proc" line 16)
-    invoked from within
-"hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 17.148 seconds; peak allocated memory: 677.625 MB.
+@E Simulation failed.
+ERROR: [SIM 211-100] CSim failed with errors.

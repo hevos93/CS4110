@@ -130,8 +130,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>vla13_address0</name>
-<Object>vla13</Object>
+<name>vla1_address0</name>
+<Object>vla1</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -141,8 +141,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>vla13_ce0</name>
-<Object>vla13</Object>
+<name>vla1_ce0</name>
+<Object>vla1</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -152,8 +152,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>vla13_q0</name>
-<Object>vla13</Object>
+<name>vla1_q0</name>
+<Object>vla1</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -163,8 +163,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>vla13_address1</name>
-<Object>vla13</Object>
+<name>vla1_address1</name>
+<Object>vla1</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -174,8 +174,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>vla13_ce1</name>
-<Object>vla13</Object>
+<name>vla1_ce1</name>
+<Object>vla1</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -185,8 +185,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>vla13_q1</name>
-<Object>vla13</Object>
+<name>vla1_q1</name>
+<Object>vla1</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>

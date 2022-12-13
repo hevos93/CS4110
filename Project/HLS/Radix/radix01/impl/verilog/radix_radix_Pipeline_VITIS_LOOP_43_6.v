@@ -17,14 +17,14 @@ module radix_radix_Pipeline_VITIS_LOOP_43_6 (
         output_r_address0,
         output_r_ce0,
         output_r_q0,
-        vla13_address0,
-        vla13_ce0,
-        vla13_we0,
-        vla13_d0,
-        vla13_address1,
-        vla13_ce1,
-        vla13_we1,
-        vla13_d1
+        vla1_address0,
+        vla1_ce0,
+        vla1_we0,
+        vla1_d0,
+        vla1_address1,
+        vla1_ce1,
+        vla1_we1,
+        vla1_d1
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 2'd1;
@@ -39,25 +39,25 @@ output   ap_ready;
 output  [3:0] output_r_address0;
 output   output_r_ce0;
 input  [31:0] output_r_q0;
-output  [2:0] vla13_address0;
-output   vla13_ce0;
-output   vla13_we0;
-output  [7:0] vla13_d0;
-output  [2:0] vla13_address1;
-output   vla13_ce1;
-output   vla13_we1;
-output  [7:0] vla13_d1;
+output  [2:0] vla1_address0;
+output   vla1_ce0;
+output   vla1_we0;
+output  [7:0] vla1_d0;
+output  [2:0] vla1_address1;
+output   vla1_ce1;
+output   vla1_we1;
+output  [7:0] vla1_d1;
 
 reg ap_idle;
 reg output_r_ce0;
-reg[2:0] vla13_address0;
-reg vla13_ce0;
-reg vla13_we0;
-reg[7:0] vla13_d0;
-reg[2:0] vla13_address1;
-reg vla13_ce1;
-reg vla13_we1;
-reg[7:0] vla13_d1;
+reg[2:0] vla1_address0;
+reg vla1_ce0;
+reg vla1_we0;
+reg[7:0] vla1_d0;
+reg[2:0] vla1_address1;
+reg vla1_ce1;
+reg vla1_we1;
+reg[7:0] vla1_d1;
 
 (* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
@@ -279,73 +279,73 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        vla13_address0 = zext_ln44_3_fu_220_p1;
+        vla1_address0 = zext_ln44_3_fu_220_p1;
     end else if (((1'b0 == ap_block_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        vla13_address0 = zext_ln44_1_fu_180_p1;
+        vla1_address0 = zext_ln44_1_fu_180_p1;
     end else begin
-        vla13_address0 = 'bx;
+        vla1_address0 = 'bx;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        vla13_address1 = zext_ln44_2_fu_210_p1;
+        vla1_address1 = zext_ln44_2_fu_210_p1;
     end else if (((1'b0 == ap_block_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        vla13_address1 = zext_ln44_fu_153_p1;
+        vla1_address1 = zext_ln44_fu_153_p1;
     end else begin
-        vla13_address1 = 'bx;
+        vla1_address1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
-        vla13_ce0 = 1'b1;
+        vla1_ce0 = 1'b1;
     end else begin
-        vla13_ce0 = 1'b0;
+        vla1_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
-        vla13_ce1 = 1'b1;
+        vla1_ce1 = 1'b1;
     end else begin
-        vla13_ce1 = 1'b0;
+        vla1_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        vla13_d0 = trunc_ln44_3_reg_257;
+        vla1_d0 = trunc_ln44_3_reg_257;
     end else if (((1'b0 == ap_block_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        vla13_d0 = {{output_r_q0[15:8]}};
+        vla1_d0 = {{output_r_q0[15:8]}};
     end else begin
-        vla13_d0 = 'bx;
+        vla1_d0 = 'bx;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        vla13_d1 = trunc_ln44_2_reg_252;
+        vla1_d1 = trunc_ln44_2_reg_252;
     end else if (((1'b0 == ap_block_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        vla13_d1 = trunc_ln44_4_fu_158_p1;
+        vla1_d1 = trunc_ln44_4_fu_158_p1;
     end else begin
-        vla13_d1 = 'bx;
+        vla1_d1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((((icmp_ln43_reg_232 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
-        vla13_we0 = 1'b1;
+        vla1_we0 = 1'b1;
     end else begin
-        vla13_we0 = 1'b0;
+        vla1_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((((icmp_ln43_reg_232 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
-        vla13_we1 = 1'b1;
+        vla1_we1 = 1'b1;
     end else begin
-        vla13_we1 = 1'b0;
+        vla1_we1 = 1'b0;
     end
 end
 

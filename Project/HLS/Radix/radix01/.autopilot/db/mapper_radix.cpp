@@ -237,9 +237,33 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void radix(volatile void *, volatile void *);
+extern "C" void radix(Byte<1>*, Byte<1>*);
 extern "C" void apatb_radix_hw(volatile void * __xlx_apatb_param_input_r, volatile void * __xlx_apatb_param_output_r) {
 using hls::sim::createStream;
+  // Collect __xlx_input_r__tmp_vec
+std::vector<Byte<1>> __xlx_input_r__tmp_vec;
+for (size_t i = 0; i < 8; ++i){
+__xlx_input_r__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_input_r)[i]);
+}
+  int __xlx_size_param_input_r = 8;
+  int __xlx_offset_param_input_r = 0;
+  int __xlx_offset_byte_param_input_r = 0*1;
+  // Collect __xlx_output_r__tmp_vec
+std::vector<Byte<1>> __xlx_output_r__tmp_vec;
+for (size_t i = 0; i < 8; ++i){
+__xlx_output_r__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_output_r)[i]);
+}
+  int __xlx_size_param_output_r = 8;
+  int __xlx_offset_param_output_r = 0;
+  int __xlx_offset_byte_param_output_r = 0*1;
   // DUT call
-  radix(__xlx_apatb_param_input_r, __xlx_apatb_param_output_r);
+  radix(__xlx_input_r__tmp_vec.data(), __xlx_output_r__tmp_vec.data());
+// print __xlx_apatb_param_input_r
+for (size_t i = 0; i < __xlx_size_param_input_r; ++i) {
+((Byte<1>*)__xlx_apatb_param_input_r)[i] = __xlx_input_r__tmp_vec[__xlx_offset_param_input_r+i];
+}
+// print __xlx_apatb_param_output_r
+for (size_t i = 0; i < __xlx_size_param_output_r; ++i) {
+((Byte<1>*)__xlx_apatb_param_output_r)[i] = __xlx_output_r__tmp_vec[__xlx_offset_param_output_r+i];
+}
 }

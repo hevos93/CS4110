@@ -955,28 +955,62 @@ void radix_hw_stub_wrapper(void*, void*);
 extern "C"
 void apatb_radix_hw(void* __xlx_apatb_param_input_r, void* __xlx_apatb_param_output_r)
 {
-  static hls::sim::Register port0 {
-    .name = "input_r",
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port0 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port0 {
+#endif
     .width = 8,
+    .asize = 1,
+    .hbm = false,
+    .name = { "input_r" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_input_r),
+#else
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_input_r),
 #endif
-  };
-  port0.param = __xlx_apatb_param_input_r;
-
-  static hls::sim::Register port1 {
-    .name = "output_r",
-    .width = 8,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_r),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_r),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_r),
 #endif
   };
-  port1.param = __xlx_apatb_param_output_r;
+  port0.param = { __xlx_apatb_param_input_r };
+  port0.depth = { 8 };
+  port0.offset = {  };
+  port0.hasWrite = { false };
+
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port1 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port1 {
+#endif
+    .width = 8,
+    .asize = 1,
+    .hbm = false,
+    .name = { "output_r" },
+#ifdef POST_CHECK
+#ifdef USE_BINARY_TV_FILE
+    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_output_r),
+#else
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_r),
+#endif
+#else
+#ifdef USE_BINARY_TV_FILE
+    .owriter = new hls::sim::Output(AUTOTB_TVOUT_output_r),
+#else
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_r),
+#endif
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_output_r),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_r),
+#endif
+#endif
+  };
+  port1.param = { __xlx_apatb_param_output_r };
+  port1.depth = { 8 };
+  port1.offset = {  };
+  port1.hasWrite = { true };
 
   refine_signal_handler();
   try {
